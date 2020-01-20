@@ -1,0 +1,207 @@
+
+sfc.dll:     file format pei-i386
+sfc.dll
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x76b61233
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Mon Apr 14 11:25:05 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000800
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001233
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		76b60000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	10
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		0000a4bf
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00000400
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00001490 0000019e Export Directory [.edata (or where ever we found it)]
+Entry 1 0000131c 0000003c Import Directory [parts of .idata]
+Entry 2 00003000 000003d8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00004000 00000040 Base Relocation Directory [.reloc]
+Entry 6 00001050 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000270 00000044 Bound Import Directory
+Entry c 00001000 0000004c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x76b6131c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000131c	00001384 ffffffff ffffffff 000013a4 0000102c
+
+	DLL Name: sfc_os.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000007	    7  <none>	76c194ef
+	80000006	    6  <none>	76c194b2
+	80000005	    5  <none>	76c19436
+	80000004	    4  <none>	76c19426
+	80000003	    3  <none>	76c193e8
+	80000002	    2  <none>	76c1f250
+	80000001	    1  <none>	76c1f382
+
+ 00001330	00001358 ffffffff ffffffff 0000147c 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	13c0	  240  FreeLibrary	7c80ac6e
+	1462	  448  GetSystemTimeAsFileTime	7c8017e9
+	144c	  316  GetCurrentProcessId	7c8099b0
+	1436	  318  GetCurrentThreadId	7c8097b8
+	1426	  468  GetTickCount	7c80932e
+	140c	  660  QueryPerformanceCounter	7c80a4b7
+	13f0	  137  DisableThreadLibraryCalls	7c811326
+	13e0	  583  LoadLibraryW	7c80aedb
+	13b0	  790  SetLastError	7c94fe10
+	13ce	  408  GetProcAddress	7c80ae30
+
+ 00001344	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x76b61490
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		4802384b
+Major/Minor 			0/0
+Name 				0000152c sfc.dll
+Ordinal Base 			1
+Number in:
+	Export Address Table 		00000011
+	[Name Pointer/Ordinal] Table	00000008
+Table Addresses
+	Export Address Table 		000014b8
+	Name Pointer Table 		000014fc
+	Ordinal Table 			0000151c
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 11c9 Export RVA
+	[   1] +base[   2] 11d9 Export RVA
+	[   2] +base[   3] 11e3 Export RVA
+	[   3] +base[   4] 11f3 Export RVA
+	[   4] +base[   5] 1203 Export RVA
+	[   5] +base[   6] 1213 Export RVA
+	[   6] +base[   7] 1223 Export RVA
+	[   7] +base[   8] 10d5 Export RVA
+	[   8] +base[   9] 10e0 Export RVA
+	[   9] +base[  10] 10fd Export RVA
+	[  10] +base[  11] 10fd Export RVA
+	[  11] +base[  12] 1163 Export RVA
+	[  12] +base[  13] 1584 Forwarder RVA -- sfc_os.SfcGetNextProtectedFile
+	[  13] +base[  14] 15b6 Forwarder RVA -- sfc_os.SfcIsFileProtected
+	[  14] +base[  15] 15e1 Forwarder RVA -- sfc_os.SfcWLEventLogoff
+	[  15] +base[  16] 1609 Forwarder RVA -- sfc_os.SfcWLEventLogon
+	[  16] +base[  17] 10eb Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   9] SRSetRestorePoint
+	[  10] SRSetRestorePointA
+	[  11] SRSetRestorePointW
+	[  12] SfcGetNextProtectedFile
+	[  13] SfcIsFileProtected
+	[  14] SfcWLEventLogoff
+	[  15] SfcWLEventLogon
+	[  16] SfpVerifyFile
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 64 (0x40) Number of fixups 28
+	reloc    0 offset   ef [10ef] HIGHLOW
+	reloc    1 offset  105 [1105] HIGHLOW
+	reloc    2 offset  10b [110b] HIGHLOW
+	reloc    3 offset  118 [1118] HIGHLOW
+	reloc    4 offset  11f [111f] HIGHLOW
+	reloc    5 offset  143 [1143] HIGHLOW
+	reloc    6 offset  16b [116b] HIGHLOW
+	reloc    7 offset  171 [1171] HIGHLOW
+	reloc    8 offset  17e [117e] HIGHLOW
+	reloc    9 offset  185 [1185] HIGHLOW
+	reloc   10 offset  1a9 [11a9] HIGHLOW
+	reloc   11 offset  243 [1243] HIGHLOW
+	reloc   12 offset  261 [1261] HIGHLOW
+	reloc   13 offset  277 [1277] HIGHLOW
+	reloc   14 offset  283 [1283] HIGHLOW
+	reloc   15 offset  28b [128b] HIGHLOW
+	reloc   16 offset  293 [1293] HIGHLOW
+	reloc   17 offset  29f [129f] HIGHLOW
+	reloc   18 offset  2b9 [12b9] HIGHLOW
+	reloc   19 offset  2c0 [12c0] HIGHLOW
+	reloc   20 offset  2ce [12ce] HIGHLOW
+	reloc   21 offset  2da [12da] HIGHLOW
+	reloc   22 offset  2e6 [12e6] HIGHLOW
+	reloc   23 offset  2f2 [12f2] HIGHLOW
+	reloc   24 offset  2fe [12fe] HIGHLOW
+	reloc   25 offset  30a [130a] HIGHLOW
+	reloc   26 offset  316 [1316] HIGHLOW
+	reloc   27 offset    0 [1000] ABSOLUTE
+
+There is a debug directory in .text at 0x76b61050
+
+Type                Size     Rva      Offset
+  2        CodeView 00000020 000010b0 000004b0
+(format RSDS signature aa3caa09fafc43fcbc18e998c9f19eac age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x000378, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000062e  76b61000  76b61000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000008  76b62000  76b62000  00000c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003d8  76b63000  76b63000  00000e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .reloc        0000006e  76b64000  76b64000  00001200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

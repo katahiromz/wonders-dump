@@ -1,0 +1,239 @@
+
+defrag.exe:     file format pei-i386
+defrag.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100578b
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 05:54:07 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00005600
+SizeOfInitializedData	00001800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000578b
+BaseOfCode		00001000
+BaseOfData		00007000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000a000
+SizeOfHeaders		00000400
+CheckSum		00012835
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00100000
+SizeOfStackCommit	00003000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00005ad0 0000008c Import Directory [parts of .idata]
+Entry 2 00009000 00000448 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001b30 00000040 Load Configuration Directory
+Entry b 00000248 00000084 Bound Import Directory
+Entry c 00001000 000001d0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1005ad0
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00005ad0	00005c80 ffffffff ffffffff 00005ea2 00001124
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5eae	  221  _controlfp	77be0067
+	5e90	  158  __set_app_type	77bc632c
+	5e82	  138  __p__fmode	77baf6c5
+	5e72	  133  __p__commode	77baf68e
+	5e62	  189  _adjust_fdiv	77bf467c
+	5e4e	  160  __setusermatherr	77bde695
+	5e42	  322  _initterm	77bcae06
+	5e30	  170  __wgetmainargs	77baf32f
+	5e22	  171  __winitenv	77bf3a08
+	5e1a	  668  exit	77bcaf41
+	5e10	  207  _cexit	77bcaf77
+	5e02	   79  _XcptFilter	77bc3cfc
+	5dfa	  253  _exit	77bcaf5c
+	5df0	  204  _c_exit	77bcaf8b
+	5ddc	  826  wcsncat	77bd8f11
+	5dd2	  830  wcsrchr	77bd901f
+	5dc8	  799  swscanf	77bd2b0a
+	5dba	  735  localeconv	77bc7e0a
+	5dae	  798  swprintf	77bd091f
+	5da6	  656  atoi	77bac352
+	5d9c	  820  wcscmp	77bd8e09
+	5d92	  822  wcscpy	77bd8dba
+	5d88	  818  wcscat	77bd8d87
+	5d7c	  768  setlocale	77bc4beb
+	5d72	  740  malloc	77bbd020
+	5d6a	  689  free	77bbce33
+	5d60	  825  wcslen	77bd8ef2
+	5d50	   18  ??2@YAPAXI@Z	77bba971
+	5d40	   19  ??3@YAXPAX@Z	77bba9a7
+	5de6	  828  wcsncpy	77bd8f91
+	5d2c	  244  _except_handler3	77bc6c74
+
+ 00005ae4	00005b5c ffffffff ffffffff 00005f98 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5f5c	  308  InitializeSecurityDescriptor	77f6e00e
+	5f48	  555  SetEntriesInAclW	77f6ea58
+	5f2c	  570  SetSecurityDescriptorDacl	77f6e033
+	5f1c	  493  RegOpenKeyExW	77f77a9c
+	5f08	  504  RegQueryValueExW	77f76a81
+	5efa	  459  RegCloseKey	77f76cce
+	5ede	   29  AllocateAndInitializeSid	77f76ed2
+	5ec6	   56  CheckTokenMembership	77f77831
+	5ebc	  226  FreeSid	77f76f12
+	5f7c	  265  GetSecurityDescriptorDacl	77f6ab8e
+
+ 00005af8	00005b88 ffffffff ffffffff 000063b8 0000102c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	62a4	  789  SetErrorMode	77e6c2dc
+	6298	  604  LocalFree	77e62419
+	6288	  597  LoadLibraryW	77e5c6fa
+	626c	  189  ExpandEnvironmentStringsW	77e5c714
+	625a	  328  GetDateFormatW	77e60254
+	6248	  481  GetTimeFormatW	77e6095b
+	6232	  326  GetCurrentThreadId	77e62fc7
+	6226	  959  lstrcatW	77e5c36f
+	62b4	  492  GetVolumeInformationW	77e66615
+	6208	   86  CreateFileW	77e64841
+	61fa	  355  GetFileSize	77e5e1a3
+	61d6	  494  GetVolumeNameForVolumeMountPointW	77e517fd
+	61c8	  646  OpenProcess	77e5fdd4
+	61b4	  322  GetCurrentProcess	77e62f9d
+	61a2	  147  DuplicateHandle	77e64494
+	6194	  248  FreeLibrary	77e6b1a1
+	6184	   80  CreateEventW	77e69b31
+	62cc	  138  DeviceIoControl	77e41689
+	62de	  340  GetDriveTypeW	77e653b8
+	62ee	  132  DeleteFileW	77e4ea51
+	62fc	  468  GetTempFileNameW	77e4f4d4
+	6310	  675  QueryPerformanceCounter	77e69577
+	632a	  479  GetTickCount	77e619d1
+	633a	  323  GetCurrentProcessId	77e63c78
+	6350	  458  GetSystemTimeAsFileTime	77e41fba
+	636a	  863  TerminateProcess	77e42004
+	637e	  879  UnhandledExceptionFilter	77e7690d
+	639a	  843  SetUnhandledExceptionFilter	77e82060
+	6216	  706  ReleaseMutex	77e619ad
+	6062	  933  WriteFile	77e65529
+	5fa6	  369  GetLastError	7c829e08
+	5fb6	  515  GlobalLock	77e521a9
+	5fc4	  511  GlobalFree	77e5cbda
+	5fd2	  518  GlobalReAlloc	77e523f9
+	5fe2	  522  GlobalUnlock	77e52111
+	5ff2	  519  GlobalSize	77e5278c
+	6000	  504  GlobalAlloc	77e5ba9b
+	600e	  556  InterlockedIncrement	77e6166c
+	6026	  552  InterlockedDecrement	77e61680
+	603e	  974  lstrlenW	77e622c9
+	604a	  971  lstrcpynW	77e5bda9
+	6056	  968  lstrcpyW	77e63f02
+	64b8	  840  SetThreadUILanguage	77e669e7
+	606e	  917  WideCharToMultiByte	77e63143
+	6084	  309  GetConsoleOutputCP	77e66aec
+	609a	  932  WriteConsoleW	77e4e594
+	60aa	  307  GetConsoleMode	77e66b88
+	60bc	  358  GetFileType	77e6b397
+	60ca	  441  GetStdHandle	77e6b437
+	60da	  244  FormatMessageW	77e4f821
+	60ec	  790  SetEvent	77e62311
+	60f8	  913  WaitForSingleObject	77e61c7b
+	610e	  108  CreateSemaphoreW	77e657ae
+	6122	   52  CloseHandle	77e63e6f
+	6130	  707  ReleaseSemaphore	77e5bf51
+	6144	  911  WaitForMultipleObjects	77e62fa6
+	615e	  750  SetConsoleCtrlHandler	77e6f259
+	6176	  719  ResetEvent	77e5b0a0
+
+ 00005b0c	00005d00 ffffffff ffffffff 000063e6 000011a4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	63c6	  310  NtQueryVolumeInformationFile	7c82771f
+
+ 00005b20	00005c74 ffffffff ffffffff 0000640a 00001118
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	63f0	  728  wsprintfW	7738b1f6
+	63fc	  460  LoadStringW	773947a5
+
+ 00005b34	00005d08 ffffffff ffffffff 000064ae 000011ac
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	642a	   80  CoRegisterClassObject	776a1116
+	6442	   60  CoInitializeEx	776bc826
+	6454	  105  CoUninitialize	776bcc89
+	6416	  276  ReleaseStgMedium	776a0db3
+	647c	  101  CoTaskMemFree	776bcf69
+	648c	  308  StringFromCLSID	776bb64f
+	649e	   15  CoCreateGuid	776a5616
+	6466	   17  CoCreateInstanceEx	776a673f
+
+ 00005b48	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10011f0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 00001b78 00000f78
+(format RSDS signature 339db112da5341d5aadd45179d22a947 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x009060, Size: 0x0003e8, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000054ce  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01007000  01007000  00005a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000448  01009000  01009000  00005c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

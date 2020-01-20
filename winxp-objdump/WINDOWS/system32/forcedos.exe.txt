@@ -1,0 +1,172 @@
+
+forcedos.exe:     file format pei-i386
+forcedos.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010016d3
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:37:12 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000e00
+SizeOfInitializedData	00001400
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000016d3
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		0001109a
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000018ec 00000064 Import Directory [parts of .idata]
+Entry 2 00003000 00001044 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010c0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001100 00000040 Load Configuration Directory
+Entry b 00000240 00000058 Bound Import Directory
+Entry c 00001000 000000a4 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10018ec
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000018ec	00001994 ffffffff ffffffff 00001a02 00001044
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	19f4	  457  LoadStringW	77cf9e36
+
+ 00001900	000019dc ffffffff ffffffff 00001a7c 0000108c
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1a4e	  724  RtlOemStringToUnicodeString	7c967465
+	1a44	 1300  wcschr	7c954962
+	1a2c	  630  RtlInitUnicodeString	7c941295
+	1a0e	  841  RtlUnicodeStringToOemString	7c9671ea
+	1a6c	  629  RtlInitString	7c941225
+
+ 00001914	0000199c ffffffff ffffffff 00001b48 0000104c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1b14	  133  __p__fmode	4cedf1db
+	1b22	  152  __set_app_type	4cef537c
+	1b04	  128  __p__commode	4cedf1a4
+	1b54	  214  _controlfp	4cf0ee4f
+	1af4	  182  _adjust_fdiv	4cf223d8
+	1ae0	  154  __setusermatherr	4cf0d695
+	1ad4	  315  _initterm	4cef9d67
+	1ac4	  109  __getmainargs	4cedeeeb
+	1ab8	  110  __initenv	4cf21a38
+	1ab0	  656  exit	4cef9e7e
+	1aa6	  200  _cexit	4cef9eb6
+	1a98	   78  _XcptFilter	4cef2dae
+	1a90	  246  _exit	4cef9e9a
+	1a86	  197  _c_exit	4cef9ece
+	1b34	  237  _except_handler3	4cef5c94
+
+ 00001928	00001950 ffffffff ffffffff 00001c9c 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1b70	  911  WriteFile	7c810e17
+	1c88	  374  GetModuleHandleA	7c80b731
+	1c72	  302  GetConsoleOutputCP	7c81aeaf
+	1c58	  439  GetSystemDefaultLangID	7c812842
+	1c46	  816  SetThreadLocale	7c81b8da
+	1c30	  345  GetFileAttributesW	7c80b7dc
+	1c18	  763  SetCurrentDirectoryW	7c80f37e
+	1c00	  314  GetCurrentDirectoryW	7c80b907
+	1be6	  337  GetEnvironmentVariableW	7c80f184
+	1bd8	  716  SearchPathW	7c80e76c
+	1bc6	  102  CreateProcessW	7c802336
+	1bb0	  894  WaitForSingleObject	7c802530
+	1b9a	  338  GetExitCodeProcess	7c81ab3b
+	1b8c	   49  CloseHandle	7c809bd7
+	1b7c	  432  GetStdHandle	7c812fc9
+	1b62	  182  ExitProcess	7c81cafa
+
+ 0000193c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010c0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000028 00001148 00000548
+(format RSDS signature 27eb25d8ef1c4c9196a6707caca12002 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000006, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+030     Entry: ID: 0x000001, Value: 0x80000058
+058      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+068       Entry: ID: 0x000409, Value: 0x0000b8
+0b8        Leaf: Addr: 0x003118, Size: 0x000274, Codepage: 1252
+070       Entry: ID: 0x000411, Value: 0x0000c8
+0c8        Leaf: Addr: 0x00338c, Size: 0x000204, Codepage: 1252
+038     Entry: ID: 0x000002, Value: 0x80000078
+078      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+088       Entry: ID: 0x000409, Value: 0x0000d8
+0d8        Leaf: Addr: 0x003590, Size: 0x00021c, Codepage: 1252
+090       Entry: ID: 0x000411, Value: 0x0000e8
+0e8        Leaf: Addr: 0x0037ac, Size: 0x00016c, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000040
+040    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+050     Entry: ID: 0x000001, Value: 0x80000098
+098      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0a8       Entry: ID: 0x000409, Value: 0x0000f8
+0f8        Leaf: Addr: 0x003918, Size: 0x00038c, Codepage: 1252
+0b0       Entry: ID: 0x000411, Value: 0x000108
+108        Leaf: Addr: 0x003ca4, Size: 0x0003a0, Codepage: 1252
+ Resources start at offset: 0x118
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000caa  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01002000  01002000  00001200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001044  01003000  01003000  00001400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

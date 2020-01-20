@@ -1,0 +1,399 @@
+
+netdde.exe:     file format pei-i386
+netdde.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100acea
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:38:38 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00016800
+SizeOfInitializedData	00003a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000acea
+BaseOfCode		00001000
+BaseOfData		00018000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0001f000
+SizeOfHeaders		00000400
+CheckSum		0001a869
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000161c8 000000c8 Import Directory [parts of .idata]
+Entry 2 0001b000 00003484 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000013d0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00003770 00000040 Load Configuration Directory
+Entry b 00000248 000000c0 Bound Import Directory
+Entry c 00001000 000003c8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10161c8
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000161c8	0001659c ffffffff ffffffff 0001675c 0000130c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	16658	  543  _vsnprintf	4cefff8a
+	16672	  508  _strnicmp	4cf064bf
+	1667e	  776  strncpy	4cf07a90
+	16688	  237  _except_handler3	4cef5c94
+	174aa	  659  fclose	4cf00ab1
+	174b4	  673  fputs	4cf00ed3
+	174bc	  670  fopen	4ceff010
+	174c4	  653  ctime	4cf0aa1d
+	174cc	  791  time	4cf0aecf
+	1669c	  794  tolower	4cedc9c9
+	166a6	  766  strchr	4cf07660
+	166b0	  197  _c_exit	4cef9ece
+	166ba	  246  _exit	4cef9e9a
+	166c2	   78  _XcptFilter	4cef2dae
+	166d0	  200  _cexit	4cef9eb6
+	166da	  656  exit	4cef9e7e
+	166e2	  168  _acmdln	4cf217ac
+	166ec	  109  __getmainargs	4cedeeeb
+	166fc	  315  _initterm	4cef9d67
+	16708	  154  __setusermatherr	4cf0d695
+	1671c	  182  _adjust_fdiv	4cf223d8
+	1672c	  128  __p__commode	4cedf1a4
+	1673c	  133  __p__fmode	4cedf1db
+	1674a	  152  __set_app_type	4cef537c
+	16768	  214  _controlfp	4cf0ee4f
+	16666	  504  _stricmp	4cf0624e
+
+ 000161dc	00016290 ffffffff ffffffff 0001696c 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	17638	  262  GetPrivateObjectSecurity	77dbd659
+	17616	  463  RegCreateKeyExW	77d8775c
+	17606	  466  RegDeleteKeyW	77d9557b
+	175e8	   92  CreatePrivateObjectSecurity	77dbd541
+	175ca	  266  GetSecurityDescriptorLength	77d874ab
+	175aa	  177  DestroyPrivateObjectSecurity	77d94eec
+	17596	  495  RegQueryValueExW	77d86fef
+	17748	    7  AccessCheckAndAuditAlarmW	77dabc3c
+	1772e	  415  ObjectDeleteAuditAlarmW	77dbd228
+	17714	  413  ObjectCloseAuditAlarmW	77d947f3
+	176f8	   29  AllocateAndInitializeSid	77d87cb9
+	176ee	  225  FreeSid	77d87ca8
+	176d0	  563  SetSecurityDescriptorOwner	77d94ae5
+	176b2	  562  SetSecurityDescriptorGroup	77d94b0d
+	176a8	  228  GetAce	77d94c13
+	17692	  408  MakeSelfRelativeSD	77d8744e
+	17680	  467  RegDeleteValueA	77d8ecd5
+	17670	  473  RegEnumKeyExW	77d87bc9
+	17654	  558  SetPrivateObjectSecurity	77dbd5ee
+	16776	  458  RegCloseKey	77d86c17
+	16784	  493  RegQueryValueA	77dabb5d
+	16796	  483  RegOpenKeyA	77d8efb8
+	167a4	  412  ObjectCloseAuditAlarmA	77dbe1ec
+	167be	  571  SetServiceStatus	77da3231
+	167d2	  515  RegisterServiceCtrlHandlerA	77da4e96
+	167f0	  577  StartServiceCtrlDispatcherA	77de7eb1
+	1680e	  561  SetSecurityDescriptorDacl	77d879db
+	1682a	   16  AddAccessAllowedAce	77d87d21
+	16840	   19  AddAccessDeniedAce	77da811f
+	16856	  305  InitializeAcl	77d87cf9
+	16866	  306  InitializeSecurityDescriptor	77d879b6
+	16886	  246  GetLengthSid	77d87d4c
+	16896	  279  GetSidSubAuthority	77d95530
+	168ac	  307  InitializeSid	77d9566b
+	168bc	  278  GetSidLengthRequired	77d95549
+	168d4	  426  OpenProcessToken	77d8797b
+	168e8	  431  OpenThreadToken	77d872bc
+	168fa	  327  LookupAccountSidA	77dbd8bc
+	1690e	  281  GetTokenInformation	77d872f5
+	16924	    6  AccessCheckAndAuditAlarmA	77dbce19
+	16940	  317  IsValidSecurityDescriptor	77d94bf1
+	1695c	  525  RevertToSelf	77d87328
+	17584	  507  RegSetValueExA	77d8ead7
+	17572	  462  RegCreateKeyExA	77d8e9e4
+	17560	  508  RegSetValueExW	77d8d757
+	17550	  484  RegOpenKeyExA	77d87842
+	1753c	  494  RegQueryValueExA	77d87aab
+	17524	  513  RegisterEventSourceW	77da800c
+	17514	  524  ReportEventW	77da3661
+	174fc	  512  RegisterEventSourceA	77da7b30
+	174ec	  523  ReportEventA	77da7c82
+	174d4	  176  DeregisterEventSource	77da79a3
+	17628	  485  RegOpenKeyExW	77d86a9f
+
+ 000161f0	000163a0 ffffffff ffffffff 00016dd0 00001110
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	16b08	  318  GetCurrentThreadId	7c8097b8
+	16b1e	  544  InterlockedIncrement	7c8097f6
+	16b36	  372  GetModuleFileNameA	7c80b55f
+	16b4c	  772  SetEvent	7c80a0a7
+	16b58	  108  CreateThread	7c8106c7
+	16b68	  894  WaitForSingleObject	7c802530
+	16b7e	   75  CreateEventA	7c83089d
+	16b8e	  468  GetTickCount	7c80932e
+	16b9e	  408  GetProcAddress	7c80ae30
+	16bb0	  240  FreeLibrary	7c80ac6e
+	16bbe	  580  LoadLibraryA	7c801d7b
+	16bce	  706  ResumeThread	7c83290f
+	16bde	  269  GetComputerNameA	7c82168c
+	16bf2	  850  TlsSetValue	7c809c55
+	16c00	  138  DisconnectNamedPipe	7c81272f
+	16c16	  911  WriteFile	7c810e17
+	16c22	  892  WaitForMultipleObjects	7c80a0ed
+	16c3c	   57  ConnectNamedPipe	7c83144b
+	16afa	   49  CloseHandle	7c809bd7
+	16c5c	   95  CreateNamedPipeW	7c82f0c5
+	16c70	  847  TlsAlloc	7c812e2f
+	16c7c	  536  InitializeCriticalSection	7c809f81
+	16c98	  734  SetConsoleCtrlHandler	7c81b2ab
+	16cb0	  803  SetProcessShutdownParameters	7c82c8e5
+	16cd0	  315  GetCurrentProcess	7c80de85
+	16ce4	  317  GetCurrentThread	7c80997b
+	16cf8	  596  LocalUnlock	7c832ec9
+	16d06	  592  LocalLock	7c832e35
+	16d12	  660  QueryPerformanceCounter	7c80a4b7
+	16d2c	  316  GetCurrentProcessId	7c8099b0
+	16d42	  448  GetSystemTimeAsFileTime	7c8017e9
+	16d5c	  842  TerminateProcess	7c801e1a
+	16d70	  859  UnhandledExceptionFilter	7c863e6a
+	16d8c	  822  SetUnhandledExceptionFilter	7c8449fd
+	16daa	  374  GetModuleHandleA	7c80b731
+	16dbe	  430  GetStartupInfoA	7c801ef2
+	16ae4	  638  OutputDebugStringA	7c85ac7c
+	16a28	  942  lstrcmpiA	7c80bb31
+	16ab6	  541  InterlockedExchange	7c80981e
+	16aa2	  495  GlobalDeleteAtom	7c830bab
+	16a96	  948  lstrcpynA	7c8101a1
+	16a86	  503  GlobalHandle	7c834cd1
+	16a7a	  951  lstrlenA	7c80be46
+	16a6c	  586  LocalAlloc	7c809a1d
+	16a60	  945  lstrcpyA	7c80be91
+	16a52	  849  TlsGetValue	7c8097d0
+	16a46	  590  LocalFree	7c8099bf
+	16c50	  678  ReadFile	7c801812
+	16a34	  491  GlobalAddAtomA	7c8360c1
+	16a18	  507  GlobalReAlloc	7c812449
+	16a00	  150  EnterCriticalSection	7c941000
+	169e8	  579  LeaveCriticalSection	7c9410e0
+	169d2	  501  GlobalGetAtomNameA	7c85c193
+	169c4	  508  GlobalSize	7c834db9
+	169b6	  504  GlobalLock	7c80ffa9
+	169a6	  360  GetLastError	7c94fe01
+	16996	  511  GlobalUnlock	7c80ff12
+	16988	  493  GlobalAlloc	7c80fdbd
+	1697a	  500  GlobalFree	7c80fcbf
+	17764	  494  GlobalCompact	7c85f578
+	17774	  615  MultiByteToWideChar	7c809c88
+	1778a	  898  WideCharToMultiByte	7c80a164
+	177a0	  551  IsBadReadPtr	7c809e91
+	177b0	  554  IsBadWritePtr	7c809f09
+	16acc	  540  InterlockedDecrement	7c80980a
+	177c0	  943  lstrcmpiW	7c80aa26
+
+ 00016204	00016368 ffffffff ffffffff 00016ed4 000010d8
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	16eae	  141  DeleteEnhMetaFile	77edfdf4
+	16e9c	  142  DeleteMetaFile	77ee3dac
+	16e8c	  143  DeleteObject	77ed6bfa
+	16e7c	   69  CreatePalette	77edb5da
+	16e68	  411  GetPaletteEntries	77edb60a
+	16e52	  547  SetEnhMetaFileBits	77ee755a
+	16e3c	  370  GetEnhMetaFileBits	77ef9829
+	16e24	   40  CreateBitmapIndirect	77efd19c
+	16e16	  406  GetObjectA	77ed8d16
+	16e06	  331  GetBitmapBits	77edaae4
+	16df2	  558  SetMetaFileBitsEx	77ee4044
+	16dde	  400  GetMetaFileBitsEx	77ee3f11
+	16ec2	  422  GetStockObject	77ed61c1
+
+ 00016218	000164e8 ffffffff ffffffff 000171e0 00001258
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	17132	  633  SetThreadDesktop	77d07d2c
+	17146	  227  FindWindowA	77d082e1
+	17154	  353  GetThreadDesktop	77cf9a51
+	17168	  501  OpenDesktopW	77d08559
+	17178	  616  SetProcessWindowStation	77d07d40
+	17192	  328  GetProcessWindowStation	77cf9195
+	171ac	  505  OpenWindowStationW	77d35e0b
+	171c2	  391  ImpersonateDdeClientWindow	77d4cd36
+	17120	  495  OemToCharBuffA	77d10116
+	17112	  314  GetMessageA	77d0772b
+	1700c	  250  GetClassLongA	77d0f4f1
+	16ffa	  142  DefWindowProcA	77d0c17e
+	16fde	  379  GetWindowThreadProcessId	77cf8a80
+	170fe	  682  TranslateMessage	77cf8bf6
+	16fc0	   96  CreateWindowExA	77d0e4a9
+	16fa6	  131  DdeSetQualityOfService	77d4caba
+	16f90	  574  SendMessageTimeoutA	77d0fb6b
+	16f80	  153  DestroyWindow	77d0b19c
+	16f70	  506  PackDDElParam	77d3b961
+	16f5e	  560  ReuseDDElParam	77d3badb
+	16f4e	  511  PostMessageA	77d0aafd
+	16f40	   52  CharUpperA	77cf8d2b
+	16f2e	  640  SetWindowLongA	77d0c29d
+	16f1e	  571  SendMessageA	77d0f3c2
+	16f12	  427  IsWindow	77d09313
+	16f00	  366  GetWindowLongA	77cf945d
+	16eee	  690  UnpackDDElParam	77d3b9c5
+	16ede	  234  FreeDDElParam	77d3ba77
+	170ea	  161  DispatchMessageA	77cf96b8
+	170da	  509  PeekMessageA	77d0a340
+	170ca	   67  CloseDesktop	77d0812f
+	170b4	   69  CloseWindowStation	77d07d18
+	170a8	  362  GetWindow	77d09655
+	17096	  513  PostQuitMessage	77d0ca5a
+	17082	  270  GetDesktopWindow	77d0d1d2
+	17072	  699  UpdateWindow	77d0aeab
+	17058	  551  RegisterWindowMessageA	77cf8e28
+	1703c	  538  RegisterClipboardFormatA	77cf8e28
+	1702e	  439  LoadCursorA	77d0d33e
+	173da	  119  DdeGetQualityOfService	77d4caa6
+	173f4	  258  GetClipboardFormatNameA	77d11290
+	1740e	  476  MessageBoxA	77d307ea
+	16fd2	  325  GetParent	77d0910f
+	1701c	  534  RegisterClassA	77d0ea5e
+
+ 0001622c	000164ac ffffffff ffffffff 000171ec 0000121c
+
+	DLL Name: NDdeApi.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	800001f9	  505  <none>	758821ae
+
+ 00016240	00016608 ffffffff ffffffff 0001733a 00001378
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	171f8	  312  NtSetInformationThread	7c94dc90
+	17220	 1212  _snprintf	7c9af9d2
+	1722c	 1267  memmove	7c9420f5
+	17236	  401  RtlAnsiStringToUnicodeString	7c94eb1b
+	17256	  630  RtlInitUnicodeString	7c941295
+	1726e	  455  RtlCopyString	7c96d1ae
+	1727e	   92  NtAllocateLocallyUniqueId	7c94cf20
+	1729a	 1200  _chkstk	7c9415f8
+	172a4	  624  RtlInitAnsiString	7c94125d
+	172b8	  726  RtlOpenCurrentUser	7c958ab9
+	172ce	 1237  atoi	7c964889
+	172d6	 1300  wcschr	7c954962
+	172e0	 1304  wcslen	7c94fe2a
+	172ea	  865  RtlValidRelativeSecurityDescriptor	7c96d1f9
+	17310	 1302  wcscpy	7c952f40
+	1731a	 1299  wcscat	7c958112
+	17324	 1290  swprintf	7c9584bb
+	17330	 1303  wcscspn	7c9756ee
+	17212	 1227  _vsnwprintf	7c9afc31
+
+ 00016254	000164b4 ffffffff ffffffff 000173ce 00001224
+
+	DLL Name: RPCRT4.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	173a2	  432  RpcServerUseProtseqEpA	77e57a43
+	1736e	  419  RpcServerRegisterAuthInfoA	77e55f12
+	1735c	  418  RpcServerListen	77e5f7bd
+	17344	  375  RpcImpersonateClient	77e3a436
+	1738c	  421  RpcServerRegisterIf	77e5f8ae
+	173bc	  260  NdrServerCall2	77eb46d5
+
+ 00016268	000164d0 ffffffff ffffffff 0001749e 00001240
+
+	DLL Name: Secur32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	17484	   41  LsaRegisterLogonProcess	77fa4d0f
+	1741c	   37  LsaFreeReturnBuffer	77fa2160
+	17442	   33  LsaCallAuthenticationPackage	77fa2188
+	17432	   39  LsaLogonUser	77fa33d8
+	17462	   40  LsaLookupAuthenticationPackage	77fa4b9a
+
+ 0001627c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10013d0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 000037b8 00002bb8
+(format RSDS signature 991bce1812ef430d9496fbed23b45a1c age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 4
+010   Entry: ID: 0x000005, Value: 0x80000030
+030    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+040     Entry: ID: 0x0000c8, Value: 0x80000098
+098      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0a8       Entry: ID: 0x000411, Value: 0x000110
+110        Leaf: Addr: 0x01b160, Size: 0x000228, Codepage: 1252
+048     Entry: ID: 0x00012c, Value: 0x800000b0
+0b0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0c0       Entry: ID: 0x000411, Value: 0x000120
+120        Leaf: Addr: 0x01b388, Size: 0x000280, Codepage: 1252
+018   Entry: ID: 0x000006, Value: 0x80000050
+050    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+060     Entry: ID: 0x000001, Value: 0x800000c8
+0c8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0d8       Entry: ID: 0x000411, Value: 0x000130
+130        Leaf: Addr: 0x01b608, Size: 0x000034, Codepage: 1252
+020   Entry: ID: 0x00000b, Value: 0x80000068
+068    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+078     Entry: ID: 0x000001, Value: 0x800000e0
+0e0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0f0       Entry: ID: 0x000411, Value: 0x000140
+140        Leaf: Addr: 0x01b63c, Size: 0x002a98, Codepage: 1252
+028   Entry: ID: 0x000010, Value: 0x80000080
+080    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+090     Entry: ID: 0x000001, Value: 0x800000f8
+0f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+108       Entry: ID: 0x000411, Value: 0x000150
+150        Leaf: Addr: 0x01e0d4, Size: 0x0003b0, Codepage: 1252
+ Resources start at offset: 0x160
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000167cc  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000400  01018000  01018000  00016c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00003484  0101b000  0101b000  00017000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

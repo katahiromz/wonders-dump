@@ -1,0 +1,161 @@
+
+pax.exe:     file format pei-i386
+pax.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x00a0a456
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Fri Oct 08 08:26:33 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00009600
+SizeOfInitializedData	00001200
+SizeOfUninitializedData	00001a00
+AddressOfEntryPoint	0000a456
+BaseOfCode		00001000
+BaseOfData		0000b000
+ImageBase		00a00000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	19
+MinorSubsystemVersion	90
+Win32Version		00000000
+SizeOfImage		00010000
+SizeOfHeaders		00000600
+CheckSum		0001aa4b
+Subsystem		00000007	(POSIX CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000e000 0000003c Import Directory [parts of .idata]
+Entry 2 0000f000 000003b8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001030 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000298 00000038 Bound Import Directory
+Entry c 0000e104 000000c8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .idata at 0xa0e000
+
+The Import Tables (interpreted .idata section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000e000	0000e0e0 ffffffff ffffffff 0000e21a 0000e1a8
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	e212	 1104  atoi	77f9431d
+	e208	 1145  strcspn	77f8d1a5
+	e1fe	 1151  strrchr	77f825a5
+	e1f4	 1148  strncmp	77f95c46
+	e1ea	 1140  sscanf	77fb78d1
+	e1e0	 1142  strchr	77f82eef
+	e1d6	 1149  strncpy	77f8a557
+	e1cc	 1138  sprintf	77f874bb
+
+ 0000e014	0000e03c ffffffff ffffffff 0000e3b6 0000e104
+
+	DLL Name: PSXDLL.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	e2ac	   52  getgrgid	673f60ba
+	e2a0	   60  getpwuid	673f5efb
+	e3c2	   16  __PdxInitializeData	673f2c61
+	e3aa	   11  RtlUnwind	77f86118
+	e390	    9  RtlUnicodeToMultiByteN	77f8ba17
+	e37e	   15  __PdxGetCmdLine	673f16fa
+	e374	   57  getpid	673f3a32
+	e36c	   65  kill	673f5435
+	e224	  115  utime	673f22fd
+	e22c	  109  time	673f4caf
+	e234	   28  close	673f2c76
+	e23c	   70  open	673f2d2e
+	e244	   76  read	673f2e9c
+	e24c	  118  write	673f2fe2
+	e254	   67  lseek	673f2cd7
+	e25c	   98  stat	673f1f56
+	e264	   69  mkfifo	673f1e5c
+	e26e	   26  chmod	673f21f5
+	e276	   27  chown	673f2276
+	e27e	   30  creat	673f2cc1
+	e286	   66  link	673f284e
+	e28e	  114  unlink	673f27d4
+	e298	   81  rmdir	673f1edc
+	e35a	    0  GetProcessHeap	673f18f4
+	e300	  112  umask	673f1d88
+	e2b8	   71  opendir	673f1979
+	e2c2	   29  closedir	673f1901
+	e2ce	   77  readdir	673f19f1
+	e2d8	   62  getuid	673f39d0
+	e2e2	   51  getgid	673f396e
+	e2ec	   53  getgrnam	673f6199
+	e2f8	   68  mkdir	673f1dd3
+	e328	   17  _exit	673f38ff
+	e308	   63  isatty	673f332e
+	e312	   93  signal	673f5492
+	e31c	   80  rewinddir	673f1ad7
+	e330	    1  HeapAlloc	77fc976b
+	e33c	    2  HeapFree	77fc9c41
+	e348	   42  fileno	673f5d83
+	e352	   41  fcntl	673f3166
+
+ 0000e028	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0xa01030
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 0000ae00
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x00f060, Size: 0x000354, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00009470  00a01000  00a01000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00001830  00a0b000  00a0b000  00000000  2**2
+                  ALLOC
+  2 .data         00000810  00a0d000  00a0d000  00009c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .idata        000003d8  00a0e000  00a0e000  0000a600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rsrc         000003b8  00a0f000  00a0f000  0000aa00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

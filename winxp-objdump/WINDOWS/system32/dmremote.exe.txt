@@ -1,0 +1,153 @@
+
+dmremote.exe:     file format pei-i386
+dmremote.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01003dfc
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:44:53 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00003400
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00003dfc
+BaseOfCode		00001000
+BaseOfData		00005000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00007000
+SizeOfHeaders		00000400
+CheckSum		00008138
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00004030 00000064 Import Directory [parts of .idata]
+Entry 2 00006000 000003a0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010b0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001430 00000040 Load Configuration Directory
+Entry b 00000248 00000058 Bound Import Directory
+Entry c 00001000 00000098 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1004030
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00004030	000040b8 ffffffff ffffffff 0000420e 00001024
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	419a	  315  _initterm	4cef9d67
+	41a6	  154  __setusermatherr	4cf0d695
+	41ba	  182  _adjust_fdiv	4cf223d8
+	41ca	  128  __p__commode	4cedf1a4
+	41da	  133  __p__fmode	4cedf1db
+	418a	  109  __getmainargs	4cedeeeb
+	41fa	  237  _except_handler3	4cef5c94
+	421a	  214  _controlfp	4cf0ee4f
+	412c	   17  ??2@YAPAXI@Z	4cee9cc5
+	417e	  110  __initenv	4cf21a38
+	4176	  656  exit	4cef9e7e
+	416c	  200  _cexit	4cef9eb6
+	415e	   78  _XcptFilter	4cef2dae
+	4156	  246  _exit	4cef9e9a
+	414c	  197  _c_exit	4cef9ece
+	413c	   18  ??3@YAXPAX@Z	4cee9cdd
+	41e8	  152  __set_app_type	4cef537c
+
+ 00004044	00004094 ffffffff ffffffff 00004282 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	423e	  544  InterlockedIncrement	7c8097f6
+	4256	  540  InterlockedDecrement	7c80980a
+	426e	  374  GetModuleHandleA	7c80b731
+	4228	  318  GetCurrentThreadId	7c8097b8
+
+ 00004058	000040a8 ffffffff ffffffff 000042c8 00001014
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	4290	  162  DispatchMessageW	77cf8a01
+	42a4	  318  GetMessageW	77cf91c6
+	42b2	  515  PostThreadMessageW	77d077b8
+
+ 0000406c	00004100 ffffffff ffffffff 000043a8 0000106c
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	42d4	  104  CoUninitialize	7698ee46
+	42e6	   91  CoRevokeClassObject	769ba2f3
+	42fc	   79  CoRegisterClassObject	769a7e90
+	4314	   60  CoInitializeSecurity	769a6b9e
+	432c	   59  CoInitializeEx	7698ef7b
+	433e	   87  CoReleaseServerProcess	76a26839
+	4358	    9  CoAddRefServerProcess	76a2682f
+	4370	   17  CoCreateInstanceEx	76990526
+	4386	   99  CoTaskMemAlloc	7698d060
+	4398	  100  CoTaskMemFree	7698d044
+
+ 00004080	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010b0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 00001478 00000878
+(format RSDS signature f30c0f79970b413a8a6cac0059ff0851 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x006060, Size: 0x00033c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000033b2  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000034  01005000  01005000  00003800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003a0  01006000  01006000  00003a00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

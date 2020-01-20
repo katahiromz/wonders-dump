@@ -1,0 +1,232 @@
+
+esentutl.exe:     file format pei-i386
+esentutl.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01009f31
+
+Characteristics 0x12f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	large address aware
+	32 bit words
+
+Time/Date		Sat Feb 17 05:52:26 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		0000a800
+SizeOfInitializedData	00019000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00009f31
+BaseOfCode		00001000
+BaseOfData		0000c000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00026000
+SizeOfHeaders		00000400
+CheckSum		0000f7ca
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000ad0c 00000078 Import Directory [parts of .idata]
+Entry 2 00025000 00000770 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00005038 00000040 Load Configuration Directory
+Entry b 00000248 0000007c Bound Import Directory
+Entry c 00001000 000001c0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100ad0c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000ad0c	0000aeac ffffffff ffffffff 0000b0da 00001128
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b0e6	  221  _controlfp	77be0067
+	b0c6	  244  _except_handler3	77bc6c74
+	b0b4	  158  __set_app_type	77bc632c
+	b0a6	  138  __p__fmode	77baf6c5
+	b096	  133  __p__commode	77baf68e
+	b086	  189  _adjust_fdiv	77bf467c
+	b072	  160  __setusermatherr	77bde695
+	b066	  322  _initterm	77bcae06
+	b056	  114  __getmainargs	77baf398
+	b04a	  115  __initenv	77bf3a00
+	b040	  207  _cexit	77bcaf77
+	b032	   79  _XcptFilter	77bc3cfc
+	b02a	  253  _exit	77bcaf5c
+	b020	  204  _c_exit	77bcaf8b
+	b016	  527  _strupr	77bd74d6
+	b00e	  656  atoi	77bac352
+	b006	  657  atol	77bac2ae
+	b4ec	  696  fwprintf	77bd2508
+	b4f8	  326  _iob	77bf1ca8
+	b500	  720  iswascii	77bad640
+	aff6	   18  ??2@YAPAXI@Z	77bba971
+	afe6	   19  ??3@YAXPAX@Z	77bba9a7
+	afda	  798  swprintf	77bd091f
+	afd0	  576  _wctime	77bdb859
+	afc6	  840  wprintf	77bd31ca
+	afbc	  825  wcslen	77bd8ef2
+	afb2	  822  wcscpy	77bd8dba
+	afa8	  778  strchr	77bd8510
+	af9c	  288  _fullpath	77bafbaa
+	af90	  511  _strcmpi	77bd70c6
+	af82	  506  _splitpath	77bc7288
+	af76	  380  _makepath	77bc6ed4
+	af6c	  295  _getch	77bbf8db
+	af62	  773  sprintf	77bd0888
+	af5a	  668  exit	77bcaf41
+	af50	  753  printf	77bd27c2
+	af44	  412  _mbsnbcpy	77bc2efb
+
+ 0000ad20	0000ad84 ffffffff ffffffff 0000b138 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b10c	  335  LookupPrivilegeValueA	77f672ee
+	b124	  428  OpenProcessToken	77f6e19f
+	b0f4	   28  AdjustTokenPrivileges	77f6b069
+
+ 0000ad34	0000adf0 ffffffff ffffffff 0000b334 0000106c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b50c	  790  SetEvent	77e62311
+	b518	  693  ReadFile	77e4184b
+	b524	  556  InterlockedIncrement	77e6166c
+	b53c	  832  SetThreadAffinityMask	77e5fc20
+	b554	  325  GetCurrentThread	77e63868
+	b568	  453  GetSystemInfo	77e6952e
+	b578	  436  GetQueuedCompletionStatus	77e5be79
+	b594	  838  SetThreadPriorityBoost	77ea5a43
+	b5ae	  900  VirtualFree	77e63fbe
+	b5bc	  914  WaitForSingleObjectEx	77e61c96
+	b5d4	   80  CreateEventW	77e69b31
+	b5e4	  898  VirtualAlloc	77e645a9
+	b5f4	  355  GetFileSize	77e5e1a3
+	b602	  111  CreateThread	77e6510f
+	b146	  416  GetProcAddress	77e63d7a
+	b158	  595  LoadLibraryExA	77e41d9e
+	b16a	  369  GetLastError	7c829e08
+	b17a	  243  FormatMessageA	77e4bf02
+	b18c	  479  GetTickCount	77e619d1
+	b19c	  383  GetModuleHandleA	77e6474a
+	b1b0	   67  CopyFileA	77e76c9e
+	b1bc	  622  MoveFileA	77e9f365
+	b1c8	  131  DeleteFileA	77e4d2fb
+	b1d6	  623  MoveFileExA	77e4dcba
+	b1e4	  206  FindClose	77e6bfb3
+	b1f0	  210  FindFirstFileA	77e71fe1
+	b202	   52  CloseHandle	77e63e6f
+	b210	  322  GetCurrentProcess	77e62f9d
+	b224	  629  MultiByteToWideChar	77e62fd6
+	b23a	  604  LocalFree	77e62419
+	b63a	  244  FormatMessageW	77e4f821
+	b254	  594  LoadLibraryA	77e41dc6
+	b264	  248  FreeLibrary	77e6b1a1
+	b272	  276  GetComputerNameA	77e4cabf
+	b286	  323  GetCurrentProcessId	77e63c78
+	b29c	  675  QueryPerformanceCounter	77e69577
+	b2b6	  326  GetCurrentThreadId	77e62fc7
+	b2cc	  458  GetSystemTimeAsFileTime	77e41fba
+	b2e6	  863  TerminateProcess	77e42004
+	b2fa	  879  UnhandledExceptionFilter	77e7690d
+	b316	  843  SetUnhandledExceptionFilter	77e82060
+	b612	   89  CreateIoCompletionPort	77e5bedd
+	b62c	   86  CreateFileW	77e64841
+	b246	  600  LocalAlloc	77e6239c
+
+ 0000ad48	0000aea4 ffffffff ffffffff 0000b350 00001120
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b342	  479  MessageBoxA	773c425f
+
+ 0000ad5c	0000ad94 ffffffff ffffffff 0000b4e2 00001010
+
+	DLL Name: ESENT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b37a	  111  JetRestore2	4b2167b7
+	b36e	    4  JetBackup	4b215c6b
+	b388	   45  JetEndSession	4b186daf
+	b35c	   29  JetDBUtilities	4b216902
+	b398	   37  JetDetachDatabase	4b186547
+	b3ac	    8  JetBeginSession	4b1a3f17
+	b3be	   16  JetCompact	4b213c70
+	b3cc	   70  JetGetSystemParameter	4b214658
+	b3e4	  130  JetSetSystemParameter	4b191d95
+	b3fc	  139  JetTerm2	4b185aae
+	b408	   83  JetInit2	4b197ab0
+	b414	   82  JetInit	4b197a98
+	b41e	   58  JetGetDatabaseFileInfo	4b215901
+	b4c0	    3  JetAttachDatabaseWithStreaming	4b213601
+	b4ae	   92  JetOpenDatabase	4b1a44f0
+	b49a	   11  JetCloseDatabase	4b186ab6
+	b490	  138  JetTerm	4b2166c9
+	b480	   96  JetOpenTable	4b1b7956
+	b468	   71  JetGetTableColumnInfo	4b1c4d43
+	b458	   14  JetCloseTable	4b1b6898
+	b44e	   87  JetMove	4b1bb92a
+	b438	  114  JetRetrieveColumns	4b1b7f50
+
+ 0000ad70	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10011e0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 00005080 00004480
+(format RSDS signature 95a0ade7c37e45cd9eba04c4bced1dc6 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x025458, Size: 0x000318, Codepage: 0
+ Resources start at offset: 0x458
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000a64c  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  0100c000  0100c000  0000ac00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000770  01025000  01025000  0000ae00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

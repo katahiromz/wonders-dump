@@ -1,0 +1,261 @@
+
+spoolsv.exe:     file format pei-i386
+spoolsv.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100468c
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:28:08 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		0000ba00
+SizeOfInitializedData	00002800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000468c
+BaseOfCode		00001000
+BaseOfData		0000d000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00010000
+SizeOfHeaders		00000400
+CheckSum		0001c0d9
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00008000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00004d44 00000162 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000c124 0000008c Import Directory [parts of .idata]
+Entry 2 0000f000 00000e48 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 0000c970 00000038 Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000060d0 00000040 Load Configuration Directory
+Entry b 00000258 00000084 Bound Import Directory
+Entry c 00001000 00000158 Import Address Table Directory
+Entry d 0000b5e4 00000040 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100c124
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000c124	0000c1f8 ffffffff ffffffff 0000c1b0 00001000
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	c350	  668  exit	77bcaf41
+	c358	  115  __initenv	77bf3a00
+	c364	   79  _XcptFilter	77bc3cfc
+	c372	  114  __getmainargs	77baf398
+	c382	  322  _initterm	77bcae06
+	c38e	  160  __setusermatherr	77bde695
+	c3a2	  189  _adjust_fdiv	77bf467c
+	c3b2	  133  __p__commode	77baf68e
+	c3c2	  138  __p__fmode	77baf6c5
+	c3d0	  158  __set_app_type	77bc632c
+	c3e2	  221  _controlfp	77be0067
+	c3f0	  244  _except_handler3	77bc6c74
+	c404	  830  wcsrchr	77bd901f
+	c40e	  253  _exit	77bcaf5c
+	c416	  204  _c_exit	77bcaf8b
+	c420	  515  _stricmp	77bd70c6
+	c42c	  568  _wcsnicmp	77bd7929
+	c438	  825  wcslen	77bd8ef2
+	c442	  564  _wcsicmp	77bd762d
+
+ 0000c138	0000c248 ffffffff ffffffff 0000c1bc 00001050
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	c44e	  580  SetServiceStatus	77f66253
+	c462	  504  RegQueryValueExW	77f76a81
+	c476	   86  ConvertStringSecurityDescriptorToSecurityDescriptorW	77f5dd22
+	c4ae	  474  RegDisablePredefinedCache	77f58746
+	c4ca	  493  RegOpenKeyExW	77f77a9c
+	c4da	  459  RegCloseKey	77f76cce
+	c4e8	  526  RegisterServiceCtrlHandlerExW	77f66379
+	c508	  587  StartServiceCtrlDispatcherW	77f51e4e
+
+ 0000c14c	0000c26c ffffffff ffffffff 0000c1ca 00001074
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	c526	  879  UnhandledExceptionFilter	77e7690d
+	c542	  843  SetUnhandledExceptionFilter	77e82060
+	c560	  863  TerminateProcess	77e42004
+	c574	  458  GetSystemTimeAsFileTime	77e41fba
+	c58e	  323  GetCurrentProcessId	77e63c78
+	c5a4	  326  GetCurrentThreadId	77e62fc7
+	c5ba	  479  GetTickCount	77e619d1
+	c5ca	  675  QueryPerformanceCounter	77e69577
+	c5e4	  386  GetModuleHandleW	77e65136
+	c5f8	  248  FreeLibrary	77e6b1a1
+	c606	  553  InterlockedExchange	77e61694
+	c61c	  322  GetCurrentProcess	77e62f9d
+	c630	  646  OpenProcess	77e5fdd4
+	c63e	  186  ExitThread	77e4f8f1
+	c64c	   52  CloseHandle	77e63e6f
+	c65a	  913  WaitForSingleObject	77e61c7b
+	c670	   80  CreateEventW	77e69b31
+	c680	  111  CreateThread	77e6510f
+	c690	  185  ExitProcess	77e668f1
+	c69e	  855  Sleep	77e424de
+	c6a6	  638  OpenEventW	77e5da2a
+	c6b4	  539  HeapSetInformation	77e5f1b1
+	c6ca	  419  GetProcessHeap	77e63ec7
+	c6dc	  369  GetLastError	7c829e08
+	c6ec	  548  InitializeCriticalSectionAndSpinCount	77e63ed9
+	c714	  490  GetVersionExW	77e67880
+	c724	  593  LeaveCriticalSection	7c81a3ab
+	c73c	  152  EnterCriticalSection	7c81a360
+	c754	  790  SetEvent	77e62311
+	c760	  809  SetLastError	7c82a136
+	c770	  594  LoadLibraryA	77e41dc6
+	c780	  556  InterlockedIncrement	77e6166c
+	c798	  679  RaiseException	77e4beab
+	c7aa	  552  InterlockedDecrement	77e61680
+	c7c2	  416  GetProcAddress	77e63d7a
+	c7d4	  450  GetSystemDirectoryW	77e5c256
+	c7ea	  600  LocalAlloc	77e6239c
+	c7f8	  604  LocalFree	77e62419
+
+ 0000c160	0000c308 ffffffff ffffffff 0000c1d8 00001110
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	c804	  607  bMakePathNameW	77c0c358
+	c816	  299  GdiInitSpool	77c0c660
+	c826	  297  GdiGetSpoolMessage	77c0c64c
+
+ 0000c174	0000c318 ffffffff ffffffff 0000c1e2 00001120
+
+	DLL Name: RPCRT4.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	c83c	  268  NdrServerCall2	77ce35ab
+	c84e	  418  RpcRevertToSelf	77c76de3
+	c860	  383  RpcImpersonateClient	77c73b2c
+	c878	   38  I_RpcBindingIsClientLocal	77c63ecf
+	c894	   88  I_RpcSessionStrictContextHandle	77c9fcaa
+	c8b6	  416  RpcRaiseException	77c61e03
+	c8ca	  430  RpcServerRegisterIf2	77c5ec45
+	c8e2	  401  RpcMgmtSetServerStackSize	77c54c72
+	c8fe	  428  RpcServerRegisterAuthInfoW	77c70fe8
+	c91c	  426  RpcServerListen	77c6fb40
+	c92e	  440  RpcServerUseProtseqEpA	77c523d7
+
+ 0000c188	0000c348 ffffffff ffffffff 0000c1ee 00001150
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	c948	  933  RtlValidRelativeSecurityDescriptor	7c80d61b
+
+ 0000c19c	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x1004d44
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		45d6a078
+Major/Minor 			0/0
+Name 				00004de4 spoolsv.exe
+Ordinal Base 			1
+Number in:
+	Export Address Table 		0000000c
+	[Name Pointer/Ordinal] Table	0000000c
+Table Addresses
+	Export Address Table 		00004d6c
+	Name Pointer Table 		00004d9c
+	Ordinal Table 			00004dcc
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 71e2 Export RVA
+	[   1] +base[   2] 86f4 Export RVA
+	[   2] +base[   3] 85ad Export RVA
+	[   3] +base[   4] 542f Export RVA
+	[   4] +base[   5] 5050 Export RVA
+	[   5] +base[   6] 4faa Export RVA
+	[   6] +base[   7] 866d Export RVA
+	[   7] +base[   8] 8562 Export RVA
+	[   8] +base[   9] 7691 Export RVA
+	[   9] +base[  10] 726c Export RVA
+	[  10] +base[  11] 86b2 Export RVA
+	[  11] +base[  12] 851d Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] YDriverUnloadComplete
+	[   1] YEndDocPrinter
+	[   2] YFlushPrinter
+	[   3] YGetPrinter
+	[   4] YGetPrinterDriver2
+	[   5] YGetPrinterDriverDirectory
+	[   6] YReadPrinter
+	[   7] YSeekPrinter
+	[   8] YSetJob
+	[   9] YSetPort
+	[  10] YSplReadPrinter
+	[  11] YWritePrinter
+
+There is a debug directory in .text at 0x100c970
+
+Type                Size     Rva      Offset
+  2        CodeView 00000024 0000c9ac 0000bdac
+(format RSDS signature e4002d5a50e1496face1789a148dc91a age 2)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 1, IDs: 1
+010   Entry: name: [val: 800000a0 len 7]: MOFDATA, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 1, IDs: 0
+030     Entry: name: [val: 800000b0 len 7]: SPOOLER, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x00f458, Size: 0x0009ef, Codepage: 0
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000068
+068      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+078       Entry: ID: 0x000409, Value: 0x000090
+090        Leaf: Addr: 0x00f0c0, Size: 0x000394, Codepage: 0
+ String table starts at offset: 0xa0
+ Resources start at offset: 0x458
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000b9d0  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00001400  0100d000  0100d000  0000be00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000e48  0100f000  0100f000  0000d200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

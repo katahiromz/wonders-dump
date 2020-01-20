@@ -1,0 +1,167 @@
+
+rraswiz.exe:     file format pei-i386
+rraswiz.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001adf
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:01:11 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001600
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001adf
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		0000c020
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000020a0 00000078 Import Directory [parts of .idata]
+Entry 2 00004000 000003d8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000011e0 00000040 Load Configuration Directory
+Entry b 00000258 0000006c Bound Import Directory
+Entry c 00001000 000000c0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10020a0
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000020a0	0000216c ffffffff ffffffff 000022f2 00001054
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2316	  221  _controlfp	77be0067
+	22fe	   17  ??1type_info@@UAE@XZ	77bb2046
+	22de	  244  _except_handler3	77bc6c74
+	22cc	  158  __set_app_type	77bc632c
+	22ae	  133  __p__commode	77baf68e
+	229e	  189  _adjust_fdiv	77bf467c
+	228a	  160  __setusermatherr	77bde695
+	227e	  322  _initterm	77bcae06
+	226e	  114  __getmainargs	77baf398
+	2264	  175  _acmdln	77bf37ec
+	2324	   53  ?terminate@@YAXXZ	77bb319a
+	22be	  138  __p__fmode	77baf6c5
+	21e2	  825  wcslen	77bd8ef2
+	21ec	   85  __CxxFrameHandler	77bb3326
+	2200	  564  _wcsicmp	77bd762d
+	225c	  668  exit	77bcaf41
+	2252	  207  _cexit	77bcaf77
+	2244	   79  _XcptFilter	77bc3cfc
+	223c	  253  _exit	77bcaf5c
+	2232	  204  _c_exit	77bcaf8b
+	2222	   19  ??3@YAXPAX@Z	77bba9a7
+	220c	   72  _CxxThrowException	77bb3223
+	21d8	  826  wcsncat	77bd8f11
+
+ 000020b4	00002118 ffffffff ffffffff 0000245e 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	235c	  273  GetCommandLineW	77e6b756
+	234e	  511  GlobalFree	77e5cbda
+	236e	  675  QueryPerformanceCounter	77e69577
+	2388	  479  GetTickCount	77e619d1
+	2398	  326  GetCurrentThreadId	77e62fc7
+	23ae	  323  GetCurrentProcessId	77e63c78
+	23c4	  458  GetSystemTimeAsFileTime	77e41fba
+	23de	  863  TerminateProcess	77e42004
+	23f2	  322  GetCurrentProcess	77e62f9d
+	2406	  879  UnhandledExceptionFilter	77e7690d
+	244c	  439  GetStartupInfoA	77e420dc
+	2440	  604  LocalFree	77e62419
+	2422	  843  SetUnhandledExceptionFilter	77e82060
+	2338	  450  GetSystemDirectoryW	77e5c256
+
+ 000020c8	000021cc ffffffff ffffffff 0000249c 000010b4
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2478	   16  CoCreateInstance	776a692a
+	248c	   59  CoInitialize	776a0d10
+
+ 000020dc	00002154 ffffffff ffffffff 000024a6 0000103c
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000006	    6  <none>	77d03f50
+	80000009	    9  <none>	77d041d2
+	80000002	    2  <none>	77d040d9
+
+ 000020f0	00002164 ffffffff ffffffff 000024ca 0000104c
+
+	DLL Name: SHELL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	24b4	    7  CommandLineToArgvW	7c8ff170
+
+ 00002104	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010e0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000024 00001228 00000628
+(format RSDS signature 71d1e51e359740b6aa9ede84aeacd420 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x000378, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000014d6  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01003000  01003000  00001a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003d8  01004000  01004000  00001c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

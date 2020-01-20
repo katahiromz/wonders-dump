@@ -1,0 +1,557 @@
+
+nwc.cpl:     file format pei-i386
+nwc.cpl
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x57682206
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Tue Mar 25 09:46:15 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00003000
+SizeOfInitializedData	00002000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00002206
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		57680000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	10
+Win32Version		00000000
+SizeOfImage		00008000
+SizeOfHeaders		00000400
+CheckSum		0000e8f3
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00000400
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00003dc0 00000044 Export Directory [.edata (or where ever we found it)]
+Entry 1 000028fc 000000a0 Import Directory [parts of .idata]
+Entry 2 00005000 00001920 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00007000 000001e8 Base Relocation Directory [.reloc]
+Entry 6 00001220 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000270 000000a8 Bound Import Directory
+Entry c 00001000 00000220 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x576828fc
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000028fc	000029c0 ffffffff ffffffff 00002cc2 00001024
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2c62	  448  GetSystemTimeAsFileTime	77e41e46
+	2c7c	  849  TerminateProcess	77e6ccc7
+	2c4c	  315  GetCurrentProcessId	77e41d40
+	2ca4	  829  SetUnhandledExceptionFilter	77e42d45
+	2c36	  318  GetCurrentThreadId	77e419f7
+	2c26	  469  GetTickCount	77e4193e
+	3d7e	  584  LoadLibraryA	77e4850d
+	2c0c	  665  QueryPerformanceCounter	77e425d8
+	2bf8	  375  GetModuleHandleA	77e42cd1
+	2be6	  408  GetProcAddress	77e42dfb
+	2bd8	  590  LocalAlloc	77e42950
+	2bc8	  361  GetLastError	77f45ba5
+	2c90	  314  GetCurrentProcess	77e41d1a
+	2bbc	  594  LocalFree	77e4282c
+
+ 00002910	00002bb4 ffffffff ffffffff 00002cda 00001218
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2cd0	  817  wcschr	77bd4d44
+
+ 00002924	000029fc ffffffff ffffffff 00002e94 00001060
+
+	DLL Name: NETUI0.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2dd0	   44  ??0NLS_STR@@QAE@XZ	5f8a1460
+	2de6	   39  ??0NLS_STR@@IAE@PAGIH@Z	5f8a175c
+	2e00	  117  ??3ALLOC_BASE@@SGXPAX@Z	5f8a130a
+	2e1a	   98  ??1REG_KEY@@QAE@XZ	5f8a1902
+	2e30	   48  ??0REG_KEY@@QAE@AAV0@ABVNLS_STR@@K@Z	5f8a1862
+	2e58	   51  ??0REG_KEY@@QAE@PAUHKEY__@@K@Z	5f8a17e6
+	2e7a	  115  ??2ALLOC_BASE@@SGPAXI@Z	5f8a15d4
+	2cfc	  176  ?Append@NLS_STR@@QAEJABV1@@Z	5f8a1d32
+	2d1c	   42  ??0NLS_STR@@QAE@PBG@Z	5f8a19dc
+	2d34	  158  ??YNLS_STR@@QAEAAV0@ABV0@@Z	5f8aa59d
+	2d52	  126  ??4NLS_STR@@QAEAAV0@PBG@Z	5f8a1960
+	2d6e	  264  ?LoadSystem@NLS_STR@@QAEJJ@Z	5f8aa255
+	2d8e	  199  ?CopyFrom@NLS_STR@@QAEJPBGI@Z	5f8a1340
+	2ce6	   97  ??1NLS_STR@@QAE@XZ	5f8a17b0
+	2dae	  490  ?_stricmp@NLS_STR@@QBEHABV1@@Z	5f8aaba4
+
+ 00002938	00002a3c ffffffff ffffffff 00003c26 000010a0
+
+	DLL Name: NETUI2.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2fc2	  325  ??1AUTO_CURSOR@@QAE@XZ	5f81d242
+	2fdc	  742  ?Dismiss@DIALOG_WINDOW@@IAEXI@Z	5f81d46c
+	2ffe	 1027  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@IPBG2I@Z	5f81eb82
+	3036	 1028  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@IPBGI@Z	5f81eb02
+	306e	  680  ?ClaimFocus@CONTROL_WINDOW@@QAEXXZ	5f824075
+	3094	 1784  ?SelectString@EDIT_CONTROL@@QAEXXZ	5f824cff
+	30ba	 1783  ?SelectString@COMBOBOX@@QAEXXZ	5f8232dd
+	30dc	 1638  ?QueryTextLength@WINDOW@@QBEHXZ	5f820a31
+	30fe	 1025  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@@Z	5f81ea80
+	3130	 1633  ?QueryText@WINDOW@@QBEJPAVNLS_STR@@@Z	5f820f44
+	3158	   21  ??0AUTO_CURSOR@@QAE@PBG@Z	5f81d0b6
+	3174	  203  ??0RESOURCE_STR@@QAE@J@Z	5f801fac
+	3190	 1026  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@II@Z	5f81eac0
+	31c4	 1438  ?QueryHwnd@WINDOW@@QBEPAUHWND__@@XZ	5f83574c
+	31ea	  437  ??1RADIO_GROUP@@QAE@XZ	5f81fdd7
+	3204	 1067  ?OnCommand@DIALOG_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	5f81f11e
+	323a	 1079  ?OnCtlColor@CONTROL_WINDOW@@UAEPAUHBRUSH__@@PAUHDC__@@PAUHWND__@@PAI@Z	5f831273
+	3284	  875  ?IndicateError@CONTROL_WINDOW@@UAEXJ@Z	5f824119
+	32ae	 2007  ?Validate@CONTROL_WINDOW@@UAEJXZ	5f827d99
+	32d2	 1200  ?OnUserAction@CONTROL_WINDOW@@MAEJABVCONTROL_EVENT@@@Z	5f81f11e
+	330c	  630  ?CD_Guiltt@CONTROL_WINDOW@@MAEJHPAVNLS_STR@@@Z	5f82406a
+	333e	  634  ?CD_VKey@CONTROL_WINDOW@@MAEHGG@Z	5f82405f
+	3362	  618  ?CD_Char@CONTROL_WINDOW@@MAEHGG@Z	5f82405f
+	3386	  633  ?CD_Measure@CONTROL_WINDOW@@MAEHPAUtagMEASUREITEMSTRUCT@@@Z	5f81f11e
+	33c4	  625  ?CD_Draw@CONTROL_WINDOW@@MAEHPAUtagDRAWITEMSTRUCT@@@Z	5f81f11e
+	33fc	 1371  ?QueryEventEffects@BUTTON_CONTROL@@MAEIABVCONTROL_EVENT@@@Z	5f822a6f
+	343a	 1814  ?SetControlValueFocus@CONTROL_WINDOW@@UAEXXZ	5f8240b8
+	346a	 1937  ?SetTabStop@CONTROL_WINDOW@@MAEXH@Z	5f824030
+	2f98	  562  ?AddItem@STRING_LIST_CONTROL@@QAEHPBG@Z	5f823108
+	34be	 1772  ?SaveValue@STATE_BUTTON_CONTROL@@MAEXH@Z	5f822c63
+	34ea	  249  ??0STATE_BUTTON_CONTROL@@IAE@PAVOWNER_WINDOW@@I@Z	5f822ba5
+	351e	  953  ?IsPumpFinished@DIALOG_WINDOW@@MAEHXZ	5f81d57e
+	2f70	  315  ??1ARRAY_CONTROLVAL_CID_PAIR@@QAE@XZ	5f81f61d
+	3578	 1011  ?MayRun@DIALOG_WINDOW@@MAEHXZ	5f8249b7
+	3598	  976  ?IsValid@DIALOG_WINDOW@@MAEHXZ	5f81d6e6
+	35ba	 1422  ?QueryHelpFile@DIALOG_WINDOW@@MAEPBGK@Z	5f81d58c
+	35e4	 1213  ?OnValidationError@DIALOG_WINDOW@@MAEXIJ@Z	5f81d5d8
+	3612	 1077  ?OnControlError@DIALOG_WINDOW@@MAEXIJ@Z	5f81d5b5
+	363c	 1190  ?OnSysColorChange@DIALOG_WINDOW@@MAEXXZ	5f81f7b1
+	3666	 1080  ?OnCtlColor@DIALOG_WINDOW@@MAEPAUHBRUSH__@@PAUHDC__@@PAUHWND__@@PAI@Z	5f81d5e0
+	36ae	 1097  ?OnDlgDeactivation@DIALOG_WINDOW@@MAEHABVACTIVATION_EVENT@@@Z	5f81f11e
+	36ee	 1096  ?OnDlgActivation@DIALOG_WINDOW@@MAEHABVACTIVATION_EVENT@@@Z	5f81f11e
+	372c	 1185  ?OnScrollBarThumb@DIALOG_WINDOW@@MAEHABVSCROLL_THUMB_EVENT@@@Z	5f81f11e
+	376e	 1184  ?OnScrollBar@DIALOG_WINDOW@@MAEHABVSCROLL_EVENT@@@Z	5f81f11e
+	37a4	 1195  ?OnTimer@DIALOG_WINDOW@@MAEHABVTIMER_EVENT@@@Z	5f81f11e
+	37d6	 1053  ?OnCancel@DIALOG_WINDOW@@MAEHXZ	5f81d5a5
+	37f8	 1576  ?QueryRobustHwnd@DIALOG_WINDOW@@UBEPAUHWND__@@XZ	5f81d424
+	382c	 1212  ?OnUserMessage@OWNER_WINDOW@@MAEHABVEVENT@@@Z	5f81f11e
+	385c	  355  ??1DIALOG_WINDOW@@QAE@XZ	5f81d3e5
+	3878	 1778  ?SelectItem@LIST_CONTROL@@QAEXHH@Z	5f82340e
+	389e	  846  ?FindItemExact@STRING_LIST_CONTROL@@QBEHPBG@Z	5f823860
+	38ce	  896  ?InsertItem@STRING_LIST_CONTROL@@QAEHHPBG@Z	5f8234b2
+	38fc	 1314  ?QueryCount@LIST_CONTROL@@QBEHXZ	5f822e98
+	3920	 1873  ?SetMaxLength@EDIT_CONTROL@@QAEXI@Z	5f824ce4
+	3946	 1872  ?SetMaxLength@COMBOBOX@@QAEHI@Z	5f82323f
+	3968	  547  ?AddAssociation@MAGIC_GROUP@@QAEJIPAVCONTROL_VALUE@@@Z	5f81f8a1
+	39a2	 1944  ?SetText@WINDOW@@QAEXPBG@Z	5f820eb3
+	39c0	  210  ??0SLE@@QAE@PAVOWNER_WINDOW@@II@Z	5f824f7e
+	39e4	  150  ??0MAGIC_GROUP@@QAE@PAVOWNER_WINDOW@@IHIPAVCONTROL_GROUP@@@Z	5f81fe48
+	3a24	  197  ??0PUSH_BUTTON@@QAE@PAVOWNER_WINDOW@@I@Z	5f822a8f
+	3a50	  224  ??0SLT@@QAE@PAVOWNER_WINDOW@@I@Z	5f824e1b
+	3a74	   54  ??0COMBOBOX@@QAE@PAVOWNER_WINDOW@@II@Z	5f823677
+	3a9e	   73  ??0DIALOG_WINDOW@@QAE@ABVIDRESOURCE@@ABVPWND2HWND@@H@Z	5f81d9fd
+	3ad8	 1973  ?Term@BLT@@SGXPAUHINSTANCE__@@@Z	5f820285
+	3afc	 1690  ?RegisterHelpFile@BLT@@SGJPAUHINSTANCE__@@JKK@Z	5f801c6e
+	3b2e	  882  ?Init@BLT_MASTER_TIMER@@SGJXZ	5f8228fc
+	3b4e	  880  ?Init@BLT@@SGJPAUHINSTANCE__@@IIII@Z	5f801cd8
+	3b76	 1975  ?Term@BLT_MASTER_TIMER@@SGXXZ	5f82293f
+	3b96	  740  ?DeregisterHelpFile@BLT@@SGXPAUHINSTANCE__@@K@Z	5f820064
+	3bc8	 1735  ?ResetCaption@POPUP@@SGXXZ	5f81ddb7
+	3be6	 1243  ?Process@DIALOG_WINDOW@@QAEJPAI@Z	5f81d4b6
+	3c0a	 1803  ?SetCaption@POPUP@@SGXJ@Z	5f81dda6
+	2f56	  397  ??1LIST_CONTROL@@IAE@XZ	5f822da1
+	2f2a	 1608  ?QueryState@STATE_BUTTON_CONTROL@@IBEIXZ	5f822c4c
+	2f00	 1927  ?SetState@STATE_BUTTON_CONTROL@@IAEXI@Z	5f822c31
+	2eec	  501  ??1WINDOW@@QAE@XZ	5f820925
+	2ec6	 1915  ?SetSelection@RADIO_GROUP@@QAEXI@Z	5f81fad4
+	2ea0	 1587  ?QuerySelection@RADIO_GROUP@@QBEIXZ	5f836217
+	3546	  834  ?FilterMessage@DIALOG_WINDOW@@MAEHPAUtagMSG@@@Z	5f81d6f6
+	3490	 1755  ?RestoreValue@STATE_BUTTON_CONTROL@@MAEXH@Z	5f822c80
+
+ 0000294c	0000299c ffffffff ffffffff 00003c90 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3db0	  482  RegOpenKeyExA	77da3c62
+	3c48	   62  CloseServiceHandle	77dbd00e
+	3c5e	  430  OpenServiceW	77dbd14f
+	3c6e	  428  OpenSCManagerW	77dbd0ba
+	3c80	  292  GetUserNameW	77da7a37
+	3d8e	  457  RegCloseKey	77da2d0c
+	3d9c	  492  RegQueryValueExA	77da3a49
+	3c32	  449  QueryServiceStatus	77dbd1b3
+
+ 00002960	00002ba8 ffffffff ffffffff 00003cb8 0000120c
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3c9e	  459  LoadStringW	77d0659d
+	3cac	  446  LoadIconW	77d0daf6
+
+ 00002974	00002b80 ffffffff ffffffff 00003d70 000011e4
+
+	DLL Name: NWPROVAU.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3cc4	   12  NPCloseEnum	5ecb5baa
+	3cd2	   13  NPEnumResource	5ecb57e9
+	3ce4	   24  NPOpenEnum	5ecb5439
+	3cf2	   38  NwSetLogonOptionsInRegistry	5ecba217
+	3d10	   36  NwSetInfoInRegistry	5ecba13a
+	3d26	   37  NwSetInfoInWksta	5ecb9c27
+	3d3a	   41  NwValidateUser	5ecb9cb2
+	3d4c	   34  NwQueryLogonOptions	5ecba1be
+	3d62	   33  NwQueryInfo	5ecba078
+
+ 00002988	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x57683dc0
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		3e7ff44b
+Major/Minor 			0/0
+Name 				00003df2 nwc.dll
+Ordinal Base 			1
+Number in:
+	Export Address Table 		00000001
+	[Name Pointer/Ordinal] Table	00000001
+Table Addresses
+	Export Address Table 		00003de8
+	Name Pointer Table 		00003dec
+	Ordinal Table 			00003df0
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 2343 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] CPlApplet
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 144 (0x90) Number of fixups 68
+	reloc    0 offset  268 [1268] HIGHLOW
+	reloc    1 offset  26c [126c] HIGHLOW
+	reloc    2 offset  270 [1270] HIGHLOW
+	reloc    3 offset  274 [1274] HIGHLOW
+	reloc    4 offset  278 [1278] HIGHLOW
+	reloc    5 offset  27c [127c] HIGHLOW
+	reloc    6 offset  280 [1280] HIGHLOW
+	reloc    7 offset  284 [1284] HIGHLOW
+	reloc    8 offset  288 [1288] HIGHLOW
+	reloc    9 offset  28c [128c] HIGHLOW
+	reloc   10 offset  290 [1290] HIGHLOW
+	reloc   11 offset  294 [1294] HIGHLOW
+	reloc   12 offset  298 [1298] HIGHLOW
+	reloc   13 offset  29c [129c] HIGHLOW
+	reloc   14 offset  2a0 [12a0] HIGHLOW
+	reloc   15 offset  2a4 [12a4] HIGHLOW
+	reloc   16 offset  2a8 [12a8] HIGHLOW
+	reloc   17 offset  2ac [12ac] HIGHLOW
+	reloc   18 offset  2b0 [12b0] HIGHLOW
+	reloc   19 offset  2b4 [12b4] HIGHLOW
+	reloc   20 offset  2b8 [12b8] HIGHLOW
+	reloc   21 offset  2bc [12bc] HIGHLOW
+	reloc   22 offset  2c0 [12c0] HIGHLOW
+	reloc   23 offset  2c4 [12c4] HIGHLOW
+	reloc   24 offset  2c8 [12c8] HIGHLOW
+	reloc   25 offset  2cc [12cc] HIGHLOW
+	reloc   26 offset  2d0 [12d0] HIGHLOW
+	reloc   27 offset  2d4 [12d4] HIGHLOW
+	reloc   28 offset  2d8 [12d8] HIGHLOW
+	reloc   29 offset  2dc [12dc] HIGHLOW
+	reloc   30 offset  2e0 [12e0] HIGHLOW
+	reloc   31 offset  2e4 [12e4] HIGHLOW
+	reloc   32 offset  2e8 [12e8] HIGHLOW
+	reloc   33 offset  2ec [12ec] HIGHLOW
+	reloc   34 offset  474 [1474] HIGHLOW
+	reloc   35 offset  4eb [14eb] HIGHLOW
+	reloc   36 offset  4fc [14fc] HIGHLOW
+	reloc   37 offset  51c [151c] HIGHLOW
+	reloc   38 offset  654 [1654] HIGHLOW
+	reloc   39 offset  7dc [17dc] HIGHLOW
+	reloc   40 offset  805 [1805] HIGHLOW
+	reloc   41 offset  8fd [18fd] HIGHLOW
+	reloc   42 offset  909 [1909] HIGHLOW
+	reloc   43 offset  a88 [1a88] HIGHLOW
+	reloc   44 offset  b2d [1b2d] HIGHLOW
+	reloc   45 offset  b34 [1b34] HIGHLOW
+	reloc   46 offset  b4b [1b4b] HIGHLOW
+	reloc   47 offset  b62 [1b62] HIGHLOW
+	reloc   48 offset  b69 [1b69] HIGHLOW
+	reloc   49 offset  b80 [1b80] HIGHLOW
+	reloc   50 offset  b95 [1b95] HIGHLOW
+	reloc   51 offset  b9c [1b9c] HIGHLOW
+	reloc   52 offset  c71 [1c71] HIGHLOW
+	reloc   53 offset  c8d [1c8d] HIGHLOW
+	reloc   54 offset  cc2 [1cc2] HIGHLOW
+	reloc   55 offset  cc9 [1cc9] HIGHLOW
+	reloc   56 offset  dc4 [1dc4] HIGHLOW
+	reloc   57 offset  e39 [1e39] HIGHLOW
+	reloc   58 offset  e46 [1e46] HIGHLOW
+	reloc   59 offset  e75 [1e75] HIGHLOW
+	reloc   60 offset  e7c [1e7c] HIGHLOW
+	reloc   61 offset  e89 [1e89] HIGHLOW
+	reloc   62 offset  e95 [1e95] HIGHLOW
+	reloc   63 offset  ea2 [1ea2] HIGHLOW
+	reloc   64 offset  eac [1eac] HIGHLOW
+	reloc   65 offset  eb5 [1eb5] HIGHLOW
+	reloc   66 offset  eca [1eca] HIGHLOW
+	reloc   67 offset  ed3 [1ed3] HIGHLOW
+
+Virtual Address: 00002000 Chunk size 332 (0x14c) Number of fixups 162
+	reloc    0 offset   36 [2036] HIGHLOW
+	reloc    1 offset   4c [204c] HIGHLOW
+	reloc    2 offset   66 [2066] HIGHLOW
+	reloc    3 offset   d9 [20d9] HIGHLOW
+	reloc    4 offset  157 [2157] HIGHLOW
+	reloc    5 offset  182 [2182] HIGHLOW
+	reloc    6 offset  1a5 [21a5] HIGHLOW
+	reloc    7 offset  1be [21be] HIGHLOW
+	reloc    8 offset  1ce [21ce] HIGHLOW
+	reloc    9 offset  1e8 [21e8] HIGHLOW
+	reloc   10 offset  1ee [21ee] HIGHLOW
+	reloc   11 offset  217 [2217] HIGHLOW
+	reloc   12 offset  21f [221f] HIGHLOW
+	reloc   13 offset  252 [2252] HIGHLOW
+	reloc   14 offset  25c [225c] HIGHLOW
+	reloc   15 offset  391 [2391] HIGHLOW
+	reloc   16 offset  3a7 [23a7] HIGHLOW
+	reloc   17 offset  3ad [23ad] HIGHLOW
+	reloc   18 offset  41e [241e] HIGHLOW
+	reloc   19 offset  43b [243b] HIGHLOW
+	reloc   20 offset  477 [2477] HIGHLOW
+	reloc   21 offset  48d [248d] HIGHLOW
+	reloc   22 offset  499 [2499] HIGHLOW
+	reloc   23 offset  4a1 [24a1] HIGHLOW
+	reloc   24 offset  4a9 [24a9] HIGHLOW
+	reloc   25 offset  4b5 [24b5] HIGHLOW
+	reloc   26 offset  4c3 [24c3] HIGHLOW
+	reloc   27 offset  4cb [24cb] HIGHLOW
+	reloc   28 offset  4d4 [24d4] HIGHLOW
+	reloc   29 offset  4da [24da] HIGHLOW
+	reloc   30 offset  4e4 [24e4] HIGHLOW
+	reloc   31 offset  4eb [24eb] HIGHLOW
+	reloc   32 offset  4f0 [24f0] HIGHLOW
+	reloc   33 offset  4f8 [24f8] HIGHLOW
+	reloc   34 offset  513 [2513] HIGHLOW
+	reloc   35 offset  51e [251e] HIGHLOW
+	reloc   36 offset  52a [252a] HIGHLOW
+	reloc   37 offset  560 [2560] HIGHLOW
+	reloc   38 offset  56a [256a] HIGHLOW
+	reloc   39 offset  576 [2576] HIGHLOW
+	reloc   40 offset  57d [257d] HIGHLOW
+	reloc   41 offset  596 [2596] HIGHLOW
+	reloc   42 offset  59c [259c] HIGHLOW
+	reloc   43 offset  5a2 [25a2] HIGHLOW
+	reloc   44 offset  5a8 [25a8] HIGHLOW
+	reloc   45 offset  5ae [25ae] HIGHLOW
+	reloc   46 offset  5b4 [25b4] HIGHLOW
+	reloc   47 offset  5ba [25ba] HIGHLOW
+	reloc   48 offset  5c0 [25c0] HIGHLOW
+	reloc   49 offset  5c6 [25c6] HIGHLOW
+	reloc   50 offset  5cc [25cc] HIGHLOW
+	reloc   51 offset  5d2 [25d2] HIGHLOW
+	reloc   52 offset  5d8 [25d8] HIGHLOW
+	reloc   53 offset  5de [25de] HIGHLOW
+	reloc   54 offset  5e4 [25e4] HIGHLOW
+	reloc   55 offset  5ea [25ea] HIGHLOW
+	reloc   56 offset  5f0 [25f0] HIGHLOW
+	reloc   57 offset  5f6 [25f6] HIGHLOW
+	reloc   58 offset  5fc [25fc] HIGHLOW
+	reloc   59 offset  602 [2602] HIGHLOW
+	reloc   60 offset  608 [2608] HIGHLOW
+	reloc   61 offset  60e [260e] HIGHLOW
+	reloc   62 offset  614 [2614] HIGHLOW
+	reloc   63 offset  61a [261a] HIGHLOW
+	reloc   64 offset  620 [2620] HIGHLOW
+	reloc   65 offset  626 [2626] HIGHLOW
+	reloc   66 offset  62c [262c] HIGHLOW
+	reloc   67 offset  632 [2632] HIGHLOW
+	reloc   68 offset  638 [2638] HIGHLOW
+	reloc   69 offset  63e [263e] HIGHLOW
+	reloc   70 offset  644 [2644] HIGHLOW
+	reloc   71 offset  64a [264a] HIGHLOW
+	reloc   72 offset  650 [2650] HIGHLOW
+	reloc   73 offset  656 [2656] HIGHLOW
+	reloc   74 offset  65c [265c] HIGHLOW
+	reloc   75 offset  662 [2662] HIGHLOW
+	reloc   76 offset  668 [2668] HIGHLOW
+	reloc   77 offset  66e [266e] HIGHLOW
+	reloc   78 offset  674 [2674] HIGHLOW
+	reloc   79 offset  67a [267a] HIGHLOW
+	reloc   80 offset  680 [2680] HIGHLOW
+	reloc   81 offset  686 [2686] HIGHLOW
+	reloc   82 offset  68c [268c] HIGHLOW
+	reloc   83 offset  692 [2692] HIGHLOW
+	reloc   84 offset  698 [2698] HIGHLOW
+	reloc   85 offset  69e [269e] HIGHLOW
+	reloc   86 offset  6a4 [26a4] HIGHLOW
+	reloc   87 offset  6aa [26aa] HIGHLOW
+	reloc   88 offset  6b0 [26b0] HIGHLOW
+	reloc   89 offset  6b6 [26b6] HIGHLOW
+	reloc   90 offset  6bc [26bc] HIGHLOW
+	reloc   91 offset  6c2 [26c2] HIGHLOW
+	reloc   92 offset  6c8 [26c8] HIGHLOW
+	reloc   93 offset  6ce [26ce] HIGHLOW
+	reloc   94 offset  6d4 [26d4] HIGHLOW
+	reloc   95 offset  6da [26da] HIGHLOW
+	reloc   96 offset  6e0 [26e0] HIGHLOW
+	reloc   97 offset  6e6 [26e6] HIGHLOW
+	reloc   98 offset  6ec [26ec] HIGHLOW
+	reloc   99 offset  6f2 [26f2] HIGHLOW
+	reloc  100 offset  6f8 [26f8] HIGHLOW
+	reloc  101 offset  6fe [26fe] HIGHLOW
+	reloc  102 offset  704 [2704] HIGHLOW
+	reloc  103 offset  70a [270a] HIGHLOW
+	reloc  104 offset  710 [2710] HIGHLOW
+	reloc  105 offset  716 [2716] HIGHLOW
+	reloc  106 offset  71c [271c] HIGHLOW
+	reloc  107 offset  722 [2722] HIGHLOW
+	reloc  108 offset  728 [2728] HIGHLOW
+	reloc  109 offset  72e [272e] HIGHLOW
+	reloc  110 offset  734 [2734] HIGHLOW
+	reloc  111 offset  73a [273a] HIGHLOW
+	reloc  112 offset  740 [2740] HIGHLOW
+	reloc  113 offset  746 [2746] HIGHLOW
+	reloc  114 offset  74c [274c] HIGHLOW
+	reloc  115 offset  752 [2752] HIGHLOW
+	reloc  116 offset  758 [2758] HIGHLOW
+	reloc  117 offset  75e [275e] HIGHLOW
+	reloc  118 offset  764 [2764] HIGHLOW
+	reloc  119 offset  76a [276a] HIGHLOW
+	reloc  120 offset  770 [2770] HIGHLOW
+	reloc  121 offset  776 [2776] HIGHLOW
+	reloc  122 offset  77c [277c] HIGHLOW
+	reloc  123 offset  782 [2782] HIGHLOW
+	reloc  124 offset  788 [2788] HIGHLOW
+	reloc  125 offset  78e [278e] HIGHLOW
+	reloc  126 offset  794 [2794] HIGHLOW
+	reloc  127 offset  79a [279a] HIGHLOW
+	reloc  128 offset  7a0 [27a0] HIGHLOW
+	reloc  129 offset  7a6 [27a6] HIGHLOW
+	reloc  130 offset  7ac [27ac] HIGHLOW
+	reloc  131 offset  7b2 [27b2] HIGHLOW
+	reloc  132 offset  7b8 [27b8] HIGHLOW
+	reloc  133 offset  7be [27be] HIGHLOW
+	reloc  134 offset  7c4 [27c4] HIGHLOW
+	reloc  135 offset  7ca [27ca] HIGHLOW
+	reloc  136 offset  7d0 [27d0] HIGHLOW
+	reloc  137 offset  7d6 [27d6] HIGHLOW
+	reloc  138 offset  7dc [27dc] HIGHLOW
+	reloc  139 offset  7e2 [27e2] HIGHLOW
+	reloc  140 offset  7e8 [27e8] HIGHLOW
+	reloc  141 offset  7ee [27ee] HIGHLOW
+	reloc  142 offset  7f4 [27f4] HIGHLOW
+	reloc  143 offset  7fa [27fa] HIGHLOW
+	reloc  144 offset  800 [2800] HIGHLOW
+	reloc  145 offset  817 [2817] HIGHLOW
+	reloc  146 offset  822 [2822] HIGHLOW
+	reloc  147 offset  83b [283b] HIGHLOW
+	reloc  148 offset  844 [2844] HIGHLOW
+	reloc  149 offset  852 [2852] HIGHLOW
+	reloc  150 offset  86c [286c] HIGHLOW
+	reloc  151 offset  877 [2877] HIGHLOW
+	reloc  152 offset  88d [288d] HIGHLOW
+	reloc  153 offset  89d [289d] HIGHLOW
+	reloc  154 offset  8a3 [28a3] HIGHLOW
+	reloc  155 offset  8ac [28ac] HIGHLOW
+	reloc  156 offset  8b8 [28b8] HIGHLOW
+	reloc  157 offset  8bf [28bf] HIGHLOW
+	reloc  158 offset  8cc [28cc] HIGHLOW
+	reloc  159 offset  8d3 [28d3] HIGHLOW
+	reloc  160 offset  8db [28db] HIGHLOW
+	reloc  161 offset    0 [2000] ABSOLUTE
+
+Virtual Address: 00004000 Chunk size 12 (0xc) Number of fixups 2
+	reloc    0 offset    0 [4000] HIGHLOW
+	reloc    1 offset   1c [401c] HIGHLOW
+
+There is a debug directory in .text at 0x57681220
+
+Type                Size     Rva      Offset
+  2        CodeView 00000018 00001410 00000810
+(format NB10 signature 6a01803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 5
+010   Entry: ID: 0x000003, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x800000b8
+0b8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0c8       Entry: ID: 0x000409, Value: 0x000148
+148        Leaf: Addr: 0x0051b0, Size: 0x0002e8, Codepage: 0
+018   Entry: ID: 0x000005, Value: 0x80000050
+050    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060     Entry: ID: 0x0032cd, Value: 0x800000d0
+0d0      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0e0       Entry: ID: 0x000409, Value: 0x000158
+158        Leaf: Addr: 0x0054b0, Size: 0x0004d0, Codepage: 0
+020   Entry: ID: 0x000006, Value: 0x80000068
+068    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+078     Entry: ID: 0x0005dd, Value: 0x800000e8
+0e8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0f8       Entry: ID: 0x000409, Value: 0x000168
+168        Leaf: Addr: 0x005d10, Size: 0x00050c, Codepage: 0
+080     Entry: ID: 0x0005de, Value: 0x80000100
+100      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+110       Entry: ID: 0x000409, Value: 0x000178
+178        Leaf: Addr: 0x006220, Size: 0x0006fe, Codepage: 0
+028   Entry: ID: 0x00000e, Value: 0x80000088
+088    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+098     Entry: ID: 0x0032c9, Value: 0x80000118
+118      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+128       Entry: ID: 0x000409, Value: 0x000188
+188        Leaf: Addr: 0x005498, Size: 0x000014, Codepage: 0
+030   Entry: ID: 0x000010, Value: 0x800000a0
+0a0    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0b0     Entry: ID: 0x000001, Value: 0x80000130
+130      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+140       Entry: ID: 0x000409, Value: 0x000198
+198        Leaf: Addr: 0x005980, Size: 0x00038c, Codepage: 0
+ Resources start at offset: 0x1b0
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002e04  57681000  57681000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000040  57684000  57684000  00003400  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001920  57685000  57685000  00003600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .reloc        0000027a  57687000  57687000  00005000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

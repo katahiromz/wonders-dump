@@ -1,0 +1,171 @@
+
+rcp.exe:     file format pei-i386
+rcp.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x010029a0
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sat Sep 25 20:11:36 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00002000
+SizeOfInitializedData	00002c00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000029a0
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00007000
+SizeOfHeaders		00000600
+CheckSum		000090a7
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002b58 00000078 Import Directory [parts of .idata]
+Entry 2 00004000 000025f8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010d0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000238 00000094 Bound Import Directory
+Entry c 00001000 000000d0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002b58
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002b58	00002c80 ffffffff ffffffff 00002ca0 000010b0
+
+	DLL Name: WSOCK32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000003	    3  <none>	74f93284
+	80000073	  115  <none>	74f94a6a
+	80000010	   16  <none>	74fb10b2
+	80000454	 1108  <none>	74f578d2
+	80000013	   19  <none>	74f9c70d
+	8000044e	 1102  <none>	74f5a50b
+	80000015	   21  <none>	74fb1073
+
+ 00002b6c	00002bd8 ffffffff ffffffff 00002d26 00001008
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2cac	  190  FormatMessageA	77e696b7
+	2d1e	  707  Sleep	77e54b74
+	2d12	  489  LocalFree	77e6499c
+	2cbe	  301  GetLastError	77e5668c
+	2cce	  288  GetFileAttributesA	77e5657a
+	2ce4	  159  FindClose	77e58d24
+	2cf0	  172  FindNextFileA	77e54bca
+	2d00	  163  FindFirstFileA	77e58dd4
+
+ 00002b80	00002c78 ffffffff ffffffff 00002d46 000010a8
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2d34	   44  CharToOemBuffA	77e0777c
+
+ 00002b94	00002bfc ffffffff ffffffff 00002eae 0000102c
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2db2	  176  _close	78014dab
+	2df0	  692  strchr	780127ce
+	2dfa	  714  system	7801aaad
+	2de6	  235  _fstat	7801c288
+	2dde	  439  _stat	78017f59
+	2e9a	  199  _except_handler3	7800f56a
+	2d52	  704  strrchr	78028c89
+	2d5c	  687  sprintf	780253ca
+	2d66	  582  exit	7800269e
+	2d6e	  321  _lseek	78014ee9
+	2d78	  405  _read	7801d884
+	2d80	  532  _write	78014b25
+	2d8a	  383  _mkdir	78017e4b
+	2d94	  624  isdigit	7800142a
+	2d9e	  622  isalpha	7801428c
+	2da8	  173  _chmod	78017b80
+	2dbc	  458  _sys_errlist	78040590
+	2dcc	  388  _open	7801d1cf
+	2dd4	  197  _errno	7800c9ac
+	2e1a	   99  __p___initenv	7800bb9e
+	2e2a	   88  __getmainargs	78003e70
+	2eba	  180  _controlfp	78003c1e
+	2e04	  208  _exit	7800b908
+	2e0c	   72  _XcptFilter	7800f7dc
+	2e7a	  110  __p__fmode	78003e64
+	2e3a	  268  _initterm	78001dea
+	2e46	  130  __setusermatherr	7800b426
+	2e5a	  155  _adjust_fdiv	7803bb70
+	2e6a	  105  __p__commode	78003e6a
+	2e88	  128  __set_app_type	78003e5a
+
+ 00002ba8	00002bd0 ffffffff ffffffff 00002ed8 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2ec8	  243  GetUserNameA	77d8d54b
+
+ 00002bbc	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010d0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00004e00
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x0043f8, Size: 0x002200, Codepage: 0
+ Resources start at offset: 0x3f8
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001ee6  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01003000  01003000  00002600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000025f8  01004000  01004000  00002800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,149 @@
+
+pentnt.exe:     file format pei-i386
+pentnt.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010017c7
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Aug 18 05:53:35 2001
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	0
+SizeOfCode		00000e00
+SizeOfInitializedData	00002a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000017c7
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		0000d633
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001a08 00000050 Import Directory [parts of .idata]
+Entry 2 00003000 00002650 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010b0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000250 00000048 Bound Import Directory
+Entry c 00001000 00000098 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001a08
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001a08	00001aa0 ffffffff ffffffff 00001bc8 00001048
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1bd4	  214  _controlfp	77bfa658
+	1be2	  237  _except_handler3	77be3eb0
+	1bb6	  152  __set_app_type	77be3632
+	1ba8	  133  __p__fmode	77bceb68
+	1b98	  128  __p__commode	77bceb4a
+	1b88	  182  _adjust_fdiv	77c0d388
+	1b74	  154  __setusermatherr	77bf8f60
+	1b68	  314  _initterm	77be79db
+	1b58	  109  __getmainargs	77bce909
+	1b4c	  110  __initenv	77c0c9e4
+	1b42	  200  _cexit	77be7b00
+	1b34	   78  _XcptFilter	77be1269
+	1b2c	  246  _exit	77be7aee
+	1b22	  197  _c_exit	77be7b11
+	1b18	  760  sprintf	77bec813
+	1b0c	  755  setlocale	77be1f83
+	1b02	  740  printf	77bee5d9
+	1afa	  655  exit	77be7adc
+	1af0	  827  wprintf	77beef2c
+
+ 00001a1c	00001a58 ffffffff ffffffff 00001c3a 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1bf6	  505  RegSetValueExW	77d8580b
+	1c18	  492  RegQueryValueExW	77d81b65
+	1c2c	  456  RegCloseKey	77d8189a
+	1c08	  482  RegOpenKeyExW	77d81a6b
+
+ 00001a30	00001a6c ffffffff ffffffff 00001d38 00001014
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1cc4	  791  SetThreadLocale	77e35d12
+	1cb0	  303  GetCurrentProcess	77e39c90
+	1c96	  394  GetProcessAffinityMask	77e26adc
+	1cd6	  450  GetUserDefaultLCID	77e39c94
+	1c6a	  787  SetThreadAffinityMask	77e59124
+	1c5a	  457  GetVersionExW	77e3c61c
+	1c48	  225  FormatMessageW	77e3f295
+	1cec	  290  GetConsoleOutputCP	77e395bf
+	1d02	  732  SetConsoleOutputCP	77e8820c
+	1d18	  380  GetOEMCP	77e2c703
+	1c82	  305  GetCurrentThread	77e33163
+	1d24	  359  GetModuleHandleA	77e39f93
+
+ 00001a44	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010b0
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001b 00001284 00000684
+(format NB10 signature 4f847d3b age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x003448, Size: 0x002208, Codepage: 0
+ Resources start at offset: 0x448
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000d46  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000044  01002000  01002000  00001200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00002650  01003000  01003000  00001400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

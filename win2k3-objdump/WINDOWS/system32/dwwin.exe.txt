@@ -1,0 +1,393 @@
+
+dwwin.exe:     file format pei-i386
+dwwin.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x3000749a
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Thu Oct 16 04:41:02 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	6
+MinorLinkerVersion	20
+SizeOfCode		00029000
+SizeOfInitializedData	0000a000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000749a
+BaseOfCode		00001000
+BaseOfData		0003d000
+ImageBase		30000000
+SectionAlignment	00001000
+FileAlignment		00001000
+MajorOSystemVersion	4
+MinorOSystemVersion	0
+MajorImageVersion	0
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00034000
+SizeOfHeaders		00001000
+CheckSum		00034981
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00000000
+SizeOfStackReserve	00100000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000289d7 0000017a Import Directory [parts of .idata]
+Entry 2 00033000 00000aa4 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 0002c000 00001a38 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00029e5a 00000038 Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 000003b8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x300289d7
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000289d7	00028b51 00000000 00000000 00028ac7 00001000
+
+	DLL Name: ADVAPI32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	28f0a	  279  RegCloseKey
+	28f18	  302  RegOpenKeyExA
+	28f28	  310  RegQueryValueExA
+	28f3c	  291  RegEnumKeyExA
+	28f4c	  305  RegQueryInfoKeyA
+	28f60	  311  RegQueryValueExW
+	28f74	   76  DeregisterEventSource
+	28f8c	  332  ReportEventA
+	28f9c	  327  RegisterEventSourceW
+	28fb4	  294  RegEnumValueA
+	28fc4	  159  GetUserNameA
+
+ 000289eb	00028b81 00000000 00000000 00028ad5 00001030
+
+	DLL Name: COMCTL32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	80000011	   17  <none>
+
+ 000289ff	00028b89 00000000 00000000 00028ae3 00001038
+
+	DLL Name: GDI32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	28fd4	   67  DeleteDC
+	28fe0	  321  RestoreDC
+	28fec	   70  DeleteObject
+	28ffc	  267  GetTextMetricsA
+	2900e	  265  GetTextFaceA
+	2901e	  330  SelectObject
+	2902e	   43  CreateFontA
+	2903c	  199  GetDeviceCaps
+	2904c	  353  SetMapMode
+	2905a	  323  SaveDC
+	29064	  307  Polyline
+	29070	   55  CreatePen
+	2907c	   99  ExtTextOutW
+	2908a	  262  GetTextExtentPoint32W
+	290a2	  368  SetTextAlign
+	290b2	  337  SetBkMode
+	290be	  370  SetTextColor
+	290ce	   44  CreateFontIndirectA
+	290e4	  234  GetObjectA
+
+ 00028a13	00028bd9 00000000 00000000 00028aed 00001088
+
+	DLL Name: KERNEL32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	290f2	  427  MultiByteToWideChar
+	29108	  170  GetCommandLineA
+	2911a	  107  ExitProcess
+	29128	  171  GetCommandLineW
+	2913a	  420  MapViewOfFile
+	2914a	  477  ReleaseMutex
+	2915a	  618  WaitForSingleObject
+	29170	  616  WaitForMultipleObjects
+	2918a	  399  LeaveCriticalSection
+	291a2	   88  EnterCriticalSection
+	291ba	   79  DeleteFileW
+	291c8	  254  GetModuleHandleA
+	291dc	  296  GetStartupInfoA
+	291ee	  297  GetStartupInfoW
+	29200	   24  CloseHandle
+	2920e	   67  CreateThread
+	2921e	  575  Sleep
+	29226	  211  GetCurrentProcess
+	2923a	  582  TerminateProcess
+	2924e	  566  SetUnhandledExceptionFilter
+	2926c	  426  MulDiv
+	29276	  152  FreeLibrary
+	29284	  278  GetProcAddress
+	29296	  622  WideCharToMultiByte
+	292ac	  252  GetModuleFileNameA
+	292c2	  400  LoadLibraryA
+	292d2	  304  GetSystemDefaultLangID
+	292ec	  330  GetUserDefaultLangID
+	29304	  157  GetACP
+	2930e	  303  GetSystemDefaultLCID
+	29326	  333  GetVersionExA
+	29336	  377  InitializeCriticalSection
+	29352	  280  GetProcessHeap
+	29364	   76  DeleteCriticalSection
+	2937c	  667  lstrcpyA
+	29388	  244  GetLastError
+	29398	  291  GetProfileStringA
+	293ac	  532  SetEvent
+	293b8	   64  CreateSemaphoreA
+	293cc	   50  CreateFileMappingA
+	293e2	  237  GetFileSize
+	293f0	   49  CreateFileA
+	293fe	  595  UnmapViewOfFile
+	29410	   78  DeleteFileA
+	2941e	  479  RemoveDirectoryA
+	29432	  480  RemoveDirectoryW
+	29446	  325  GetTickCount
+	29456	  529  SetEnvironmentVariableA
+	29470	  472  ReadProcessMemory
+	29484	  612  VirtualQueryEx
+	29496	  307  GetSystemInfo
+	294a6	  232  GetFileAttributesA
+	294bc	   42  CreateDirectoryA
+	294d0	  135  FindNextFileA
+	294e0	  126  FindClose
+	294ec	  130  FindFirstFileA
+	294fe	  337  GetWindowsDirectoryA
+	29516	  635  WriteFile
+	29522	  537  SetFilePointer
+	29534	   52  CreateFileW
+	29542	  318  GetTempPathW
+	29552	  235  GetFileAttributesW
+	29568	   45  CreateDirectoryW
+	2957c	  419  LockResource
+	2958c	  405  LoadResource
+	2959c	  138  FindResourceExA
+	295ae	  305  GetSystemDirectoryA
+	295c4	  528  SetEndOfFile
+	295d4	  110  ExpandEnvironmentStringsA
+	295f0	  111  ExpandEnvironmentStringsW
+	2960c	  391  IsDBCSLeadByte
+	2961e	   61  CreateProcessA
+	29630	   62  CreateProcessW
+	29642	  577  SuspendThread
+	29652	  309  GetSystemTime
+	29662	  174  GetComputerNameA
+	29676	   56  CreateMutexA
+	29686	  584  TlsAlloc
+	29692	  585  TlsFree
+	2969c	  587  TlsSetValue
+	296aa	  606  VirtualFree
+	296b8	  586  TlsGetValue
+	296c6	  317  GetTempPathA
+	296d6	  482  ResumeThread
+	296e6	  214  GetCurrentThreadId
+	296fc	  583  TerminateThread
+	2970e	  212  GetCurrentProcessId
+	29724	  395  IsValidCodePage
+	29736	  360  HeapAlloc
+	29742	  603  VirtualAlloc
+	29752	   85  DuplicateHandle
+	29764	  662  lstrcmpW
+	29770	  302  GetStringTypeW
+	29782	   72  DebugBreak
+	29790	  323  GetThreadSelectorEntry
+	297aa	  246  GetLocaleInfoA
+	297bc	  398  LCMapStringW
+	297cc	  319  GetThreadContext
+	297e0	  366  HeapFree
+	297ec	  542  SetLastError
+	297fc	  311  GetSystemTimeAsFileTime
+	29816	  442  OutputDebugStringA
+	2982c	  397  LCMapStringA
+	2983c	  299  GetStringTypeA
+	2984e	  485  RtlUnwind
+
+ 00028a27	00028d81 00000000 00000000 00028afb 00001230
+
+	DLL Name: OLEAUT32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	80000006	    6  <none>
+	8000000d	   13  <none>
+	80000002	    2  <none>
+	800000b8	  184  <none>
+	80000007	    7  <none>
+
+ 00028a3b	00028d99 00000000 00000000 00028b09 00001248
+
+	DLL Name: SHELL32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	2985a	   26  ExtractIconExA
+	2986c	   99  ShellExecuteExA
+
+ 00028a4f	00028da5 00000000 00000000 00028b15 00001254
+
+	DLL Name: SHLWAPI.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	2987e	    6  AssocQueryStringW
+	29892	  267  UrlGetPartA
+	298a0	  279  wnsprintfA
+
+ 00028a63	00028db5 00000000 00000000 00028b21 00001264
+
+	DLL Name: URLMON.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	298ae	   22  CreateURLMoniker
+
+ 00028a77	00028dbd 00000000 00000000 00028b2d 0000126c
+
+	DLL Name: USER32.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	298c2	  292  GetScrollInfo
+	298d2	  354  IsDlgButtonChecked
+	298e8	  374  LoadIconA
+	298f4	  161  DrawFocusRect
+	29904	  546  SetWindowTextW
+	29916	  311  GetWindow
+	29922	  370  LoadCursorA
+	29930	  136  DestroyIcon
+	2993e	  316  GetWindowPlacement
+	29954	  356  IsIconic
+	29960	  388  LoadStringW
+	2996e	  323  GetWindowThreadProcessId
+	2998a	  200  EnumWindows
+	29998	   36  CharPrevA
+	299a4	   18  CallWindowProcA
+	299b6	   19  CallWindowProcW
+	299c8	  361  IsWindowUnicode
+	299da	  178  EnableWindow
+	299ea	  165  DrawIconEx
+	299f8	  138  DestroyWindow
+	29a08	  539  SetWindowLongA
+	29a1a	  297  GetSysColor
+	29a28	  472  SendDlgItemMessageA
+	29a3e	  228  GetClientRect
+	29a4e	  522  SetScrollInfo
+	29a5e	  564  SystemParametersInfoA
+	29a76	   47  CheckDlgButton
+	29a88	  498  SetDlgItemTextA
+	29a9a	  501  SetFocus
+	29aa6	  180  EndDialog
+	29ab2	  243  GetDlgItem
+	29ac0	  557  ShowWindow
+	29ace	  492  SetCursor
+	29ada	  338  InvalidateRect
+	29aec	  143  DialogBoxParamW
+	29afe	  142  DialogBoxParamA
+	29b10	   76  CreateDialogParamW
+	29b26	   75  CreateDialogParamA
+	29b3c	  545  SetWindowTextA
+	29b4e	  238  GetDC
+	29b56	  400  MapWindowPoints
+	29b68	  298  GetSysColorBrush
+	29b7c	  204  FillRect
+	29b88	  461  ReleaseDC
+	29b94	  300  GetSystemMetrics
+	29ba8	  502  SetForegroundWindow
+	29bbe	  314  GetWindowLongA
+	29bd0	  317  GetWindowRect
+	29be0	  542  SetWindowPos
+	29bf0	  447  RegisterClassExA
+	29c04	   85  CreateWindowExA
+	29c16	  277  GetMessageA
+	29c24	  352  IsDialogMessageA
+	29c38	  581  TranslateMessage
+	29c4c	  144  DispatchMessageA
+	29c60	  435  PostQuitMessage
+	29c72	  365  KillTimer
+	29c7e	  534  SetTimer
+	29c8a	  474  SendMessageA
+	29c9a	  433  PostMessageA
+	29caa	  128  DefWindowProcA
+
+ 00028a8b	00028eb5 00000000 00000000 00028b39 00001364
+
+	DLL Name: VERSION.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	29cbc	    1  GetFileVersionInfoSizeA
+	29cd6	    2  GetFileVersionInfoSizeW
+	29cf0	   10  VerQueryValueA
+	29d02	    3  GetFileVersionInfoW
+	29d18	    0  GetFileVersionInfoA
+
+ 00028a9f	00028ecd 00000000 00000000 00028b45 0000137c
+
+	DLL Name: WININET.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	29d2e	  120  InternetReadFileExA
+	29d44	  136  InternetWriteFile
+	29d58	   74  HttpSendRequestExA
+	29d6e	  127  InternetSetOptionA
+	29d84	   67  HttpEndRequestA
+	29d96	  131  InternetSetStatusCallback
+	29db2	   79  InternetAutodial
+	29dc6	  102  InternetGetConnectedState
+	29de2	   86  InternetCloseHandle
+	29df8	  117  InternetQueryOptionA
+	29e10	   71  HttpQueryInfoA
+	29e22	   69  HttpOpenRequestA
+	29e36	   90  InternetConnectA
+	29e4a	  111  InternetOpenA
+
+ 00028ab3	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x30029e5a
+
+Type                Size     Rva      Offset
+  2        CodeView 00000052 00005748 00005748
+(format NB10 signature 4e138e3f age 2)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 3
+010   Entry: ID: 0x000005, Value: 0x80000028
+028    Name Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 1
+038     Entry: ID: 0x000065, Value: 0x80000070
+070      Language Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 1
+080       Entry: ID: 0x000409, Value: 0x0000b8
+0b8        Leaf: Addr: 0x0330f0, Size: 0x000316, Codepage: 0
+018   Entry: ID: 0x00000b, Value: 0x80000040
+040    Name Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 1
+050     Entry: ID: 0x000001, Value: 0x80000088
+088      Language Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 1
+098       Entry: ID: 0x000409, Value: 0x0000c8
+0c8        Leaf: Addr: 0x033408, Size: 0x0001ac, Codepage: 0
+020   Entry: ID: 0x000010, Value: 0x80000058
+058    Name Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 1
+068     Entry: ID: 0x000001, Value: 0x800000a0
+0a0      Language Table: Char: 0, Time: 3f8e134a, Ver: 0/0, Num Names: 0, IDs: 1
+0b0       Entry: ID: 0x000409, Value: 0x0000d8
+0d8        Leaf: Addr: 0x0335b4, Size: 0x0004f0, Codepage: 0
+ Resources start at offset: 0xf0
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00028e92  30001000  30001000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00001000  3002a000  3002a000  0002a000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000aa4  30033000  30033000  0002b000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

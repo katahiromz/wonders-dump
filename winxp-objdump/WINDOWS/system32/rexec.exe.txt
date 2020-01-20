@@ -1,0 +1,193 @@
+
+rexec.exe:     file format pei-i386
+rexec.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100136b
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:59:35 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001a00
+SizeOfInitializedData	00001a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000136b
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		00009632
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000022f0 0000008c Import Directory [parts of .idata]
+Entry 2 00004000 00001500 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001130 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000011f8 00000040 Load Configuration Directory
+Entry b 00000248 00000094 Bound Import Directory
+Entry c 00001000 00000118 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10022f0
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000022f0	0000243c ffffffff ffffffff 00002568 000010c0
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	25dc	  728  malloc	4ceec407
+	25d2	  603  _write	4cef0303
+	25ca	  319  _iob	4cf1fc80
+	25c0	  671  fprintf	4cf00e13
+	2574	  214  _controlfp	4cf0ee4f
+	2554	  237  _except_handler3	4cef5c94
+	2542	  152  __set_app_type	4cef537c
+	2534	  133  __p__fmode	4cedf1db
+	2524	  128  __p__commode	4cedf1a4
+	2514	  182  _adjust_fdiv	4cf223d8
+	2500	  154  __setusermatherr	4cf0d695
+	24f4	  315  _initterm	4cef9d67
+	24e4	  109  __getmainargs	4cedeeeb
+	24d8	  110  __initenv	4cf21a38
+	24ce	  200  _cexit	4cef9eb6
+	24c0	   78  _XcptFilter	4cef2dae
+	24b8	  246  _exit	4cef9e9a
+	24ae	  197  _c_exit	4cef9ece
+	24a4	  210  _close	4ceed0d7
+	249c	  437  _open	4ceef566
+	2494	  656  exit	4cef9e7e
+
+ 00002304	00002384 ffffffff ffffffff 000025a6 00001008
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2726	  229  FlushConsoleInputBuffer	7c874b3c
+	271a	  678  ReadFile	7c801812
+	2700	  892  WaitForMultipleObjects	7c80a0ed
+	26ec	  640  PeekConsoleInputA	7c8744ad
+	26d8	  667  ReadConsoleInputA	7c8744f3
+	26cc	  911  WriteFile	7c810e17
+	26b6	  396  GetOverlappedResult	7c8315b4
+	26ae	  834  Sleep	7c802446
+	26a0	  183  ExitThread	7c80c0e8
+	268a	  318  GetCurrentThreadId	7c8097b8
+	2678	  235  FormatMessageA	7c82f790
+	265c	  432  GetStdHandle	7c812fc9
+	2740	  108  CreateThread	7c8106c7
+	27fe	  822  SetUnhandledExceptionFilter	7c8449fd
+	27e2	  859  UnhandledExceptionFilter	7c863e6a
+	27ce	  315  GetCurrentProcess	7c80de85
+	27ba	  842  TerminateProcess	7c801e1a
+	2582	  360  GetLastError	7c94fe01
+	2592	  374  GetModuleHandleA	7c80b731
+	263a	  894  WaitForSingleObject	7c802530
+	2624	  901  WriteConsoleInputA	7c8733e5
+	27a0	  448  GetSystemTimeAsFileTime	7c8017e9
+	278a	  316  GetCurrentProcessId	7c8099b0
+	277a	  468  GetTickCount	7c80932e
+	2760	  660  QueryPerformanceCounter	7c80a4b7
+	2650	  772  SetEvent	7c80a0a7
+	266c	  590  LocalFree	7c8099bf
+	2604	   49  CloseHandle	7c809bd7
+	2612	  843  TerminateThread	7c81cb23
+	2750	   75  CreateEventA	7c83089d
+
+ 00002318	00002418 ffffffff ffffffff 000025b4 0000109c
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000012	   18  <none>	719e30a8
+	80000016	   22  <none>	719f0bf6
+	80000015	   21  <none>	719e4521
+	80000037	   55  <none>	719ee703
+	80000097	  151  <none>	719e3f7b
+	80000003	    3  <none>	719e3e2b
+	80000073	  115  <none>	719e6a55
+	80000010	   16  <none>	719e676f
+
+ 0000232c	0000237c ffffffff ffffffff 000025f6 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	25e6	  291  GetUserNameA	77d954a4
+
+ 00002340	00002410 ffffffff ffffffff 0000282e 00001094
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	281c	   49  CharToOemBuffA	77d11626
+
+ 00002354	00002400 ffffffff ffffffff 00002856 00001084
+
+	DLL Name: MSWSOCK.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	283a	   30  s_perror	719a4199
+	2846	   27  rcmd	7199629e
+	284e	   28  rexec	7199666c
+
+ 00002368	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001130
+
+Type                Size     Rva      Offset
+  2        CodeView 00000022 00001240 00000640
+(format RSDS signature fe6c7539bb884603a554a4d27442e0bd age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x004428, Size: 0x0010d8, Codepage: 0
+ Resources start at offset: 0x428
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001862  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01003000  01003000  00001e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001500  01004000  01004000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

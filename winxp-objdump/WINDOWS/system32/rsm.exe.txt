@@ -1,0 +1,215 @@
+
+rsm.exe:     file format pei-i386
+rsm.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01005ab2
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Aug 18 05:55:49 2001
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	0
+SizeOfCode		00005400
+SizeOfInitializedData	0000ac00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00005ab2
+BaseOfCode		00001000
+BaseOfData		00007000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00013000
+SizeOfHeaders		00000400
+CheckSum		00011195
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00005d58 00000064 Import Directory [parts of .idata]
+Entry 2 00008000 0000a964 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000248 0000006c Bound Import Directory
+Entry c 00001000 000000dc Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1005d58
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00005d58	00005e20 ffffffff ffffffff 00005fe4 00001064
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5fc4	  133  __p__fmode	77bceb68
+	5fd2	  152  __set_app_type	77be3632
+	5ff0	  214  _controlfp	77bfa658
+	5fb4	  128  __p__commode	77bceb4a
+	5ffe	  237  _except_handler3	77be3eb0
+	5fa4	  182  _adjust_fdiv	77c0d388
+	5f90	  154  __setusermatherr	77bf8f60
+	5f84	  314  _initterm	77be79db
+	5f72	  164  __wgetmainargs	77bce8af
+	5f64	  165  __winitenv	77c0c9ec
+	5f5c	  655  exit	77be7adc
+	5f52	  200  _cexit	77be7b00
+	5f44	   78  _XcptFilter	77be1269
+	5f3c	  246  _exit	77be7aee
+	5f32	  197  _c_exit	77be7b11
+	5f28	  805  wcscat	77bf3c88
+	5f1e	  563  _wcsupr	77bf2b8b
+	5f12	  785  swprintf	77bec89c
+	5f08	  812  wcslen	77bf3dbc
+	5efc	  710  iswdigit	77bccd91
+	5ef4	  625  _wtoi	77bccbc5
+	5eea	  809  wcscpy	77bf3cb2
+	5eda	   17  ??2@YAPAXI@Z	77bd8925
+	5ece	  552  _wcsicmp	77bf26b8
+	5ec4	  786  swscanf	77bee8fa
+	5eba	  740  printf	77bee5d9
+	5eb0	  727  malloc	77bdac46
+	5ea8	  676  free	77bdaa6b
+	5e98	   18  ??3@YAXPAX@Z	77bd8933
+
+ 00005d6c	00005dbc ffffffff ffffffff 00006080 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6012	  362  GetModuleHandleW	77e3a663
+	603c	  346  GetLastError	77f5157d
+	604c	  127  DeviceIoControl	77e33d45
+	605e	   77  CreateFileW	77e379b1
+	606c	  359  GetModuleHandleA	77e39f93
+	6026	  873  WideCharToMultiByte	77e39924
+
+ 00005d80	00005dd8 ffffffff ffffffff 000061e4 0000101c
+
+	DLL Name: NTMSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	614e	   64  SetNtmsObjectInformationW	72583287
+	6136	    0  AccessNtmsLibraryDoor	725836d6
+	6124	   29  EjectNtmsMedia	725835eb
+	6110	   24  DismountNtmsMedia	725826e6
+	616a	   12  CreateNtmsMediaPoolW	72582bae
+	60ea	    9  CloseNtmsSession	725822db
+	60d4	   14  DeallocateNtmsMedia	72582805
+	60be	   32  EnumerateNtmsObject	725832fc
+	60a2	   39  GetNtmsObjectInformationW	7258318d
+	608e	   55  OpenNtmsSessionW	72582419
+	6182	   19  DeleteNtmsMediaPool	72582f3c
+	6198	   59  SetNtmsDeviceChangeDetection	725823e4
+	61b8	   50  InventoryNtmsLibrary	72583820
+	61d0	    2  AllocateNtmsMedia	72582759
+	60fe	   51  MountNtmsMedia	725825cc
+
+ 00005d94	00005e18 ffffffff ffffffff 000061fe 0000105c
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	61f0	  457  LoadStringW	77cf718c
+
+ 00005da8	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010f0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000018 0000111c 0000051c
+(format NB10 signature d5847d3b age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000006, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 6
+030     Entry: ID: 0x000003, Value: 0x80000078
+078      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+088       Entry: ID: 0x000409, Value: 0x000158
+158        Leaf: Addr: 0x008238, Size: 0x0009ca, Codepage: 1252
+090       Entry: ID: 0x000411, Value: 0x000168
+168        Leaf: Addr: 0x008c04, Size: 0x000590, Codepage: 1252
+038     Entry: ID: 0x000004, Value: 0x80000098
+098      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0a8       Entry: ID: 0x000409, Value: 0x000178
+178        Leaf: Addr: 0x009194, Size: 0x002db8, Codepage: 1252
+0b0       Entry: ID: 0x000411, Value: 0x000188
+188        Leaf: Addr: 0x00bf4c, Size: 0x001eac, Codepage: 1252
+040     Entry: ID: 0x000005, Value: 0x800000b8
+0b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0c8       Entry: ID: 0x000409, Value: 0x000198
+198        Leaf: Addr: 0x00ddf8, Size: 0x001a2a, Codepage: 1252
+0d0       Entry: ID: 0x000411, Value: 0x0001a8
+1a8        Leaf: Addr: 0x00f824, Size: 0x00124c, Codepage: 1252
+048     Entry: ID: 0x000006, Value: 0x800000d8
+0d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0e8       Entry: ID: 0x000409, Value: 0x0001b8
+1b8        Leaf: Addr: 0x010a70, Size: 0x0004e6, Codepage: 1252
+0f0       Entry: ID: 0x000411, Value: 0x0001c8
+1c8        Leaf: Addr: 0x010f58, Size: 0x0003b0, Codepage: 1252
+050     Entry: ID: 0x000007, Value: 0x800000f8
+0f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+108       Entry: ID: 0x000409, Value: 0x0001d8
+1d8        Leaf: Addr: 0x011308, Size: 0x00052e, Codepage: 1252
+110       Entry: ID: 0x000411, Value: 0x0001e8
+1e8        Leaf: Addr: 0x011838, Size: 0x0003ec, Codepage: 1252
+058     Entry: ID: 0x000008, Value: 0x80000118
+118      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+128       Entry: ID: 0x000409, Value: 0x0001f8
+1f8        Leaf: Addr: 0x011c24, Size: 0x0003aa, Codepage: 1252
+130       Entry: ID: 0x000411, Value: 0x000208
+208        Leaf: Addr: 0x011fd0, Size: 0x0001e4, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000060
+060    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+070     Entry: ID: 0x000001, Value: 0x80000138
+138      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+148       Entry: ID: 0x000409, Value: 0x000218
+218        Leaf: Addr: 0x0121b4, Size: 0x0003d0, Codepage: 1252
+150       Entry: ID: 0x000411, Value: 0x000228
+228        Leaf: Addr: 0x012584, Size: 0x0003e0, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+a965  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+a975   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0x238
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000520a  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000020  01007000  01007000  00005800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         0000aa00  01008000  01008000  00005a00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

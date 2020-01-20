@@ -1,0 +1,153 @@
+
+lodctr.exe:     file format pei-i386
+lodctr.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01001750
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Wed Dec 08 03:15:12 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00003400
+SizeOfInitializedData	00003000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001750
+BaseOfCode		00001000
+BaseOfData		00005000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00009000
+SizeOfHeaders		00000600
+CheckSum		0000ece2
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00003e58 0000003c Import Directory [parts of .idata]
+Entry 2 00008000 000003c0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010c0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000230 00000044 Bound Import Directory
+Entry c 00001000 000000b8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1003e58
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00003e58	00003f34 ffffffff ffffffff 00003fd6 000010a0
+
+	DLL Name: loadperf.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3fbe	   12  UpdatePerfNameFilesA	754478a9
+	3fa2	    0  BackupPerfRegistryToFileW	7544a1a9
+	3f82	    7  RestorePerfRegistryFromFileW	7544ab8e
+	3f6a	    9  SetServiceAsTrustedW	754479fc
+	3f4c	    6  LoadPerfCounterTextStringsW	75446ce2
+
+ 00003e6c	00003e94 ffffffff ffffffff 00004280 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	411c	  281  GetEnvironmentStrings	77e64780
+	4102	  194  FreeEnvironmentStringsW	77e632f0
+	4270	  479  LoadLibraryA	77e68023
+	425e	  339  GetProcAddress	77e6564b
+	424e	  750  VirtualAlloc	77e60ee2
+	3fe4	  442  HeapFree	77fc9c41
+	3ff0	  341  GetProcessHeap	77e59596
+	4002	  436  HeapAlloc	77fc976b
+	400e	  821  lstrlenA	77e67334
+	401a	  219  GetCommandLineW	77e6c693
+	402c	  603  SearchPathA	77e5e100
+	403a	  218  GetCommandLineA	77e571cc
+	404c	  398  GetVersion	77e6e6d6
+	405a	  140  ExitProcess	77e6b0bb
+	4068	  301  GetLastError	77e5668c
+	4078	  514  MultiByteToWideChar	77e65f62
+	408e	  715  TerminateProcess	77e5225c
+	40a2	  265  GetCurrentProcess	77e656d7
+	40b6	  731  UnhandledExceptionFilter	77e89fb7
+	40d2	  312  GetModuleFileNameA	77e63992
+	40e8	  193  FreeEnvironmentStringsA	77e5229e
+	422a	  361  GetStringTypeA	77e5e6e0
+	423c	  364  GetStringTypeW	77e57a07
+	4134	  283  GetEnvironmentStringsW	77e58bc7
+	414e	  769  WideCharToMultiByte	77e5afd8
+	4164	  207  GetCPInfo	77e69041
+	4170	  201  GetACP	77e55fcc
+	417a	  326  GetOEMCP	77e5b97e
+	4186	  664  SetHandleCount	77e6138c
+	4198	  360  GetStdHandle	77e63f05
+	41a8	  296  GetFileType	77e6cac7
+	41b6	  358  GetStartupInfoA	77e6d000
+	41c8	  440  HeapDestroy	77e583d1
+	41d6	  438  HeapCreate	77e55304
+	41e4	  753  VirtualFree	77e5d002
+	41f2	  599  RtlUnwind	77f86118
+	41fe	  782  WriteFile	77e64a24
+	420a	  476  LCMapStringA	77e6d78f
+	421a	  477  LCMapStringW	77e65ae4
+
+ 00003e80	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010c0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00006400
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x008060, Size: 0x00035c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000328e  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00002600  01005000  01005000  00003a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003c0  01008000  01008000  00006000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

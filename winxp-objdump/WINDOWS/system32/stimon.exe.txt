@@ -1,0 +1,158 @@
+
+stimon.exe:     file format pei-i386
+stimon.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001113
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:45:25 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000600
+SizeOfInitializedData	00003000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001113
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		000130b3
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000139c 0000003c Import Directory [parts of .idata]
+Entry 2 00003000 00002d04 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001060 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001090 00000040 Load Configuration Directory
+Entry b 00000258 00000030 Bound Import Directory
+Entry c 00001000 0000004c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100139c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000139c	000013e4 ffffffff ffffffff 000014e6 0000100c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1444	  200  _cexit	4cef9eb6
+	144e	  656  exit	4cef9e7e
+	1456	  549  _wcmdln	4cf217a8
+	1460	  164  __wgetmainargs	4cedee8a
+	1472	  315  _initterm	4cef9d67
+	147e	  154  __setusermatherr	4cf0d695
+	1492	  182  _adjust_fdiv	4cf223d8
+	1436	   78  _XcptFilter	4cef2dae
+	14b2	  133  __p__fmode	4cedf1db
+	14c0	  152  __set_app_type	4cef537c
+	14d2	  237  _except_handler3	4cef5c94
+	14f2	  214  _controlfp	4cf0ee4f
+	142e	  246  _exit	4cef9e9a
+	14a2	  128  __p__commode	4cedf1a4
+	1424	  197  _c_exit	4cef9ece
+
+ 000013b0	000013d8 ffffffff ffffffff 00001526 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1500	  374  GetModuleHandleA	7c80b731
+	1514	  431  GetStartupInfoW	7c801e54
+
+ 000013c4	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001060
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 000010d8 000004d8
+(format RSDS signature da8f6a3255f04d42888cc4e7309a18ed age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 3
+010   Entry: ID: 0x000003, Value: 0x80000028
+028    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 6
+038     Entry: ID: 0x000001, Value: 0x80000098
+098      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0a8       Entry: ID: 0x000411, Value: 0x000158
+158        Leaf: Addr: 0x0031d8, Size: 0x0002e8, Codepage: 1252
+040     Entry: ID: 0x000002, Value: 0x800000b0
+0b0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0c0       Entry: ID: 0x000411, Value: 0x000168
+168        Leaf: Addr: 0x0034c0, Size: 0x000128, Codepage: 1252
+048     Entry: ID: 0x000003, Value: 0x800000c8
+0c8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0d8       Entry: ID: 0x000411, Value: 0x000178
+178        Leaf: Addr: 0x0035e8, Size: 0x000668, Codepage: 1252
+050     Entry: ID: 0x000004, Value: 0x800000e0
+0e0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0f0       Entry: ID: 0x000411, Value: 0x000188
+188        Leaf: Addr: 0x003c50, Size: 0x0008a8, Codepage: 1252
+058     Entry: ID: 0x000005, Value: 0x800000f8
+0f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+108       Entry: ID: 0x000411, Value: 0x000198
+198        Leaf: Addr: 0x0044f8, Size: 0x000ea8, Codepage: 1252
+060     Entry: ID: 0x000006, Value: 0x80000110
+110      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+120       Entry: ID: 0x000411, Value: 0x0001a8
+1a8        Leaf: Addr: 0x0053a0, Size: 0x000568, Codepage: 1252
+018   Entry: ID: 0x00000e, Value: 0x80000068
+068    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+078     Entry: ID: 0x00006f, Value: 0x80000128
+128      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+138       Entry: ID: 0x000411, Value: 0x0001b8
+1b8        Leaf: Addr: 0x005908, Size: 0x00005a, Codepage: 1252
+020   Entry: ID: 0x000010, Value: 0x80000080
+080    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+090     Entry: ID: 0x000001, Value: 0x80000140
+140      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+150       Entry: ID: 0x000411, Value: 0x0001c8
+1c8        Leaf: Addr: 0x005964, Size: 0x0003a0, Codepage: 1252
+ Resources start at offset: 0x1d8
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000534  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000024  01002000  01002000  00000a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00002d04  01003000  01003000  00000c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

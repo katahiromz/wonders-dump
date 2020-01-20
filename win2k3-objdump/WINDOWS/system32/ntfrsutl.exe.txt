@@ -1,0 +1,159 @@
+
+ntfrsutl.exe:     file format pei-i386
+ntfrsutl.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01002477
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 05:50:30 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001c00
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00002477
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		000097ed
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002758 00000064 Import Directory [parts of .idata]
+Entry 2 00004000 00000448 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010d0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001be0 00000040 Load Configuration Directory
+Entry b 00000240 0000006c Bound Import Directory
+Entry c 00001000 000000b0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002758
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002758	00002808 ffffffff ffffffff 0000298a 0000104c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2956	  138  __p__fmode	77baf6c5
+	2964	  158  __set_app_type	77bc632c
+	2976	  244  _except_handler3	77bc6c74
+	28c6	  820  wcscmp	77bd8e09
+	2946	  133  __p__commode	77baf68e
+	28ba	  564  _wcsicmp	77bd762d
+	28b0	  832  wcsstr	77bd90a6
+	28a4	  568  _wcsnicmp	77bd7929
+	289a	  837  wcstoul	77bae0ef
+	2890	  566  _wcslwr	77bd7787
+	2922	  160  __setusermatherr	77bde695
+	2936	  189  _adjust_fdiv	77bf467c
+	2916	  322  _initterm	77bcae06
+	2906	  114  __getmainargs	77baf398
+	28fa	  115  __initenv	77bf3a00
+	28f0	  207  _cexit	77bcaf77
+	28e2	   79  _XcptFilter	77bc3cfc
+	28da	  253  _exit	77bcaf5c
+	28d0	  204  _c_exit	77bcaf8b
+	2886	  753  printf	77bd27c2
+	287e	  668  exit	77bcaf41
+	2876	  326  _iob	77bf1ca8
+	2996	  221  _controlfp	77be0067
+	286c	  683  fprintf	77bd1d51
+
+ 0000276c	000027bc ffffffff ffffffff 000029e0 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2b08	  458  GetSystemTimeAsFileTime	77e41fba
+	2adc	  326  GetCurrentThreadId	77e62fc7
+	2acc	  479  GetTickCount	77e619d1
+	2ab2	  675  QueryPerformanceCounter	77e69577
+	29d2	  600  LocalAlloc	77e6239c
+	29c2	  369  GetLastError	7c829e08
+	29b0	  244  FormatMessageW	77e4f821
+	29a4	  604  LocalFree	77e62419
+	2af2	  323  GetCurrentProcessId	77e63c78
+
+ 00002780	00002800 ffffffff ffffffff 000029fa 00001044
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	29ee	  728  wsprintfW	7738b1f6
+
+ 00002794	000027e4 ffffffff ffffffff 00002aa4 00001028
+
+	DLL Name: NTFRSAPI.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	2a7c	   19  NtFrsApi_InfoLineW	5d63924b
+	2a66	   18  NtFrsApi_InfoFreeW	5d639310
+	2a4a	   16  NtFrsApi_ForceReplication	5d63b806
+	2a28	   26  NtFrsApi_Set_DsPollingIntervalW	5d638dec
+	2a06	   17  NtFrsApi_Get_DsPollingIntervalW	5d63902f
+	2a92	   21  NtFrsApi_InfoW	5d63bb37
+
+ 000027a8	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010d0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 00001c28 00001028
+(format RSDS signature 076d1c9e5c4a490aa3f8019b94d9cb97 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x0003e8, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001b22  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000003c  01003000  01003000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000448  01004000  01004000  00002200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,1042 @@
+
+wiaacmgr.exe:     file format pei-i386
+wiaacmgr.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01024b4a
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:47:38 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00034200
+SizeOfInitializedData	00032e00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00024b4a
+BaseOfCode		00001000
+BaseOfData		00036000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0006a000
+SizeOfHeaders		00000400
+CheckSum		00074aa6
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0003345c 00000104 Import Directory [parts of .idata]
+Entry 2 00038000 00031b10 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001580 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000034f0 00000040 Load Configuration Directory
+Entry b 00000258 00000108 Bound Import Directory
+Entry c 00001000 00000578 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x103345c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0003345c	00033a28 ffffffff ffffffff 00033c0c 000014c8
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	33bb4	  182  _adjust_fdiv	4cf223d8
+	33bc4	  128  __p__commode	4cedf1a4
+	33bd4	  133  __p__fmode	4cedf1db
+	33be2	  152  __set_app_type	4cef537c
+	33bf4	   16  ??1type_info@@UAE@XZ	4cee1868
+	33ad8	  237  _except_handler3	4cef5c94
+	33c18	  214  _controlfp	4cf0ee4f
+	33c26	   52  ?terminate@@YAXXZ	4cee266d
+	33b78	  549  _wcmdln	4cf217a8
+	33b70	  656  exit	4cef9e7e
+	33b66	  200  _cexit	4cef9eb6
+	33b58	   78  _XcptFilter	4cef2dae
+	33b50	  246  _exit	4cef9e9a
+	33b46	  197  _c_exit	4cef9ece
+	33b3c	  810  wcscpy	4cf07e94
+	33b32	  823  wcstol	4ceddc2b
+	33b28	  816  wcsncpy	4cf0806b
+	33b1e	  750  realloc	4ceec437
+	33b16	  677  free	4ceec21b
+	33b0c	  728  malloc	4ceec407
+	33afe	  544  _vsnwprintf	4cefffe7
+	33aec	   89  __RTDynamicCast	4cee3079
+	33ba0	  154  __setusermatherr	4cf0d695
+	33b94	  315  _initterm	4cef9d67
+	33b82	  164  __wgetmainargs	4cedee8a
+
+ 00033470	00033560 ffffffff ffffffff 00033d0e 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	33ce6	   62  CloseServiceHandle	77d96cc5
+	33cd6	  473  RegEnumKeyExW	77d87bc9
+	33cc2	  495  RegQueryValueExW	77d86fef
+	33cb2	  476  RegEnumValueW	77d87edd
+	33c9e	  490  RegQueryInfoKeyW	77d949ae
+	33c8c	  508  RegSetValueExW	77d8d757
+	33c7c	  485  RegOpenKeyExW	77d86a9f
+	33c6a	  463  RegCreateKeyExW	77d8775c
+	33c5c	  458  RegCloseKey	77d86c17
+	33c4a	  468  RegDeleteValueW	77d8ede1
+	33c3a	  466  RegDeleteKeyW	77d9557b
+	33cfc	  428  OpenSCManagerW	77d96f35
+
+ 00033484	00033618 ffffffff ffffffff 00034244 000010b8
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	33de2	  540  InterlockedDecrement	7c80980a
+	33dfa	  691  ReleaseMutex	7c8024b7
+	33e0a	  862  UnmapViewOfFile	7c80ba04
+	33e1c	   49  CloseHandle	7c809bd7
+	33e2a	   56  CompareStringW	7c80a3ee
+	33e3c	  834  Sleep	7c802446
+	33e44	  318  GetCurrentThreadId	7c8097b8
+	33e5a	  377  GetModuleHandleW	7c80e4cd
+	33e6e	  145  DuplicateHandle	7c80de8e
+	33e80	  315  GetCurrentProcess	7c80de85
+	33e94	   76  CreateEventW	7c80a739
+	33ea4	  320  GetDateFormatW	7c83378d
+	33eb6	  362  GetLocalTime	7c80a864
+	33ec6	  468  GetTickCount	7c80932e
+	33ed6	   74  CreateDirectoryW	7c8323ea
+	33eea	  360  GetLastError	7c94fe01
+	33efa	  183  ExitThread	7c80c0e8
+	33f08	  241  FreeLibraryAndExitThread	7c80c200
+	33f24	  240  FreeLibrary	7c80ac6e
+	33f32	  108  CreateThread	7c8106c7
+	33f42	  583  LoadLibraryW	7c80aedb
+	33f52	  373  GetModuleFileNameW	7c80b465
+	33f68	  940  lstrcmpW	7c80aa5c
+	33f74	  130  DeleteFileW	7c831f4b
+	33f82	  316  GetCurrentProcessId	7c8099b0
+	33f98	  946  lstrcpyW	7c80baf4
+	33fa4	  952  lstrlenW	7c809a99
+	33fb0	  949  lstrcpynW	7c80ba7f
+	33fbc	  204  FindClose	7c80ee67
+	33fc8	  211  FindFirstFileW	7c80ef71
+	33fda	  218  FindNextFileW	7c80efca
+	33fea	  894  WaitForSingleObject	7c802530
+	34000	  781  SetFileTime	7c831ca8
+	3400e	   82  CreateFileW	7c8107f0
+	3401c	  448  GetSystemTimeAsFileTime	7c8017e9
+	34036	  347  GetFileSize	7c810b07
+	34044	   93  CreateMutexW	7c80e947
+	34054	  615  MultiByteToWideChar	7c809c88
+	3406a	  943  lstrcmpiW	7c80aa26
+	34076	  937  lstrcatW	7c810fc2
+	34082	  521  HeapDestroy	7c810f88
+	34090	  408  GetProcAddress	7c80ae30
+	340a2	  951  lstrlenA	7c80be46
+	340ae	  833  SizeofResource	7c80bcf9
+	340c0	  585  LoadResource	7c80a045
+	340d0	  226  FindResourceW	7c80bc5e
+	340e0	  582  LoadLibraryExW	7c801af5
+	340f2	  429  GetShortPathNameW	7c81f256
+	34106	  266  GetCommandLineW	7c817013
+	34118	   81  CreateFileMappingW	7c809420
+	3412e	  602  MapViewOfFile	7c80b995
+	3413e	  626  OpenFileMappingW	7c80bb6a
+	34152	  354  GetFullPathNameW	7c80b8e2
+	34166	  763  SetCurrentDirectoryW	7c80f37e
+	3417e	  442  GetSystemDirectoryW	7c831dd3
+	34194	  102  CreateProcessW	7c802336
+	341a6	  790  SetLastError	7c94fe10
+	341b6	  660  QueryPerformanceCounter	7c80a4b7
+	341d0	  842  TerminateProcess	7c801e1a
+	341e4	  859  UnhandledExceptionFilter	7c863e6a
+	34200	  822  SetUnhandledExceptionFilter	7c8449fd
+	3421e	  374  GetModuleHandleA	7c80b731
+	34232	  431  GetStartupInfoW	7c801e54
+	33dcc	  345  GetFileAttributesW	7c80b7dc
+	33db4	  579  LeaveCriticalSection	7c9410e0
+	33d9c	  150  EnterCriticalSection	7c941000
+	33d80	  536  InitializeCriticalSection	7c809f81
+	33d68	  127  DeleteCriticalSection	7c95135a
+	33d5c	  772  SetEvent	7c80a0a7
+	33d4e	  703  ResetEvent	7c80a0cb
+	33d36	  544  InterlockedIncrement	7c8097f6
+	33d2a	  590  LocalFree	7c8099bf
+	33d1c	  586  LocalAlloc	7c809a1d
+	34b2c	  489  GetWindowsDirectoryW	7c80ae0b
+	34b1e	  493  GlobalAlloc	7c80fdbd
+	34b0e	  511  GlobalUnlock	7c80ff12
+	34b00	  504  GlobalLock	7c80ffa9
+	34aee	  236  FormatMessageW	7c834ba7
+	34ade	  460  GetTempPathW	7c830779
+	34aca	  458  GetTempFileNameW	7c8359cf
+	34ab2	  839  SystemTimeToFileTime	7c810bac
+	34a98	  588  LocalFileTimeToFileTime	7c83553c
+	34a8c	  611  MoveFileW	7c821249
+	34a80	   66  CopyFileW	7c82f863
+	34a76	  614  MulDiv	7c809856
+	34a6a	  911  WriteFile	7c810e17
+
+ 00033498	00033594 ffffffff ffffffff 00034342 00001034
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	34b9c	  528  SelectPalette	77ed8632
+	34b8a	  500  RealizePalette	77edea4b
+	34b7a	  538  SetBrushOrgEx	77ed87ec
+	34b6e	  553  SetLayout	77ed9008
+	34b5c	  446  GetTextMetricsW	77ed7db9
+	34b44	  438  GetTextExtentPoint32W	77ed7f9d
+	34bac	   63  CreateHalftonePalette	77edba7a
+	34bc4	  586  StretchBlt	77edb6c0
+	34c46	  566  SetROP2	77edd8c0
+	34332	  364  GetDeviceCaps	77ed5a69
+	3431e	   50  CreateDIBSection	77ed9e09
+	34314	   18  BitBlt	77ed6f79
+	342fa	   44  CreateCompatibleBitmap	77ed700a
+	34bd2	  569  SetStretchBltMode	77ed8597
+	34be6	   71  CreatePen	77eda145
+	34bf2	  462  LineTo	77edd987
+	34bfc	  466  MoveToEx	77eda20a
+	34c08	  503  Rectangle	77ede9ae
+	34c14	   11  Arc	77f04e4e
+	34c1a	  148  Ellipse	77edef75
+	34c24	   72  CreatePenIndirect	77ee3f79
+	34c38	  534  SetBkColor	77ed5e29
+	342e4	   45  CreateCompatibleDC	77ed5fe0
+	342d8	  140  DeleteDC	77ed6e5f
+	342cc	  535  SetBkMode	77ed5edb
+	342bc	  527  SelectObject	77ed5b70
+	342ac	  573  SetTextColor	77ed5d77
+	3429a	  422  GetStockObject	77ed61c1
+	34286	   80  CreateSolidBrush	77ed61a5
+	34278	  408  GetObjectW	77ed83b3
+	34262	   61  CreateFontIndirectW	77ed938f
+	34252	  143  DeleteObject	77ed6bfa
+
+ 000334ac	00033814 ffffffff ffffffff 0003480e 000012b4
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	346c4	  289  GetKeyState	77d09ed9
+	346d2	  567  SendDlgItemMessageW	77d073cc
+	346e8	  647  SetWindowTextW	77d0960e
+	346fa	  434  KillTimer	77cf8c42
+	34706	   54  CharUpperBuffW	77cf9216
+	34718	  475  MessageBeep	77d11f7b
+	34726	  147  DestroyAcceleratorTable	77d1fe8d
+	34740	  436  LoadAcceleratorsW	77d0ee76
+	34754	  658  ShowWindow	77d0af56
+	34762	  153  DestroyWindow	77d0b19c
+	34772	  198  EndDialog	77d04a4e
+	3477e	  196  EnableWindow	77d09849
+	3478e	  596  SetDlgItemTextW	77d0736c
+	347a0	  379  GetWindowThreadProcessId	77cf8a80
+	347bc	  279  GetForegroundWindow	77d09823
+	347d2	   44  CharNextW	77d0b1b0
+	347de	  427  IsWindow	77d09313
+	347ea	  318  GetMessageW	77cf91c6
+	347f8	  419  IsDlgButtonChecked	77d04dfa
+	34dc2	   97  CreateWindowExW	77d0d0a3
+	34db6	  723  WinHelpW	77d41bd4
+	34da0	  480  MessageBoxIndirectW	77d464d5
+	346ac	  680  TranslateAcceleratorW	77cf941e
+	34d80	  197  EndDeferWindowPos	77d0af8d
+	34d6e	  144  DeferWindowPos	77d0afdb
+	34d58	   12  BeginDeferWindowPos	77d0afb9
+	34d4c	  191  DrawTextW	77d0d7e2
+	34d3c	  253  GetClassNameW	77d09d12
+	3469e	  273  GetDlgItem	77d0436e
+	34690	  282  GetIconInfo	77d0d427
+	34676	  552  RegisterWindowMessageW	77cfaf34
+	34668	  483  MessageBoxW	77d46534
+	3465a	  446  LoadImageW	77d07b97
+	3464e	   72  CopyIcon	77cfde72
+	3463a	  536  RegisterClassExW	77cfaf7f
+	34628	  641  SetWindowLongW	77d0c2bb
+	3461a	   13  BeginPaint	77d08fe9
+	3460e	  200  EndPaint	77d08ffd
+	34606	  268  GetDC	77cf86c7
+	345fa	  554  ReleaseDC	77cf869d
+	345e8	  403  InvalidateRect	77d08fd5
+	345d8	  699  UpdateWindow	77d0aeab
+	345cc	  233  FrameRect	77d0f92a
+	343f4	  598  SetFocus	77d0b112
+	345aa	  183  DrawIconEx	77d0cb84
+	34594	  296  GetLastActivePopup	77d1157a
+	34586	  457  LoadStringW	77cf9e36
+	3456e	  377  GetWindowTextLengthW	77d07836
+	3455c	  378  GetWindowTextW	77d0a5cd
+	34546	  515  PostThreadMessageW	77d077b8
+	3452a	  490  MsgWaitForMultipleObjects	77cf9689
+	34516	  682  TranslateMessage	77cf8bf6
+	34502	  162  DispatchMessageW	77cf8a01
+	344f2	  510  PeekMessageW	77cf929b
+	344e2	  255  GetClientRect	77d0908e
+	344ce	  347  GetSysColorBrush	77cf8eab
+	344c2	  226  FillRect	77d09c2f
+	344b4	  394  InflateRect	77d098d5
+	34d28	  488  MonitorFromWindow	77d0a679
+	34d14	  270  GetDesktopWindow	77d0d1d2
+	34e18	  489  MoveWindow	77d0b29e
+	343e6	  580  SetCapture	77d0c35e
+	343d4	  471  MapWindowPoints	77d09507
+	343c8	  523  PtInRect	77d09719
+	343bc	  325  GetParent	77d0910f
+	343a6	  578  SendNotifyMessageW	77d0d64f
+	34394	  428  IsWindowEnabled	77d0977a
+	34382	  367  GetWindowLongW	77cf88a6
+	34376	  634  SetTimer	77cf8c2e
+	34368	  442  LoadCursorW	77cf9d69
+	3435a	  346  GetSysColor	77cf8e78
+	3434c	  150  DestroyIcon	77d0d312
+	34df8	  431  IsWindowVisible	77d09e3d
+	34de6	  537  RegisterClassW	77cfa39a
+	34e26	   74  CopyRect	77d0a042
+	34e32	  278  GetFocus	77d098c8
+	34e3e	  402  IntersectRect	77d08f1f
+	34e4e	  498  OffsetRect	77d09011
+	344a6	  190  DrawTextExW	77d0b415
+	34496	  179  DrawFocusRect	77d0f94f
+	34486	  576  SendMessageW	77d0929a
+	34474	  513  PostQuitMessage	77d0ca5a
+	34464	  512  PostMessageW	77cf8ccb
+	3444e	  599  SetForegroundWindow	77d042ed
+	3443e	  267  GetCursorPos	77d0974e
+	34432	  589  SetCursor	77d09930
+	34420	  143  DefWindowProcW	77d08d20
+	34412	  243  GetCapture	77cf94da
+	34d94	  444  LoadIconW	77d0e8bc
+	34e0a	  424  IsRectEmpty	77d098fe
+	34dd4	  159  DialogBoxParamW	77d047ab
+	345b8	  349  GetSystemMetrics	77cf8f9c
+	34400	  553  ReleaseCapture	77d0c37a
+	34c50	   73  CopyImage	77d0dc14
+	34c5c	  466  MapDialogRect	77d3be4c
+	34c6c	  729  wsprintfW	77cfa9b6
+	34c78	   28  CallWindowProcW	77d0a01e
+	34c8a	  557  RemovePropW	77d0c076
+	34c98	  249  GetClassInfoW	77d0e81e
+	34ca8	  331  GetPropW	77d094b3
+	34cb4	  619  SetPropW	77d0c0b9
+	34cc0	  229  FindWindowExW	77cfe0e3
+	34cd0	  643  SetWindowPos	77d099f3
+	34ce0	  320  GetMonitorInfoW	77d0a6d9
+	34cf2	  487  MonitorFromRect	77d0c713
+	34d04	  372  GetWindowRect	77d090b4
+
+ 000334c0	00033a90 ffffffff ffffffff 00034902 00001530
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	350b8	  145  CreateStreamOnHGlobal	76995e80
+	350d0	    8  CLSIDFromString	769bfcb6
+	350e2	   10  CoAllowSetForegroundWindow	76a14d50
+	3481a	  104  CoUninitialize	7698ee46
+	3482c	   58  CoInitialize	76992a53
+	3483c	   16  CoCreateInstance	7699057e
+	34850	  282  PropVariantClear	769a4104
+	34864	  154  FreePropVariantArray	769b098c
+	3487c	   91  CoRevokeClassObject	769ba2f3
+	34892	   79  CoRegisterClassObject	769a7e90
+	348aa	   99  CoTaskMemAlloc	7698d060
+	348bc	  100  CoTaskMemFree	7698d044
+	348cc	  101  CoTaskMemRealloc	769c2b04
+	348e0	  322  StringFromCLSID	7699ca98
+	348f2	  324  StringFromIID	769d659b
+
+ 000334d4	0003377c ffffffff ffffffff 0003490c 0000121c
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	800000a1	  161  <none>	770d79e8
+	800000a3	  163  <none>	770dccdd
+	80000002	    2  <none>	770d4ba2
+	80000115	  277  <none>	7710025a
+	80000009	    9  <none>	770d48f0
+	80000006	    6  <none>	770d4880
+
+ 000334e8	00033798 ffffffff ffffffff 000349e4 00001238
+
+	DLL Name: SHELL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	35100	  126  SHChangeNotify	7d614909
+	35112	  216  SHOpenFolderAndSelectItems	7d6b2a1e
+	35130	  218  SHParseDisplayName	7d5ddb70
+	80000010	   16  <none>	7d5dc97c
+	3491a	  183  SHGetMalloc	7d61b395
+	800002ec	  748  <none>	7d6c5edd
+	34928	  173  SHGetFileInfoW	7d61aff3
+	3493a	  195  SHGetSpecialFolderLocation	7d5df2e3
+	34958	  266  ShellExecuteExW	7d5f2f03
+	3496a	  189  SHGetPathFromIDListW	7d5e1024
+	80000098	  152  <none>	7d5dad90
+	8000009b	  155  <none>	7d5daaec
+	349d4	  267  ShellExecuteW	7d6a5bf0
+	349c2	   46  ExtractIconExW	7d5ee1b7
+	349ae	  178  SHGetFolderPathW	7d5ded76
+	34998	  167  SHGetDesktopFolder	7d5db768
+	34982	  122  SHBrowseForFolderW	7d6b6fa1
+	80000012	   18  <none>	7d5dadf5
+
+ 000334fc	000337e4 ffffffff ffffffff 00034a3c 00001284
+
+	DLL Name: SHLWAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	349fc	  311  wnsprintfW	77f293e6
+	34a0a	  280  StrToIntExW	77f3bb03
+	34a18	  283  StrTrimW	77f32ee7
+	34a24	  111  PathRemoveExtensionW	77f268f3
+	800000ae	  174  <none>	77f27c21
+	800000ba	  186  <none>	77f77c24
+	800001b5	  437  <none>	77f248d4
+	35146	   47  PathFindExtensionW	77f26859
+	349f0	  240  StrCpyNW	77f26753
+	35172	   49  PathFindFileNameW	77f27077
+	3515c	  113  PathRemoveFileSpecW	77f27c56
+
+ 00033510	00033ad0 ffffffff ffffffff 00034a5c 00001570
+
+	DLL Name: wiashext.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	34a48	    7  DoDeleteAllItems	57984f35
+
+ 00033524	000339c0 ffffffff ffffffff 00035092 00001460
+
+	DLL Name: gdiplus.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	35080	   49  GdipCloneImage	4afb5aaf
+	3506e	  165  GdipDrawImageI	4afb9697
+	35050	  274  GdipGetImageGraphicsContext	4af27a51
+	3503e	  607  GdiplusShutdown	4af2fe84
+	3502c	  608  GdiplusStartup	4af31895
+	35014	  271  GdipGetImageEncoders	4afbc0ef
+	34ff8	  272  GdipGetImageEncodersSize	4afbc085
+	34fe0	  268  GdipGetImageDecoders	4afbbec2
+	34fc4	  269  GdipGetImageDecodersSize	4afbbe58
+	34fa6	   86  GdipCreateHBITMAPFromBitmap	4af68b0e
+	34f88	   69  GdipCreateBitmapFromHBITMAP	4afb6540
+	34f6c	   72  GdipCreateBitmapFromScan0	4af280fa
+	34f52	  455  GdipRemovePropertyItem	4afb59a1
+	34f38	  359  GdipGetPropertyItemSize	4afb577f
+	34f22	  394  GdipImageRotateFlip	4afb55f0
+	34f0a	  280  GdipGetImageRawFormat	4af666c6
+	34ef4	  275  GdipGetImageHeight	4af1eeee
+	34ee0	  284  GdipGetImageWidth	4af1ee59
+	34e5c	  224  GdipFree	4af22951
+	34e68	   33  GdipAlloc	4af22904
+	34e74	  134  GdipDeleteGraphics	4af12f4f
+	34e8a	  418  GdipLoadImageFromFile	4af4ffc2
+	34ea2	  142  GdipDisposeImage	4af1c196
+	34eb6	  476  GdipSaveImageToFile	4afb5239
+	34ecc	  474  GdipSaveAddImage	4afb5353
+
+ 00033538	00033774 ffffffff ffffffff 000350ac 00001214
+
+	DLL Name: MSIMG32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3509e	    0  AlphaBlend	762d119b
+
+ 0003354c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001580
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 00003574 00002974
+(format RSDS signature 40245370ce99493e927889d5c9cf5380 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 2, IDs: 9
+010   Entry: name: [val: 800019d8 len 8]: REGISTRY, Value: 0x80000068
+068    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 4
+078     Entry: ID: 0x000065, Value: 0x80000538
+538      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+548       Entry: ID: 0x000411, Value: 0x001198
+1198        Leaf: Addr: 0x0399fc, Size: 0x000514, Codepage: 1252
+080     Entry: ID: 0x000066, Value: 0x80000550
+550      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+560       Entry: ID: 0x000411, Value: 0x0011a8
+11a8        Leaf: Addr: 0x039f10, Size: 0x000395, Codepage: 1252
+088     Entry: ID: 0x0000d3, Value: 0x80000568
+568      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+578       Entry: ID: 0x000411, Value: 0x0011b8
+11b8        Leaf: Addr: 0x03a2a8, Size: 0x000388, Codepage: 1252
+090     Entry: ID: 0x0000df, Value: 0x80000580
+580      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+590       Entry: ID: 0x000411, Value: 0x0011c8
+11c8        Leaf: Addr: 0x03a630, Size: 0x000395, Codepage: 1252
+018   Entry: name: [val: 800019ea len 7]: TYPELIB, Value: 0x80000098
+098    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0a8     Entry: ID: 0x000001, Value: 0x80000598
+598      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5a8       Entry: ID: 0x000411, Value: 0x0011d8
+11d8        Leaf: Addr: 0x03a9c8, Size: 0x000850, Codepage: 1252
+020   Entry: ID: 0x000002, Value: 0x800000b0
+0b0    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 9
+0c0     Entry: ID: 0x0000cf, Value: 0x800005b0
+5b0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5c0       Entry: ID: 0x000411, Value: 0x0011e8
+11e8        Leaf: Addr: 0x03b218, Size: 0x000438, Codepage: 1252
+0c8     Entry: ID: 0x0000db, Value: 0x800005c8
+5c8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5d8       Entry: ID: 0x000411, Value: 0x0011f8
+11f8        Leaf: Addr: 0x03b650, Size: 0x000252, Codepage: 1252
+0d0     Entry: ID: 0x0000dd, Value: 0x800005e0
+5e0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5f0       Entry: ID: 0x000411, Value: 0x001208
+1208        Leaf: Addr: 0x03b8a4, Size: 0x000182, Codepage: 1252
+0d8     Entry: ID: 0x000190, Value: 0x800005f8
+5f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+608       Entry: ID: 0x000411, Value: 0x001218
+1218        Leaf: Addr: 0x03ba28, Size: 0x00198c, Codepage: 1252
+0e0     Entry: ID: 0x00025a, Value: 0x80000610
+610      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+620       Entry: ID: 0x000411, Value: 0x001228
+1228        Leaf: Addr: 0x03d3b4, Size: 0x000438, Codepage: 1252
+0e8     Entry: ID: 0x00025b, Value: 0x80000628
+628      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+638       Entry: ID: 0x000411, Value: 0x001238
+1238        Leaf: Addr: 0x03d7ec, Size: 0x00178e, Codepage: 1252
+0f0     Entry: ID: 0x00025c, Value: 0x80000640
+640      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+650       Entry: ID: 0x000411, Value: 0x001248
+1248        Leaf: Addr: 0x03ef7c, Size: 0x000438, Codepage: 1252
+0f8     Entry: ID: 0x00025d, Value: 0x80000658
+658      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+668       Entry: ID: 0x000411, Value: 0x001258
+1258        Leaf: Addr: 0x03f3b4, Size: 0x0016fa, Codepage: 1252
+100     Entry: ID: 0x000fa1, Value: 0x80000670
+670      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+680       Entry: ID: 0x000411, Value: 0x001268
+1268        Leaf: Addr: 0x040ab0, Size: 0x000092, Codepage: 1252
+028   Entry: ID: 0x000003, Value: 0x80000108
+108    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 59
+118     Entry: ID: 0x000001, Value: 0x80000688
+688      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+698       Entry: ID: 0x000411, Value: 0x001278
+1278        Leaf: Addr: 0x040b44, Size: 0x000668, Codepage: 1252
+120     Entry: ID: 0x000002, Value: 0x800006a0
+6a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6b0       Entry: ID: 0x000411, Value: 0x001288
+1288        Leaf: Addr: 0x0411ac, Size: 0x0002e8, Codepage: 1252
+128     Entry: ID: 0x000003, Value: 0x800006b8
+6b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6c8       Entry: ID: 0x000411, Value: 0x001298
+1298        Leaf: Addr: 0x041494, Size: 0x000128, Codepage: 1252
+130     Entry: ID: 0x000004, Value: 0x800006d0
+6d0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6e0       Entry: ID: 0x000411, Value: 0x0012a8
+12a8        Leaf: Addr: 0x0415bc, Size: 0x000ea8, Codepage: 1252
+138     Entry: ID: 0x000005, Value: 0x800006e8
+6e8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6f8       Entry: ID: 0x000411, Value: 0x0012b8
+12b8        Leaf: Addr: 0x042464, Size: 0x0008a8, Codepage: 1252
+140     Entry: ID: 0x000006, Value: 0x80000700
+700      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+710       Entry: ID: 0x000411, Value: 0x0012c8
+12c8        Leaf: Addr: 0x042d0c, Size: 0x000568, Codepage: 1252
+148     Entry: ID: 0x000007, Value: 0x80000718
+718      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+728       Entry: ID: 0x000411, Value: 0x0012d8
+12d8        Leaf: Addr: 0x043274, Size: 0x0025a8, Codepage: 1252
+150     Entry: ID: 0x000008, Value: 0x80000730
+730      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+740       Entry: ID: 0x000411, Value: 0x0012e8
+12e8        Leaf: Addr: 0x04581c, Size: 0x0010a8, Codepage: 1252
+158     Entry: ID: 0x000009, Value: 0x80000748
+748      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+758       Entry: ID: 0x000411, Value: 0x0012f8
+12f8        Leaf: Addr: 0x0468c4, Size: 0x000468, Codepage: 1252
+160     Entry: ID: 0x00000a, Value: 0x80000760
+760      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+770       Entry: ID: 0x000411, Value: 0x001308
+1308        Leaf: Addr: 0x046d2c, Size: 0x000ea8, Codepage: 1252
+168     Entry: ID: 0x00000b, Value: 0x80000778
+778      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+788       Entry: ID: 0x000411, Value: 0x001318
+1318        Leaf: Addr: 0x047bd4, Size: 0x000668, Codepage: 1252
+170     Entry: ID: 0x00000c, Value: 0x80000790
+790      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7a0       Entry: ID: 0x000411, Value: 0x001328
+1328        Leaf: Addr: 0x04823c, Size: 0x0002e8, Codepage: 1252
+178     Entry: ID: 0x00000d, Value: 0x800007a8
+7a8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7b8       Entry: ID: 0x000411, Value: 0x001338
+1338        Leaf: Addr: 0x048524, Size: 0x000128, Codepage: 1252
+180     Entry: ID: 0x00000e, Value: 0x800007c0
+7c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7d0       Entry: ID: 0x000411, Value: 0x001348
+1348        Leaf: Addr: 0x04864c, Size: 0x000ea8, Codepage: 1252
+188     Entry: ID: 0x00000f, Value: 0x800007d8
+7d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7e8       Entry: ID: 0x000411, Value: 0x001358
+1358        Leaf: Addr: 0x0494f4, Size: 0x0008a8, Codepage: 1252
+190     Entry: ID: 0x000010, Value: 0x800007f0
+7f0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+800       Entry: ID: 0x000411, Value: 0x001368
+1368        Leaf: Addr: 0x049d9c, Size: 0x000568, Codepage: 1252
+198     Entry: ID: 0x000011, Value: 0x80000808
+808      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+818       Entry: ID: 0x000411, Value: 0x001378
+1378        Leaf: Addr: 0x04a304, Size: 0x0025a8, Codepage: 1252
+1a0     Entry: ID: 0x000012, Value: 0x80000820
+820      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+830       Entry: ID: 0x000411, Value: 0x001388
+1388        Leaf: Addr: 0x04c8ac, Size: 0x0010a8, Codepage: 1252
+1a8     Entry: ID: 0x000013, Value: 0x80000838
+838      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+848       Entry: ID: 0x000411, Value: 0x001398
+1398        Leaf: Addr: 0x04d954, Size: 0x000468, Codepage: 1252
+1b0     Entry: ID: 0x000014, Value: 0x80000850
+850      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+860       Entry: ID: 0x000411, Value: 0x0013a8
+13a8        Leaf: Addr: 0x04ddbc, Size: 0x000128, Codepage: 1252
+1b8     Entry: ID: 0x000015, Value: 0x80000868
+868      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+878       Entry: ID: 0x000411, Value: 0x0013b8
+13b8        Leaf: Addr: 0x04dee4, Size: 0x000130, Codepage: 1252
+1c0     Entry: ID: 0x000016, Value: 0x80000880
+880      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+890       Entry: ID: 0x000411, Value: 0x0013c8
+13c8        Leaf: Addr: 0x04e014, Size: 0x0002e8, Codepage: 1252
+1c8     Entry: ID: 0x000017, Value: 0x80000898
+898      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+8a8       Entry: ID: 0x000411, Value: 0x0013d8
+13d8        Leaf: Addr: 0x04e2fc, Size: 0x000ea8, Codepage: 1252
+1d0     Entry: ID: 0x000018, Value: 0x800008b0
+8b0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+8c0       Entry: ID: 0x000411, Value: 0x0013e8
+13e8        Leaf: Addr: 0x04f1a4, Size: 0x0008a8, Codepage: 1252
+1d8     Entry: ID: 0x000019, Value: 0x800008c8
+8c8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+8d8       Entry: ID: 0x000411, Value: 0x0013f8
+13f8        Leaf: Addr: 0x04fa4c, Size: 0x000568, Codepage: 1252
+1e0     Entry: ID: 0x00001a, Value: 0x800008e0
+8e0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+8f0       Entry: ID: 0x000411, Value: 0x001408
+1408        Leaf: Addr: 0x04ffb4, Size: 0x0025a8, Codepage: 1252
+1e8     Entry: ID: 0x00001b, Value: 0x800008f8
+8f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+908       Entry: ID: 0x000411, Value: 0x001418
+1418        Leaf: Addr: 0x05255c, Size: 0x0010a8, Codepage: 1252
+1f0     Entry: ID: 0x00001c, Value: 0x80000910
+910      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+920       Entry: ID: 0x000411, Value: 0x001428
+1428        Leaf: Addr: 0x053604, Size: 0x000468, Codepage: 1252
+1f8     Entry: ID: 0x00001d, Value: 0x80000928
+928      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+938       Entry: ID: 0x000411, Value: 0x001438
+1438        Leaf: Addr: 0x053a6c, Size: 0x0002e8, Codepage: 1252
+200     Entry: ID: 0x00001e, Value: 0x80000940
+940      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+950       Entry: ID: 0x000411, Value: 0x001448
+1448        Leaf: Addr: 0x053d54, Size: 0x0008a8, Codepage: 1252
+208     Entry: ID: 0x00001f, Value: 0x80000958
+958      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+968       Entry: ID: 0x000411, Value: 0x001458
+1458        Leaf: Addr: 0x0545fc, Size: 0x0002e8, Codepage: 1252
+210     Entry: ID: 0x000020, Value: 0x80000970
+970      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+980       Entry: ID: 0x000411, Value: 0x001468
+1468        Leaf: Addr: 0x0548e4, Size: 0x0008a8, Codepage: 1252
+218     Entry: ID: 0x000021, Value: 0x80000988
+988      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+998       Entry: ID: 0x000411, Value: 0x001478
+1478        Leaf: Addr: 0x05518c, Size: 0x0002e8, Codepage: 1252
+220     Entry: ID: 0x000022, Value: 0x800009a0
+9a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+9b0       Entry: ID: 0x000411, Value: 0x001488
+1488        Leaf: Addr: 0x055474, Size: 0x0008a8, Codepage: 1252
+228     Entry: ID: 0x000023, Value: 0x800009b8
+9b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+9c8       Entry: ID: 0x000411, Value: 0x001498
+1498        Leaf: Addr: 0x055d1c, Size: 0x000668, Codepage: 1252
+230     Entry: ID: 0x000024, Value: 0x800009d0
+9d0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+9e0       Entry: ID: 0x000411, Value: 0x0014a8
+14a8        Leaf: Addr: 0x056384, Size: 0x0002e8, Codepage: 1252
+238     Entry: ID: 0x000025, Value: 0x800009e8
+9e8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+9f8       Entry: ID: 0x000411, Value: 0x0014b8
+14b8        Leaf: Addr: 0x05666c, Size: 0x000128, Codepage: 1252
+240     Entry: ID: 0x000026, Value: 0x80000a00
+a00      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+a10       Entry: ID: 0x000411, Value: 0x0014c8
+14c8        Leaf: Addr: 0x056794, Size: 0x000ea8, Codepage: 1252
+248     Entry: ID: 0x000027, Value: 0x80000a18
+a18      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+a28       Entry: ID: 0x000411, Value: 0x0014d8
+14d8        Leaf: Addr: 0x05763c, Size: 0x0008a8, Codepage: 1252
+250     Entry: ID: 0x000028, Value: 0x80000a30
+a30      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+a40       Entry: ID: 0x000411, Value: 0x0014e8
+14e8        Leaf: Addr: 0x057ee4, Size: 0x000568, Codepage: 1252
+258     Entry: ID: 0x000029, Value: 0x80000a48
+a48      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+a58       Entry: ID: 0x000411, Value: 0x0014f8
+14f8        Leaf: Addr: 0x05844c, Size: 0x0025a8, Codepage: 1252
+260     Entry: ID: 0x00002a, Value: 0x80000a60
+a60      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+a70       Entry: ID: 0x000411, Value: 0x001508
+1508        Leaf: Addr: 0x05a9f4, Size: 0x0010a8, Codepage: 1252
+268     Entry: ID: 0x00002b, Value: 0x80000a78
+a78      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+a88       Entry: ID: 0x000411, Value: 0x001518
+1518        Leaf: Addr: 0x05ba9c, Size: 0x000468, Codepage: 1252
+270     Entry: ID: 0x00002c, Value: 0x80000a90
+a90      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+aa0       Entry: ID: 0x000411, Value: 0x001528
+1528        Leaf: Addr: 0x05bf04, Size: 0x0002e8, Codepage: 1252
+278     Entry: ID: 0x00002d, Value: 0x80000aa8
+aa8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ab8       Entry: ID: 0x000411, Value: 0x001538
+1538        Leaf: Addr: 0x05c1ec, Size: 0x0008a8, Codepage: 1252
+280     Entry: ID: 0x00002e, Value: 0x80000ac0
+ac0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ad0       Entry: ID: 0x000411, Value: 0x001548
+1548        Leaf: Addr: 0x05ca94, Size: 0x0002e8, Codepage: 1252
+288     Entry: ID: 0x00002f, Value: 0x80000ad8
+ad8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ae8       Entry: ID: 0x000411, Value: 0x001558
+1558        Leaf: Addr: 0x05cd7c, Size: 0x0002e8, Codepage: 1252
+290     Entry: ID: 0x000030, Value: 0x80000af0
+af0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b00       Entry: ID: 0x000411, Value: 0x001568
+1568        Leaf: Addr: 0x05d064, Size: 0x0002e8, Codepage: 1252
+298     Entry: ID: 0x000031, Value: 0x80000b08
+b08      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b18       Entry: ID: 0x000411, Value: 0x001578
+1578        Leaf: Addr: 0x05d34c, Size: 0x000128, Codepage: 1252
+2a0     Entry: ID: 0x000032, Value: 0x80000b20
+b20      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b30       Entry: ID: 0x000411, Value: 0x001588
+1588        Leaf: Addr: 0x05d474, Size: 0x000568, Codepage: 1252
+2a8     Entry: ID: 0x000033, Value: 0x80000b38
+b38      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b48       Entry: ID: 0x000411, Value: 0x001598
+1598        Leaf: Addr: 0x05d9dc, Size: 0x0008a8, Codepage: 1252
+2b0     Entry: ID: 0x000034, Value: 0x80000b50
+b50      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b60       Entry: ID: 0x000411, Value: 0x0015a8
+15a8        Leaf: Addr: 0x05e284, Size: 0x0002e8, Codepage: 1252
+2b8     Entry: ID: 0x000035, Value: 0x80000b68
+b68      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b78       Entry: ID: 0x000411, Value: 0x0015b8
+15b8        Leaf: Addr: 0x05e56c, Size: 0x000128, Codepage: 1252
+2c0     Entry: ID: 0x000036, Value: 0x80000b80
+b80      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+b90       Entry: ID: 0x000411, Value: 0x0015c8
+15c8        Leaf: Addr: 0x05e694, Size: 0x000ea8, Codepage: 1252
+2c8     Entry: ID: 0x000037, Value: 0x80000b98
+b98      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ba8       Entry: ID: 0x000411, Value: 0x0015d8
+15d8        Leaf: Addr: 0x05f53c, Size: 0x0008a8, Codepage: 1252
+2d0     Entry: ID: 0x000038, Value: 0x80000bb0
+bb0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+bc0       Entry: ID: 0x000411, Value: 0x0015e8
+15e8        Leaf: Addr: 0x05fde4, Size: 0x000568, Codepage: 1252
+2d8     Entry: ID: 0x000039, Value: 0x80000bc8
+bc8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+bd8       Entry: ID: 0x000411, Value: 0x0015f8
+15f8        Leaf: Addr: 0x06034c, Size: 0x0025a8, Codepage: 1252
+2e0     Entry: ID: 0x00003a, Value: 0x80000be0
+be0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+bf0       Entry: ID: 0x000411, Value: 0x001608
+1608        Leaf: Addr: 0x0628f4, Size: 0x0010a8, Codepage: 1252
+2e8     Entry: ID: 0x00003b, Value: 0x80000bf8
+bf8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c08       Entry: ID: 0x000411, Value: 0x001618
+1618        Leaf: Addr: 0x06399c, Size: 0x000468, Codepage: 1252
+030   Entry: ID: 0x000005, Value: 0x800002f0
+2f0    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 21
+300     Entry: ID: 0x000067, Value: 0x80000c10
+c10      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c20       Entry: ID: 0x000411, Value: 0x001628
+1628        Leaf: Addr: 0x063e04, Size: 0x00018c, Codepage: 1252
+308     Entry: ID: 0x0000cb, Value: 0x80000c28
+c28      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c38       Entry: ID: 0x000411, Value: 0x001638
+1638        Leaf: Addr: 0x063f90, Size: 0x000260, Codepage: 1252
+310     Entry: ID: 0x0000cc, Value: 0x80000c40
+c40      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c50       Entry: ID: 0x000411, Value: 0x001648
+1648        Leaf: Addr: 0x0641f0, Size: 0x0000e4, Codepage: 1252
+318     Entry: ID: 0x0000d0, Value: 0x80000c58
+c58      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c68       Entry: ID: 0x000411, Value: 0x001658
+1658        Leaf: Addr: 0x0642d4, Size: 0x0001e8, Codepage: 1252
+320     Entry: ID: 0x0000d1, Value: 0x80000c70
+c70      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c80       Entry: ID: 0x000411, Value: 0x001668
+1668        Leaf: Addr: 0x0644bc, Size: 0x0002a0, Codepage: 1252
+328     Entry: ID: 0x0000d2, Value: 0x80000c88
+c88      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+c98       Entry: ID: 0x000411, Value: 0x001678
+1678        Leaf: Addr: 0x06475c, Size: 0x0001e0, Codepage: 1252
+330     Entry: ID: 0x0000d9, Value: 0x80000ca0
+ca0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+cb0       Entry: ID: 0x000411, Value: 0x001688
+1688        Leaf: Addr: 0x06493c, Size: 0x000260, Codepage: 1252
+338     Entry: ID: 0x0000da, Value: 0x80000cb8
+cb8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+cc8       Entry: ID: 0x000411, Value: 0x001698
+1698        Leaf: Addr: 0x064b9c, Size: 0x0001e8, Codepage: 1252
+340     Entry: ID: 0x0000db, Value: 0x80000cd0
+cd0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ce0       Entry: ID: 0x000411, Value: 0x0016a8
+16a8        Leaf: Addr: 0x064d84, Size: 0x00036c, Codepage: 1252
+348     Entry: ID: 0x0000dd, Value: 0x80000ce8
+ce8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+cf8       Entry: ID: 0x000411, Value: 0x0016b8
+16b8        Leaf: Addr: 0x0650f0, Size: 0x00013c, Codepage: 1252
+350     Entry: ID: 0x0000de, Value: 0x80000d00
+d00      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+d10       Entry: ID: 0x000411, Value: 0x0016c8
+16c8        Leaf: Addr: 0x06522c, Size: 0x000264, Codepage: 1252
+358     Entry: ID: 0x0000df, Value: 0x80000d18
+d18      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+d28       Entry: ID: 0x000411, Value: 0x0016d8
+16d8        Leaf: Addr: 0x065490, Size: 0x000174, Codepage: 1252
+360     Entry: ID: 0x0000e1, Value: 0x80000d30
+d30      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+d40       Entry: ID: 0x000411, Value: 0x0016e8
+16e8        Leaf: Addr: 0x065604, Size: 0x00017c, Codepage: 1252
+368     Entry: ID: 0x0000e2, Value: 0x80000d48
+d48      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+d58       Entry: ID: 0x000411, Value: 0x0016f8
+16f8        Leaf: Addr: 0x065780, Size: 0x00020c, Codepage: 1252
+370     Entry: ID: 0x0000e3, Value: 0x80000d60
+d60      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+d70       Entry: ID: 0x000411, Value: 0x001708
+1708        Leaf: Addr: 0x06598c, Size: 0x00029c, Codepage: 1252
+378     Entry: ID: 0x000d02, Value: 0x80000d78
+d78      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+d88       Entry: ID: 0x000411, Value: 0x001718
+1718        Leaf: Addr: 0x065c28, Size: 0x00014c, Codepage: 1252
+380     Entry: ID: 0x000d03, Value: 0x80000d90
+d90      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+da0       Entry: ID: 0x000411, Value: 0x001728
+1728        Leaf: Addr: 0x065d74, Size: 0x0001b4, Codepage: 1252
+388     Entry: ID: 0x000d04, Value: 0x80000da8
+da8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+db8       Entry: ID: 0x000411, Value: 0x001738
+1738        Leaf: Addr: 0x065f28, Size: 0x000114, Codepage: 1252
+390     Entry: ID: 0x000d05, Value: 0x80000dc0
+dc0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+dd0       Entry: ID: 0x000411, Value: 0x001748
+1748        Leaf: Addr: 0x06603c, Size: 0x000140, Codepage: 1252
+398     Entry: ID: 0x000d06, Value: 0x80000dd8
+dd8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+de8       Entry: ID: 0x000411, Value: 0x001758
+1758        Leaf: Addr: 0x06617c, Size: 0x00014c, Codepage: 1252
+3a0     Entry: ID: 0x000d07, Value: 0x80000df0
+df0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e00       Entry: ID: 0x000411, Value: 0x001768
+1768        Leaf: Addr: 0x0662c8, Size: 0x0001b4, Codepage: 1252
+038   Entry: ID: 0x000006, Value: 0x800003a8
+3a8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 18
+3b8     Entry: ID: 0x000007, Value: 0x80000e08
+e08      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e18       Entry: ID: 0x000411, Value: 0x001778
+1778        Leaf: Addr: 0x06647c, Size: 0x000294, Codepage: 1252
+3c0     Entry: ID: 0x000008, Value: 0x80000e20
+e20      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e30       Entry: ID: 0x000411, Value: 0x001788
+1788        Leaf: Addr: 0x066710, Size: 0x000258, Codepage: 1252
+3c8     Entry: ID: 0x000009, Value: 0x80000e38
+e38      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e48       Entry: ID: 0x000411, Value: 0x001798
+1798        Leaf: Addr: 0x066968, Size: 0x000388, Codepage: 1252
+3d0     Entry: ID: 0x00000a, Value: 0x80000e50
+e50      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e60       Entry: ID: 0x000411, Value: 0x0017a8
+17a8        Leaf: Addr: 0x066cf0, Size: 0x00037c, Codepage: 1252
+3d8     Entry: ID: 0x00000b, Value: 0x80000e68
+e68      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e78       Entry: ID: 0x000411, Value: 0x0017b8
+17b8        Leaf: Addr: 0x06706c, Size: 0x0003b4, Codepage: 1252
+3e0     Entry: ID: 0x00000c, Value: 0x80000e80
+e80      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+e90       Entry: ID: 0x000411, Value: 0x0017c8
+17c8        Leaf: Addr: 0x067420, Size: 0x0003c4, Codepage: 1252
+3e8     Entry: ID: 0x00000d, Value: 0x80000e98
+e98      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ea8       Entry: ID: 0x000411, Value: 0x0017d8
+17d8        Leaf: Addr: 0x0677e4, Size: 0x00034c, Codepage: 1252
+3f0     Entry: ID: 0x00000e, Value: 0x80000eb0
+eb0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ec0       Entry: ID: 0x000411, Value: 0x0017e8
+17e8        Leaf: Addr: 0x067b30, Size: 0x00037c, Codepage: 1252
+3f8     Entry: ID: 0x00000f, Value: 0x80000ec8
+ec8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ed8       Entry: ID: 0x000411, Value: 0x0017f8
+17f8        Leaf: Addr: 0x067eac, Size: 0x0001e0, Codepage: 1252
+400     Entry: ID: 0x000010, Value: 0x80000ee0
+ee0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ef0       Entry: ID: 0x000411, Value: 0x001808
+1808        Leaf: Addr: 0x06808c, Size: 0x00038c, Codepage: 1252
+408     Entry: ID: 0x000011, Value: 0x80000ef8
+ef8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f08       Entry: ID: 0x000411, Value: 0x001818
+1818        Leaf: Addr: 0x068418, Size: 0x000438, Codepage: 1252
+410     Entry: ID: 0x000012, Value: 0x80000f10
+f10      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f20       Entry: ID: 0x000411, Value: 0x001828
+1828        Leaf: Addr: 0x068850, Size: 0x000274, Codepage: 1252
+418     Entry: ID: 0x000040, Value: 0x80000f28
+f28      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f38       Entry: ID: 0x000411, Value: 0x001838
+1838        Leaf: Addr: 0x068ac4, Size: 0x0000e0, Codepage: 1252
+420     Entry: ID: 0x000045, Value: 0x80000f40
+f40      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f50       Entry: ID: 0x000411, Value: 0x001848
+1848        Leaf: Addr: 0x068ba4, Size: 0x000044, Codepage: 1252
+428     Entry: ID: 0x00059e, Value: 0x80000f58
+f58      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f68       Entry: ID: 0x000411, Value: 0x001858
+1858        Leaf: Addr: 0x068be8, Size: 0x000234, Codepage: 1252
+430     Entry: ID: 0x00059f, Value: 0x80000f70
+f70      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f80       Entry: ID: 0x000411, Value: 0x001868
+1868        Leaf: Addr: 0x068e1c, Size: 0x0000d8, Codepage: 1252
+438     Entry: ID: 0x0005a0, Value: 0x80000f88
+f88      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+f98       Entry: ID: 0x000411, Value: 0x001878
+1878        Leaf: Addr: 0x068ef4, Size: 0x000128, Codepage: 1252
+440     Entry: ID: 0x0005a1, Value: 0x80000fa0
+fa0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+fb0       Entry: ID: 0x000411, Value: 0x001888
+1888        Leaf: Addr: 0x06901c, Size: 0x0000b8, Codepage: 1252
+040   Entry: ID: 0x000009, Value: 0x80000448
+448    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+458     Entry: ID: 0x0000e0, Value: 0x80000fb8
+fb8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+fc8       Entry: ID: 0x000411, Value: 0x001898
+1898        Leaf: Addr: 0x0690d4, Size: 0x000030, Codepage: 1252
+048   Entry: ID: 0x00000e, Value: 0x80000460
+460    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 15
+470     Entry: ID: 0x000002, Value: 0x80000fd0
+fd0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+fe0       Entry: ID: 0x000411, Value: 0x0018a8
+18a8        Leaf: Addr: 0x069104, Size: 0x000084, Codepage: 1252
+478     Entry: ID: 0x000065, Value: 0x80000fe8
+fe8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+ff8       Entry: ID: 0x000411, Value: 0x0018b8
+18b8        Leaf: Addr: 0x069188, Size: 0x000014, Codepage: 1252
+480     Entry: ID: 0x000066, Value: 0x80001000
+1000      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1010       Entry: ID: 0x000411, Value: 0x0018c8
+18c8        Leaf: Addr: 0x06919c, Size: 0x000084, Codepage: 1252
+488     Entry: ID: 0x000067, Value: 0x80001018
+1018      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1028       Entry: ID: 0x000411, Value: 0x0018d8
+18d8        Leaf: Addr: 0x069220, Size: 0x000014, Codepage: 1252
+490     Entry: ID: 0x00006d, Value: 0x80001030
+1030      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1040       Entry: ID: 0x000411, Value: 0x0018e8
+18e8        Leaf: Addr: 0x069234, Size: 0x000014, Codepage: 1252
+498     Entry: ID: 0x0000ca, Value: 0x80001048
+1048      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1058       Entry: ID: 0x000411, Value: 0x0018f8
+18f8        Leaf: Addr: 0x069248, Size: 0x000022, Codepage: 1252
+4a0     Entry: ID: 0x0000cb, Value: 0x80001060
+1060      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1070       Entry: ID: 0x000411, Value: 0x001908
+1908        Leaf: Addr: 0x06926c, Size: 0x000022, Codepage: 1252
+4a8     Entry: ID: 0x0000cc, Value: 0x80001078
+1078      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1088       Entry: ID: 0x000411, Value: 0x001918
+1918        Leaf: Addr: 0x069290, Size: 0x000022, Codepage: 1252
+4b0     Entry: ID: 0x0000cd, Value: 0x80001090
+1090      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+10a0       Entry: ID: 0x000411, Value: 0x001928
+1928        Leaf: Addr: 0x0692b4, Size: 0x000022, Codepage: 1252
+4b8     Entry: ID: 0x0000ce, Value: 0x800010a8
+10a8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+10b8       Entry: ID: 0x000411, Value: 0x001938
+1938        Leaf: Addr: 0x0692d8, Size: 0x000084, Codepage: 1252
+4c0     Entry: ID: 0x0000d4, Value: 0x800010c0
+10c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+10d0       Entry: ID: 0x000411, Value: 0x001948
+1948        Leaf: Addr: 0x06935c, Size: 0x000030, Codepage: 1252
+4c8     Entry: ID: 0x00025c, Value: 0x800010d8
+10d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+10e8       Entry: ID: 0x000411, Value: 0x001958
+1958        Leaf: Addr: 0x06938c, Size: 0x000014, Codepage: 1252
+4d0     Entry: ID: 0x00025d, Value: 0x800010f0
+10f0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1100       Entry: ID: 0x000411, Value: 0x001968
+1968        Leaf: Addr: 0x0693a0, Size: 0x000076, Codepage: 1252
+4d8     Entry: ID: 0x00025e, Value: 0x80001108
+1108      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1118       Entry: ID: 0x000411, Value: 0x001978
+1978        Leaf: Addr: 0x069418, Size: 0x000014, Codepage: 1252
+4e0     Entry: ID: 0x00025f, Value: 0x80001120
+1120      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1130       Entry: ID: 0x000411, Value: 0x001988
+1988        Leaf: Addr: 0x06942c, Size: 0x000076, Codepage: 1252
+050   Entry: ID: 0x000010, Value: 0x800004e8
+4e8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+4f8     Entry: ID: 0x000001, Value: 0x80001138
+1138      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1148       Entry: ID: 0x000411, Value: 0x001998
+1998        Leaf: Addr: 0x0694a4, Size: 0x0003b0, Codepage: 1252
+058   Entry: ID: 0x000018, Value: 0x80000500
+500    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+510     Entry: ID: 0x00007b, Value: 0x80001150
+1150      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1160       Entry: ID: 0x000411, Value: 0x0019a8
+19a8        Leaf: Addr: 0x069854, Size: 0x00029f, Codepage: 1252
+060   Entry: ID: 0x0000f1, Value: 0x80000518
+518    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+528     Entry: ID: 0x0000db, Value: 0x80001168
+1168      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1178       Entry: ID: 0x000411, Value: 0x0019b8
+19b8        Leaf: Addr: 0x069af4, Size: 0x000010, Codepage: 1252
+530     Entry: ID: 0x0000dd, Value: 0x80001180
+1180      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1190       Entry: ID: 0x000411, Value: 0x0019c8
+19c8        Leaf: Addr: 0x069b04, Size: 0x00000c, Codepage: 1252
+ String table starts at offset: 0x19d8
+ Resources start at offset: 0x19fc
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00034186  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00001200  01036000  01036000  00034600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00031b10  01038000  01038000  00035800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,140 @@
+
+bootvrfy.exe:     file format pei-i386
+bootvrfy.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x010012f0
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sat Sep 25 19:59:21 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00000800
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000012f0
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00004000
+SizeOfHeaders		00000600
+CheckSum		0000d0eb
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000149c 00000050 Import Directory [parts of .idata]
+Entry 2 00003000 000003e8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001080 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000248 00000048 Bound Import Directory
+Entry c 00001000 00000074 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100149c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000149c	00001528 ffffffff ffffffff 00001612 0000103c
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	15ce	  105  __p__commode	78003e6a
+	15ec	  128  __set_app_type	78003e5a
+	161e	  180  _controlfp	78003c1e
+	159e	  268  _initterm	78001dea
+	158e	   88  __getmainargs	78003e70
+	157e	   99  __p___initenv	7800bb9e
+	1576	  582  exit	7800269e
+	1568	   72  _XcptFilter	7800f7dc
+	15fe	  199  _except_handler3	7800f56a
+	15be	  155  _adjust_fdiv	7803bb70
+	15de	  110  __p__fmode	78003e64
+	15aa	  130  __setusermatherr	7800b426
+	1560	  208  _exit	7800b908
+
+ 000014b0	000014ec ffffffff ffffffff 000016ca 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	16ac	  444  RegisterServiceCtrlHandlerW	77d995e7
+	1698	  479  SetServiceStatus	77d99694
+	167e	  343  NotifyBootConfigStatus	77d83f5c
+	166c	  361  OpenSCManagerW	77d93c56
+	165c	  363  OpenServiceW	77d93d01
+	164a	   61  ControlService	77d8253b
+	162c	  486  StartServiceCtrlDispatcherW	77d990e4
+
+ 000014c4	0000150c ffffffff ffffffff 00001736 00001020
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	172a	  656  SetEvent	77e5670d
+	16f4	  765  WaitForSingleObject	77e58778
+	16e6	  141  ExitThread	77e606cf
+	170a	  301  GetLastError	77e5668c
+	171a	   52  CreateEventA	77e5b217
+	16d8	  140  ExitProcess	77e6b0bb
+
+ 000014d8	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001080
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00001400
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x000384, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000744  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000068  01002000  01002000  00000e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003e8  01003000  01003000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

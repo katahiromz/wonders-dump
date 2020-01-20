@@ -1,0 +1,201 @@
+
+rasautou.exe:     file format pei-i386
+rasautou.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100222a
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Aug 18 05:55:40 2001
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	0
+SizeOfCode		00001e00
+SizeOfInitializedData	00000c00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000222a
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		0000336c
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000274c 000000c8 Import Directory [parts of .idata]
+Entry 2 00004000 000006d0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001120 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000250 000000c4 Bound Import Directory
+Entry c 00001000 00000108 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100274c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000274c	000028ac ffffffff ffffffff 00002a0e 00001098
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2a1a	  214  _controlfp	77bfa658
+	2a28	  237  _except_handler3	77be3eb0
+	29fc	  152  __set_app_type	77be3632
+	29ee	  133  __p__fmode	77bceb68
+	29de	  128  __p__commode	77bceb4a
+	29ce	  182  _adjust_fdiv	77c0d388
+	29ba	  154  __setusermatherr	77bf8f60
+	2958	  503  _stricmp	77bf21a2
+	294e	  779  strstr	77bf3ab0
+	2944	  760  sprintf	77bec813
+	293a	  809  wcscpy	77bf3cb2
+	2932	  655  exit	77be7adc
+	2926	  552  _wcsicmp	77bf26b8
+	2964	  197  _c_exit	77be7b11
+	296e	  246  _exit	77be7aee
+	2976	   78  _XcptFilter	77be1269
+	2984	  200  _cexit	77be7b00
+	298e	  165  __winitenv	77c0c9ec
+	299c	  164  __wgetmainargs	77bce8af
+	29ae	  314  _initterm	77be79db
+	291c	  740  printf	77bee5d9
+
+ 00002760	00002814 ffffffff ffffffff 00002a6e 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2a50	  456  RegCloseKey	77d8189a
+	2a3c	  491  RegQueryValueExA	77d823d7
+	2a5e	  482  RegOpenKeyExW	77d81a6b
+
+ 00002774	00002824 ffffffff ffffffff 00002b92 00001010
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2d30	  358  GetModuleFileNameW	77e39fc8
+	2d18	  467  GetWindowsDirectoryW	77e361da
+	2b68	  304  GetCurrentProcessId	77e40656
+	2b50	  629  ProcessIdToSessionId	77e307a7
+	2b40	  561  LoadLibraryW	77e3296f
+	2b2e	  393  GetProcAddress	77e3a5fd
+	2b0a	  873  WideCharToMultiByte	77e39924
+	2af4	  593  MultiByteToWideChar	77e37cce
+	2ad8	  175  ExpandEnvironmentStringsW	77e3152c
+	2ac8	  346  GetLastError	77f5157d
+	2ab4	  362  GetModuleHandleW	77e3a663
+	2aa6	  564  LocalAlloc	77e39881
+	2a9a	  568  LocalFree	77e39a45
+	2a8a	  853  VirtualAlloc	77e3980a
+	2a7c	  856  VirtualFree	77e39e34
+	2b20	  229  FreeLibrary	77e40618
+	2b7e	  359  GetModuleHandleA	77e39f93
+
+ 00002788	00002904 ffffffff ffffffff 00002bf8 000010f0
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2bd2	  191  NtOpenFile	77f7eaf3
+	2bc8	   98  NtClose	77f7e543
+	2bbc	   16  DbgPrint	77f7d480
+	2ba0	  250  NtQuerySystemInformation	77f7ee83
+	2be0	  621  RtlInitUnicodeString	77f7f5df
+
+ 0000279c	0000286c ffffffff ffffffff 00002c50 00001058
+
+	DLL Name: RASAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2c1c	   41  RasGetAutodialParamW	76e99ca6
+	2c02	   37  RasGetAutodialAddressW	76e92196
+	2c34	   25  RasEnumAutodialAddressesW	76e9957f
+
+ 000027b0	0000287c ffffffff ffffffff 00002c98 00001068
+
+	DLL Name: RASDLG.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2c80	    5  RasAutodialQueryDlgW	7549c368
+	2c5e	   13  RasPhonebookDlgW	754b5c86
+	2c72	    7  RasDialDlgW	754a46f7
+
+ 000027c4	0000288c ffffffff ffffffff 00002cae 00001078
+
+	DLL Name: SHLWAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2ca4	  208  StrCatW	7728193b
+
+ 000027d8	00002894 ffffffff ffffffff 00002cf4 00001080
+
+	DLL Name: TAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2cba	  208  lineShutdown	76e6c2c8
+	2ce2	  139  lineInitialize	76e6c178
+	2cca	  134  lineGetTranslateCapsW	76e7824a
+
+ 000027ec	000028a4 ffffffff ffffffff 00002d0c 00001090
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000073	  115  <none>	719e41da
+
+ 00002800	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001120
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001d 000016e0 00000ae0
+(format NB10 signature cc847d3b age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000010, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x004350, Size: 0x000380, Codepage: 0
+ Resources start at offset: 0x350
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001d46  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000284  01003000  01003000  00002200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000006d0  01004000  01004000  00002600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,189 @@
+
+ipxroute.exe:     file format pei-i386
+ipxroute.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01002ea1
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:10:05 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00003000
+SizeOfInitializedData	00002c00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00002ea1
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00008000
+SizeOfHeaders		00000400
+CheckSum		0000a51d
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00003924 00000078 Import Directory [parts of .idata]
+Entry 2 00005000 00002828 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001100 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001338 00000040 Load Configuration Directory
+Entry b 00000250 00000070 Bound Import Directory
+Entry c 00001000 00000100 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1003924
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00003924	0000399c ffffffff ffffffff 00003bca 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3a9c	  594  LocalFree	77e4282c
+	3aa8	  234  FormatMessageA	77e54f8a
+	3aba	  361  GetLastError	77f45ba5
+	3aca	  619  MultiByteToWideChar	77e45595
+	3ae0	  590  LocalAlloc	77e42950
+	3aee	  408  GetProcAddress	77e42dfb
+	3b00	  375  GetModuleHandleA	77e42cd1
+	3b14	  665  QueryPerformanceCounter	77e425d8
+	3b2e	  469  GetTickCount	77e4193e
+	3b3e	  318  GetCurrentThreadId	77e419f7
+	3b54	  315  GetCurrentProcessId	77e41d40
+	3b6a	  448  GetSystemTimeAsFileTime	77e41e46
+	3b84	  849  TerminateProcess	77e6ccc7
+	3b98	  314  GetCurrentProcess	77e41d1a
+	3bac	  829  SetUnhandledExceptionFilter	77e42d45
+	3e12	  797  SetLastError	77f45bb4
+	3d1a	  826  SetThreadUILanguage	77e55a8d
+
+ 00003938	00003a00 ffffffff ffffffff 00003d00 00001064
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3c2a	  757  qsort	77bc5f60
+	3c32	  794  strtoul	77bad786
+	3c20	  771  sprintf	77bcd86e
+	3c46	  202  _c_exit	77bc8cac
+	3c50	  251  _exit	77bc8c8c
+	3c58	   78  _XcptFilter	77bc20be
+	3c66	  205  _cexit	77bc8c9d
+	3c70	  113  __initenv	77bed9d8
+	3c7c	  112  __getmainargs	77baed5c
+	3c8c	  320  _initterm	77bc8b58
+	3c98	  158  __setusermatherr	77bda0a0
+	3cac	  187  _adjust_fdiv	77bee654
+	3cbc	  131  __p__commode	77baefda
+	3ccc	  136  __p__fmode	77baeff8
+	3cda	  156  __set_app_type	77bc44b8
+	3cec	  242  _except_handler3	77bc4d50
+	3d0c	  219  _controlfp	77bdb7a1
+	3c18	  666  exit	77bc8c7b
+	3c0e	  738  malloc	77bbbacf
+	3c06	  324  _iob	77bebca0
+	3bfc	  681  fprintf	77bcec23
+	3bf4	  687  free	77bbb8fb
+	3bea	  751  printf	77bcf5f6
+	3be0	  745  memmove	77bd4140
+	3bd8	  654  atoi	77bac155
+	3c3c	  525  _strupr	77bd3581
+
+ 0000394c	000039e4 ffffffff ffffffff 00003d9a 00001048
+
+	DLL Name: MPRAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3d82	   71  MprConfigGetGuidName	76cd731b
+	3d68	   85  MprConfigServerConnect	76cd8ac9
+	3d4c	   70  MprConfigGetFriendlyName	76cd72c5
+	3d30	   86  MprConfigServerDisconnect	76cd7d04
+
+ 00003960	00003a6c ffffffff ffffffff 00003dee 000010d0
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3dd6	  667  RtlInitUnicodeString	77f43942
+	3dc8	  235  NtOpenFile	77f42adf
+	3dbe	  136  NtClose	77f4238b
+	3da6	  180  NtDeviceIoControlFile	77f426bf
+	3e22	  324  NtRequestWaitReplyPort	77f43183
+	3e3c	  142  NtConnectPort	77f42403
+	3e4c	  398  NtWaitForSingleObject	77f43735
+	3e64	  616  RtlFreeUnicodeString	77f47d27
+	3e7c	  148  NtCreateFile	77f42467
+	3e8c	  444  RtlAnsiStringToUnicodeString	77f46008
+	3eac	  666  RtlInitString	77f438c8
+
+ 00003974	000039f8 ffffffff ffffffff 00003e06 0000105c
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3df8	   48  CharToOemA	77d02acf
+
+ 00003988	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001100
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001d 00001380 00000780
+(format NB10 signature cd00803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x005448, Size: 0x0023dc, Codepage: 0
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000068
+068      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+078       Entry: ID: 0x000409, Value: 0x000090
+090        Leaf: Addr: 0x0050a0, Size: 0x0003a4, Codepage: 0
+ Resources start at offset: 0x448
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002ebc  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000188  01004000  01004000  00003400  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00002828  01005000  01005000  00003600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

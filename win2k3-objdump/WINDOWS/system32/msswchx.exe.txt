@@ -1,0 +1,181 @@
+
+msswchx.exe:     file format pei-i386
+msswchx.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010018a2
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:11:03 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001200
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000018a2
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		000059a3
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001b10 00000078 Import Directory [parts of .idata]
+Entry 2 00004000 00000470 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001100 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001248 00000040 Load Configuration Directory
+Entry b 00000248 0000006c Bound Import Directory
+Entry c 00001000 000000f8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001b10
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001b10	00001b9c ffffffff ffffffff 00001da0 00001014
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1cd6	  619  MultiByteToWideChar	77e45595
+	1cec	  375  GetModuleHandleA	77e42cd1
+	1d00	  665  QueryPerformanceCounter	77e425d8
+	1d1a	  469  GetTickCount	77e4193e
+	1cc6	  778  SetErrorMode	77e4273d
+	1d40	  448  GetSystemTimeAsFileTime	77e41e46
+	1d5a	  849  TerminateProcess	77e6ccc7
+	1d6e	  314  GetCurrentProcess	77e41d1a
+	1d82	  829  SetUnhandledExceptionFilter	77e42d45
+	1ca4	  408  GetProcAddress	77e42dfb
+	1cb6	  587  LoadLibraryW	77e5836b
+	1c8e	  318  GetCurrentThreadId	77e419f7
+	1d2a	  315  GetCurrentProcessId	77e41d40
+	1c80	  239  FreeLibrary	77e42e72
+	209a	  431  GetStartupInfoA	77e4e861
+
+ 00001b24	00001c40 ffffffff ffffffff 00001e6e 000010b8
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1dae	  202  _c_exit	77bc8cac
+	1db8	  251  _exit	77bc8c8c
+	1dc0	   78  _XcptFilter	77bc20be
+	1dce	  205  _cexit	77bc8c9d
+	1dd8	  666  exit	77bc8c7b
+	1de0	  173  _acmdln	77bed7c8
+	1e7a	  219  _controlfp	77bdb7a1
+	1e5a	  242  _except_handler3	77bc4d50
+	1e48	  156  __set_app_type	77bc44b8
+	1e3a	  136  __p__fmode	77baeff8
+	1e2a	  131  __p__commode	77baefda
+	1e1a	  187  _adjust_fdiv	77bee654
+	1e06	  158  __setusermatherr	77bda0a0
+	1dfa	  320  _initterm	77bc8b58
+	1dea	  112  __getmainargs	77baed5c
+
+ 00001b38	00001b88 ffffffff ffffffff 00001ebc 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e88	   56  CheckTokenMembership	77da751c
+	1ea0	   29  AllocateAndInitializeSid	77da38f4
+
+ 00001b4c	00001b94 ffffffff ffffffff 00001edc 0000100c
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1eca	  421  GetStockObject	77c013fe
+
+ 00001b60	00001bdc ffffffff ffffffff 0000208e 00001054
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f1a	  632  SetThreadDesktop	77d123a4
+	207c	  536  RegisterClassW	77d0a7ed
+	206a	   97  CreateWindowExW	77d0a57b
+	205c	  657  ShowWindow	77d03b34
+	204c	  698  UpdateWindow	77d03aca
+	203e	  318  GetMessageW	77d017f7
+	202a	  681  TranslateMessage	77d01845
+	2016	  162  DispatchMessageW	77d01739
+	2004	  143  DefWindowProcW	77d02e37
+	1ff4	  153  DestroyWindow	77d066d7
+	1fe2	  515  PostQuitMessage	77d09f5a
+	1fd6	  633  SetTimer	77d024fb
+	1fc0	   69  CloseWindowStation	77d0e49e
+	1fa6	  328  GetProcessWindowStation	77d01e10
+	1f90	  507  OpenWindowStationW	77d2c5d3
+	1f76	  615  SetProcessWindowStation	77d123b8
+	1f62	  505  OpenInputDesktop	77d2759c
+	1ee6	  436  KillTimer	77d0250f
+	1ef2	  485  MessageBoxW	77d545e2
+	1f00	  278  GetFocus	77d03667
+	1f0c	  459  LoadStringW	77d0659d
+	1f2e	   67  CloseDesktop	77d0e48a
+	1f3e	  353  GetThreadDesktop	77d02a92
+	1f52	  503  OpenDesktopW	77d2c3ac
+
+ 00001b74	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001100
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001c 00001290 00000690
+(format NB10 signature 0701803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000006, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x004400, Size: 0x000070, Codepage: 0
+ Resources start at offset: 0x400
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000010ac  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000a0  01003000  01003000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000470  01004000  01004000  00001800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

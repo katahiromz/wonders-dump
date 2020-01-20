@@ -1,0 +1,425 @@
+
+tlntsess.exe:     file format pei-i386
+tlntsess.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100cd26
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Fri Jun 12 21:31:39 2009
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		0000ec00
+SizeOfInitializedData	00003a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000cd26
+BaseOfCode		00001000
+BaseOfData		00010000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00015000
+SizeOfHeaders		00000400
+CheckSum		000163ad
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000e648 00000104 Import Directory [parts of .idata]
+Entry 2 00011000 000035b4 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000013e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00002570 00000040 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 000003d4 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100e648
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000e648	0000ea48 00000000 00000000 0000ed50 000012fc
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	ed20	  128  __p__commode
+	ed30	  133  __p__fmode
+	ed3e	  152  __set_app_type
+	ed5c	  214  _controlfp
+	ed10	  182  _adjust_fdiv
+	ecf0	  315  _initterm
+	ec8e	  352  _itoa
+	ec84	  795  toupper
+	ec78	  796  towlower
+	ec6e	  814  wcsncat
+	ec64	  807  wcschr
+	ec58	  557  _wcsnicmp
+	eb2a	  677  free
+	eb32	  776  strncpy
+	eb3c	  784  strtoul
+	eb46	  766  strchr
+	ece0	  109  __getmainargs
+	ecd4	  110  __initenv
+	eccc	  656  exit
+	ecc2	  200  _cexit
+	ecb4	   78  _XcptFilter
+	ecac	  246  _exit
+	eb5a	   18  ??3@YAXPAX@Z
+	ecfc	  154  __setusermatherr
+	eb50	  761  sprintf
+	ec96	  508  _strnicmp
+	eca2	  197  _c_exit
+	f8dc	  728  malloc
+	ec4e	  808  wcscmp
+	ec44	  778  strrchr
+	ec3a	  735  memmove
+	ec2e	  504  _stricmp
+	ec24	  818  wcsrchr
+	ec1a	  698  isdigit
+	ec06	  237  _except_handler3
+	ebde	   43  ?_set_new_handler@@YAP6AHI@ZP6AHI@Z@Z
+	ebd4	  806  wcscat
+	ebca	  732  memchr
+	ebbe	  500  _strcmpi
+	ebb4	  816  wcsncpy
+	eba8	  553  _wcsicmp
+	eb9e	  810  wcscpy
+	eb94	  813  wcslen
+	eb86	  484  _snwprintf
+	eb76	   17  ??2@YAPAXI@Z
+	eb6a	  482  _snprintf
+	eb20	  647  calloc
+
+ 0000e65c	0000e74c 00000000 00000000 0000f062 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f03c	  180  DuplicateTokenEx
+	f028	  329  LookupAccountSidW
+	f010	  134  CryptAcquireContextW
+	eff8	   97  CreateProcessAsUserW
+	efe2	  160  CryptReleaseContext
+	efd2	  372  LsaOpenPolicy
+	efb6	  380  LsaQueryInformationPolicy
+	efaa	  341  LsaClose
+	ef9a	  355  LsaFreeMemory
+	ef80	  302  ImpersonateLoggedOnUser
+	ef70	  526  RevertToSelf
+	ef62	  318  IsValidSid
+	ef46	  277  GetSidIdentifierAuthority
+	ef2c	  280  GetSidSubAuthorityCount
+	f998	  487  RegOpenKeyW
+	f984	  427  OpenProcessToken
+	f96c	  335  LookupPrivilegeValueW
+	f962	  228  GetAce
+	f950	  150  CryptGenRandom
+	f93e	  464  RegCreateKeyExW
+	f92a	  506  RegSetKeySecurity
+	f90c	  266  GetSecurityDescriptorLength
+	f8f6	  409  MakeSelfRelativeSD
+	f8e6	  525  ReportEventW
+	ef16	  279  GetSidSubAuthority
+	ef06	  485  RegOpenKeyExA
+	eef2	  495  RegQueryValueExA
+	eee4	  480  RegLoadKeyA
+	eed2	  509  RegSetValueExW
+	eec2	  462  RegCreateKeyA
+	eeaa	   28  AdjustTokenPrivileges
+	ee9a	  246  GetLengthSid
+	ee8a	  305  InitializeAcl
+	ee74	   16  AddAccessAllowedAce
+	ee54	  306  InitializeSecurityDescriptor
+	ee38	  562  SetSecurityDescriptorDacl
+	ee2a	  325  LogonUserW
+	ee1a	  486  RegOpenKeyExW
+	ee06	  496  RegQueryValueExW
+	edee	  514  RegisterEventSourceW
+	edd6	  176  DeregisterEventSource
+	edba	   29  AllocateAndInitializeSid
+	f050	  432  OpenThreadToken
+	eda4	  327  LookupAccountNameW
+	ed8e	  281  GetTokenInformation
+	ed82	  216  EqualSid
+	ed74	  459  RegCloseKey
+	ed6a	  225  FreeSid
+
+ 0000e670	0000e810 00000000 00000000 0000f580 000010c4
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f390	  300  GetConsoleMode
+	f3a2	   79  CreateFileA
+	f3b0	    9  AllocConsole
+	f3c0	  237  FreeConsole
+	f3ce	  372  GetModuleFileNameA
+	f400	  947  lstrcpyW
+	f40c	  843  TerminateProcess
+	f420	  769  SetEnvironmentVariableA
+	f43a	  770  SetEnvironmentVariableW
+	f454	  338  GetExitCodeProcess
+	f46a	  734  SetConsoleCtrlHandler
+	f482	  145  DuplicateHandle
+	f494	  315  GetCurrentProcess
+	f4a8	  317  GetCurrentThread
+	f4bc	  270  GetComputerNameExA
+	f4d2	  660  QueryPerformanceCounter
+	f4ec	  318  GetCurrentThreadId
+	f502	  316  GetCurrentProcessId
+	f518	  448  GetSystemTimeAsFileTime
+	f532	  860  UnhandledExceptionFilter
+	f54e	  823  SetUnhandledExceptionFilter
+	f56c	  374  GetModuleHandleA
+	f9a6	  236  FormatMessageW
+	f9b8	   76  CreateEventW
+	f9c8	  895  WaitForSingleObject
+	f9de	  691  ReleaseMutex
+	f9ee	   49  CloseHandle
+	f9fc	   95  CreateNamedPipeW
+	fa10	  523  HeapFree
+	fa1c	  517  HeapAlloc
+	fa28	  412  GetProcessHeap
+	fa3a	  882  VirtualFree
+	fa48	  879  VirtualAlloc
+	fa58	  631  OpenProcess
+	f3e4	  185  ExpandEnvironmentStringsA
+	f2ec	   82  CreateFileW
+	f070	  240  FreeLibrary
+	f07e	  408  GetProcAddress
+	f090	  580  LoadLibraryA
+	f0a0	  441  GetSystemDirectoryA
+	f0b6	  893  WaitForMultipleObjects
+	f0d0	  360  GetLastError
+	f0e0	  468  GetTickCount
+	f0f0	  500  GlobalFree
+	f0fe	  493  GlobalAlloc
+	f10c	  790  SetLastError
+	f11c	  787  SetHandleInformation
+	f134	  432  GetStdHandle
+	f144	  899  WideCharToMultiByte
+	f15a	  283  GetConsoleCP
+	f16a	  583  LoadLibraryW
+	f17a	  442  GetSystemDirectoryW
+	f190	  953  lstrlenW
+	f19c	  678  ReadFile
+	f1a8	  912  WriteFile
+	f1b4	  272  GetComputerNameW
+	f1c8	  362  GetLocalTime
+	f1d8	   39  CancelIo
+	f1e4	  946  lstrcpyA
+	f1f0	  937  lstrcatA
+	f1fc	  590  LocalFree
+	f208	  586  LocalAlloc
+	f216	  235  FormatMessageA
+	f228	  246  GetACP
+	f232	  396  GetOverlappedResult
+	f248	  182  ExitProcess
+	f256	  771  SetErrorMode
+	f266	  615  MultiByteToWideChar
+	f27c	  245  GenerateConsoleCtrlEvent
+	f298	  756  SetConsoleScreenBufferSize
+	f2b6	  760  SetConsoleWindowInfo
+	f2ce	  304  GetConsoleScreenBufferInfo
+	fa66	  582  LoadLibraryExW
+	f2fa	  555  IsDBCSLeadByte
+	f30c	  902  WriteConsoleInputA
+	f322	  186  ExpandEnvironmentStringsW
+	f33e	  911  WriteConsoleW
+	f34e	  671  ReadConsoleOutputA
+	f364	  675  ReadConsoleOutputW
+	f37a	  905  WriteConsoleInputW
+
+ 0000e684	0000eb08 00000000 00000000 0000f5fa 000013bc
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f5ca	  544  RtlEqualUnicodeString
+	f5be	   16  DbgPrint
+	f5a4	  814  RtlSubAuthorityCountSid
+	f58e	  815  RtlSubAuthoritySid
+	f5e2	  631  RtlInitUnicodeString
+
+ 0000e698	0000e9c4 00000000 00000000 0000f6b4 00001278
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f63e	  714  VkKeyScanW
+	f69a	  328  GetProcessWindowStation
+	f604	  729  wsprintfW
+	f610	   48  CharToOemA
+	f61e	  457  LoadStringW
+	f62c	  470  MapVirtualKeyW
+	f64c	   67  CloseDesktop
+	f65c	  501  OpenDesktopW
+	f66c	   69  CloseWindowStation
+	f682	  637  SetUserObjectSecurity
+
+ 0000e6ac	0000e97c 00000000 00000000 0000f6c0 00001230
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000072	  114  <none>
+	8000014a	  330  <none>
+	80000006	    6  <none>
+
+ 0000e6c0	0000e98c 00000000 00000000 0000f6de 00001240
+
+	DLL Name: PSAPI.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	f6ce	    5  EnumProcesses
+
+ 0000e6d4	0000e99c 00000000 00000000 0000f7cc 00001250
+
+	DLL Name: Security.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f7b4	    0  AcceptSecurityContext
+	f79a	   26  QueryContextAttributesW
+	f77c	   17  ImpersonateSecurityContext
+	f764	   32  RevertSecurityContext
+	f748	    2  AcquireCredentialsHandleW
+	f72c	   31  QuerySecurityPackageInfoW
+	f714	    8  DeleteSecurityContext
+	f6fc	   16  FreeCredentialsHandle
+	f6e8	   15  FreeContextBuffer
+
+ 0000e6e8	0000e96c 00000000 00000000 0000f812 00001220
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f800	  149  NetGetAnyDCName
+	f7ee	  246  NetUserGetInfo
+	f7da	  105  NetApiBufferFree
+
+ 0000e6fc	0000e954 00000000 00000000 0000f884 00001208
+
+	DLL Name: MPR.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f874	   65  WNetOpenEnumW
+	f860	   29  WNetEnumResourceW
+	f846	   13  WNetCancelConnection2W
+	f836	   17  WNetCloseEnum
+	f820	    7  WNetAddConnection2W
+
+ 0000e710	0000e9f0 00000000 00000000 0000f8b0 000012a4
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f89a	   68  WSAStringToAddressA
+	80000016	   22  <none>
+	f88c	   66  WSASocketW
+	8000000a	   10  <none>
+	80000015	   21  <none>
+	80000073	  115  <none>
+	80000003	    3  <none>
+	80000074	  116  <none>
+	80000005	    5  <none>
+	80000070	  112  <none>
+	80000038	   56  <none>
+	8000000f	   15  <none>
+	80000033	   51  <none>
+	80000009	    9  <none>
+	80000037	   55  <none>
+	80000008	    8  <none>
+	8000000c	   12  <none>
+	80000034	   52  <none>
+	80000039	   57  <none>
+	8000006f	  111  <none>
+	8000000b	   11  <none>
+
+ 0000e724	0000e994 00000000 00000000 0000f8d0 00001248
+
+	DLL Name: SHELL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f8bc	  178  SHGetFolderPathW
+
+ 0000e738	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10013e0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 000025b8 000019b8
+(format RSDS signature 5d794fefad5748879ed50a3e0ae8f91d age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 2, IDs: 3
+010   Entry: name: [val: 800001d8 len 8]: REGISTRY, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+048     Entry: ID: 0x000064, Value: 0x800000c0
+0c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0d0       Entry: ID: 0x000411, Value: 0x000168
+168        Leaf: Addr: 0x0111fc, Size: 0x0000b1, Codepage: 1252
+050     Entry: ID: 0x000066, Value: 0x800000d8
+0d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0e8       Entry: ID: 0x000411, Value: 0x000178
+178        Leaf: Addr: 0x0112b0, Size: 0x000250, Codepage: 1252
+018   Entry: name: [val: 800001ea len 7]: TYPELIB, Value: 0x80000058
+058    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+068     Entry: ID: 0x000001, Value: 0x800000f0
+0f0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+100       Entry: ID: 0x000411, Value: 0x000188
+188        Leaf: Addr: 0x011500, Size: 0x0011ac, Codepage: 1252
+020   Entry: ID: 0x000006, Value: 0x80000070
+070    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+080     Entry: ID: 0x000007, Value: 0x80000108
+108      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+118       Entry: ID: 0x000411, Value: 0x000198
+198        Leaf: Addr: 0x0126ac, Size: 0x000170, Codepage: 1252
+088     Entry: ID: 0x000008, Value: 0x80000120
+120      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+130       Entry: ID: 0x000411, Value: 0x0001a8
+1a8        Leaf: Addr: 0x01281c, Size: 0x0002d4, Codepage: 1252
+028   Entry: ID: 0x00000b, Value: 0x80000090
+090    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0a0     Entry: ID: 0x000001, Value: 0x80000138
+138      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+148       Entry: ID: 0x000411, Value: 0x0001b8
+1b8        Leaf: Addr: 0x012af0, Size: 0x001704, Codepage: 1252
+030   Entry: ID: 0x000010, Value: 0x800000a8
+0a8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0b8     Entry: ID: 0x000001, Value: 0x80000150
+150      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+160       Entry: ID: 0x000411, Value: 0x0001c8
+1c8        Leaf: Addr: 0x0141f4, Size: 0x0003c0, Codepage: 1252
+ String table starts at offset: 0x1d8
+ Resources start at offset: 0x1fc
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000ea78  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000400  01010000  01010000  0000f000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000035b4  01011000  01011000  0000f400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

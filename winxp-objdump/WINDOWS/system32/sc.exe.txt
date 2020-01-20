@@ -1,0 +1,193 @@
+
+sc.exe:     file format pei-i386
+sc.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100844a
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Fri Feb 06 19:39:08 2009
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00007e00
+SizeOfInitializedData	00001000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000844a
+BaseOfCode		00001000
+BaseOfData		00009000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000b000
+SizeOfHeaders		00000400
+CheckSum		00016dec
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00008664 00000064 Import Directory [parts of .idata]
+Entry 2 0000a000 00000420 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001140 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00004f60 00000040 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 00000138 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1008664
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00008664	00008790 00000000 00000000 00008916 000010c8
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8850	  197  _c_exit
+	8846	  815  wcsncmp
+	883c	  808  wcscmp
+	885a	  246  _exit
+	882a	  628  _wtol
+	8820	  810  wcscpy
+	8814	  553  _wcsicmp
+	880a	  813  wcslen
+	8862	   78  _XcptFilter
+	8870	  200  _cexit
+	887a	  656  exit
+	8882	  165  __winitenv
+	8890	  164  __wgetmainargs
+	88a2	  315  _initterm
+	88ae	  154  __setusermatherr
+	88c2	  182  _adjust_fdiv
+	8800	  741  printf
+	88d2	  128  __p__commode
+	88e2	  133  __p__fmode
+	88f0	  152  __set_app_type
+	8902	  237  _except_handler3
+	8922	  214  _controlfp
+	8832	  289  _getche
+
+ 00008678	000086c8 00000000 00000000 00008c1c 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8a76	  449  QueryServiceObjectSecurity
+	8c0a	  429  OpenSCManagerW
+	8bfa	  580  StartServiceW
+	8be2	  451  QueryServiceStatusEx
+	8bd2	  175  DeleteService
+	8bb8	  411  NotifyBootConfigStatus
+	8b9e	  274  GetServiceDisplayNameW
+	8b88	  276  GetServiceKeyNameW
+	8b72	  212  EnumServicesStatusW
+	8b5e	  208  EnumServiceGroupW
+	8b46	  211  EnumServicesStatusExW
+	8b30	  450  QueryServiceStatus
+	8b1a	  320  LockServiceDatabase
+	8b02	  633  UnlockServiceDatabase
+	8ae8	  448  QueryServiceLockStatusW
+	8ab0	   86  ConvertStringSecurityDescriptorToSecurityDescriptorW
+	8a94	  571  SetServiceObjectSecurity
+	8a3e	   78  ConvertSecurityDescriptorToStringSecurityDescriptorW
+	8a24	  207  EnumDependentServicesW
+	8a12	  101  CreateServiceW
+	89fc	   62  CloseServiceHandle
+	89e4	   55  ChangeServiceConfigW
+	89d2	   66  ControlService
+	89c2	  486  RegOpenKeyExW
+	89ae	  496  RegQueryValueExW
+	8930	  446  QueryServiceConfigW
+	8946	  431  OpenServiceW
+	8956	  444  QueryServiceConfig2W
+	896e	   53  ChangeServiceConfig2W
+	8986	   80  ConvertSidToStringSidW
+	89a0	  459  RegCloseKey
+
+ 0000868c	00008748 00000000 00000000 00008d7c 00001080
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8d4a	  823  SetUnhandledExceptionFilter
+	8d2e	  860  UnhandledExceptionFilter
+	8d1a	  315  GetCurrentProcess
+	8d06	  843  TerminateProcess
+	8cec	  448  GetSystemTimeAsFileTime
+	8cd6	  316  GetCurrentProcessId
+	8cc0	  318  GetCurrentThreadId
+	8cb0	  468  GetTickCount
+	8c96	  660  QueryPerformanceCounter
+	8c86	  583  LoadLibraryW
+	8c74	  408  GetProcAddress
+	8c66	  240  FreeLibrary
+	8c5a	  590  LocalFree
+	8c4c	  586  LocalAlloc
+	8c3c	  360  GetLastError
+	8c2a	  236  FormatMessageW
+	8d68	  374  GetModuleHandleA
+
+ 000086a0	000087f0 00000000 00000000 00008dd0 00001128
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8da2	  631  RtlInitUnicodeString
+	8dba	  395  RtlAdjustPrivilege
+	8d8a	  718  RtlNtStatusToDosError
+
+ 000086b4	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001140
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001f 00004fa8 000043a8
+(format RSDS signature 688a2ef7d3604dec9e2f858e9001b617 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x00a060, Size: 0x0003c0, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00007dda  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01009000  01009000  00008200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000420  0100a000  0100a000  00008400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

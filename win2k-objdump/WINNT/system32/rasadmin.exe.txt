@@ -1,0 +1,886 @@
+
+rasadmin.exe:     file format pei-i386
+rasadmin.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x0100adf0
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Wed Nov 24 04:08:16 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00012000
+SizeOfInitializedData	0000a600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000adf0
+BaseOfCode		00001000
+BaseOfData		00013000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0001f000
+SizeOfHeaders		00000600
+CheckSum		0002a2e0
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000e71c 000000dc Import Directory [parts of .idata]
+Entry 2 00014000 0000944c Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001780 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000248 000000cc Bound Import Directory
+Entry c 00001000 00000778 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100e71c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000e71c	0000e86c ffffffff ffffffff 0000f0be 00001074
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f08a	  110  __p__fmode	78003e64
+	f098	  128  __set_app_type	78003e5a
+	f0d8	  387  _onexit	78004446
+	f0ca	   85  __dllonexit	78002131
+	f0aa	  199  _except_handler3	7800f56a
+	f07a	  105  __p__commode	78003e6a
+	f06a	  155  _adjust_fdiv	7803bb70
+	f056	  130  __setusermatherr	7800b426
+	f04a	  268  _initterm	78001dea
+	f03a	   88  __getmainargs	78003e70
+	f030	  141  _acmdln	7803b508
+	f028	  582  exit	7800269e
+	f01a	   72  _XcptFilter	7800f7dc
+	f012	  208  _exit	7800b908
+	eff6	  736  wcscpy	780020e2
+	f0e2	  180  _controlfp	78003c1e
+	f008	  467  _tzset	780139e0
+	ef96	   16  ??3@YAXPAX@Z	78001f56
+	ef8c	  745  wcsspn	78028f55
+	f000	  717  time	7802a875
+	efd6	  750  wcstombs	78016b45
+	efea	  399  _purecall	7800f47d
+	efe2	  570  atoi	7800c7d0
+	efb6	  673  qsort	7802109c
+	efca	  656  mbstowcs	78003023
+	efbe	  450  _strnicmp	78012d7c
+	efa6	   15  ??2@YAPAXI@Z	780021ee
+	122e8	   80  __argv	7803ce38
+	ef70	  603  free	780010ed
+	122f2	   79  __argc	7803ce34
+	ef78	  676  realloc	78001ec9
+	ef82	  654  malloc	78001000
+
+ 0000e730	0000e808 ffffffff ffffffff 0000f1e4 00001010
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1235c	  484  LoadResource	77e5bde8
+	1234c	  498  LockResource	77e6138c
+	1233c	  482  LoadLibraryW	77e5ecdf
+	f0f0	  807  lstrcatW	77e66133
+	1237c	  336  GetPrivateProfileStringW	77e66b90
+	1236c	  181  FindResourceW	77e5e8c3
+	12398	  788  WritePrivateProfileStringW	77e614b1
+	12312	  201  GetACP	77e55fcc
+	1231c	  195  FreeLibrary	77e6ab8c
+	122fc	  268  GetCurrentThreadId	77e59aa2
+	f1d2	  358  GetStartupInfoA	77e6d000
+	f1be	  314  GetModuleHandleA	77e656db
+	f1a4	  763  WaitForMultipleObjects	77e6e673
+	f194	  301  GetLastError	77e5668c
+	f180	  225  GetComputerNameW	77e5f6fe
+	f16a	  765  WaitForSingleObject	77e58778
+	f154	  537  OutputDebugStringW	77e7b8a4
+	f13e	  769  WideCharToMultiByte	77e5afd8
+	f12c	  364  GetStringTypeW	77e57a07
+	f120	  822  lstrlenW	77e5cd5c
+	f114	  813  lstrcmpiW	77e5aab8
+	f0fc	  816  lstrcpyW	77e5a1a4
+	1232a	  339  GetProcAddress	77e6564b
+	f108	  810  lstrcmpW	77e6016c
+
+ 0000e744	0000e7f8 ffffffff ffffffff 0000f202 00001000
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	123b6	  526  TranslateCharsetInfo	77f43510
+	123ce	  301  GetDeviceCaps	77f45946
+	f1f2	  462  SelectObject	77f4182d
+
+ 0000e758	0000ef04 ffffffff ffffffff 0000f2ee 0000170c
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f2bc	  450  MessageBeep	77df3600
+	f20c	  692  wsprintfW	77de850e
+	f218	  304  GetMessageTime	77de78fd
+	f22a	  404  IsWindowEnabled	77de5d6e
+	f23c	  467  OemToCharA	77dfd65e
+	f24a	  388  IsCharAlphaW	77dee624
+	f25a	   47  CharUpperA	77dece72
+	f268	  599  SetTimer	77de39d1
+	f274	  409  KillTimer	77de39df
+	f280	   12  BeginPaint	77de4d23
+	f28e	  189  EndPaint	77de4d31
+	f29a	   49  CharUpperBuffW	77ded068
+	f2ac	  541  SendMessageW	77de4e36
+	123de	  616  SetWindowsHookExW	77def203
+	f2ca	  329  GetSystemMetrics	77de71fe
+	f2de	  441  MapDialogRect	77dfd6df
+	12468	  623  ShowWindow	77de7181
+	1245c	  400  IsIconic	77de5f2b
+	12450	  419  LoadIconW	77dee175
+	12440	  484  PostMessageW	77de35ac
+	1242e	   21  CallNextHookEx	77de5dec
+	12418	  651  UnhookWindowsHookEx	77de651c
+	1240c	  686  WinHelpW	77e03594
+	123f2	  517  RegisterWindowMessageW	77def21d
+
+ 0000e76c	0000eed8 ffffffff ffffffff 0000f2fa 000016e0
+
+	DLL Name: RASSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000007	    7  <none>	66f51db3
+	8000000a	   10  <none>	66f51fe5
+	80000006	    6  <none>	66f5193e
+	80000002	    2  <none>	66f52ed1
+	80000003	    3  <none>	66f52fb8
+	80000004	    4  <none>	66f5303e
+	80000009	    9  <none>	66f51f05
+	8000000d	   13  <none>	66f511e8
+	80000005	    5  <none>	66f514f6
+	80000008	    8  <none>	66f51e93
+
+ 0000e780	0000e8f0 ffffffff ffffffff 0000f38a 000010f8
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f378	  225  NetUserGetInfo	75118646
+	f364	  227  NetUserModalsGet	75119485
+	f34c	  158  NetMessageBufferSend	750f456a
+	f32e	  163  NetQueryDisplayInformation	751161ac
+	f31a	   93  NetApiBufferFree	750e34c7
+	f306	  192  NetServerGetInfo	750fe90d
+
+ 0000e794	0000e90c ffffffff ffffffff 0000f8b4 00001114
+
+	DLL Name: NETUI0.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	124bc	   27  ??0ITER_STRLIST@@QAE@AAVSTRLIST@@@Z	751844b4
+	12476	   54  ??0STRLIST@@QAE@H@Z	751842ab
+	12550	   33  ??0NLS_STR@@QAE@I@Z	75182164
+	12566	  401  ?_stricmp@NLS_STR@@QBEHABV1@ABVISTR@@@Z	75184d52
+	124a2	   79  ??1ITER_STRLIST@@QAE@XZ	751844d8
+	124e2	  407  ?atoi@NLS_STR@@QBEHXZ	75184ec4
+	124fa	  293  ?QueryNumElem@SLIST@@QAEIXZ	75183072
+	12518	   55  ??0STRLIST@@QAE@PBG0H@Z	75181a38
+	12532	  172  ?CopyTo@NLS_STR@@QBEJPAGI@Z	75181f8e
+	1248c	   86  ??1STRLIST@@QAE@XZ	75181a7f
+	125a6	  237  ?MapCopyFrom@NLS_STR@@QAEJPBDI@Z	75184ab0
+	f398	   81  ??1NLS_STR@@QAE@XZ	75181689
+	f3ae	   37  ??0NUM_NLS_STR@@QAE@K@Z	75183f8a
+	f3c8	    9  ??0DEC_STR@@QAE@KI@Z	75183e4d
+	f3e0	   31  ??0NLS_STR@@IAE@PAGIH@Z	75181634
+	f3fa	  104  ??4NLS_STR@@QAEAAV0@ABV0@@Z	75181904
+	f418	  220  ?InsertParams@NLS_STR@@QAEJPAPBV1@@Z	75184825
+	f440	   34  ??0NLS_STR@@QAE@PBG@Z	75181820
+	f458	   95  ??2ALLOC_BASE@@SGPAXI@Z	75181306
+	f472	   97  ??3ALLOC_BASE@@SGXPAX@Z	75181314
+	f48c	  421  ?strlen@NLS_STR@@QBEIXZ	75181a32
+	125ca	  222  ?InsertStr@NLS_STR@@QAEHABV1@AAVISTR@@@Z	75184a1d
+	12590	  126  ??EISTR@@QAEAAV0@XZ	7518196a
+	f4e2	   36  ??0NLS_STR@@QAE@XZ	75181b7d
+	f4f8	  409  ?atol@NLS_STR@@QBEJXZ	75184f1e
+	f510	  399  ?_stricmp@NLS_STR@@QBEHABV1@@Z	75184d30
+	f532	   78  ??1ITER_SL@@QAE@XZ	751812ae
+	f548	  245  ?Next@ITER_SL@@QAEPAXXZ	75181288
+	f562	   26  ??0ITER_SL@@QAE@PAVSLIST@@@Z	75181256
+	f582	  266  ?QueryChar@NLS_STR@@QBEGABVISTR@@@Z	751847e7
+	f5a8	   22  ??0ISTR@@QAE@ABVNLS_STR@@@Z	7518191e
+	f5c6	  435  NETUI_IsDBCS	75187d63
+	f5d6	  148  ?Append@NLS_STR@@QAEJABV1@@Z	75181bb7
+	f5f6	  171  ?CopyFrom@NLS_STR@@QAEJPBGI@Z	751816de
+	f616	  364  ?SetIters@SLIST@@IAEXPAVSL_NODE@@@Z	75181ab8
+	f63c	   52  ??0SLIST@@QAE@XZ	75181a25
+	f650	   85  ??1SLIST@@QAE@XZ	75181ac6
+	f664	  149  ?Append@SLIST@@QAEJPAX@Z	751827bb
+	f680	  298  ?QueryPtr@BUFFER@@QBEPAEXZ	75181f5a
+	12616	  405  ?_strupr@NLS_STR@@QAEAAV1@XZ	75181ad6
+	f6b2	  303  ?QuerySize@BUFFER@@QBEIXZ	75181f5e
+	f6ce	    6  ??0BUFFER@@QAE@I@Z	75181ef6
+	f6e4	  132  ??YNLS_STR@@QAEAAV0@ABV0@@Z	751847c3
+	f702	  219  ?InsertParams@NLS_STR@@QAAJIPBV1@ZZ	7518489e
+	f728	  296  ?QueryPch@NLS_STR@@QBEPBGABVISTR@@@Z	751819fe
+	f750	  131  ??YISTR@@QAEXH@Z	7518192d
+	f764	  412  ?strcat@NLS_STR@@QAEAAV1@ABV1@@Z	75184795
+	f788	  438  NETUI_strncmp	75185491
+	f798	  312  ?QueryTimeString@INTL_PROFILE@@QBEJABVWIN_TIME@@PAVNLS_STR@@@Z	75186982
+	f7da	  302  ?QueryShortDateString@INTL_PROFILE@@QBEJABVWIN_TIME@@PAVNLS_STR@@@Z	75186aa7
+	f820	   20  ??0INTL_PROFILE@@QAE@XZ	7518655b
+	f83a	   65  ??0WIN_TIME@@QAE@KH@Z	75187528
+	f852	   83  ??1REG_KEY@@QAE@XZ	75181d0e
+	f868	   41  ??0REG_KEY@@QAE@AAV0@ABVNLS_STR@@K@Z	75181c7d
+	f890	   45  ??0REG_KEY@@QAE@PAUHKEY__@@PBGK@Z	751881d1
+	f4a6	  150  ?AppendChar@NLS_STR@@QAEJG@Z	75182045
+	f4c6	  105  ??4NLS_STR@@QAEAAV0@PBG@Z	75181895
+	f69e	   68  ??1BUFFER@@QAE@XZ	75181fbc
+	125f6	  235  ?LoadSystem@NLS_STR@@QAEJJ@Z	751844fd
+	12636	  349  ?Resize@BUFFER@@QAEJI@Z	75185707
+
+ 0000e7a8	0000ea00 ffffffff ffffffff 0000fc3c 00001208
+
+	DLL Name: NETUI1.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f98e	  653  ?GetInfo@NEW_LM_OBJ@@QAEJXZ	75141a63
+	f9c6	 1347  I_MNetComputerNameCompare	75144a4e
+	f9e2	  211  ??0SERVER_1@@QAE@PBG@Z	7515b75f
+	f9fc	  379  ??1SERVER_1@@QAE@XZ	7515b967
+	fa12	  311  ??1LOC_LM_ENUM@@QAE@XZ	751422d8
+	fa2c	  300  ??1LM_ENUM_ITER@@IAE@XZ	751422d3
+	fa46	  886  ?QueryComment@SERVER_1@@QBEPBGXZ	7515b8b1
+	fa6a	 1027  ?QueryServerType@SERVER_1@@QBEKXZ	7515b8c8
+	fa8e	  418  ??RSERVER1_ENUM_ITER@@QAEPBVSERVER1_ENUM_OBJ@@XZ	7514be9d
+	fac2	  209  ??0SERVER1_ENUM_ITER@@QAE@AAVSERVER1_ENUM@@@Z	7514be70
+	f974	  398  ??1WKSTA_USER_1@@QAE@XZ	7515d997
+	f9ac	  277  ??0WKSTA_USER_1@@QAE@XZ	7515d917
+	f956	  784  ?IsDomain@LOCATION@@QBEHXZ	751540f9
+	fb62	 1241  ?Start@LM_SERVICE@@QAEJPBGII@Z	751515a8
+	fb84	  862  ?Poll@LM_SERVICE@@QAEJPAH@Z	75151a75
+	fba2	  651  ?GetInfo@LM_ENUM@@QAEJXZ	751421fb
+	fbbe	  208  ??0SERVER1_ENUM@@QAE@PBG0K@Z	7514be3c
+	fbde	  860  ?Pause@LM_SERVICE@@QAEJII@Z	751515f6
+	fbfc	  541  ?Continue@LM_SERVICE@@QAEJII@Z	75151643
+	fc1e	 1243  ?Stop@LM_SERVICE@@QAEJII@Z	75151690
+	f8f2	  963  ?QueryName@LOCATION@@QBEPBGXZ	7515d466
+	f8dc	  310  ??1LOCATION@@QAE@XZ	75141ccb
+	faf2	  307  ??1LM_SERVICE@@QAE@XZ	75151584
+	f934	 1023  ?QueryServer@LOCATION@@QBEPBGXZ	75142257
+	f912	  916  ?QueryDomain@LOCATION@@QBEPBGXZ	7515411d
+	f8c0	  103  ??0LOCATION@@QAE@ABV0@@Z	75153b86
+	fb0a	 1044  ?QueryStatus@LM_SERVICE@@QAE?AW4LM_SERVICE_STATUS@@PAJ@Z	75151766
+	fb46	   84  ??0LM_SERVICE@@QAE@PBG0@Z	751514af
+	126ac	  795  ?IsServer@LOCATION@@QBEHXZ	7515410a
+	1266a	 1312  ?W_Set@LOCATION@@AAEJPBGW4LOCATION_TYPE@@H@Z	7514190d
+	12650	  104  ??0LOCATION@@QAE@PBGH@Z	7514188f
+	1269a	 1355  IsSlowTransport	751452ae
+
+ 0000e7bc	0000ea84 ffffffff ffffffff 000122c8 0000128c
+
+	DLL Name: NETUI2.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	fece	  825  ?OnCancel@DIALOG_WINDOW@@MAEHXZ	750796d3
+	fef0	  927  ?OnOK@DIALOG_WINDOW@@MAEHXZ	750796c8
+	ff0e	 1160  ?QueryRobustHwnd@DIALOG_WINDOW@@UBEPAUHWND__@@XZ	75079543
+	ff42	  984  ?OnUserMessage@OWNER_WINDOW@@MAEHABVEVENT@@@Z	75079c8c
+	ff72	 1101  ?QueryHwnd@WINDOW@@QBEPAUHWND__@@XZ	75075f3a
+	fe98	  956  ?OnScrollBar@DIALOG_WINDOW@@MAEHABVSCROLL_EVENT@@@Z	75079c8c
+	ff98	  180  ??0SLT@@QAE@PAVOWNER_WINDOW@@I@Z	7507a39f
+	ffbc	  267  ??1AUTO_CURSOR@@QAE@XZ	750748b3
+	ffd6	   15  ??0AUTO_CURSOR@@QAE@PBG@Z	7507485b
+	fff2	 1427  ?SetText@WINDOW@@QAEXPBG@Z	7507e74b
+	10010	 1426  ?SetText@WINDOW@@QAEXABVNLS_STR@@@Z	7507e76d
+	10036	  779  ?Load@NLS_STR@@QAEJJ@Z	7507d89c
+	10050	  839  ?OnCommand@DIALOG_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	10086	 1014  ?Process@DIALOG_WINDOW@@QAEJPAH@Z	75079658
+	100aa	  288  ??1DIALOG_WINDOW@@QAE@XZ	75079500
+	100c6	  375  ??1WINDOW@@QAE@XZ	7507e680
+	100da	  967  ?OnTimer@DIALOG_WINDOW@@MAEHABVTIMER_EVENT@@@Z	75079c8c
+	1010c	 1437  ?Show@WINDOW@@QAEHH@Z	7507e864
+	10124	 1412  ?SetState@STATE_BUTTON_CONTROL@@IAEXI@Z	75077861
+	1014e	 1502  ?W_SetIcon@ICON_CONTROL@@AAEJABVIDRESOURCE@@H@Z	75079026
+	10180	   99  ??0ICON_CONTROL@@QAE@PAVOWNER_WINDOW@@I@Z	75078eed
+	101ac	   57  ??0DIALOG_WINDOW@@QAE@ABVIDRESOURCE@@ABVPWND2HWND@@H@Z	750793b7
+	101e6	  575  ?Dismiss@DIALOG_WINDOW@@IAEXI@Z	75079583
+	10208	 1105  ?QueryItem@BLT_LISTBOX@@QBEPAVLBI@@H@Z	75076aec
+	10232	 1175  ?QueryState@STATE_BUTTON_CONTROL@@IBEIXZ	75077877
+	1025e	  851  ?OnCtlColor@CONTROL_WINDOW@@UAEPAUHBRUSH__@@PAUHDC__@@PAUHWND__@@PAI@Z	75088302
+	102a8	  694  ?IndicateError@CONTROL_WINDOW@@UAEXJ@Z	75078ec1
+	102d2	 1484  ?Validate@CONTROL_WINDOW@@UAEJXZ	7507e4a0
+	102f6	  972  ?OnUserAction@CONTROL_WINDOW@@MAEJABVCONTROL_EVENT@@@Z	75079c8c
+	10330	  471  ?CD_Guiltt@CONTROL_WINDOW@@MAEJHPAVNLS_STR@@@Z	75078e2b
+	fd90	  852  ?OnCtlColor@DIALOG_WINDOW@@MAEPAUHBRUSH__@@PAUHDC__@@PAUHWND__@@PAI@Z	750796ff
+	10386	  459  ?CD_Char@CONTROL_WINDOW@@MAEHGG@Z	75078e25
+	fd66	  962  ?OnSysColorChange@DIALOG_WINDOW@@MAEXXZ	75075169
+	103e8	  466  ?CD_Draw@CONTROL_WINDOW@@MAEHPAUtagDRAWITEMSTRUCT@@@Z	75079c8c
+	10420	 1066  ?QueryEventEffects@BUTTON_CONTROL@@MAEIABVCONTROL_EVENT@@@Z	750776bd
+	1045e	 1319  ?SetControlValueFocus@CONTROL_WINDOW@@UAEXXZ	75078e69
+	1048e	 1421  ?SetTabStop@CONTROL_WINDOW@@MAEXH@Z	75078df6
+	104b4	 1271  ?RestoreValue@STATE_BUTTON_CONTROL@@MAEXH@Z	750778a1
+	104e2	 1289  ?SaveValue@STATE_BUTTON_CONTROL@@MAEXH@Z	75077889
+	1050e	  204  ??0STATE_BUTTON_CONTROL@@IAE@PAVOWNER_WINDOW@@I@Z	750777df
+	10542	  813  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@KIQAPAVNLS_STR@@I@Z	7507d434
+	10586	 1015  ?Process@DIALOG_WINDOW@@QAEJPAI@Z	750795c0
+	105aa	  631  ?Enable@RADIO_GROUP@@QAEXH@Z	7507541f
+	105ca	  634  ?Enable@WINDOW@@QAEXH@Z	7507e87c
+	105e4	  515  ?ClaimFocus@CONTROL_WINDOW@@QAEXXZ	75078e35
+	1060a	 1049  ?QueryCount@LIST_CONTROL@@QBEHXZ	75077e47
+	1062e	 1324  ?SetCount@LAZY_LISTBOX@@QAEXI@Z	75077077
+	10650	  174  ??0SLE@@QAE@PAVOWNER_WINDOW@@II@Z	7507a693
+	10674	  167  ??0RADIO_GROUP@@QAE@PAVOWNER_WINDOW@@IHIPAVCONTROL_GROUP@@@Z	750751a8
+	106b4	  164  ??0PUSH_BUTTON@@QAE@PAVOWNER_WINDOW@@I@Z	750776d8
+	106e0	  338  ??1RADIO_GROUP@@QAE@XZ	75075282
+	106fa	  811  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@IPBG2I@Z	7507d36c
+	10732	 1401  ?SetSelection@RADIO_GROUP@@QAEXI@Z	75075315
+	10758	 1166  ?QuerySelection@RADIO_GROUP@@QBEIXZ	750753f3
+	1077e	 1052  ?QueryCurrentItem@LIST_CONTROL@@QBEHXZ	750780b6
+	107a8	 1192  ?QueryText@WINDOW@@QBEJPAGI@Z	7507e792
+	107c8	  719  ?Invalidate@WINDOW@@QAEXH@Z	7507e8bb
+	fdd8	  869  ?OnDlgDeactivation@DIALOG_WINDOW@@MAEHABVACTIVATION_EVENT@@@Z	75079c8c
+	fd3c	  849  ?OnControlError@DIALOG_WINDOW@@MAEXIJ@Z	750796de
+	10834	 1390  ?SetRedraw@WINDOW@@QAEXH@Z	7507e8ab
+	10852	  812  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@IPBGI@Z	7507d2e9
+	1088a	  790  ?MakeDefault@PUSH_BUTTON@@QAEXXZ	75077752
+	108ae	 1296  ?SelectString@EDIT_CONTROL@@QAEXXZ	7507a5e3
+	108d4	  809  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@@Z	7507d271
+	10906	 1226  ?ReleaseLBI@LAZY_LISTBOX@@EAEXPAVLBI@@@Z	75077059
+	10932	 1251  ?RequestLBI@LAZY_LISTBOX@@EAEPAVLBI@@PBUtagDRAWITEMSTRUCT@@@Z	7507704a
+	10972	  472  ?CD_Guiltt@LAZY_LISTBOX@@MAEJHPAVNLS_STR@@@Z	7507708d
+	109a2	  476  ?CD_VKey@LISTBOX@@MAEHGG@Z	750766de
+	109c0	  469  ?CD_Draw@LISTBOX@@MAEHPAUtagDRAWITEMSTRUCT@@@Z	750765d6
+	109f2	 1070  ?QueryEventEffects@LIST_CONTROL@@MAEIABVCONTROL_EVENT@@@Z	750781c2
+	10a2e	 1266  ?RestoreValue@LIST_CONTROL@@MAEXH@Z	75078174
+	10a54	 1284  ?SaveValue@LIST_CONTROL@@MAEXH@Z	75078106
+	10a78	   89  ??0HAW_FOR_HAWAII_INFO@@QAE@XZ	750764b1
+	10a9a	  104  ??0LAZY_LISTBOX@@QAE@PAVOWNER_WINDOW@@IHW4FontType@@@Z	75076fc1
+	10ad4	  310  ??1LIST_CONTROL@@IAE@XZ	75077d34
+	10aee	  297  ??1FONT@@QAE@XZ	750749b3
+	10b00	  302  ??1HAW_FOR_HAWAII_INFO@@QAE@XZ	750764e3
+	10b22	  551  ?Compare_HAWforHawaii@LBI@@UBEHABVNLS_STR@@@Z	75079c8c
+	10b52	  490  ?CalcHeight@LBI@@UAEII@Z	7507a245
+	10b6e	  730  ?IsDestroyable@LBI@@MAEHXZ	75087515
+	10b8c	  106  ??0LBI@@QAE@XZ	7507a206
+	10b9e	  307  ??1LBI@@UAE@XZ	7507a23e
+	fd0e	  985  ?OnValidationError@DIALOG_WINDOW@@MAEXIJ@Z	750796fc
+	10bda	  539  ?Command@WINDOW@@QBEKIIJ@Z	7507e6ab
+	10bf8	  810  ?MsgPopup@@YGHABVOWNINGWND@@JW4MSG_SEVERITY@@II@Z	7507d2ac
+	10c2c	 1225  ?ReleaseLBI@BLT_LISTBOX@@EAEXPAVLBI@@@Z	75076ee3
+	10c56	 1250  ?RequestLBI@BLT_LISTBOX@@EAEPAVLBI@@PBUtagDRAWITEMSTRUCT@@@Z	75076ed9
+	10c96	  470  ?CD_Guiltt@BLT_LISTBOX@@MAEJHPAVNLS_STR@@@Z	75076b20
+	10cc4	  457  ?CD_Char@BLT_LISTBOX@@MAEHGG@Z	75076d45
+	10ce6	  473  ?CD_Measure@BLT_LISTBOX@@MAEHPAUtagMEASUREITEMSTRUCT@@@Z	75076885
+	10d22	 1151  ?QueryOwnerHwnd@WINDOW@@QBEPAUHWND__@@XZ	7507e69f
+	10d4e	  411  ?AddItem@BLT_LISTBOX@@QAEHPAVLBI@@@Z	750768aa
+	10d76	  567  ?DeleteAllItems@LIST_CONTROL@@QAEXXZ	7507803f
+	10d9e	 1122  ?QueryLeadingChar@LBI@@UBEGXZ	7507a24f
+	10dbe	  992  ?Paint@DISPLAY_TABLE@@QBEXPAVLISTBOX@@PAUHDC__@@PBUtagRECT@@PAUGUILTT_INFO@@@Z	7507a0b7
+	10e10	  381  ??ADISPLAY_TABLE@@QAEAAPAVDTE@@I@Z	7507a1fb
+	10e36	   64  ??0DISPLAY_TABLE@@QAE@IPBI@Z	75079fa7
+	10e56	  216  ??0STR_DTE_ELLIPSIS@@QAE@PBGPAVLISTBOX@@W4ELLIPSIS_STYLE@@@Z	7508780f
+	10e96	 1068  ?QueryEventEffects@CONTROL_VALUE@@UAEIABVCONTROL_EVENT@@@Z	75079c8c
+	10ed4	 1264  ?RestoreValue@CONTROL_VALUE@@MAEXH@Z	75076ee3
+	10efc	 1282  ?SaveValue@CONTROL_VALUE@@MAEXH@Z	75076ee3
+	10f20	  169  ??0RESOURCE_STR@@QAE@J@Z	7507d949
+	10f3c	   67  ??0DMID_DTE@@QAE@I@Z	75079dd3
+	10f54	 1164  ?QuerySelCount@LIST_CONTROL@@QBEHXZ	75077e63
+	10f7a	 1161  ?QueryRobustHwnd@DISPATCHER@@UBEPAUHWND__@@XZ	75079caa
+	10faa	  579  ?Dispatch@LB_COLUMN_HEADER@@MAEHABVEVENT@@PAK@Z	75081187
+	10fdc	  982  ?OnUserMessage@DISPATCHER@@MAEHABVEVENT@@@Z	75079c8c
+	1100a	  840  ?OnCommand@DISPATCHER@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	1103c	  968  ?OnTimer@DISPATCHER@@MAEHABVTIMER_EVENT@@@Z	75079c8c
+	1106a	  947  ?OnQMouseActivate@DISPATCHER@@MAEKABVQMOUSEACT_EVENT@@@Z	75079c8c
+	fe18	  868  ?OnDlgActivation@DIALOG_WINDOW@@MAEHABVACTIVATION_EVENT@@@Z	75079c8c
+	fe56	  957  ?OnScrollBarThumb@DIALOG_WINDOW@@MAEHABVSCROLL_THUMB_EVENT@@@Z	75079c8c
+	110f6	  949  ?OnQMouseCursor@DISPATCHER@@MAEHABVQMOUSEACT_EVENT@@@Z	75079c8c
+	11130	  903  ?OnLMouseButtonDblClick@DISPATCHER@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	1116e	  911  ?OnLMouseButtonUp@DISPATCHER@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	111a6	  906  ?OnLMouseButtonDown@DISPATCHER@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	111e0	  920  ?OnMouseMove@DISPATCHER@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	11212	  829  ?OnChar@DISPATCHER@@MAEHABVCHAR_EVENT@@@Z	75079c8c
+	1123e	  898  ?OnKeyUp@DISPATCHER@@MAEHABVVKEY_EVENT@@@Z	75079c8c
+	1126c	  893  ?OnKeyDown@DISPATCHER@@MAEHABVVKEY_EVENT@@@Z	75079c8c
+	1129c	  867  ?OnDestroy@DISPATCHER@@MAEHXZ	7507e4a0
+	112bc	  836  ?OnCloseReq@DISPATCHER@@MAEHXZ	7507e4a0
+	112de	  924  ?OnMove@DISPATCHER@@MAEHABVMOVE_EVENT@@@Z	75079c8c
+	1130a	  954  ?OnResize@DISPATCHER@@MAEHABVSIZE_EVENT@@@Z	75079c8c
+	11338	  858  ?OnDefocus@DISPATCHER@@MAEHABVFOCUS_EVENT@@@Z	75079c8c
+	11368	  881  ?OnFocus@DISPATCHER@@MAEHABVFOCUS_EVENT@@@Z	75079c8c
+	11396	  856  ?OnDeactivation@DISPATCHER@@MAEHABVACTIVATION_EVENT@@@Z	75079c8c
+	113d0	  821  ?OnActivation@DISPATCHER@@MAEHABVACTIVATION_EVENT@@@Z	75079c8c
+	11408	  936  ?OnPaintReq@DISPATCHER@@MAEHXZ	7507e4a0
+	1142a	 1269  ?RestoreValue@SLT@@MAEXH@Z	7507a450
+	11448	 1287  ?SaveValue@SLT@@MAEXH@Z	7507a42a
+	11462	  108  ??0LB_COLUMN_HEADER@@QAE@PAVOWNER_WINDOW@@IVXYPOINT@@VXYDIMENSION@@@Z	750810ee
+	114aa	  440  ?AppendDataTo@STR_DTE@@UBEJPAVNLS_STR@@@Z	75079e1f
+	114d6	 1128  ?QueryLeftMargin@METALLIC_STR_DTE@@UBEIXZ	7507e4a0
+	11502	  995  ?Paint@METALLIC_STR_DTE@@UBEXPAUHDC__@@PBUtagRECT@@@Z	7507e4a3
+	1153a	  991  ?Paint@DISPLAY_TABLE@@QBEXPAVLISTBOX@@PAUHDC__@@PBUtagRECT@@@Z	7507a133
+	1157c	  254  ??0XYRECT@@QAE@PBVWINDOW@@H@Z	7507de88
+	1159c	 1073  ?QueryFont@CONTROL_WINDOW@@QBEPAUHFONT__@@XZ	75078e45
+	115cc	  250  ??0XYRECT@@QAE@ABUtagRECT@@@Z	7507de2d
+	115ec	   62  ??0DISPLAY_CONTEXT@@QAE@PAVWINDOW@@PAUHDC__@@@Z	7507450e
+	1161e	  290  ??1DISPLAY_CONTEXT@@QAE@XZ	7507452d
+	1163c	 1127  ?QueryLeftMargin@DTE@@UBEIXZ	75079ccf
+	1165c	 1002  ?Paint@STR_DTE@@UBEXPAUHDC__@@PBUtagRECT@@@Z	75079e50
+	1168c	  946  ?OnQMinMax@APP_WINDOW@@MAEHAAVQMINMAX_EVENT@@@Z	75079c8c
+	116be	  961  ?OnShutdown@APP_WINDOW@@MAEXXZ	75075169
+	116e0	  797  ?MayShutdown@APP_WINDOW@@MAEHXZ	75087515
+	11702	  794  ?MayRestore@APP_WINDOW@@MAEHXZ	75087515
+	11724	  963  ?OnSystemChange@APP_WINDOW@@MAEHABVSYSCHANGE_EVENT@@@Z	75079c8c
+	1175e	  933  ?OnOther@CLIENT_WINDOW@@MAEHABVEVENT@@@Z	75077ba0
+	1178a	  875  ?OnDropDown@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	117c0	  876  ?OnEnter@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	117f4	  959  ?OnSelect@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	11828	  827  ?OnChange@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	1185c	  854  ?OnDblClick@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	11892	  833  ?OnClick@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	118c6	  857  ?OnDefocus@CLIENT_WINDOW@@MAEHABVFOCUS_EVENT@@@Z	75079c8c
+	118fa	  902  ?OnLMouseButtonDblClick@CLIENT_WINDOW@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	1193a	  910  ?OnLMouseButtonUp@CLIENT_WINDOW@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	11974	  905  ?OnLMouseButtonDown@CLIENT_WINDOW@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	119b0	  919  ?OnMouseMove@CLIENT_WINDOW@@MAEHABVMOUSE_EVENT@@@Z	75079c8c
+	119e6	  828  ?OnChar@CLIENT_WINDOW@@MAEHABVCHAR_EVENT@@@Z	75079c8c
+	11a16	  897  ?OnKeyUp@CLIENT_WINDOW@@MAEHABVVKEY_EVENT@@@Z	75079c8c
+	11a46	  892  ?OnKeyDown@CLIENT_WINDOW@@MAEHABVVKEY_EVENT@@@Z	75079c8c
+	11a78	  866  ?OnDestroy@CLIENT_WINDOW@@MAEHXZ	7507e4a0
+	11a9c	  834  ?OnCloseReq@APP_WINDOW@@MAEHXZ	75074d64
+	11abe	  855  ?OnDeactivation@CLIENT_WINDOW@@MAEHABVACTIVATION_EVENT@@@Z	75079c8c
+	11afc	  820  ?OnActivation@CLIENT_WINDOW@@MAEHABVACTIVATION_EVENT@@@Z	75079c8c
+	11b38	  934  ?OnPaintReq@APP_WINDOW@@MAEHXZ	75074d70
+	11b5a	  580  ?DispatchMessageW@APP_WINDOW@@MAEJABVEVENT@@@Z	75074c26
+	11b8c	 1159  ?QueryRobustHwnd@CLIENT_WINDOW@@UBEPAUHWND__@@XZ	75077c92
+	11bc0	  751  ?IsPumpFinished@HAS_MESSAGE_PUMP@@MAEHXZ	7507e4a0
+	11bec	 1406  ?SetSize@WINDOW@@QAEXVXYDIMENSION@@H@Z	7507e9cb
+	11c16	 1169  ?QuerySize@WINDOW@@QBE?AVXYDIMENSION@@XZ	7507ea0c
+	11c42	 1346  ?SetFont@CONTROL_WINDOW@@QAEXPAUHFONT__@@H@Z	75078e54
+	11c72	   79  ??0FONT@@QAE@PBGEHW4FontAttributes@@@Z	7507ac52
+	11c9c	 1272  ?Resume@WIN32_THREAD@@QAEJXZ	7509344e
+	11cbc	  698  ?Init@BASE_ELLIPSIS@@SGJXZ	75086af7
+	11cda	 1222  ?RegisterHelpFile@BLT@@SGJPAUHINSTANCE__@@JKK@Z	75075c8d
+	11d0c	  181  ??0SLT@@QAE@PAVOWNER_WINDOW@@IVXYPOINT@@VXYDIMENSION@@KPBG@Z	7507a3db
+	11d4c	 1176  ?QueryStaticClassName@CONTROL_WINDOW@@KGPBGXZ	75078c99
+	11d7c	  236  ??0WIN32_EVENT@@QAE@PBGHH@Z	75093051
+	11d9a	  123  ??0MENUITEM@@QAE@PAVAPP_WINDOW@@I@Z	7507bd21
+	11dc0	 1205  ?QueryVerticalMargins@METALLIC_STR_DTE@@SGIXZ	7507e5d0
+	11df0	  369  ??1WIN32_EVENT@@QAE@XZ	7509309d
+	11e0a	 1451  ?Term@BASE_ELLIPSIS@@SGXXZ	75086b34
+	11e28	  630  ?Enable@MENUITEM@@QAEXH@Z	7507bda2
+	11e44	  917  ?OnMenuInit@APP_WINDOW@@MAEHABVMENU_EVENT@@@Z	75079c8c
+	11e74	 1405  ?SetSize@WINDOW@@QAEXHHH@Z	7507e9a2
+	11e92	 1384  ?SetPos@WINDOW@@QAEXVXYPOINT@@HPAV1@@Z	7507e902
+	11ebc	  838  ?OnCommand@CLIENT_WINDOW@@MAEHABVCONTROL_EVENT@@@Z	75079c8c
+	11ef2	  880  ?OnFocus@CLIENT_WINDOW@@MAEHABVFOCUS_EVENT@@@Z	75079c8c
+	11f24	  586  ?DisplayCtError@APPLICATION@@AAEXJ@Z	75074a3c
+	11f4c	 1273  ?Run@APPLICATION@@MAEHXZ	75074a37
+	11f68	  291  ??1DISPLAY_MAP@@QAE@XZ	750761f4
+	11f82	  286  ??1CUSTOM_CONTROL@@QAE@XZ	750805bc
+	11f9e	   25  ??0BLT_LISTBOX@@QAE@PAVOWNER_WINDOW@@IHW4FontType@@H@Z	750767a0
+	11fd8	   26  ??0BLT_LISTBOX@@QAE@PAVOWNER_WINDOW@@IVXYPOINT@@VXYDIMENSION@@KHW4FontType@@H@Z	750767fd
+	1202a	 1011  ?PreMain@WIN32_THREAD@@MAEJXZ	7507e4a0
+	1204a	  241  ??0WIN32_THREAD@@QAE@HIPBG@Z	75093278
+	1206a	  374  ??1WIN32_THREAD@@UAE@XZ	75093317
+	12084	 1298  ?Set@WIN32_EVENT@@QAEJXZ	750930a2
+	120a0	  568  ?DeleteAndExit@WIN32_THREAD@@IAEXI@Z	750934a9
+	120c8	  127  ??0MLE@@QAE@PAVOWNER_WINDOW@@II@Z	7507a72e
+	120ec	 1197  ?QueryTextLength@WINDOW@@QBEHXZ	7507e841
+	1210e	 1200  ?QueryTextSize@WINDOW@@QBEHXZ	7507e84b
+	1212e	 1345  ?SetFocus@OWNER_WINDOW@@QAEXI@Z	750789f7
+	12150	  675  ?FindItemExact@STRING_LIST_CONTROL@@QBEHPBG@Z	750782d1
+	12180	  416  ?AddItem@STRING_LIST_CONTROL@@QAEHPBG@Z	75078266
+	121aa	   45  ??0COMBOBOX@@QAE@PAVOWNER_WINDOW@@II@Z	75078548
+	121d4	  970  ?OnTimerNotification@TIMER_CALLOUT@@MAEXI@Z	75076ee3
+	12202	  633  ?Enable@TIMER_BASE@@QAEXH@Z	750774ce
+	12220	  222  ??0TIMER@@QAE@PAVTIMER_CALLOUT@@KH@Z	7507759f
+	12248	  357  ??1TIMER_BASE@@QAE@XZ	75077497
+	12260	  130  ??0MLT@@QAE@PAVOWNER_WINDOW@@I@Z	7507a472
+	12284	 1170  ?QuerySize@WINDOW@@QBEXPAH0@Z	7507e9df
+	122a4	 1039  ?QueryCid@CONTROL_WINDOW@@QBEIXZ	75078e31
+	fce4	 1093  ?QueryHelpFile@DIALOG_WINDOW@@MAEPBGK@Z	750796bc
+	fcc2	  764  ?IsValid@DIALOG_WINDOW@@MAEHXZ	75079a82
+	fca2	  796  ?MayRun@DIALOG_WINDOW@@MAEHXZ	75087515
+	fc70	  663  ?FilterMessage@DIALOG_WINDOW@@MAEHPAUtagMSG@@@Z	7507967a
+	fc48	  750  ?IsPumpFinished@DIALOG_WINDOW@@MAEHXZ	750796b3
+	110a6	  943  ?OnQHitTest@DISPATCHER@@MAEKABVXYPOINT@@@Z	75079c91
+	110d4	  941  ?OnQDlgCode@DISPATCHER@@MAEKXZ	7507e4a0
+	107e6	 1242  ?RemoveSelection@LIST_CONTROL@@QAEXXZ	75078781
+	1080e	 1292  ?SelectItem@LIST_CONTROL@@QAEXHH@Z	75077f1d
+	103aa	  474  ?CD_Measure@CONTROL_WINDOW@@MAEHPAUtagMEASUREITEMSTRUCT@@@Z	75079c8c
+	10362	  475  ?CD_VKey@CONTROL_WINDOW@@MAEHGG@Z	75078e25
+	10bb0	 1084  ?QueryHelpContext@DIALOG_WINDOW@@MAEKXZ	7507e4a0
+	127f4	 1312  ?SetCheck@MENUITEM@@QAEXH@Z	7507bdd5
+	12812	 1310  ?SetCaption@POPUP@@SGXJ@Z	7507c825
+	12ebc	  269  ??1BASE_SET_FOCUS_DLG@@QAE@XZ	75087d4e
+	12e78	   18  ??0BASE_SET_FOCUS_DLG@@QAE@QAUHWND__@@W4SELECTION_TYPE@@KPBGK2K@Z	75087aca
+	12edc	 1438  ?ShowArea@BASE_SET_FOCUS_DLG@@IAEXH@Z	75088461
+	12ba2	  891  ?OnHelp@GET_FNAME_BASE_DLG@@QAEXPAUHWND__@@@Z	7508c5b5
+	12e42	  981  ?OnUserMessage@BASE_SET_FOCUS_DLG@@MAEHABVEVENT@@@Z	75088061
+	12e08	  837  ?OnCommand@BASE_SET_FOCUS_DLG@@MAEHABVCONTROL_EVENT@@@Z	7508816f
+	12de4	  926  ?OnOK@BASE_SET_FOCUS_DLG@@MAEHXZ	75088202
+	12db4	 1092  ?QueryHelpFile@BASE_SET_FOCUS_DLG@@MAEPBGK@Z	75088307
+	12d84	 1083  ?QueryHelpContext@BASE_SET_FOCUS_DLG@@MAEKXZ	7507cd9f
+	12d68	  361  ??1UI_EXT_MGR_IF@@QAE@XZ	750912b8
+	12776	 1247  ?ReplaceItem@BLT_LISTBOX@@QAEJHPAVLBI@@PAPAV2@@Z	75076a1b
+	12752	  721  ?InvalidateItem@LISTBOX@@QAEXHH@Z	75076728
+	12b04	  664  ?FilterMessage@HAS_MESSAGE_PUMP@@MAEHPAUtagMSG@@@Z	75079c8c
+	12ad4	  923  ?OnMove@CLIENT_WINDOW@@MAEHABVMOVE_EVENT@@@Z	75079c8c
+	12aae	 1155  ?QueryPos@WINDOW@@QBE?AVXYPOINT@@XZ	7507e952
+	12a7c	  953  ?OnResize@CLIENT_WINDOW@@MAEHABVSIZE_EVENT@@@Z	75079c8c
+	12a42	  492  ?CalcHmodRsrc@BLT@@SGPAUHINSTANCE__@@ABVIDRESOURCE@@@Z	75075d31
+	12a26	  531  ?Close@APP_WINDOW@@QAEXXZ	75074e7b
+	129f4	  966  ?OnTimer@CLIENT_WINDOW@@MAEHABVTIMER_EVENT@@@Z	75079c8c
+	12d0e	  705  ?InitCHOOSEFONT@WIN32_FONT_PICKER@@SGXPAUtagCHOOSEFONTW@@PAUtagLOGFONTW@@PAUHWND__@@@Z	75093582
+	12caa	 1020  ?Process@WIN32_FONT_PICKER@@SGJPAVOWNER_WINDOW@@PAHPAVFONT@@PAUtagLOGFONTW@@PAUtagCHOOSEFONTW@@@Z	750934f3
+	12c82	 1347  ?SetFont@FONT@@QAEJABUtagLOGFONTW@@@Z	7507ad08
+	12c50	 1115  ?QueryItemText@MENU_BASE@@QBEJPAVNLS_STR@@II@Z	7507bfaa
+	12c1e	  230  ??0UI_MENU_EXT_MGR@@QAE@PAVUI_EXT_MGR_IF@@KK@Z	75091212
+	12bfa	 1108  ?QueryItemCount@MENU_BASE@@QBEHXZ	7507bf55
+	12bd2	    0  ??0ACCELTABLE@@QAE@ABVIDRESOURCE@@@Z	75074902
+	12b3a	 1466  ?Translate@ACCELTABLE@@QBEHPBVWINDOW@@PAUtagMSG@@@Z	75074957
+	126ca	  542  ?Compare@LBI@@UBEHPBV1@@Z	75079c8c
+	126e6	  994  ?Paint@LBI@@UBEXPAVLISTBOX@@PAUHDC__@@PBUtagRECT@@PAUGUILTT_INFO@@@Z	7507a24c
+	1272e	  572  ?DeleteItem@LIST_CONTROL@@QAEHH@Z	75077fb5
+	129d6	  724  ?IsChecked@MENUITEM@@QBEHXZ	7507bdf0
+	1285c	  156  ??0POPUP_MENU@@QAE@ABVPWND2HWND@@@Z	7507c298
+	127aa	  671  ?FindItem@BLT_LISTBOX@@QBEHABVLBI@@@Z	75076963
+	127d2	   78  ??0FONT@@QAE@ABUtagLOGFONTW@@@Z	7507ac22
+	128fc	  170  ??0SCREEN_DC@@QAE@XZ	7507458a
+	12b70	  527  ?ClearMasterTimerHotkey@BLT_MASTER_TIMER@@SGKXZ	750773d5
+	1282e	  772  ?ItemExists@MENUITEM@@SGHPAVAPP_WINDOW@@I@Z	7507be39
+	12914	  260  ??1APPLICATION@@IAE@XZ	75074a1f
+	12882	    3  ??0APP_WINDOW@@IAE@ABVNLS_STR@@ABVIDRESOURCE@@1@Z	75074afe
+	128b6	    2  ??0APPLICATION@@IAE@PAUHINSTANCE__@@HIIII@Z	750749c2
+	128e4	  339  ??1SCREEN_DC@@QAE@XZ	7507459b
+	12976	  683  ?GetPlacement@APP_WINDOW@@QBEJPAUtagWINDOWPLACEMENT@@@Z	75074e16
+	1292e	  261  ??1APP_WINDOW@@IAE@XZ	75074b71
+	12946	  258  ??1ACCELTABLE@@QAE@XZ	75074948
+	1295e	  333  ??1POPUP_MENU@@QAE@XZ	7507c38f
+	129b0	  916  ?OnMenuCommand@APP_WINDOW@@MAEHI@Z	75079c8c
+
+ 0000e7d0	0000ef68 ffffffff ffffffff 000122de 00001770
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	122d4	 1168  wcslen	77f8d1f7
+
+ 0000e7e4	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001780
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 0001cc00
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 9
+010   Entry: ID: 0x000002, Value: 0x80000058
+058    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+068     Entry: ID: 0x000064, Value: 0x800002e0
+2e0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+2f0       Entry: ID: 0x000411, Value: 0x0008c8
+8c8        Leaf: Addr: 0x014cb8, Size: 0x0000e8, Codepage: 1252
+070     Entry: ID: 0x000065, Value: 0x800002f8
+2f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+308       Entry: ID: 0x000411, Value: 0x0008d8
+8d8        Leaf: Addr: 0x014da0, Size: 0x0000e8, Codepage: 1252
+018   Entry: ID: 0x000003, Value: 0x80000078
+078    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 14
+088     Entry: ID: 0x000001, Value: 0x80000310
+310      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+320       Entry: ID: 0x000411, Value: 0x0008e8
+8e8        Leaf: Addr: 0x014e88, Size: 0x000130, Codepage: 1252
+090     Entry: ID: 0x000002, Value: 0x80000328
+328      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+338       Entry: ID: 0x000411, Value: 0x0008f8
+8f8        Leaf: Addr: 0x014fb8, Size: 0x0002e8, Codepage: 1252
+098     Entry: ID: 0x000003, Value: 0x80000340
+340      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+350       Entry: ID: 0x000411, Value: 0x000908
+908        Leaf: Addr: 0x0152a0, Size: 0x0002e8, Codepage: 1252
+0a0     Entry: ID: 0x000004, Value: 0x80000358
+358      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+368       Entry: ID: 0x000411, Value: 0x000918
+918        Leaf: Addr: 0x015588, Size: 0x0002e8, Codepage: 1252
+0a8     Entry: ID: 0x000005, Value: 0x80000370
+370      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+380       Entry: ID: 0x000411, Value: 0x000928
+928        Leaf: Addr: 0x015870, Size: 0x0002e8, Codepage: 1252
+0b0     Entry: ID: 0x000006, Value: 0x80000388
+388      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+398       Entry: ID: 0x000411, Value: 0x000938
+938        Leaf: Addr: 0x015b58, Size: 0x0002e8, Codepage: 1252
+0b8     Entry: ID: 0x000007, Value: 0x800003a0
+3a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+3b0       Entry: ID: 0x000411, Value: 0x000948
+948        Leaf: Addr: 0x015e40, Size: 0x0002e8, Codepage: 1252
+0c0     Entry: ID: 0x000008, Value: 0x800003b8
+3b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+3c8       Entry: ID: 0x000411, Value: 0x000958
+958        Leaf: Addr: 0x016128, Size: 0x0002e8, Codepage: 1252
+0c8     Entry: ID: 0x000009, Value: 0x800003d0
+3d0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+3e0       Entry: ID: 0x000411, Value: 0x000968
+968        Leaf: Addr: 0x016410, Size: 0x0002e8, Codepage: 1252
+0d0     Entry: ID: 0x00000a, Value: 0x800003e8
+3e8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+3f8       Entry: ID: 0x000411, Value: 0x000978
+978        Leaf: Addr: 0x0166f8, Size: 0x0002e8, Codepage: 1252
+0d8     Entry: ID: 0x00000b, Value: 0x80000400
+400      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+410       Entry: ID: 0x000411, Value: 0x000988
+988        Leaf: Addr: 0x0169e0, Size: 0x0002e8, Codepage: 1252
+0e0     Entry: ID: 0x00000c, Value: 0x80000418
+418      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+428       Entry: ID: 0x000411, Value: 0x000998
+998        Leaf: Addr: 0x016cc8, Size: 0x0002e8, Codepage: 1252
+0e8     Entry: ID: 0x00000d, Value: 0x80000430
+430      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+440       Entry: ID: 0x000411, Value: 0x0009a8
+9a8        Leaf: Addr: 0x016fb0, Size: 0x0002e8, Codepage: 1252
+0f0     Entry: ID: 0x00000e, Value: 0x80000448
+448      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+458       Entry: ID: 0x000411, Value: 0x0009b8
+9b8        Leaf: Addr: 0x017298, Size: 0x0002e8, Codepage: 1252
+020   Entry: ID: 0x000004, Value: 0x800000f8
+0f8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+108     Entry: ID: 0x000001, Value: 0x80000460
+460      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+470       Entry: ID: 0x000411, Value: 0x0009c8
+9c8        Leaf: Addr: 0x017580, Size: 0x0002f0, Codepage: 1252
+028   Entry: ID: 0x000005, Value: 0x80000110
+110    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 17
+120     Entry: ID: 0x0003e9, Value: 0x80000478
+478      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+488       Entry: ID: 0x000411, Value: 0x0009d8
+9d8        Leaf: Addr: 0x017870, Size: 0x00019c, Codepage: 1252
+128     Entry: ID: 0x00044d, Value: 0x80000490
+490      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+4a0       Entry: ID: 0x000411, Value: 0x0009e8
+9e8        Leaf: Addr: 0x017a0c, Size: 0x0003a0, Codepage: 1252
+130     Entry: ID: 0x0004af, Value: 0x800004a8
+4a8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+4b8       Entry: ID: 0x000411, Value: 0x0009f8
+9f8        Leaf: Addr: 0x017dac, Size: 0x0003a4, Codepage: 1252
+138     Entry: ID: 0x0004b1, Value: 0x800004c0
+4c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+4d0       Entry: ID: 0x000411, Value: 0x000a08
+a08        Leaf: Addr: 0x018150, Size: 0x000278, Codepage: 1252
+140     Entry: ID: 0x000515, Value: 0x800004d8
+4d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+4e8       Entry: ID: 0x000411, Value: 0x000a18
+a18        Leaf: Addr: 0x0183c8, Size: 0x000138, Codepage: 1252
+148     Entry: ID: 0x000577, Value: 0x800004f0
+4f0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+500       Entry: ID: 0x000411, Value: 0x000a28
+a28        Leaf: Addr: 0x018500, Size: 0x000098, Codepage: 1252
+150     Entry: ID: 0x000579, Value: 0x80000508
+508      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+518       Entry: ID: 0x000411, Value: 0x000a38
+a38        Leaf: Addr: 0x018598, Size: 0x0001b4, Codepage: 1252
+158     Entry: ID: 0x00057a, Value: 0x80000520
+520      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+530       Entry: ID: 0x000411, Value: 0x000a48
+a48        Leaf: Addr: 0x01874c, Size: 0x000130, Codepage: 1252
+160     Entry: ID: 0x0005dd, Value: 0x80000538
+538      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+548       Entry: ID: 0x000411, Value: 0x000a58
+a58        Leaf: Addr: 0x01887c, Size: 0x00016c, Codepage: 1252
+168     Entry: ID: 0x000641, Value: 0x80000550
+550      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+560       Entry: ID: 0x000411, Value: 0x000a68
+a68        Leaf: Addr: 0x0189e8, Size: 0x000238, Codepage: 1252
+170     Entry: ID: 0x000642, Value: 0x80000568
+568      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+578       Entry: ID: 0x000411, Value: 0x000a78
+a78        Leaf: Addr: 0x018c20, Size: 0x0002e0, Codepage: 1252
+178     Entry: ID: 0x0006a5, Value: 0x80000580
+580      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+590       Entry: ID: 0x000411, Value: 0x000a88
+a88        Leaf: Addr: 0x018f00, Size: 0x000644, Codepage: 1252
+180     Entry: ID: 0x000707, Value: 0x80000598
+598      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5a8       Entry: ID: 0x000411, Value: 0x000a98
+a98        Leaf: Addr: 0x019544, Size: 0x000574, Codepage: 1252
+188     Entry: ID: 0x000708, Value: 0x800005b0
+5b0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5c0       Entry: ID: 0x000411, Value: 0x000aa8
+aa8        Leaf: Addr: 0x019ab8, Size: 0x000700, Codepage: 1252
+190     Entry: ID: 0x000709, Value: 0x800005c8
+5c8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5d8       Entry: ID: 0x000411, Value: 0x000ab8
+ab8        Leaf: Addr: 0x01a1b8, Size: 0x0008c8, Codepage: 1252
+198     Entry: ID: 0x00076d, Value: 0x800005e0
+5e0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+5f0       Entry: ID: 0x000411, Value: 0x000ac8
+ac8        Leaf: Addr: 0x01aa80, Size: 0x000454, Codepage: 1252
+1a0     Entry: ID: 0x0007d1, Value: 0x800005f8
+5f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+608       Entry: ID: 0x000411, Value: 0x000ad8
+ad8        Leaf: Addr: 0x01aed4, Size: 0x00075c, Codepage: 1252
+030   Entry: ID: 0x000006, Value: 0x800001a8
+1a8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 12
+1b8     Entry: ID: 0x000466, Value: 0x80000610
+610      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+620       Entry: ID: 0x000411, Value: 0x000ae8
+ae8        Leaf: Addr: 0x01b630, Size: 0x000044, Codepage: 1252
+1c0     Entry: ID: 0x00046c, Value: 0x80000628
+628      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+638       Entry: ID: 0x000411, Value: 0x000af8
+af8        Leaf: Addr: 0x01b674, Size: 0x0000e4, Codepage: 1252
+1c8     Entry: ID: 0x00046d, Value: 0x80000640
+640      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+650       Entry: ID: 0x000411, Value: 0x000b08
+b08        Leaf: Addr: 0x01b758, Size: 0x000078, Codepage: 1252
+1d0     Entry: ID: 0x000560, Value: 0x80000658
+658      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+668       Entry: ID: 0x000411, Value: 0x000b18
+b18        Leaf: Addr: 0x01b7d0, Size: 0x0000bc, Codepage: 1252
+1d8     Entry: ID: 0x000566, Value: 0x80000670
+670      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+680       Entry: ID: 0x000411, Value: 0x000b28
+b28        Leaf: Addr: 0x01b88c, Size: 0x000304, Codepage: 1252
+1e0     Entry: ID: 0x000567, Value: 0x80000688
+688      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+698       Entry: ID: 0x000411, Value: 0x000b38
+b38        Leaf: Addr: 0x01bb90, Size: 0x0003fc, Codepage: 1252
+1e8     Entry: ID: 0x000568, Value: 0x800006a0
+6a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6b0       Entry: ID: 0x000411, Value: 0x000b48
+b48        Leaf: Addr: 0x01bf8c, Size: 0x000258, Codepage: 1252
+1f0     Entry: ID: 0x000569, Value: 0x800006b8
+6b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6c8       Entry: ID: 0x000411, Value: 0x000b58
+b58        Leaf: Addr: 0x01c1e4, Size: 0x00030c, Codepage: 1252
+1f8     Entry: ID: 0x00056a, Value: 0x800006d0
+6d0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6e0       Entry: ID: 0x000411, Value: 0x000b68
+b68        Leaf: Addr: 0x01c4f0, Size: 0x00018c, Codepage: 1252
+200     Entry: ID: 0x00056b, Value: 0x800006e8
+6e8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+6f8       Entry: ID: 0x000411, Value: 0x000b78
+b78        Leaf: Addr: 0x01c67c, Size: 0x000448, Codepage: 1252
+208     Entry: ID: 0x00056c, Value: 0x80000700
+700      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+710       Entry: ID: 0x000411, Value: 0x000b88
+b88        Leaf: Addr: 0x01cac4, Size: 0x0002f8, Codepage: 1252
+210     Entry: ID: 0x00056d, Value: 0x80000718
+718      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+728       Entry: ID: 0x000411, Value: 0x000b98
+b98        Leaf: Addr: 0x01cdbc, Size: 0x0001c4, Codepage: 1252
+038   Entry: ID: 0x000009, Value: 0x80000218
+218    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+228     Entry: ID: 0x000001, Value: 0x80000730
+730      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+740       Entry: ID: 0x000411, Value: 0x000ba8
+ba8        Leaf: Addr: 0x01cf80, Size: 0x000018, Codepage: 1252
+040   Entry: ID: 0x00000a, Value: 0x80000230
+230    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+240     Entry: ID: 0x004dbc, Value: 0x80000748
+748      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+758       Entry: ID: 0x000411, Value: 0x000bb8
+bb8        Leaf: Addr: 0x01cf98, Size: 0x000008, Codepage: 1252
+248     Entry: ID: 0x0055f0, Value: 0x80000760
+760      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+770       Entry: ID: 0x000411, Value: 0x000bc8
+bc8        Leaf: Addr: 0x01cfa0, Size: 0x000008, Codepage: 1252
+048   Entry: ID: 0x00000e, Value: 0x80000250
+250    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 13
+260     Entry: ID: 0x00012c, Value: 0x80000778
+778      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+788       Entry: ID: 0x000411, Value: 0x000bd8
+bd8        Leaf: Addr: 0x01cfa8, Size: 0x000022, Codepage: 1252
+268     Entry: ID: 0x00012d, Value: 0x80000790
+790      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7a0       Entry: ID: 0x000411, Value: 0x000be8
+be8        Leaf: Addr: 0x01cfcc, Size: 0x000014, Codepage: 1252
+270     Entry: ID: 0x00012e, Value: 0x800007a8
+7a8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7b8       Entry: ID: 0x000411, Value: 0x000bf8
+bf8        Leaf: Addr: 0x01cfe0, Size: 0x000014, Codepage: 1252
+278     Entry: ID: 0x00012f, Value: 0x800007c0
+7c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7d0       Entry: ID: 0x000411, Value: 0x000c08
+c08        Leaf: Addr: 0x01cff4, Size: 0x000014, Codepage: 1252
+280     Entry: ID: 0x000130, Value: 0x800007d8
+7d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+7e8       Entry: ID: 0x000411, Value: 0x000c18
+c18        Leaf: Addr: 0x01d008, Size: 0x000014, Codepage: 1252
+288     Entry: ID: 0x000131, Value: 0x800007f0
+7f0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+800       Entry: ID: 0x000411, Value: 0x000c28
+c28        Leaf: Addr: 0x01d01c, Size: 0x000014, Codepage: 1252
+290     Entry: ID: 0x000132, Value: 0x80000808
+808      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+818       Entry: ID: 0x000411, Value: 0x000c38
+c38        Leaf: Addr: 0x01d030, Size: 0x000014, Codepage: 1252
+298     Entry: ID: 0x000133, Value: 0x80000820
+820      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+830       Entry: ID: 0x000411, Value: 0x000c48
+c48        Leaf: Addr: 0x01d044, Size: 0x000014, Codepage: 1252
+2a0     Entry: ID: 0x000134, Value: 0x80000838
+838      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+848       Entry: ID: 0x000411, Value: 0x000c58
+c58        Leaf: Addr: 0x01d058, Size: 0x000014, Codepage: 1252
+2a8     Entry: ID: 0x000135, Value: 0x80000850
+850      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+860       Entry: ID: 0x000411, Value: 0x000c68
+c68        Leaf: Addr: 0x01d06c, Size: 0x000014, Codepage: 1252
+2b0     Entry: ID: 0x000136, Value: 0x80000868
+868      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+878       Entry: ID: 0x000411, Value: 0x000c78
+c78        Leaf: Addr: 0x01d080, Size: 0x000014, Codepage: 1252
+2b8     Entry: ID: 0x000137, Value: 0x80000880
+880      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+890       Entry: ID: 0x000411, Value: 0x000c88
+c88        Leaf: Addr: 0x01d094, Size: 0x000014, Codepage: 1252
+2c0     Entry: ID: 0x000138, Value: 0x80000898
+898      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+8a8       Entry: ID: 0x000411, Value: 0x000c98
+c98        Leaf: Addr: 0x01d0a8, Size: 0x000014, Codepage: 1252
+050   Entry: ID: 0x000010, Value: 0x800002c8
+2c8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+2d8     Entry: ID: 0x000001, Value: 0x800008b0
+8b0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+8c0       Entry: ID: 0x000411, Value: 0x000ca8
+ca8        Leaf: Addr: 0x01d0bc, Size: 0x000390, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+944d  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+945d   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0xcb8
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00011f04  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000bc  01013000  01013000  00012600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         0000a210  01014000  01014000  00012800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

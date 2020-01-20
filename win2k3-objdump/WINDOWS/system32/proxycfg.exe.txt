@@ -1,0 +1,160 @@
+
+proxycfg.exe:     file format pei-i386
+proxycfg.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001704
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:09:27 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000a00
+SizeOfInitializedData	00001600
+SizeOfUninitializedData	00000200
+AddressOfEntryPoint	00001704
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	3
+MinorSubsystemVersion	50
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		00003972
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00004000 00000064 Import Directory [parts of .idata]
+Entry 2 00005000 00000d88 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001010 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000010e8 00000040 Load Configuration Directory
+Entry b 000002a8 0000006c Bound Import Directory
+Entry c 00004108 000000a4 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .idata at 0x1004000
+
+The Import Tables (interpreted .idata section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00004000	00004064 ffffffff ffffffff 000042a2 00004108
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	41ac	  239  FreeLibrary	77e42e72
+	41ba	  235  FormatMessageW	77e54f0d
+	41cc	  585  LoadLibraryExA	77e484e8
+	41de	  919  WriteFile	77e492aa
+	41ea	  905  WideCharToMultiByte	77e4683d
+	4200	  301  GetConsoleOutputCP	77e559ca
+	4216	  918  WriteConsoleW	77e55909
+	4226	  299  GetConsoleMode	77e55946
+	4238	  350  GetFileType	77e4dd97
+	4246	  433  GetStdHandle	77e4e7d7
+	4256	  619  MultiByteToWideChar	77e45595
+	426c	  959  lstrlenA	77e4241f
+	4278	  361  GetLastError	77f45ba5
+	4288	  594  LocalFree	77e4282c
+	4294	  501  GlobalFree	77e59582
+
+ 00004014	000040b8 ffffffff ffffffff 000043a6 0000415c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	42d0	  823  wcslen	77bd4e32
+	42f6	  251  _exit	77bc8c8c
+	42fe	   78  _XcptFilter	77bc20be
+	430c	  205  _cexit	77bc8c9d
+	4316	  113  __initenv	77bed9d8
+	4322	  112  __getmainargs	77baed5c
+	4332	  320  _initterm	77bc8b58
+	433e	  158  __setusermatherr	77bda0a0
+	42e4	  666  exit	77bc8c7b
+	4362	  131  __p__commode	77baefda
+	4372	  136  __p__fmode	77baeff8
+	4380	  156  __set_app_type	77bc44b8
+	4392	  242  _except_handler3	77bc4d50
+	43b2	  219  _controlfp	77bdb7a1
+	4352	  187  _adjust_fdiv	77bee654
+	42da	  804  tolower	77bacb14
+	42c0	   17  ??2@YAPAXI@Z	77bb94db
+	42b0	   18  ??3@YAXPAX@Z	77bb9507
+	42ec	  202  _c_exit	77bc8cac
+
+ 00004028	000040b0 ffffffff ffffffff 000043d8 00004154
+
+	DLL Name: WININET.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	43c0	  152  InternetQueryOptionA	760f8e99
+
+ 0000403c	000040a4 00000000 00000000 00004430 00004148
+
+	DLL Name: WINHTTP.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	440a	   12  WinHttpGetDefaultProxyConfiguration
+	43e4	   25  WinHttpSetDefaultProxyConfiguration
+
+ 00004050	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001010
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001d 00001130 00000530
+(format NB10 signature a700803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x005458, Size: 0x000930, Codepage: 0
+ Resources start at offset: 0x458
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000910  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000020  01002000  01002000  00000000  2**2
+                  ALLOC
+  2 .data         00000008  01003000  01003000  00000e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .idata        0000043c  01004000  01004000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rsrc         00000d88  01005000  01005000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

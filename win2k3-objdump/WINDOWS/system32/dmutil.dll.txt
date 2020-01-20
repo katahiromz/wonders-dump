@@ -1,0 +1,552 @@
+
+dmutil.dll:     file format pei-i386
+dmutil.dll
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x72a62f9b
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Sat Feb 17 14:00:02 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00002c00
+SizeOfInitializedData	0000a000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00002f9b
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		72a60000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	10
+Win32Version		00000000
+SizeOfImage		00010000
+SizeOfHeaders		00000400
+CheckSum		0000eeaa
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00000400
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00003730 0000031e Export Directory [.edata (or where ever we found it)]
+Entry 1 000030a0 00000078 Import Directory [parts of .idata]
+Entry 2 00005000 000096b8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 0000f000 0000021c Base Relocation Directory [.reloc]
+Entry 6 00001140 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000270 00000074 Bound Import Directory
+Entry c 00001000 00000124 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x72a630a0
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000030a0	000031c8 ffffffff ffffffff 000032d0 000010b0
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3246	  834  wcstok	77bd910c
+	3250	  825  wcslen	77bd8ef2
+	325a	  773  sprintf	77bd0888
+	3264	  798  swprintf	77bd091f
+	3270	  818  wcscat	77bd8d87
+	327a	  601  _wgetenv	77bc75b5
+	3286	  740  malloc	77bbd020
+	3290	  689  free	77bbce33
+	3298	  742  mbstowcs	77bad7ea
+	32a4	   18  ??2@YAPAXI@Z	77bba971
+	32b4	  322  _initterm	77bcae06
+	32c0	  189  _adjust_fdiv	77bf467c
+	323c	  822  wcscpy	77bd8dba
+
+ 000030b4	00003200 ffffffff ffffffff 000033f8 000010e8
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	32dc	  635  RtlFreeUnicodeString	7c82b0be
+	32f4	  243  NtOpenFile	7c82730f
+	3302	  525  RtlCreateUnicodeString	7c82aef0
+	331c	  343  NtSetBootEntryOrder	7c82791f
+	3332	  268  NtQueryBootEntryOrder	7c82748f
+	334a	  126  NtAddBootEntry	7c826bff
+	335c	  357  NtSetInformationFile	7c8279ff
+	3374	  280  NtQueryInformationFile	7c82754f
+	338e	  448  RtlAdjustPrivilege	7c8130ae
+	33a4	  410  NtWriteFile	7c827d2f
+	33b2	  314  NtReadFile	7c82775f
+	33c0	  188  NtDeviceIoControlFile	7c826fbf
+	33d8	  144  NtClose	7c826d1f
+	33e2	  964  VerSetConditionMask	7c81379f
+
+ 000030c8	00003138 ffffffff ffffffff 0000364e 00001020
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	34ac	  111  CreateThread	77e6510f
+	34bc	  528  HeapAlloc	7c829fd6
+	34c8	  419  GetProcessHeap	77e63ec7
+	348e	  604  LocalFree	77e62419
+	349a	  244  FormatMessageW	77e4f821
+	3630	  843  SetUnhandledExceptionFilter	77e82060
+	3614	  879  UnhandledExceptionFilter	77e7690d
+	3600	  322  GetCurrentProcess	77e62f9d
+	35ec	  863  TerminateProcess	77e42004
+	35d2	  458  GetSystemTimeAsFileTime	77e41fba
+	35bc	  323  GetCurrentProcessId	77e63c78
+	35a6	  326  GetCurrentThreadId	77e62fc7
+	3596	  479  GetTickCount	77e619d1
+	357c	  675  QueryPerformanceCounter	77e69577
+	356c	  597  LoadLibraryW	77e5c6fa
+	355a	  416  GetProcAddress	77e63d7a
+	354c	  248  FreeLibrary	77e6b1a1
+	3536	  897  VerifyVersionInfoW	77e5cb59
+	352a	  962  lstrcmpW	77e6efab
+	351e	  968  lstrcpyW	77e63f02
+	3512	  974  lstrlenW	77e622c9
+	3506	  973  lstrlenA	77e5be30
+	34ee	  321  GetCurrentDirectoryW	77e70531
+	34e6	  855  Sleep	77e424de
+	3402	  129  DeleteCriticalSection	7c82c988
+	341a	  548  InitializeCriticalSectionAndSpinCount	77e63ed9
+	3442	  139  DisableThreadLibraryCalls	77e69316
+	345e	  593  LeaveCriticalSection	7c81a3ab
+	3476	  152  EnterCriticalSection	7c81a360
+	34da	  534  HeapFree	7c829e17
+
+ 000030dc	00003118 ffffffff ffffffff 000036dc 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	36ca	  430  OpenSCManagerW	77f6d845
+	366a	  504  RegQueryValueExW	77f76a81
+	367e	  493  RegOpenKeyExW	77f77a9c
+	368e	  451  QueryServiceStatus	77f6db9a
+	36a4	   62  CloseServiceHandle	77f6d675
+	365c	  459  RegCloseKey	77f76cce
+	36ba	  432  OpenServiceW	77f6d707
+
+ 000030f0	000031b4 ffffffff ffffffff 00003720 0000109c
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	36f8	  730  wvsprintfW	7738b211
+	3706	  460  LoadStringW	773947a5
+	3714	  728  wsprintfW	7738b1f6
+	36ea	  486  MessageBoxW	7739ee1c
+
+ 00003104	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x72a63730
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		45d6835d
+Major/Minor 			0/0
+Name 				0000387a dmutil.dll
+Ordinal Base 			1
+Number in:
+	Export Address Table 		0000001d
+	[Name Pointer/Ordinal] Table	0000001d
+Table Addresses
+	Export Address Table 		00003758
+	Name Pointer Table 		000037cc
+	Ordinal Table 			00003840
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 2d17 Export RVA
+	[   1] +base[   2] 2670 Export RVA
+	[   2] +base[   3] 2344 Export RVA
+	[   3] +base[   4] 1915 Export RVA
+	[   4] +base[   5] 188a Export RVA
+	[   5] +base[   6] 142d Export RVA
+	[   6] +base[   7] 1da3 Export RVA
+	[   7] +base[   8] 2c83 Export RVA
+	[   8] +base[   9] 1974 Export RVA
+	[   9] +base[  10] 1969 Export RVA
+	[  10] +base[  11] 26f7 Export RVA
+	[  11] +base[  12] 1738 Export RVA
+	[  12] +base[  13] 25bb Export RVA
+	[  13] +base[  14] 1ce9 Export RVA
+	[  14] +base[  15] 2bee Export RVA
+	[  15] +base[  16] 21e9 Export RVA
+	[  16] +base[  17] 22e9 Export RVA
+	[  17] +base[  18] 1e4b Export RVA
+	[  18] +base[  19] 2276 Export RVA
+	[  19] +base[  20] 218d Export RVA
+	[  20] +base[  21] 2211 Export RVA
+	[  21] +base[  22] 2750 Export RVA
+	[  22] +base[  23] 2bd0 Export RVA
+	[  23] +base[  24] 28b7 Export RVA
+	[  24] +base[  25] 1c6a Export RVA
+	[  25] +base[  26] 1a38 Export RVA
+	[  26] +base[  27] 281b Export RVA
+	[  27] +base[  28] 2852 Export RVA
+	[  28] +base[  29] 14a3 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   1] AddEntryBootFileGpt
+	[   2] AddEntryBootFileMbr
+	[   0] CoDisableDynamicVolumes
+	[   3] DisplayError
+	[   4] DisplayErrorRgszw
+	[   5] DllMain
+	[   6] DmCommonNtOpenFile
+	[   7] DynamicSupport
+	[   8] FTrace
+	[   9] FTraceValist
+	[  10] FreeRgszw
+	[  11] GetErrorData
+	[  12] GetInstallDirectoryPath
+	[  13] GetSystemVolume
+	[  14] IsPersonalSKU
+	[  15] LowAcquirePrivilege
+	[  16] LowGetPartitionInfo
+	[  17] LowNtAddBootEntry
+	[  18] LowNtReadFile
+	[  19] LowNtReadOnlyAttributeOff
+	[  20] LowNtWriteFile
+	[  21] RgszwDupRgszw
+	[  22] RgszwFromArgs
+	[  23] RgszwFromValist
+	[  24] ShowMessage
+	[  25] ShowMessageValist
+	[  26] SzwDupSzw
+	[  27] SzwFromSza
+	[  28] TranslateError
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 204 (0xcc) Number of fixups 98
+	reloc    0 offset  128 [1128] HIGHLOW
+	reloc    1 offset  3fc [13fc] HIGHLOW
+	reloc    2 offset  400 [1400] HIGHLOW
+	reloc    3 offset  444 [1444] HIGHLOW
+	reloc    4 offset  44a [144a] HIGHLOW
+	reloc    5 offset  450 [1450] HIGHLOW
+	reloc    6 offset  457 [1457] HIGHLOW
+	reloc    7 offset  465 [1465] HIGHLOW
+	reloc    8 offset  472 [1472] HIGHLOW
+	reloc    9 offset  47c [147c] HIGHLOW
+	reloc   10 offset  481 [1481] HIGHLOW
+	reloc   11 offset  488 [1488] HIGHLOW
+	reloc   12 offset  490 [1490] HIGHLOW
+	reloc   13 offset  56b [156b] HIGHLOW
+	reloc   14 offset  572 [1572] HIGHLOW
+	reloc   15 offset  584 [1584] HIGHLOW
+	reloc   16 offset  58b [158b] HIGHLOW
+	reloc   17 offset  5a8 [15a8] HIGHLOW
+	reloc   18 offset  5af [15af] HIGHLOW
+	reloc   19 offset  5d3 [15d3] HIGHLOW
+	reloc   20 offset  5da [15da] HIGHLOW
+	reloc   21 offset  654 [1654] HIGHLOW
+	reloc   22 offset  658 [1658] HIGHLOW
+	reloc   23 offset  65c [165c] HIGHLOW
+	reloc   24 offset  660 [1660] HIGHLOW
+	reloc   25 offset  67e [167e] HIGHLOW
+	reloc   26 offset  682 [1682] HIGHLOW
+	reloc   27 offset  686 [1686] HIGHLOW
+	reloc   28 offset  68a [168a] HIGHLOW
+	reloc   29 offset  68e [168e] HIGHLOW
+	reloc   30 offset  6c2 [16c2] HIGHLOW
+	reloc   31 offset  6c6 [16c6] HIGHLOW
+	reloc   32 offset  6ca [16ca] HIGHLOW
+	reloc   33 offset  6ce [16ce] HIGHLOW
+	reloc   34 offset  6ff [16ff] HIGHLOW
+	reloc   35 offset  703 [1703] HIGHLOW
+	reloc   36 offset  707 [1707] HIGHLOW
+	reloc   37 offset  70b [170b] HIGHLOW
+	reloc   38 offset  750 [1750] HIGHLOW
+	reloc   39 offset  758 [1758] HIGHLOW
+	reloc   40 offset  75e [175e] HIGHLOW
+	reloc   41 offset  7be [17be] HIGHLOW
+	reloc   42 offset  7d9 [17d9] HIGHLOW
+	reloc   43 offset  7df [17df] HIGHLOW
+	reloc   44 offset  837 [1837] HIGHLOW
+	reloc   45 offset  84d [184d] HIGHLOW
+	reloc   46 offset  862 [1862] HIGHLOW
+	reloc   47 offset  87a [187a] HIGHLOW
+	reloc   48 offset  9ba [19ba] HIGHLOW
+	reloc   49 offset  9f2 [19f2] HIGHLOW
+	reloc   50 offset  9fc [19fc] HIGHLOW
+	reloc   51 offset  a0a [1a0a] HIGHLOW
+	reloc   52 offset  a12 [1a12] HIGHLOW
+	reloc   53 offset  a1d [1a1d] HIGHLOW
+	reloc   54 offset  a24 [1a24] HIGHLOW
+	reloc   55 offset  a42 [1a42] HIGHLOW
+	reloc   56 offset  a5b [1a5b] HIGHLOW
+	reloc   57 offset  a7f [1a7f] HIGHLOW
+	reloc   58 offset  a93 [1a93] HIGHLOW
+	reloc   59 offset  a9d [1a9d] HIGHLOW
+	reloc   60 offset  aaa [1aaa] HIGHLOW
+	reloc   61 offset  ae0 [1ae0] HIGHLOW
+	reloc   62 offset  b2b [1b2b] HIGHLOW
+	reloc   63 offset  b64 [1b64] HIGHLOW
+	reloc   64 offset  b73 [1b73] HIGHLOW
+	reloc   65 offset  b85 [1b85] HIGHLOW
+	reloc   66 offset  b98 [1b98] HIGHLOW
+	reloc   67 offset  bae [1bae] HIGHLOW
+	reloc   68 offset  bca [1bca] HIGHLOW
+	reloc   69 offset  bdf [1bdf] HIGHLOW
+	reloc   70 offset  be6 [1be6] HIGHLOW
+	reloc   71 offset  beb [1beb] HIGHLOW
+	reloc   72 offset  c11 [1c11] HIGHLOW
+	reloc   73 offset  c19 [1c19] HIGHLOW
+	reloc   74 offset  c1f [1c1f] HIGHLOW
+	reloc   75 offset  c26 [1c26] HIGHLOW
+	reloc   76 offset  c9b [1c9b] HIGHLOW
+	reloc   77 offset  cb4 [1cb4] HIGHLOW
+	reloc   78 offset  ccc [1ccc] HIGHLOW
+	reloc   79 offset  cdc [1cdc] HIGHLOW
+	reloc   80 offset  d1b [1d1b] HIGHLOW
+	reloc   81 offset  d26 [1d26] HIGHLOW
+	reloc   82 offset  d33 [1d33] HIGHLOW
+	reloc   83 offset  d44 [1d44] HIGHLOW
+	reloc   84 offset  d6a [1d6a] HIGHLOW
+	reloc   85 offset  d8d [1d8d] HIGHLOW
+	reloc   86 offset  dac [1dac] HIGHLOW
+	reloc   87 offset  dbc [1dbc] HIGHLOW
+	reloc   88 offset  e0c [1e0c] HIGHLOW
+	reloc   89 offset  e21 [1e21] HIGHLOW
+	reloc   90 offset  e31 [1e31] HIGHLOW
+	reloc   91 offset  e7f [1e7f] HIGHLOW
+	reloc   92 offset  e9e [1e9e] HIGHLOW
+	reloc   93 offset  ea3 [1ea3] HIGHLOW
+	reloc   94 offset  fb2 [1fb2] HIGHLOW
+	reloc   95 offset  fb9 [1fb9] HIGHLOW
+	reloc   96 offset  fd2 [1fd2] HIGHLOW
+	reloc   97 offset  fdc [1fdc] HIGHLOW
+
+Virtual Address: 00002000 Chunk size 316 (0x13c) Number of fixups 154
+	reloc    0 offset   c8 [20c8] HIGHLOW
+	reloc    1 offset   ed [20ed] HIGHLOW
+	reloc    2 offset  138 [2138] HIGHLOW
+	reloc    3 offset  196 [2196] HIGHLOW
+	reloc    4 offset  1ae [21ae] HIGHLOW
+	reloc    5 offset  1d3 [21d3] HIGHLOW
+	reloc    6 offset  204 [2204] HIGHLOW
+	reloc    7 offset  262 [2262] HIGHLOW
+	reloc    8 offset  2ce [22ce] HIGHLOW
+	reloc    9 offset  32f [232f] HIGHLOW
+	reloc   10 offset  350 [2350] HIGHLOW
+	reloc   11 offset  37d [237d] HIGHLOW
+	reloc   12 offset  3d3 [23d3] HIGHLOW
+	reloc   13 offset  3de [23de] HIGHLOW
+	reloc   14 offset  3ff [23ff] HIGHLOW
+	reloc   15 offset  40b [240b] HIGHLOW
+	reloc   16 offset  42b [242b] HIGHLOW
+	reloc   17 offset  449 [2449] HIGHLOW
+	reloc   18 offset  463 [2463] HIGHLOW
+	reloc   19 offset  475 [2475] HIGHLOW
+	reloc   20 offset  47c [247c] HIGHLOW
+	reloc   21 offset  49f [249f] HIGHLOW
+	reloc   22 offset  528 [2528] HIGHLOW
+	reloc   23 offset  52f [252f] HIGHLOW
+	reloc   24 offset  5c7 [25c7] HIGHLOW
+	reloc   25 offset  5d2 [25d2] HIGHLOW
+	reloc   26 offset  5d7 [25d7] HIGHLOW
+	reloc   27 offset  5e6 [25e6] HIGHLOW
+	reloc   28 offset  60d [260d] HIGHLOW
+	reloc   29 offset  61c [261c] HIGHLOW
+	reloc   30 offset  64f [264f] HIGHLOW
+	reloc   31 offset  657 [2657] HIGHLOW
+	reloc   32 offset  677 [2677] HIGHLOW
+	reloc   33 offset  69b [269b] HIGHLOW
+	reloc   34 offset  6b9 [26b9] HIGHLOW
+	reloc   35 offset  6d1 [26d1] HIGHLOW
+	reloc   36 offset  6e9 [26e9] HIGHLOW
+	reloc   37 offset  715 [2715] HIGHLOW
+	reloc   38 offset  782 [2782] HIGHLOW
+	reloc   39 offset  78e [278e] HIGHLOW
+	reloc   40 offset  7da [27da] HIGHLOW
+	reloc   41 offset  842 [2842] HIGHLOW
+	reloc   42 offset  895 [2895] HIGHLOW
+	reloc   43 offset  95d [295d] HIGHLOW
+	reloc   44 offset  965 [2965] HIGHLOW
+	reloc   45 offset  975 [2975] HIGHLOW
+	reloc   46 offset  985 [2985] HIGHLOW
+	reloc   47 offset  995 [2995] HIGHLOW
+	reloc   48 offset  9a5 [29a5] HIGHLOW
+	reloc   49 offset  9b5 [29b5] HIGHLOW
+	reloc   50 offset  9e4 [29e4] HIGHLOW
+	reloc   51 offset  9f4 [29f4] HIGHLOW
+	reloc   52 offset  a04 [2a04] HIGHLOW
+	reloc   53 offset  a14 [2a14] HIGHLOW
+	reloc   54 offset  a24 [2a24] HIGHLOW
+	reloc   55 offset  a34 [2a34] HIGHLOW
+	reloc   56 offset  a44 [2a44] HIGHLOW
+	reloc   57 offset  a54 [2a54] HIGHLOW
+	reloc   58 offset  a64 [2a64] HIGHLOW
+	reloc   59 offset  a74 [2a74] HIGHLOW
+	reloc   60 offset  a84 [2a84] HIGHLOW
+	reloc   61 offset  a94 [2a94] HIGHLOW
+	reloc   62 offset  aa4 [2aa4] HIGHLOW
+	reloc   63 offset  ab4 [2ab4] HIGHLOW
+	reloc   64 offset  ac4 [2ac4] HIGHLOW
+	reloc   65 offset  ad4 [2ad4] HIGHLOW
+	reloc   66 offset  ae0 [2ae0] HIGHLOW
+	reloc   67 offset  aec [2aec] HIGHLOW
+	reloc   68 offset  af8 [2af8] HIGHLOW
+	reloc   69 offset  b04 [2b04] HIGHLOW
+	reloc   70 offset  b10 [2b10] HIGHLOW
+	reloc   71 offset  b1c [2b1c] HIGHLOW
+	reloc   72 offset  b28 [2b28] HIGHLOW
+	reloc   73 offset  b34 [2b34] HIGHLOW
+	reloc   74 offset  b65 [2b65] HIGHLOW
+	reloc   75 offset  b91 [2b91] HIGHLOW
+	reloc   76 offset  bfa [2bfa] HIGHLOW
+	reloc   77 offset  c02 [2c02] HIGHLOW
+	reloc   78 offset  c0e [2c0e] HIGHLOW
+	reloc   79 offset  c57 [2c57] HIGHLOW
+	reloc   80 offset  c63 [2c63] HIGHLOW
+	reloc   81 offset  c6a [2c6a] HIGHLOW
+	reloc   82 offset  c73 [2c73] HIGHLOW
+	reloc   83 offset  c8d [2c8d] HIGHLOW
+	reloc   84 offset  ca0 [2ca0] HIGHLOW
+	reloc   85 offset  ca7 [2ca7] HIGHLOW
+	reloc   86 offset  cb6 [2cb6] HIGHLOW
+	reloc   87 offset  cbd [2cbd] HIGHLOW
+	reloc   88 offset  cc3 [2cc3] HIGHLOW
+	reloc   89 offset  cd4 [2cd4] HIGHLOW
+	reloc   90 offset  ce4 [2ce4] HIGHLOW
+	reloc   91 offset  cf3 [2cf3] HIGHLOW
+	reloc   92 offset  d06 [2d06] HIGHLOW
+	reloc   93 offset  d0c [2d0c] HIGHLOW
+	reloc   94 offset  d30 [2d30] HIGHLOW
+	reloc   95 offset  d3b [2d3b] HIGHLOW
+	reloc   96 offset  d46 [2d46] HIGHLOW
+	reloc   97 offset  d4d [2d4d] HIGHLOW
+	reloc   98 offset  d62 [2d62] HIGHLOW
+	reloc   99 offset  d7c [2d7c] HIGHLOW
+	reloc  100 offset  d92 [2d92] HIGHLOW
+	reloc  101 offset  d9e [2d9e] HIGHLOW
+	reloc  102 offset  da6 [2da6] HIGHLOW
+	reloc  103 offset  dae [2dae] HIGHLOW
+	reloc  104 offset  dba [2dba] HIGHLOW
+	reloc  105 offset  dd4 [2dd4] HIGHLOW
+	reloc  106 offset  ddb [2ddb] HIGHLOW
+	reloc  107 offset  de8 [2de8] HIGHLOW
+	reloc  108 offset  e0e [2e0e] HIGHLOW
+	reloc  109 offset  e14 [2e14] HIGHLOW
+	reloc  110 offset  e1a [2e1a] HIGHLOW
+	reloc  111 offset  e20 [2e20] HIGHLOW
+	reloc  112 offset  e26 [2e26] HIGHLOW
+	reloc  113 offset  e2c [2e2c] HIGHLOW
+	reloc  114 offset  e33 [2e33] HIGHLOW
+	reloc  115 offset  e3a [2e3a] HIGHLOW
+	reloc  116 offset  e41 [2e41] HIGHLOW
+	reloc  117 offset  e48 [2e48] HIGHLOW
+	reloc  118 offset  e4f [2e4f] HIGHLOW
+	reloc  119 offset  e56 [2e56] HIGHLOW
+	reloc  120 offset  e5d [2e5d] HIGHLOW
+	reloc  121 offset  e6c [2e6c] HIGHLOW
+	reloc  122 offset  e71 [2e71] HIGHLOW
+	reloc  123 offset  e77 [2e77] HIGHLOW
+	reloc  124 offset  e86 [2e86] HIGHLOW
+	reloc  125 offset  e8b [2e8b] HIGHLOW
+	reloc  126 offset  e93 [2e93] HIGHLOW
+	reloc  127 offset  ea1 [2ea1] HIGHLOW
+	reloc  128 offset  ea7 [2ea7] HIGHLOW
+	reloc  129 offset  eb1 [2eb1] HIGHLOW
+	reloc  130 offset  eb7 [2eb7] HIGHLOW
+	reloc  131 offset  ebc [2ebc] HIGHLOW
+	reloc  132 offset  ec2 [2ec2] HIGHLOW
+	reloc  133 offset  ed3 [2ed3] HIGHLOW
+	reloc  134 offset  eda [2eda] HIGHLOW
+	reloc  135 offset  ef5 [2ef5] HIGHLOW
+	reloc  136 offset  efd [2efd] HIGHLOW
+	reloc  137 offset  f06 [2f06] HIGHLOW
+	reloc  138 offset  f0d [2f0d] HIGHLOW
+	reloc  139 offset  f20 [2f20] HIGHLOW
+	reloc  140 offset  f2d [2f2d] HIGHLOW
+	reloc  141 offset  f32 [2f32] HIGHLOW
+	reloc  142 offset  f37 [2f37] HIGHLOW
+	reloc  143 offset  f3c [2f3c] HIGHLOW
+	reloc  144 offset  f47 [2f47] HIGHLOW
+	reloc  145 offset  f54 [2f54] HIGHLOW
+	reloc  146 offset  f60 [2f60] HIGHLOW
+	reloc  147 offset  f6d [2f6d] HIGHLOW
+	reloc  148 offset  f73 [2f73] HIGHLOW
+	reloc  149 offset  f7a [2f7a] HIGHLOW
+	reloc  150 offset  f83 [2f83] HIGHLOW
+	reloc  151 offset  f89 [2f89] HIGHLOW
+	reloc  152 offset  fb2 [2fb2] HIGHLOW
+	reloc  153 offset  fc4 [2fc4] HIGHLOW
+
+Virtual Address: 00003000 Chunk size 20 (0x14) Number of fixups 6
+	reloc    0 offset   20 [3020] HIGHLOW
+	reloc    1 offset   42 [3042] HIGHLOW
+	reloc    2 offset   4e [304e] HIGHLOW
+	reloc    3 offset   5a [305a] HIGHLOW
+	reloc    4 offset   7c [307c] HIGHLOW
+	reloc    5 offset    0 [3000] ABSOLUTE
+
+There is a debug directory in .text at 0x72a61140
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 00001404 00000804
+(format RSDS signature 925ff86100344cf68c8729f5073358fc age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 3
+010   Entry: ID: 0x000006, Value: 0x80000028
+028    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+038     Entry: ID: 0x00003f, Value: 0x80000070
+070      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+080       Entry: ID: 0x000409, Value: 0x0000b8
+0b8        Leaf: Addr: 0x00e650, Size: 0x000066, Codepage: 0
+018   Entry: ID: 0x00000b, Value: 0x80000040
+040    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+050     Entry: ID: 0x000001, Value: 0x80000088
+088      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+098       Entry: ID: 0x000409, Value: 0x0000c8
+0c8        Leaf: Addr: 0x0050f0, Size: 0x0090ec, Codepage: 0
+020   Entry: ID: 0x000010, Value: 0x80000058
+058    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+068     Entry: ID: 0x000001, Value: 0x800000a0
+0a0      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0b0       Entry: ID: 0x000409, Value: 0x0000d8
+0d8        Leaf: Addr: 0x00e1e0, Size: 0x00046c, Codepage: 0
+ Resources start at offset: 0x9650
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002a4e  72a61000  72a61000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  72a64000  72a64000  00003000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000096b8  72a65000  72a65000  00003200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .reloc        00000328  72a6f000  72a6f000  0000ca00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

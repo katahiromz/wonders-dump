@@ -1,0 +1,148 @@
+
+riched32.dll:     file format pei-i386
+riched32.dll
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x73231014
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Sat Aug 25 04:35:50 2001
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	0
+SizeOfCode		00000200
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000200
+AddressOfEntryPoint	00001014
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		73230000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		00001066
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00000000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 000010c0 00000035 Export Directory [.edata (or where ever we found it)]
+Entry 1 000010f8 0000003c Import Directory [parts of .idata]
+Entry 2 00003000 000003f0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00004000 00000018 Base Relocation Directory [.reloc]
+Entry 6 000011a0 00000038 Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000278 00000030 Bound Import Directory
+Entry c 00001000 00000014 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x732310f8
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000010f8	0000114e ffffffff ffffffff 00001134 00001000
+
+	DLL Name: RICHED20.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1162	    7  RichEdit10ANSIWndProc	74db29ac
+
+ 0000110c	00001156 ffffffff ffffffff 00001142 00001008
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	117a	  691  UnregisterClassA	77cfcd1e
+	118e	  534  RegisterClassA	77cfdc11
+
+ 00001120	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x732310c0
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		3b7d7552
+Major/Minor 			0/0
+Name 				000010e8 riched32.dll
+Ordinal Base 			1
+Number in:
+	Export Address Table 		00000000
+	[Name Pointer/Ordinal] Table	00000000
+Table Addresses
+	Export Address Table 		000010e8
+	Name Pointer Table 		000010e8
+	Ordinal Table 			000010e8
+
+Export Address Table -- Ordinal Base 1
+
+[Ordinal/Name Pointer] Table
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 24 (0x18) Number of fixups 8
+	reloc    0 offset   2c [102c] HIGHLOW
+	reloc    1 offset   31 [1031] HIGHLOW
+	reloc    2 offset   63 [1063] HIGHLOW
+	reloc    3 offset   69 [1069] HIGHLOW
+	reloc    4 offset   7b [107b] HIGHLOW
+	reloc    5 offset   80 [1080] HIGHLOW
+	reloc    6 offset   86 [1086] HIGHLOW
+	reloc    7 offset    0 [1000] ABSOLUTE
+
+There is a debug directory in .text at 0x732311a0
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001d 0000109c 0000049c
+(format NB10 signature d8e57d3b age 2)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x000390, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001d8  73231000  73231000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000004  73232000  73232000  00000600  2**2
+                  CONTENTS, ALLOC
+  2 .rsrc         000003f0  73233000  73233000  00000800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .reloc        00000018  73234000  73234000  00000c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

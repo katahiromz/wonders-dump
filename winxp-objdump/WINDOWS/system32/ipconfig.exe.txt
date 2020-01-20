@@ -1,0 +1,270 @@
+
+ipconfig.exe:     file format pei-i386
+ipconfig.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01006585
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:59:32 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00007200
+SizeOfInitializedData	00006400
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00006585
+BaseOfCode		00001000
+BaseOfData		00009000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00010000
+SizeOfHeaders		00000400
+CheckSum		00017551
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000075ac 00000104 Import Directory [parts of .idata]
+Entry 2 0000a000 00005388 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00002360 00000040 Load Configuration Directory
+Entry b 00000248 00000100 Bound Import Directory
+Entry c 00001000 000001ec Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10075ac
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000075ac	00007800 ffffffff ffffffff 000079b0 00001150
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7948	  154  __setusermatherr	4cf0d695
+	78c2	  741  printf	4cf0186a
+	78cc	  795  toupper	4cedcad7
+	78d6	  786  swprintf	4ceff9c8
+	78e2	  656  exit	4cef9e7e
+	78ea	  756  setlocale	4cef3c31
+	78f6	  197  _c_exit	4cef9ece
+	7900	  246  _exit	4cef9e9a
+	7908	   78  _XcptFilter	4cef2dae
+	7916	  200  _cexit	4cef9eb6
+	789c	  810  wcscpy	4cf07e94
+	7920	  110  __initenv	4cf21a38
+	792c	  109  __getmainargs	4cedeeeb
+	793c	  315  _initterm	4cef9d67
+	795c	  182  _adjust_fdiv	4cf223d8
+	796c	  128  __p__commode	4cedf1a4
+	797c	  133  __p__fmode	4cedf1db
+	798a	  152  __set_app_type	4cef537c
+	799c	  237  _except_handler3	4cef5c94
+	79bc	  214  _controlfp	4cf0ee4f
+	78ba	  791  time	4cf0aecf
+	78b0	  806  wcscat	4cf07e61
+	78a6	  813  wcslen	4cf07fcc
+
+ 000075c0	000076b0 ffffffff ffffffff 00007a6c 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7a5a	  428  OpenSCManagerW	77d96f35
+	7a4a	  430  OpenServiceW	77d96fdd
+	7a38	   66  ControlService	77da49dd
+	7a22	   62  CloseServiceHandle	77d96cc5
+	7a10	  508  RegSetValueExW	77d8d757
+	7a02	  458  RegCloseKey	77d86c17
+	79ee	  494  RegQueryValueExA	77d87aab
+	79de	  485  RegOpenKeyExW	77d86a9f
+	79ca	  495  RegQueryValueExW	77d86fef
+
+ 000075d4	0000770c ffffffff ffffffff 00007cd6 0000105c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7cc2	  374  GetModuleHandleA	7c80b731
+	7ca4	  822  SetUnhandledExceptionFilter	7c8449fd
+	80ee	   49  CloseHandle	7c809bd7
+	80fc	  150  EnterCriticalSection	7c941000
+	8114	  579  LeaveCriticalSection	7c9410e0
+	7a7a	  590  LocalFree	7c8099bf
+	7a86	  790  SetLastError	7c94fe10
+	7a96	  360  GetLastError	7c94fe01
+	7aa6	  586  LocalAlloc	7c809a1d
+	7ab4	  615  MultiByteToWideChar	7c809c88
+	7aca	  448  GetSystemTimeAsFileTime	7c8017e9
+	7ae4	  136  DeviceIoControl	7c801629
+	7af6	   82  CreateFileW	7c8107f0
+	7b04	  412  GetProcessHeap	7c80ac51
+	7b16	  271  GetComputerNameExW	7c8201d9
+	7b2c	  910  WriteConsoleW	7c83549c
+	7b3c	  350  GetFileType	7c810ee1
+	7b4a	   56  CompareStringW	7c80a3ee
+	7b5c	  500  GlobalFree	7c80fcbf
+	7b6a	  432  GetStdHandle	7c812fc9
+	7b7a	  266  GetCommandLineW	7c817013
+	7b8c	  236  FormatMessageW	7c834ba7
+	7b9e	  472  GetUserDefaultLCID	7c809fa0
+	7bb4	  470  GetTimeFormatW	7c833feb
+	7bc6	  320  GetDateFormatW	7c83378d
+	7bd8	  195  FileTimeToSystemTime	7c80e87c
+	7bf0	  194  FileTimeToLocalFileTime	7c80e8f6
+	7c0a	  660  QueryPerformanceCounter	7c80a4b7
+	7c24	  468  GetTickCount	7c80932e
+	7c34	  318  GetCurrentThreadId	7c8097b8
+	7c4a	  316  GetCurrentProcessId	7c8099b0
+	7c60	  842  TerminateProcess	7c801e1a
+	7c74	  315  GetCurrentProcess	7c80de85
+	7c88	  859  UnhandledExceptionFilter	7c863e6a
+
+ 000075e8	00007860 ffffffff ffffffff 00007d22 000011b0
+
+	DLL Name: netman.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7ce4	    5  HrPnpInstanceIdFromGuid	77c7b3fc
+	7cfe	    4  HrLanConnectionNameFromGuidOrPath	77c7177d
+
+ 000075fc	000076f0 ffffffff ffffffff 00007db2 00001040
+
+	DLL Name: DNSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7d2e	   33  DnsFreeConfigStructure	76ee29be
+	7d8c	   75  DnsQuery_W	76ed2d94
+	7d78	   80  DnsRecordListFree	76ed5ad3
+	7d60	   28  DnsFlushResolverCache	76ee757a
+	7d48	   68  DnsQueryConfigAllocEx	76ed7a1d
+	7d9a	   35  DnsGetCacheDataTable	76ee2e94
+
+ 00007610	000077bc ffffffff ffffffff 00007dd4 0000110c
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7dbe	    7  WSAAddressToStringW	719e6979
+	8000000b	   11  <none>	719e2ee1
+	80000008	    8  <none>	719e2ead
+	8000000c	   12  <none>	719e45c1
+	8000006f	  111  <none>	719e3cce
+	80000073	  115  <none>	719e6a55
+
+ 00007624	000077d8 ffffffff ffffffff 00007eae 00001128
+
+	DLL Name: iphlpapi.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7de0	  110  NhGetInterfaceNameFromGuid	76d1d4f0
+	7dfe	   45  GetInterfaceInfo	76d12841
+	7e12	   42  GetIfTable	76d15143
+	7e20	   46  GetIpAddrTable	76d13b9c
+	7e32	   49  GetIpForwardTable	76d1aac7
+	7e46	  111  NhpAllocateAndGetInterfaceInfoFromStack	76d16ae8
+	7e70	   57  GetNetworkParams	76d1cccf
+	7e84	   53  GetIpStatistics	76d19b93
+	7e96	   26  GetAdaptersAddresses	76d13e54
+
+ 00007638	0000786c ffffffff ffffffff 00007f8e 000011bc
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7f84	 1272  sprintf	7c965ba4
+	7f50	  667  RtlIpv6AddressToStringW	7c9a356f
+	7f42	  196  NtOpenFile	7c94d580
+	7f36	   16  DbgPrint	7c96fb3f
+	7f26	  115  NtCreateFile	7c94d090
+	7f0e	  717  RtlNtStatusToDosError	7c94f60d
+	7ef6	  146  NtDeviceIoControlFile	7c94d260
+	7ede	  355  NtWaitForSingleObject	7c94df30
+	7ed4	  103  NtClose	7c94cfd0
+	7ebc	  630  RtlInitUnicodeString	7c941295
+	7f6a	  664  RtlIpv6AddressToStringA	7c9a3169
+
+ 0000764c	00007798 ffffffff ffffffff 00007faa 000010e8
+
+	DLL Name: RPCRT4.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7f98	  486  UuidFromStringW	77e61413
+
+ 00007660	000077a0 ffffffff ffffffff 0000803e 000010f0
+
+	DLL Name: SETUPAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8020	  270  SetupDiCreateDeviceInfoList	7604c341
+	8006	  358  SetupDiOpenDeviceInfoW	7604eeec
+	7fe6	  283  SetupDiDestroyDeviceInfoList	7604b28d
+	7fc2	  326  SetupDiGetDeviceRegistryPropertyW	7604eb01
+
+ 00007674	000077b4 ffffffff ffffffff 00008062 00001104
+
+	DLL Name: SHELL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	804c	    7  CommandLineToArgvW	7d631348
+
+ 00007688	000076d8 ffffffff ffffffff 000080e0 00001028
+
+	DLL Name: DHCPCSVC.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	80c6	   35  DhcpStaticRefreshParams	7ccbfd79
+	80b0	   13  DhcpHandlePnPEvent	7ccc1f11
+	809e	    8  DhcpEnumClasses	7ccc1ca3
+	8086	   27  DhcpReleaseParameters	7ccbfbc1
+	806e	    0  DhcpAcquireParameters	7ccbfa6f
+
+ 0000769c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10011f0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 000023a8 000017a8
+(format RSDS signature 5122f122b827433aaa4b7760e7ac2cc4 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x00a438, Size: 0x004f50, Codepage: 0
+ Resources start at offset: 0x438
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000712c  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000f3c  01009000  01009000  00007600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00005388  0100a000  0100a000  00008600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

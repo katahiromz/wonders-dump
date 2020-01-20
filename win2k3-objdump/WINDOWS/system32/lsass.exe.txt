@@ -1,0 +1,175 @@
+
+lsass.exe:     file format pei-i386
+lsass.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010014df
+
+Characteristics 0x12f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	large address aware
+	32 bit words
+
+Time/Date		Tue Mar 25 07:05:30 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001200
+SizeOfInitializedData	00001e00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000014df
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		0000b64c
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00006000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001b48 00000078 Import Directory [parts of .idata]
+Entry 2 00004000 00001b10 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000011a0 00000040 Load Configuration Directory
+Entry b 00000248 0000006c Bound Import Directory
+Entry c 00001000 000000c0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001b48
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001b48	00001bdc ffffffff ffffffff 00001d9c 0000101c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1d04	  665  QueryPerformanceCounter	77e425d8
+	1d1e	  469  GetTickCount	77e4193e
+	1d2e	  318  GetCurrentThreadId	77e419f7
+	1cf0	  375  GetModuleHandleA	77e42cd1
+	1d5a	  448  GetSystemTimeAsFileTime	77e41e46
+	1d74	  849  TerminateProcess	77e6ccc7
+	1d88	  314  GetCurrentProcess	77e41d1a
+	1cde	  408  GetProcAddress	77e42dfb
+	1cce	  778  SetErrorMode	77e4273d
+	1cb0	  829  SetUnhandledExceptionFilter	77e42d45
+	1ca2	  176  ExitThread	77e57e76
+	1c8e	  317  GetCurrentThread	77e41a24
+	1d44	  315  GetCurrentProcessId	77e41d40
+	1c80	   46  CloseHandle	77e41c83
+	1fee	  543  InterlockedExchange	77e41d4f
+	2004	  893  VirtualQuery	77e4def9
+
+ 00001b5c	00001bc0 ffffffff ffffffff 00001e1c 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1df8	  431  OpenThreadToken	77da1b7d
+	1ddc	   29  AllocateAndInitializeSid	77da38f4
+	1dc4	   56  CheckTokenMembership	77da751c
+	1dba	  225  FreeSid	77da38e9
+	1daa	  523  RevertToSelf	77da1bcb
+	1e0a	  304  ImpersonateSelf	77dbccfa
+
+ 00001b70	00001c4c ffffffff ffffffff 00001f14 0000108c
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1ed4	  353  NtSetInformationProcess	77f433c7
+	1e48	  374  NtShutdownSystem	77f4356b
+	1ebc	  667  RtlInitUnicodeString	77f43942
+	1e9e	  233  NtOpenEvent	77f42ab7
+	1e90	  344  NtSetEvent	77f43313
+	1e86	  136  NtClose	77f4238b
+	1e72	  305  NtRaiseHardError	77f4301b
+	1f08	  892  RtlUnwind	77f68e5f
+	1eac	  146  NtCreateEvent	77f4243f
+	1eee	  837  RtlSetProcessIsCritical	77f72bb2
+	1e2a	  876  RtlUnhandledExceptionFilter	77fa47b5
+	1e5c	  438  RtlAdjustPrivilege	77f7e392
+
+ 00001b84	00001c20 ffffffff ffffffff 00001fb2 00001060
+
+	DLL Name: LSASRV.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f30	  100  LsapDsInitializeDsStateInfo	7432b380
+	1f9e	   98  LsapCheckBootMode	743067f0
+	1f90	  128  ServiceInit	74307e20
+	1f82	  102  LsapInitLsa	74307640
+	1f5e	  101  LsapDsInitializePromoteInterface	743075a0
+	1f4e	   97  LsapAuOpenSam	742c6260
+	1f1e	   92  LsaISetupWasRun	74307500
+
+ 00001b98	00001c40 ffffffff ffffffff 00001fe2 00001080
+
+	DLL Name: SAMSRV.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1fbe	  111  SampUsingDsData	7420a0e0
+	1fd0	   49  SamIInitialize	741eccf0
+
+ 00001bac	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010f0
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001a 000011e8 000005e8
+(format NB10 signature baff7f3e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 1, IDs: 1
+010   Entry: name: [val: 800000a0 len 7]: MOFDATA, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 1, IDs: 0
+030     Entry: name: [val: 800000b0 len 14]: LSAMOFRESOURCE, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x004438, Size: 0x0016d3, Codepage: 0
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000068
+068      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+078       Entry: ID: 0x000409, Value: 0x000090
+090        Leaf: Addr: 0x0040d0, Size: 0x000364, Codepage: 0
+ String table starts at offset: 0xa0
+ Resources start at offset: 0x438
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001014  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000074  01003000  01003000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001b10  01004000  01004000  00001800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

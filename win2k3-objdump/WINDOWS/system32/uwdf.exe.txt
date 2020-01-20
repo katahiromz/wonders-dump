@@ -1,0 +1,307 @@
+
+uwdf.exe:     file format pei-i386
+uwdf.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01008645
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:03:38 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		0000ac00
+SizeOfInitializedData	00000c00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00008645
+BaseOfCode		00001000
+BaseOfData		0000c000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000e000
+SizeOfHeaders		00000400
+CheckSum		0001a285
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 0000b800 000002d6 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000acf8 000000b4 Import Directory [parts of .idata]
+Entry 2 0000d000 00000408 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00002470 00000040 Load Configuration Directory
+Entry b 00000250 000000b8 Bound Import Directory
+Entry c 00001000 000001cc Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100acf8
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000acf8	0000af08 ffffffff ffffffff 0000b09a 0000115c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b028	  170  __wgetmainargs	77baf32f
+	b03a	  322  _initterm	77bcae06
+	b05a	  189  _adjust_fdiv	77bf467c
+	af78	   19  ??3@YAXPAX@Z	77bba9a7
+	b06a	  133  __p__commode	77baf68e
+	b07a	  138  __p__fmode	77baf6c5
+	b088	  158  __set_app_type	77bc632c
+	b0a6	  111  __dllonexit	77bc5df8
+	b0b4	  445  _onexit	77bc5d9f
+	b0be	  221  _controlfp	77be0067
+	afa2	  458  _purecall	77bc6f6b
+	af98	  825  wcslen	77bd8ef2
+	af88	   18  ??2@YAPAXI@Z	77bba971
+	b046	  160  __setusermatherr	77bde695
+	b01a	  171  __winitenv	77bf3a08
+	b012	  668  exit	77bcaf41
+	b008	  207  _cexit	77bcaf77
+	affa	   79  _XcptFilter	77bc3cfc
+	aff2	  253  _exit	77bcaf5c
+	afe8	  204  _c_exit	77bcaf8b
+	afde	  827  wcsncmp	77bd8f55
+	afca	  244  _except_handler3	77bc6c74
+	afc0	  740  malloc	77bbd020
+	afb6	  820  wcscmp	77bd8e09
+	afae	  689  free	77bbce33
+
+ 0000ad0c	0000adac ffffffff ffffffff 0000b1b8 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b18a	  529  RegisterTraceGuidsW	7c80cf5d
+	b1a0	  642  UnregisterTraceGuids	7c80a9c7
+	b172	  285  GetTraceLoggerHandle	7c80252a
+	b15c	  284  GetTraceEnableLevel	7c8025a1
+	b146	  283  GetTraceEnableFlags	7c8025db
+	b10e	   86  ConvertStringSecurityDescriptorToSecurityDescriptorW	77f5dd22
+	b0fc	  466  RegCreateKeyExW	77f771fc
+	b0ea	  517  RegSetValueExW	77f77739
+	b0dc	  459  RegCloseKey	77f76cce
+	b0cc	  633  TraceMessage	7c83ee51
+	b552	  330  LookupAccountSidW	77f6aeb5
+	b566	  103  CreateWellKnownSid	77f6b4ce
+
+ 0000ad20	0000ade0 ffffffff ffffffff 0000b414 00001034
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b5ea	  111  CreateThread	77e6510f
+	b5da	  809  SetLastError	7c82a136
+	b5c8	  864  TerminateThread	77e66928
+	b5b0	  750  SetConsoleCtrlHandler	77e6f259
+	b5a0	  677  QueueUserAPC	77ea5d81
+	b592	  650  OpenThread	77e77a85
+	b588	  856  SleepEx	77e41e84
+	b57c	  965  lstrcmpiW	77e5b06a
+	b3f6	  843  SetUnhandledExceptionFilter	77e82060
+	b3c6	  322  GetCurrentProcess	77e62f9d
+	b3b2	  863  TerminateProcess	77e42004
+	b398	  458  GetSystemTimeAsFileTime	77e41fba
+	b388	  479  GetTickCount	77e619d1
+	b36e	  675  QueryPerformanceCounter	77e69577
+	b35e	   80  CreateEventW	77e69b31
+	b348	  323  GetCurrentProcessId	77e63c78
+	b338	  597  LoadLibraryW	77e5c6fa
+	b326	  416  GetProcAddress	77e63d7a
+	b318	  248  FreeLibrary	77e6b1a1
+	b2fc	  547  InitializeCriticalSection	77e67861
+	b1c6	  569  IsDebuggerPresent	77e5da00
+	b1da	  552  InterlockedDecrement	77e61680
+	b1f2	  556  InterlockedIncrement	77e6166c
+	b20a	  369  GetLastError	7c829e08
+	b21a	  913  WaitForSingleObject	77e61c7b
+	b230	  706  ReleaseMutex	77e619ad
+	b240	  152  EnterCriticalSection	7c81a360
+	b258	  593  LeaveCriticalSection	7c81a3ab
+	b270	   97  CreateMutexW	77e6933c
+	b280	   52  CloseHandle	77e63e6f
+	b28e	  326  GetCurrentThreadId	77e62fc7
+	b2a4	  129  DeleteCriticalSection	7c82c988
+	b2bc	  548  InitializeCriticalSectionAndSpinCount	77e63ed9
+	b2e4	  604  LocalFree	77e62419
+	b2f0	  790  SetEvent	77e62311
+	b3da	  879  UnhandledExceptionFilter	77e7690d
+
+ 0000ad34	0000aeac ffffffff ffffffff 0000b4a2 00001100
+
+	DLL Name: SETUPAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b484	  272  SetupDiCreateDeviceInfoList	770ed198
+	b442	  328  SetupDiGetDeviceInterfaceDetailW	770efa3d
+	b466	  365  SetupDiOpenDeviceInterfaceW	770f03f9
+	b422	  285  SetupDiDestroyDeviceInfoList	770eab09
+
+ 0000ad48	0000af70 ffffffff ffffffff 0000b4c0 000011c4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b4b0	   15  DbgBreakPoint	7c81a3e1
+
+ 0000ad5c	0000ae74 ffffffff ffffffff 0000b528 000010c8
+
+	DLL Name: RPCRT4.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b7e4	  443  RpcServerUseProtseqEpW	77c5df6f
+	b7cc	  431  RpcServerRegisterIfEx	77c6f6a9
+	b7ba	  426  RpcServerListen	77c6fb40
+	b7a2	  433  RpcServerUnregisterIf	77c6503b
+	b784	  403  RpcMgmtStopServerListening	77c9f84c
+	b76a	  404  RpcMgmtWaitServerListen	77c9f88f
+	b74c	  355  RpcBindingToStringBindingW	77c6fcd9
+	b732	  478  RpcStringBindingParseW	77c6fd27
+	b720	  480  RpcStringFreeW	77c74a29
+	b510	  328  RpcAsyncCompleteCall	77ce2c9c
+	b4f2	  422  RpcServerInqCallAttributesW	77c60a4a
+	b4e0	  268  NdrServerCall2	77ce35ab
+	b4ca	  126  NdrAsyncServerCall	77ce1526
+
+ 0000ad70	0000aec0 ffffffff ffffffff 0000b546 00001114
+
+	DLL Name: Secur32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b534	   25  GetUserNameExW	76f52191
+
+ 0000ad84	0000aec8 ffffffff ffffffff 0000b714 0000111c
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	b6fa	  445  LoadCursorW	773969ee
+	b708	  447  LoadIconW	7738bce1
+	b65a	  143  DefWindowProcW	7739c6b7
+	b6e8	  537  RegisterClassW	7739017a
+	b6d6	   97  CreateWindowExW	77392470
+	b6c4	  641  SetWindowLongW	77392375
+	b6b4	  153  DestroyWindow	7738b9c6
+	b6a6	  318  GetMessageW	7739c819
+	b692	  682  TranslateMessage	7739bdac
+	b67e	  162  DispatchMessageW	7739bac1
+	b66c	  367  GetWindowLongW	7739b8be
+	b648	  516  PostQuitMessage	7739ff02
+	b638	  515  PostMessageW	7739c7d8
+	b618	  693  UnregisterDeviceNotification	77385b50
+	b5fa	  541  RegisterDeviceNotificationW	7738aed9
+
+ 0000ad98	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x100b800
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		45d692ba
+Major/Minor 			0/0
+Name 				0000b8f0 uWDF.exe
+Ordinal Base 			1
+Number in:
+	Export Address Table 		00000014
+	[Name Pointer/Ordinal] Table	00000014
+Table Addresses
+	Export Address Table 		0000b828
+	Name Pointer Table 		0000b878
+	Ordinal Table 			0000b8c8
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 4624 Export RVA
+	[   1] +base[   2] 449b Export RVA
+	[   2] +base[   3] 442a Export RVA
+	[   3] +base[   4] 4316 Export RVA
+	[   4] +base[   5] 452d Export RVA
+	[   5] +base[   6] 3497 Export RVA
+	[   6] +base[   7] 459d Export RVA
+	[   7] +base[   8] 440c Export RVA
+	[   8] +base[   9] 60ad Export RVA
+	[   9] +base[  10] 84a8 Export RVA
+	[  10] +base[  11] 80b2 Export RVA
+	[  11] +base[  12] 50f5 Export RVA
+	[  12] +base[  13] 5089 Export RVA
+	[  13] +base[  14] 4889 Export RVA
+	[  14] +base[  15] 4821 Export RVA
+	[  15] +base[  16] 4a5b Export RVA
+	[  16] +base[  17] 490a Export RVA
+	[  17] +base[  18] 4c2d Export RVA
+	[  18] +base[  19] 4cca Export RVA
+	[  19] +base[  20] 48a4 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] WdfDeviceCreate
+	[   1] WdfDeviceGetDeviceName
+	[   2] WdfDeviceGetIoTarget
+	[   3] WdfDeviceInitSetFileEventCallbacks
+	[   4] WdfDeviceRegisterIoCallbacks
+	[   5] WdfDriverCreate
+	[   6] WdfFdoInitSetEventCallbacks
+	[   7] WdfFdoInitSetFilter
+	[   8] WdfIoQueueGetDevice
+	[   9] WdfIoTargetFormatIoctlRequest
+	[  10] WdfMemoryBufferCreate
+	[  11] WdfObjectDereferenceActual
+	[  12] WdfObjectReferenceActual
+	[  13] WdfRequestComplete
+	[  14] WdfRequestCompleteWithInformation
+	[  15] WdfRequestCreate
+	[  16] WdfRequestGetParameters
+	[  17] WdfRequestRetrieveBuffer
+	[  18] WdfRequestSend
+	[  19] WdfRequestSetCompletionRoutine
+
+There is a debug directory in .text at 0x10011f0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000021 000024b8 000018b8
+(format RSDS signature a27e5f33e5854e2ab7f9d9974aa09cf3 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x00d060, Size: 0x0003a8, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000aad6  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  0100c000  0100c000  0000b000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000408  0100d000  0100d000  0000b200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

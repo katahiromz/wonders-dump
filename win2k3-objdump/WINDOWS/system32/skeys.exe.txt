@@ -1,0 +1,235 @@
+
+skeys.exe:     file format pei-i386
+skeys.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01005638
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:08:46 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00005400
+SizeOfInitializedData	00001e00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00005638
+BaseOfCode		00001000
+BaseOfData		00007000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000a000
+SizeOfHeaders		00000400
+CheckSum		0000a5b6
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000596c 00000078 Import Directory [parts of .idata]
+Entry 2 00009000 00000400 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000019a0 00000040 Load Configuration Directory
+Entry b 00000240 0000007c Bound Import Directory
+Entry c 00001000 000001d0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100596c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000596c	00005b64 ffffffff ffffffff 00005c9c 00001180
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5bc6	  832  wcsstr	77bd90a6
+	5bd0	  822  wcscpy	77bd8dba
+	5bda	  204  _c_exit	77bcaf8b
+	5be4	  253  _exit	77bcaf5c
+	5bec	   79  _XcptFilter	77bc3cfc
+	5bfa	  207  _cexit	77bcaf77
+	5c04	  668  exit	77bcaf41
+	5c0c	  560  _wcmdln	77bf37e8
+	5c16	  170  __wgetmainargs	77baf32f
+	5c28	  322  _initterm	77bcae06
+	5c34	  160  __setusermatherr	77bde695
+	5c48	  189  _adjust_fdiv	77bf467c
+	5c58	  133  __p__commode	77baf68e
+	5c68	  138  __p__fmode	77baf6c5
+	5c76	  158  __set_app_type	77bc632c
+	5c88	  244  _except_handler3	77bc6c74
+	5ca8	  221  _controlfp	77be0067
+	5bbc	  740  malloc	77bbd020
+	5bb4	  689  free	77bbce33
+
+ 00005980	000059e4 ffffffff ffffffff 00005e84 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5dcc	  493  RegOpenKeyExW	77f77a9c
+	5e66	  587  StartServiceCtrlDispatcherW	77f51e4e
+	5e48	  527  RegisterServiceCtrlHandlerW	77f593db
+	5e34	  580  SetServiceStatus	77f66253
+	5e1c	  522  RegisterEventSourceW	77f66924
+	5e0c	  533  ReportEventW	77f6be3d
+	5df4	  176  DeregisterEventSource	77f5f160
+	5ddc	   55  ChangeServiceConfigW	77f82b21
+	5dba	  430  OpenSCManagerW	77f6d845
+	5daa	  432  OpenServiceW	77f6d707
+	5d94	   62  CloseServiceHandle	77f6d675
+	5d80	  504  RegQueryValueExW	77f76a81
+	5d6e	  517  RegSetValueExW	77f77739
+	5d60	  459  RegCloseKey	77f76cce
+	5d4e	  466  RegCreateKeyExW	77f771fc
+	5d32	   29  AllocateAndInitializeSid	77f76ed2
+	5d22	  247  GetLengthSid	77f76eb9
+	5d12	  307  InitializeAcl	77f6e05e
+	5cfc	   16  AddAccessAllowedAce	77f6b0d5
+	5cdc	  308  InitializeSecurityDescriptor	77f6e00e
+	5cc0	  570  SetSecurityDescriptorDacl	77f6e033
+	5cb6	  226  FreeSid	77f76f12
+
+ 00005994	00005a40 ffffffff ffffffff 000061cc 0000105c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6062	  629  MultiByteToWideChar	77e62fd6
+	6078	  140  DisconnectNamedPipe	77e5f94b
+	608e	  933  WriteFile	77e65529
+	609a	   60  ConnectNamedPipe	77e5c92c
+	60ae	   99  CreateNamedPipeW	77e5c9a6
+	60c2	  974  lstrlenW	77e622c9
+	60ce	  638  OpenEventW	77e5da2a
+	60dc	  959  lstrcatW	77e5c36f
+	60e8	  750  SetConsoleCtrlHandler	77e6f259
+	6100	  185  ExitProcess	77e668f1
+	610e	  675  QueryPerformanceCounter	77e69577
+	6128	  323  GetCurrentProcessId	77e63c78
+	613e	  458  GetSystemTimeAsFileTime	77e41fba
+	5f58	   86  CreateFileW	77e64841
+	6158	  863  TerminateProcess	77e42004
+	616c	  322  GetCurrentProcess	77e62f9d
+	6180	  879  UnhandledExceptionFilter	77e7690d
+	619c	  843  SetUnhandledExceptionFilter	77e82060
+	61ba	  440  GetStartupInfoW	77e4203e
+	6032	   40  CallNamedPipeW	77ea2bff
+	605a	  855  Sleep	77e424de
+	5e92	  961  lstrcmpA	77e5c7a8
+	5e9e	  973  lstrlenA	77e5be30
+	5eaa	  958  lstrcatA	77e60f41
+	5eb6	  857  SuspendThread	77e77a5f
+	5ec6	  722  ResumeThread	77e5f38b
+	5ed6	  741  SetCommState	77ea76e9
+	5ee6	   52  CloseHandle	77e63e6f
+	5ef4	  913  WaitForSingleObject	77e61c7b
+	5f0a	  790  SetEvent	77e62311
+	5f16	  742  SetCommTimeouts	77ea79f1
+	5f28	  269  GetCommProperties	77ea719f
+	5f3c	  270  GetCommState	77ea7257
+	5f4c	  851  SetupComm	77ea6eca
+	6026	  968  lstrcpyW	77e63f02
+	5f66	  719  ResetEvent	77e5b0a0
+	5f74	  404  GetOverlappedResult	77e4f41f
+	5f8a	  911  WaitForMultipleObjects	77e62fa6
+	5fa4	   50  ClearCommError	77ea6d7f
+	5fb6	  369  GetLastError	7c829e08
+	5fc6	  693  ReadFile	77e4184b
+	5fd2	  186  ExitThread	77e4f8f1
+	5fe0	  479  GetTickCount	77e619d1
+	5ff0	  326  GetCurrentThreadId	77e62fc7
+	6006	   80  CreateEventW	77e69b31
+	6016	  111  CreateThread	77e6510f
+	6044	  917  WideCharToMultiByte	77e63143
+
+ 000059a8	00005b08 ffffffff ffffffff 0000636e 00001124
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	61fc	  242  GetAsyncKeyState	7738ec9b
+	6362	  728  wsprintfW	7738b1f6
+	634c	  315  GetMessageExtraInfo	773a8ab4
+	6340	  570  SendInput	773ac792
+	632e	  473  MapVirtualKeyW	773ab29b
+	6320	  725  keybd_event	773d80fa
+	630c	  506  OpenInputDesktop	77385602
+	62fc	  504  OpenDesktopW	77385d02
+	62ee	  230  FindWindowW	7739d787
+	62de	  576  SendMessageW	7739c2ee
+	62d0	  478  MessageBeep	773c68ee
+	62c0	  267  GetCursorPos	7739c751
+	62a8	  666  SystemParametersInfoW	7739485d
+	628e	  328  GetProcessWindowStation	7739def9
+	627a	  353  GetThreadDesktop	7739e042
+	6264	  508  OpenWindowStationW	77385cd6
+	624a	  616  SetProcessWindowStation	7738a9bd
+	6236	  633  SetThreadDesktop	7738a9a9
+	6226	   67  CloseDesktop	7738ae83
+	6210	   69  CloseWindowStation	7738ae97
+	61da	   38  CharLowerA	7739e401
+	61e8	  349  GetSystemMetrics	7739d36a
+
+ 000059bc	00005b00 00000000 00000000 0000637a 0000111c
+
+	DLL Name: SKDLL.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000002	    2  <none>
+
+ 000059d0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10011f0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000022 000019e8 00000de8
+(format RSDS signature 06a30577edc94ccaaf7e0446089acf0f age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x009060, Size: 0x0003a0, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00005384  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000a00  01007000  01007000  00005800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000400  01009000  01009000  00006200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

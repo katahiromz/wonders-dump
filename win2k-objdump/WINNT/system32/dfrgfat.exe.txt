@@ -1,0 +1,285 @@
+
+dfrgfat.exe:     file format pei-i386
+dfrgfat.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x0100e3b0
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Wed Oct 13 08:30:11 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		0000e200
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000e3b0
+BaseOfCode		00001000
+BaseOfData		00010000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0002e000
+SizeOfHeaders		00000600
+CheckSum		00013401
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	000f4240
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000e61c 000000c8 Import Directory [parts of .idata]
+Entry 2 0002d000 000004a4 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001230 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000238 000000c0 Bound Import Directory
+Entry c 00001000 0000022c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100e61c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000e61c	0000e89c ffffffff ffffffff 0000ea10 000011b8
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	e9fa	 1165  wcscmp	77f95d84
+	e91a	 1133  memmove	77f82a70
+	e924	 1061  _allmul	77f93694
+	e96a	 1060  _alldiv	77f941b4
+	e958	 1099  _wtoi	77fb6d63
+	e960	 1063  _allrem	77fb6568
+	e988	 1167  wcscspn	77f91870
+	e974	 1173  wcsrchr	77f94d3b
+	e97e	 1170  wcsncmp	77f89bf2
+	e9a6	  213  NtQueryVolumeInformationFile	77f87422
+	e992	 1164  wcschr	77f8b01f
+	e99c	 1168  wcslen	77f8d1f7
+	e9da	 1156  swprintf	77f90378
+	e9f0	 1163  wcscat	77f85bf1
+	e9e6	 1169  wcsncat	77f8e8a2
+	e9c6	 1166  wcscpy	77f94653
+	e9d0	 1175  wcsstr	77f96bf5
+	e910	 1070  _chkstk	77f8f73c
+	ea04	 1121  iswctype	77f8655c
+	e946	  126  NtFsControlFile	77f8bf26
+	e92e	  293  NtWaitForSingleObject	77f8a117
+	ea1a	  656  RtlUnwind	77f86118
+
+ 0000e630	0000e6f4 ffffffff ffffffff 0000ea26 00001010
+
+	DLL Name: COMCTL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000011	   17  <none>	77b2222e
+
+ 0000e644	0000e848 ffffffff ffffffff 0000ea6a 00001164
+
+	DLL Name: SHELL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	ea4c	   97  SHGetSpecialFolderLocation	7755d5d0
+	ea34	   95  SHGetPathFromIDListW	7755da45
+
+ 0000e658	0000e8f8 ffffffff ffffffff 0000eadc 00001214
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	eaca	    7  CLSIDFromString	77a34c7c
+	eab4	   16  CoCreateInstanceEx	77a24b6c
+	eaa2	   50  CoInitializeEx	77a26810
+	ea8a	   67  CoRegisterClassObject	77a3a6ca
+	ea76	  253  ReleaseStgMedium	77a2938d
+
+ 0000e66c	0000e800 ffffffff ffffffff 0000eba8 0000111c
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	ebcc	  180  _controlfp	78003c1e
+	ebc2	  387  _onexit	78004446
+	ebb4	   85  __dllonexit	78002131
+	eb96	  128  __set_app_type	78003e5a
+	eb88	  110  __p__fmode	78003e64
+	eb78	  105  __p__commode	78003e6a
+	eb68	  155  _adjust_fdiv	7803bb70
+	eb54	  130  __setusermatherr	7800b426
+	eb48	  268  _initterm	78001dea
+	eb38	   88  __getmainargs	78003e70
+	eb2e	  141  _acmdln	7803b508
+	eb26	  582  exit	7800269e
+	eb18	   72  _XcptFilter	7800f7dc
+	eb10	  208  _exit	7800b908
+	eb06	  713  swscanf	78025474
+	eae6	   15  ??2@YAPAXI@Z	780021ee
+	eaf6	   16  ??3@YAXPAX@Z	78001f56
+
+ 0000e680	0000e6e4 ffffffff ffffffff 0000ec0c 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	ebe8	  424  RegQueryValueExW	77d88078
+	ebfc	  414  RegOpenKeyExW	77d88169
+	ebda	  388  RegCloseKey	77d87d4d
+
+ 0000e694	0000e704 ffffffff ffffffff 0000f076 00001020
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	edb4	  270  GetDateFormatW	77e69369
+	ee70	  402  GetVolumeInformationW	77e6413d
+	ee88	  404  GetVolumeNameForVolumeMountPointW	77e54b1d
+	ee3e	  813  lstrcmpiW	77e5aab8
+	ee4a	  285  GetEnvironmentVariableW	77e6e98a
+	ec78	  427  GlobalSize	77e60235
+	ef5c	  303  GetLocalTime	77e6c37a
+	f064	  358  GetStartupInfoA	77e6d000
+	f050	  314  GetModuleHandleA	77e656db
+	f03c	  287  GetExitCodeThread	77e56207
+	f02a	  716  TerminateThread	77e5e2c6
+	f01c	  141  ExitThread	77e606cf
+	f010	  656  SetEvent	77e5670d
+	ecac	  459  InterlockedIncrement	77e64a02
+	ecc4	  456  InterlockedDecrement	77e64a13
+	eca0	  782  WriteFile	77e64a24
+	ef22	   99  DeviceIoControl	77e675d0
+	ef12	  655  SetErrorMode	77e665a2
+	ef02	  280  GetDriveTypeW	77e5fb65
+	eee4	  169  FindFirstVolumeMountPointW	77e8ef23
+	eec8	  176  FindNextVolumeMountPointW	77e8f286
+	eeac	  183  FindVolumeMountPointClose	77e5befb
+	ef6c	  769  WideCharToMultiByte	77e5afd8
+	ef82	  195  FreeLibrary	77e6ab8c
+	ee64	  810  lstrcmpW	77e6016c
+	ef34	  482  LoadLibraryW	77e5ecdf
+	ef90	  185  FlushFileBuffers	77e547d2
+	ee2c	   37  CompareStringW	77e67e42
+	ee20	  819  lstrcpynW	77e61393
+	ee10	  181  FindResourceW	77e5e8c3
+	edfe	  706  SizeofResource	77e60f97
+	f002	  521  OpenEventW	77e5a11c
+	efee	  225  GetComputerNameW	77e5f6fe
+	efde	   77  CreateThread	77e66510
+	efcc	  219  GetCommandLineW	77e6c693
+	efbc	  400  GetVersionExW	77e5a3e1
+	efac	  422  GlobalHandle	77e6e4ad
+	ec1a	  191  FormatMessageW	77e5aa62
+	ec2c	  301  GetLastError	77e5668c
+	ec3c	  423  GlobalLock	77e5cca3
+	ec4a	  419  GlobalFree	77e6c287
+	ec58	  426  GlobalReAlloc	77e64368
+	ec68	  430  GlobalUnlock	77e5b7f4
+	ef44	  712  SystemTimeToFileTime	77e664a5
+	ec86	  412  GlobalAlloc	77e6911a
+	ec94	  573  ReadFile	77e548da
+	eddc	  765  WaitForSingleObject	77e58778
+	edf2	  807  lstrcatW	77e66133
+	ed6a	  293  GetFileSize	77e58854
+	ecdc	  668  SetLastError	77e6c4e4
+	ecec	  453  InitializeCriticalSection	77e58d0f
+	ed08	  478  LeaveCriticalSection	77f8aa7d
+	ed20	  111  EnterCriticalSection	77f8aa4c
+	ed38	   90  DeleteCriticalSection	77f877e0
+	ed50	  816  lstrcpyW	77e5a1a4
+	ed5c	   30  CloseHandle	77e5a6c8
+	ed78	   58  CreateFileW	77e595a3
+	ed86	  585  ReleaseMutex	77e674f7
+	ed96	  822  lstrlenW	77e5cd5c
+	eda2	  392  GetTimeFormatW	77e64547
+	efa4	  707  Sleep	77e54b74
+	edc6	  268  GetCurrentThreadId	77e59aa2
+
+ 0000e6a8	0000e6fc ffffffff ffffffff 0000f096 00001018
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f084	  359  GetStockObject	77f41710
+
+ 0000e6bc	0000e854 ffffffff ffffffff 0000f1aa 00001170
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f12a	  417  LoadCursorW	77dee0ff
+	f138	   91  CreateWindowExW	77de7d01
+	f118	  505  RegisterClassW	77dee852
+	f106	  135  DefWindowProcW	77de44a7
+	f14a	  152  DispatchMessageW	77de2eff
+	f15e	  647  TranslateMessage	77de3669
+	f172	  305  GetMessageW	77de2e6c
+	f180	  485  PostQuitMessage	77e04584
+	f192	  599  SetTimer	77de39d1
+	f19e	  409  KillTimer	77de39df
+	f0a0	  456  MessageBoxW	77e016cc
+	f0ae	  692  wsprintfW	77de850e
+	f0f6	  144  DestroyWindow	77de736e
+	f0ca	  432  LoadStringW	77dee395
+	f0ba	  484  PostMessageW	77de35ac
+	f0e6	  541  SendMessageW	77de4e36
+	f0d8	   50  CharUpperW	77ded09d
+
+ 0000e6d0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001230
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 0000f000
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000006, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000411, Value: 0x000080
+080        Leaf: Addr: 0x02d0a0, Size: 0x0000a4, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000068
+068      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+078       Entry: ID: 0x000411, Value: 0x000090
+090        Leaf: Addr: 0x02d144, Size: 0x000360, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+4a5  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+4b5   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0xa0
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000e1b6  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01010000  01010000  0000e800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000600  0102d000  0102d000  0000ea00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

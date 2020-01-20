@@ -1,0 +1,272 @@
+
+ssmyst.scr:     file format pei-i386
+ssmyst.scr
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010034e5
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:36:21 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00003200
+SizeOfInitializedData	00001200
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000034e5
+BaseOfCode		00001000
+BaseOfData		00005000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00007000
+SizeOfHeaders		00000400
+CheckSum		0000a51c
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000370c 0000008c Import Directory [parts of .idata]
+Entry 2 00006000 00000ffc Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011b0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001388 00000040 Load Configuration Directory
+Entry b 00000248 00000080 Bound Import Directory
+Entry c 00001000 000001ac Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100370c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000370c	000037a8 ffffffff ffffffff 0000395c 00001010
+
+	DLL Name: COMCTL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3944	   93  InitCommonControlsEx	77164088
+	80000011	   17  <none>	771db609
+
+ 00003720	00003904 ffffffff ffffffff 00003a2c 0000116c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	397e	  197  _c_exit	4cef9ece
+	3988	  246  _exit	4cef9e9a
+	3990	   78  _XcptFilter	4cef2dae
+	399e	  200  _cexit	4cef9eb6
+	39a8	  656  exit	4cef9e7e
+	39b0	  110  __initenv	4cf21a38
+	39bc	  109  __getmainargs	4cedeeeb
+	39cc	  315  _initterm	4cef9d67
+	39d8	  154  __setusermatherr	4cf0d695
+	39ec	  182  _adjust_fdiv	4cf223d8
+	39fc	  128  __p__commode	4cedf1a4
+	3a0c	  133  __p__fmode	4cedf1db
+	3a1a	  152  __set_app_type	4cef537c
+	3a38	  214  _controlfp	4cf0ee4f
+	396a	  237  _except_handler3	4cef5c94
+
+ 00003734	00003798 ffffffff ffffffff 00003a76 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3a46	  458  RegCloseKey	77d86c17
+	3a54	  495  RegQueryValueExW	77d86fef
+	3a68	  486  RegOpenKeyW	77d87936
+
+ 00003748	000037f8 ffffffff ffffffff 00003c62 00001060
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3ab8	  468  GetTickCount	7c80932e
+	3ac8	  917  WritePrivateProfileStringW	7c81ee34
+	3ae6	  660  QueryPerformanceCounter	7c80a4b7
+	3b00	  318  GetCurrentThreadId	7c8097b8
+	3b16	  316  GetCurrentProcessId	7c8099b0
+	3b2c	  448  GetSystemTimeAsFileTime	7c8017e9
+	3b46	  842  TerminateProcess	7c801e1a
+	3b5a	  315  GetCurrentProcess	7c80de85
+	3b6e	  859  UnhandledExceptionFilter	7c863e6a
+	3b8a	  822  SetUnhandledExceptionFilter	7c8449fd
+	3ba8	  834  Sleep	7c802446
+	3bb0	  408  GetProcAddress	7c80ae30
+	3bc2	  377  GetModuleHandleW	7c80e4cd
+	3bd6	  240  FreeLibrary	7c80ac6e
+	3be4	  583  LoadLibraryW	7c80aedb
+	3bf4	  444  GetSystemPowerStatus	7c835358
+	3c0c	  479  GetVersionExW	7c80aef5
+	3c1c	  182  ExitProcess	7c81cafa
+	3c2a	  431  GetStartupInfoW	7c801e54
+	3c3c	  266  GetCommandLineW	7c817013
+	3c4e	  374  GetModuleHandleA	7c80b731
+	3aa0	  399  GetPrivateProfileIntW	7c832748
+	3a84	  405  GetPrivateProfileStringW	7c80f9ed
+
+ 0000375c	000037b4 ffffffff ffffffff 00003d6e 0000101c
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3d20	  411  GetPaletteEntries	77edb60a
+	3d10	  528  SelectPalette	77ed8632
+	3cfe	  500  RealizePalette	77edea4b
+	3cec	    9  AnimatePalette	77efcece
+	3ce0	   71  CreatePen	77eda145
+	3d34	  405  GetNearestPaletteIndex	77f04806
+	3cc0	   69  CreatePalette	77edb5da
+	3cb2	  408  GetObjectW	77ed83b3
+	3ca4	  534  SetBkColor	77ed5e29
+	3c96	  222  ExtTextOutW	77ed8086
+	3c86	  527  SelectObject	77ed5b70
+	3d4e	  422  GetStockObject	77ed61c1
+	3d60	  353  GetClipBox	77ed6aa1
+	3cd0	  143  DeleteObject	77ed6bfa
+	3c7a	  466  MoveToEx	77eda20a
+	3c70	  462  LineTo	77edd987
+
+ 00003770	00003858 ffffffff ffffffff 0000401c 000010c0
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	4010	   44  CharNextW	77d0b1b0
+	4004	  444  LoadIconW	77d0e8bc
+	3ff4	  255  GetClientRect	77d0908e
+	3fe0	  349  GetSystemMetrics	77cf8f9c
+	3fd2	  230  FindWindowW	77d0c9c3
+	3fbc	  599  SetForegroundWindow	77d042ed
+	3fa2	  552  RegisterWindowMessageW	77cfaf34
+	3f90	  537  RegisterClassW	77cfa39a
+	3f7e	   97  CreateWindowExW	77d0d0a3
+	3f70	  318  GetMessageW	77cf91c6
+	3f5c	  682  TranslateMessage	77cf8bf6
+	3f48	  162  DispatchMessageW	77cf8a01
+	3f32	  279  GetForegroundWindow	77d09823
+	3f22	  510  PeekMessageW	77cf929b
+	3f10	  159  DialogBoxParamW	77d047ab
+	3f04	  325  GetParent	77d0910f
+	3ef8	  427  IsWindow	77d09313
+	3ee8	  512  PostMessageW	77cf8ccb
+	3d78	  403  InvalidateRect	77d08fd5
+	3d8a	  196  EnableWindow	77d09849
+	3d9a	  273  GetDlgItem	77d0436e
+	3da8	  394  InflateRect	77d098d5
+	3db6	  729  wsprintfW	77cfa9b6
+	3dc2	  457  LoadStringW	77cf9e36
+	3dd0	  634  SetTimer	77cf8c2e
+	3ddc	  434  KillTimer	77cf8c42
+	3de8	  554  ReleaseDC	77cf869d
+	3df4	  268  GetDC	77cf86c7
+	3dfc	  723  WinHelpW	77d41bd4
+	3e08	  576  SendMessageW	77d0929a
+	3e18	  372  GetWindowRect	77d090b4
+	3e28	  198  EndDialog	77d04a4e
+	3e34	  274  GetDlgItemInt	77d3bc8b
+	3e44	  594  SetDlgItemInt	77d3bc09
+	3e54	   56  CheckDlgButton	77d04dca
+	3e66	  567  SendDlgItemMessageW	77d073cc
+	3e7c	   59  CheckRadioButton	77d3bde1
+	3e90	  666  SystemParametersInfoW	77cf9f06
+	3ea8	  267  GetCursorPos	77d0974e
+	3eb8	  513  PostQuitMessage	77d0ca5a
+	3eca	  589  SetCursor	77d09930
+	3ed6	  143  DefWindowProcW	77d08d20
+
+ 00003784	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10011b0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 000013d0 000007d0
+(format RSDS signature 478a79b0429d484e8e12440314463c36 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 6
+010   Entry: ID: 0x000003, Value: 0x80000040
+040    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+050     Entry: ID: 0x000001, Value: 0x800000e8
+0e8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0f8       Entry: ID: 0x000411, Value: 0x0001c0
+1c0        Leaf: Addr: 0x006250, Size: 0x0002e8, Codepage: 1252
+018   Entry: ID: 0x000005, Value: 0x80000058
+058    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+068     Entry: ID: 0x0007d3, Value: 0x80000100
+100      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+110       Entry: ID: 0x000411, Value: 0x0001d0
+1d0        Leaf: Addr: 0x006538, Size: 0x0002f4, Codepage: 1252
+020   Entry: ID: 0x000006, Value: 0x80000070
+070    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 4
+080     Entry: ID: 0x000001, Value: 0x80000118
+118      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+128       Entry: ID: 0x000411, Value: 0x0001e0
+1e0        Leaf: Addr: 0x00682c, Size: 0x00003c, Codepage: 1252
+088     Entry: ID: 0x000007, Value: 0x80000130
+130      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+140       Entry: ID: 0x000411, Value: 0x0001f0
+1f0        Leaf: Addr: 0x006868, Size: 0x000030, Codepage: 1252
+090     Entry: ID: 0x00003f, Value: 0x80000148
+148      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+158       Entry: ID: 0x000411, Value: 0x000200
+200        Leaf: Addr: 0x006898, Size: 0x000074, Codepage: 1252
+098     Entry: ID: 0x000040, Value: 0x80000160
+160      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+170       Entry: ID: 0x000411, Value: 0x000210
+210        Leaf: Addr: 0x00690c, Size: 0x0000b8, Codepage: 1252
+028   Entry: ID: 0x00000e, Value: 0x800000a0
+0a0    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0b0     Entry: ID: 0x000064, Value: 0x80000178
+178      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+188       Entry: ID: 0x000411, Value: 0x000220
+220        Leaf: Addr: 0x0069c4, Size: 0x000014, Codepage: 1252
+030   Entry: ID: 0x000010, Value: 0x800000b8
+0b8    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0c8     Entry: ID: 0x000001, Value: 0x80000190
+190      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1a0       Entry: ID: 0x000411, Value: 0x000230
+230        Leaf: Addr: 0x0069d8, Size: 0x000380, Codepage: 1252
+038   Entry: ID: 0x000018, Value: 0x800000d0
+0d0    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0e0     Entry: ID: 0x000001, Value: 0x800001a8
+1a8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+1b8       Entry: ID: 0x000411, Value: 0x000240
+240        Leaf: Addr: 0x006d58, Size: 0x0002a1, Codepage: 1252
+ Resources start at offset: 0x250
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00003028  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01005000  01005000  00003600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000ffc  01006000  01006000  00003800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

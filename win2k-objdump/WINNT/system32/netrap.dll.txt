@@ -1,0 +1,231 @@
+
+netrap.dll:     file format pei-i386
+netrap.dll
+architecture: i386, flags 0x00000103:
+HAS_RELOC, EXEC_P, D_PAGED
+start address 0x00000000
+
+Characteristics 0x230e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+	DLL
+
+Time/Date		Wed Dec 08 17:15:38 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00001e00
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00000000
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		75130000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	10
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000600
+CheckSum		0000ec98
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00000000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00002b10 000001cf Export Directory [.edata (or where ever we found it)]
+Entry 1 00002940 00000050 Import Directory [parts of .idata]
+Entry 2 00004000 000003d0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00005000 0000006c Base Relocation Directory [.reloc]
+Entry 6 00001050 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000270 00000044 Bound Import Directory
+Entry c 00001000 00000048 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x75132940
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002940	000029a0 ffffffff ffffffff 00002a14 00001010
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2a0a	  739  wcslen	780012ef
+	2a00	  736  wcscpy	780020e2
+	29e2	  692  strchr	780127ce
+	29f6	  742  wcsncpy	78012737
+	29ec	  702  strncpy	7800231a
+	29d8	  624  isdigit	7800142a
+
+ 00002954	000029bc ffffffff ffffffff 00002ac0 0000102c
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2aac	  506  RtlInitAnsiString	77f9194e
+	2a78	  693  RtlxUnicodeStringToOemSize	77fa7614
+	2a46	  566  RtlOemStringToUnicodeString	77f90929
+	2a2e	  510  RtlInitUnicodeString	77f87124
+	2a96	   51  NlsMbOemCodePageTag	77fcd318
+	2a64	  653  RtlUnicodeToOemN	77f834c6
+
+ 00002968	00002990 ffffffff ffffffff 00002afe 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2ae4	  393  GetTimeZoneInformation	77e65376
+	2aca	  485  LocalAlloc	77e64911
+	2ad8	  489  LocalFree	77e6499c
+
+ 0000297c	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x75132b10
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		37ec57aa
+Major/Minor 			0/0
+Name 				00002bc4 NETRAP.dll
+Ordinal Base 			1
+Number in:
+	Export Address Table 		0000000e
+	[Name Pointer/Ordinal] Table	0000000e
+Table Addresses
+	Export Address Table 		00002b38
+	Name Pointer Table 		00002b70
+	Ordinal Table 			00002ba8
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 10c8 Export RVA
+	[   1] +base[   2] 1225 Export RVA
+	[   2] +base[   3] 11e8 Export RVA
+	[   3] +base[   4] 11b9 Export RVA
+	[   4] +base[   5] 223e Export RVA
+	[   5] +base[   6] 126e Export RVA
+	[   6] +base[   7] 226d Export RVA
+	[   7] +base[   8] 252a Export RVA
+	[   8] +base[   9] 26d5 Export RVA
+	[   9] +base[  10] 263d Export RVA
+	[  10] +base[  11] 25c8 Export RVA
+	[  11] +base[  12] 2660 Export RVA
+	[  12] +base[  13] 2683 Export RVA
+	[  13] +base[  14] 26a6 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] RapArrayLength
+	[   1] RapAsciiToDecimal
+	[   2] RapAuxDataCount
+	[   3] RapAuxDataCountOffset
+	[   4] RapConvertSingleEntry
+	[   5] RapConvertSingleEntryEx
+	[   6] RapExamineDescriptor
+	[   7] RapGetFieldSize
+	[   8] RapIsValidDescriptorSmb
+	[   9] RapLastPointerOffset
+	[  10] RapParmNumDescriptor
+	[  11] RapStructureAlignment
+	[  12] RapStructureSize
+	[  13] RapTotalSize
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 44 (0x2c) Number of fixups 18
+	reloc    0 offset  149 [1149] HIGHLOW
+	reloc    1 offset  20a [120a] HIGHLOW
+	reloc    2 offset  22e [122e] HIGHLOW
+	reloc    3 offset  314 [1314] HIGHLOW
+	reloc    4 offset  325 [1325] HIGHLOW
+	reloc    5 offset  590 [1590] HIGHLOW
+	reloc    6 offset  5db [15db] HIGHLOW
+	reloc    7 offset  679 [1679] HIGHLOW
+	reloc    8 offset  93e [193e] HIGHLOW
+	reloc    9 offset  9b0 [19b0] HIGHLOW
+	reloc   10 offset  a72 [1a72] HIGHLOW
+	reloc   11 offset  aa7 [1aa7] HIGHLOW
+	reloc   12 offset  ade [1ade] HIGHLOW
+	reloc   13 offset  b0c [1b0c] HIGHLOW
+	reloc   14 offset  b24 [1b24] HIGHLOW
+	reloc   15 offset  c1b [1c1b] HIGHLOW
+	reloc   16 offset  c53 [1c53] HIGHLOW
+	reloc   17 offset  c96 [1c96] HIGHLOW
+
+Virtual Address: 00002000 Chunk size 52 (0x34) Number of fixups 22
+	reloc    0 offset   48 [2048] HIGHLOW
+	reloc    1 offset   86 [2086] HIGHLOW
+	reloc    2 offset   d7 [20d7] HIGHLOW
+	reloc    3 offset  154 [2154] HIGHLOW
+	reloc    4 offset  3dd [23dd] HIGHLOW
+	reloc    5 offset  413 [2413] HIGHLOW
+	reloc    6 offset  456 [2456] HIGHLOW
+	reloc    7 offset  4a1 [24a1] HIGHLOW
+	reloc    8 offset  5a0 [25a0] HIGHLOW
+	reloc    9 offset  5f2 [25f2] HIGHLOW
+	reloc   10 offset  6e7 [26e7] HIGHLOW
+	reloc   11 offset  7c7 [27c7] HIGHLOW
+	reloc   12 offset  7db [27db] HIGHLOW
+	reloc   13 offset  805 [2805] HIGHLOW
+	reloc   14 offset  827 [2827] HIGHLOW
+	reloc   15 offset  846 [2846] HIGHLOW
+	reloc   16 offset  85c [285c] HIGHLOW
+	reloc   17 offset  87a [287a] HIGHLOW
+	reloc   18 offset  87f [287f] HIGHLOW
+	reloc   19 offset  88e [288e] HIGHLOW
+	reloc   20 offset  8f1 [28f1] HIGHLOW
+	reloc   21 offset  90a [290a] HIGHLOW
+
+Virtual Address: 00003000 Chunk size 12 (0xc) Number of fixups 2
+	reloc    0 offset   74 [3074] HIGHLOW
+	reloc    1 offset   78 [3078] HIGHLOW
+
+There is a debug directory in .text at 0x75131050
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00002c00
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x00036c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001cdf  75131000  75131000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000007c  75133000  75133000  00002400  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003d0  75134000  75134000  00002600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .reloc        0000014c  75135000  75135000  00002a00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

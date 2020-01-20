@@ -1,0 +1,146 @@
+
+cisvc.exe:     file format pei-i386
+cisvc.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100129b
+
+Characteristics 0x11f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:43:44 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000c00
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000129b
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	5
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00004000
+SizeOfHeaders		00000400
+CheckSum		00009e32
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000016f4 00000064 Import Directory [parts of .idata]
+Entry 2 00003000 000003e0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001090 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001108 00000040 Load Configuration Directory
+Entry b 00000250 00000058 Bound Import Directory
+Entry c 00001000 0000007c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10016f4
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000016f4	000017c4 ffffffff ffffffff 00001836 0000106c
+
+	DLL Name: query.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	181e	   34  ??0CException@@QAE@XZ	7d531844
+	1812	  792  CiSvcMain	7d4f8ace
+	17d4	  724  ?SystemExceptionTranslator@@YAXIPAU_EXCEPTION_POINTERS@@@Z	7d53195b
+
+ 00001708	0000176c ffffffff ffffffff 00001974 00001014
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1840	   45  ?_set_se_translator@@YAP6AXIPAU_EXCEPTION_POINTERS@@@ZP6AXI0@Z@Z	4cee25ad
+	1884	   82  __CxxFrameHandler	4cee27fa
+	1898	   71  _CxxThrowException	4cee26f6
+	18ae	  197  _c_exit	4cef9ece
+	18b8	  246  _exit	4cef9e9a
+	18c0	   78  _XcptFilter	4cef2dae
+	18ce	  200  _cexit	4cef9eb6
+	18d8	  656  exit	4cef9e7e
+	18e0	  165  __winitenv	4cf21a40
+	18ee	  164  __wgetmainargs	4cedee8a
+	1900	  315  _initterm	4cef9d67
+	190c	  154  __setusermatherr	4cf0d695
+	1920	  182  _adjust_fdiv	4cf223d8
+	1930	  128  __p__commode	4cedf1a4
+	1940	  133  __p__fmode	4cedf1db
+	194e	  152  __set_app_type	4cef537c
+	1960	  237  _except_handler3	4cef5c94
+	1980	   18  ??3@YAXPAX@Z	4cee9cdd
+	1990	   16  ??1type_info@@UAE@XZ	4cee1868
+	19a8	  214  _controlfp	4cf0ee4f
+	19b6	   52  ?terminate@@YAXXZ	4cee266d
+
+ 0000171c	00001758 ffffffff ffffffff 000019e8 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	19ca	  578  StartServiceCtrlDispatcherW	77da357d
+
+ 00001730	00001760 ffffffff ffffffff 00001a1a 00001008
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	19f6	  771  SetErrorMode	7c80ac9f
+	1a06	  374  GetModuleHandleA	7c80b731
+
+ 00001744	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001090
+
+Type                Size     Rva      Offset
+  2        CodeView 00000022 00001150 00000550
+(format RSDS signature 04efc1e6973c4e1ba14cda08eae49e1e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x00037c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000a28  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000058  01002000  01002000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003e0  01003000  01003000  00001200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

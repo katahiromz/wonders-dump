@@ -1,0 +1,112 @@
+
+microsoft.storage.vds.dll:     file format pei-i386
+microsoft.storage.vds.dll
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x484a49fe
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Sat Feb 17 14:02:13 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	8
+MinorLinkerVersion	0
+SizeOfCode		00023000
+SizeOfInitializedData	00002000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000249fe
+BaseOfCode		00002000
+BaseOfData		00026000
+ImageBase		48480000
+SectionAlignment	00002000
+FileAlignment		00001000
+MajorOSystemVersion	4
+MinorOSystemVersion	0
+MajorImageVersion	0
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0002a000
+SizeOfHeaders		00001000
+CheckSum		0003126f
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00000400
+SizeOfStackReserve	00100000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000249a4 00000057 Import Directory [parts of .idata]
+Entry 2 00026000 00000528 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00028000 0000000c Base Relocation Directory [.reloc]
+Entry 6 0002492c 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00002000 00000008 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00002008 00000048 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x484a49a4
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000249a4	000249cc 00000000 00000000 000249ee 00002000
+
+	DLL Name: mscoree.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	249e0	    0  _CorDllMain
+
+ 000249b8	00000000 00000000 00000000 00000000 00000000
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00024000 Chunk size 12 (0xc) Number of fixups 2
+	reloc    0 offset  a00 [24a00] HIGHLOW
+	reloc    1 offset    0 [24000] ABSOLUTE
+
+There is a debug directory in .text at 0x484a492c
+
+Type                Size     Rva      Offset
+  2        CodeView 00000032 00024948 00023948
+(format RSDS signature a851de417fa44af09bbb250477028357 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 00000000, Value: 0x000048
+048        Leaf: Addr: 0x026058, Size: 0x0004d0, Codepage: 0
+ Resources start at offset: 0x58
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00022a04  48482000  48482000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .rsrc         00000528  484a6000  484a6000  00024000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .reloc        0000000c  484a8000  484a8000  00025000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

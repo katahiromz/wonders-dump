@@ -1,0 +1,156 @@
+
+wmpcd.dll:     file format pei-i386
+wmpcd.dll
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x56b2108c
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Mon Apr 14 11:26:16 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001000
+SizeOfInitializedData	00003000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000108c
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		56b20000
+SectionAlignment	00001000
+FileAlignment		00001000
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00001000
+CheckSum		00012a96
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00000400
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00001200 000000a5 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001120 00000028 Import Directory [parts of .idata]
+Entry 2 00003000 000003e8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00004000 0000001c Base Relocation Directory [.reloc]
+Entry 6 00001020 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000280 00000020 Bound Import Directory
+Entry c 00001000 0000001c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x56b21120
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001120	00001148 ffffffff ffffffff 000011f0 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1180	  660  QueryPerformanceCounter	7c80a4b7
+	119a	  468  GetTickCount	7c80932e
+	11aa	  318  GetCurrentThreadId	7c8097b8
+	11c0	  316  GetCurrentProcessId	7c8099b0
+	11d6	  448  GetSystemTimeAsFileTime	7c8017e9
+	1164	  137  DisableThreadLibraryCalls	7c811326
+
+ 00001134	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x56b21200
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		480242da
+Major/Minor 			0/0
+Name 				00001250 smalldll.dll
+Ordinal Base 			1
+Number in:
+	Export Address Table 		00000004
+	[Name Pointer/Ordinal] Table	00000004
+Table Addresses
+	Export Address Table 		00001228
+	Name Pointer Table 		00001238
+	Ordinal Table 			00001248
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 1067 Export RVA
+	[   1] +base[   2] 106f Export RVA
+	[   2] +base[   3] 1067 Export RVA
+	[   3] +base[   4] 1067 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] DllCanUnloadNow
+	[   1] DllGetClassObject
+	[   2] DllRegisterServer
+	[   3] DllUnregisterServer
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 28 (0x1c) Number of fixups 10
+	reloc    0 offset   9c [109c] HIGHLOW
+	reloc    1 offset   ba [10ba] HIGHLOW
+	reloc    2 offset   d0 [10d0] HIGHLOW
+	reloc    3 offset   dc [10dc] HIGHLOW
+	reloc    4 offset   e4 [10e4] HIGHLOW
+	reloc    5 offset   ec [10ec] HIGHLOW
+	reloc    6 offset   f8 [10f8] HIGHLOW
+	reloc    7 offset  112 [1112] HIGHLOW
+	reloc    8 offset  119 [1119] HIGHLOW
+	reloc    9 offset    0 [1000] ABSOLUTE
+
+There is a debug directory in .text at 0x56b21020
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 0000103c 0000103c
+(format RSDS signature 40b9751997694416aebe25f4bdbeb759 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x000384, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002a5  56b21000  56b21000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000008  56b22000  56b22000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003e8  56b23000  56b23000  00003000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .reloc        00000042  56b24000  56b24000  00004000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

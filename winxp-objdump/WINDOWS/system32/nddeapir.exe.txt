@@ -1,0 +1,126 @@
+
+nddeapir.exe:     file format pei-i386
+nddeapir.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001113
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:38:36 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000600
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001113
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00004000
+SizeOfHeaders		00000400
+CheckSum		000067f1
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001378 0000003c Import Directory [parts of .idata]
+Entry 2 00003000 000003f0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001060 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001090 00000040 Load Configuration Directory
+Entry b 00000248 00000030 Bound Import Directory
+Entry c 00001000 0000004c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001378
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001378	000013c0 ffffffff ffffffff 000014c0 0000100c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1420	  200  _cexit	4cef9eb6
+	142a	  656  exit	4cef9e7e
+	1432	  168  _acmdln	4cf217ac
+	143c	  109  __getmainargs	4cedeeeb
+	144c	  315  _initterm	4cef9d67
+	1458	  154  __setusermatherr	4cf0d695
+	146c	  182  _adjust_fdiv	4cf223d8
+	1412	   78  _XcptFilter	4cef2dae
+	148c	  133  __p__fmode	4cedf1db
+	149a	  152  __set_app_type	4cef537c
+	14ac	  237  _except_handler3	4cef5c94
+	14cc	  214  _controlfp	4cf0ee4f
+	140a	  246  _exit	4cef9e9a
+	147c	  128  __p__commode	4cedf1a4
+	1400	  197  _c_exit	4cef9ece
+
+ 0000138c	000013b4 ffffffff ffffffff 00001500 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	14da	  374  GetModuleHandleA	7c80b731
+	14ee	  430  GetStartupInfoA	7c801ef2
+
+ 000013a0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001060
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 000010d8 000004d8
+(format RSDS signature 11dd80bff70647adb1299751fd82531b age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x00038c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000050e  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000024  01002000  01002000  00000a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003f0  01003000  01003000  00000c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

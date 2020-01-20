@@ -1,0 +1,862 @@
+
+ntvdm.exe:     file format pei-i386
+ntvdm.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x0f00e230
+
+Characteristics 0x31f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Fri Nov 12 09:37:13 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		0005b600
+SizeOfInitializedData	00008e00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000e230
+BaseOfCode		00001000
+BaseOfData		0005d000
+ImageBase		0f000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		000b3000
+SizeOfHeaders		00000600
+CheckSum		00069c38
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00000000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 0005b780 00000da1 Export Directory [.edata (or where ever we found it)]
+Entry 1 000595e4 00000078 Import Directory [parts of .idata]
+Entry 2 000b1000 000013dc Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000015a0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000630e0 00000040 Load Configuration Directory
+Entry b 00000240 00000074 Bound Import Directory
+Entry c 00001000 00000598 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0xf0595e4
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000595e4	00059698 ffffffff ffffffff 00059eb0 0000103c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	59d34	  207  GetCPInfo	77e69041
+	59d40	  201  GetACP	77e55fcc
+	59d1e	  769  WideCharToMultiByte	77e5afd8
+	59d56	  664  SetHandleCount	77e6138c
+	59d04	  283  GetEnvironmentStringsW	77e58bc7
+	59d4a	  326  GetOEMCP	77e5b97e
+	59d78	  296  GetFileType	77e6cac7
+	59d86	  358  GetStartupInfoA	77e6d000
+	59d68	  360  GetStdHandle	77e63f05
+	59da6	  438  HeapCreate	77e55304
+	59db4	  753  VirtualFree	77e5d002
+	59dc2	  782  WriteFile	77e64a24
+	59d98	  440  HeapDestroy	77e583d1
+	59cec	  281  GetEnvironmentStrings	77e64780
+	59dea	  476  LCMapStringA	77e6d78f
+	59dfa	  477  LCMapStringW	77e65ae4
+	59e0a	  361  GetStringTypeA	77e5e6e0
+	59e1c	  364  GetStringTypeW	77e57a07
+	59e2e	  339  GetProcAddress	77e6564b
+	59cd2	  194  FreeEnvironmentStringsW	77e632f0
+	59e50	  301  GetLastError	77e5668c
+	59e60	  573  ReadFile	77e548da
+	59e6c	  185  FlushFileBuffers	77e547d2
+	59e80	  661  SetFilePointer	77e6ed4c
+	59e92	   30  CloseHandle	77e5a6c8
+	59ea0	  680  SetStdHandle	77e69290
+	59cbc	  514  MultiByteToWideChar	77e65f62
+	59ca2	  193  FreeEnvironmentStringsA	77e5229e
+	59c8c	  312  GetModuleFileNameA	77e63992
+	59c70	  731  UnhandledExceptionFilter	77e89fb7
+	59dda	  750  VirtualAlloc	77e60ee2
+	59dce	  442  HeapFree	77fc9c41
+	59e40	  479  LoadLibraryA	77e68023
+	59c48	  715  TerminateProcess	77e5225c
+	59c3c	  436  HeapAlloc	77fc976b
+	59c30	  599  RtlUnwind	77f86118
+	59c22	  140  ExitProcess	77e6b0bb
+	59c14	  398  GetVersion	77e6e6d6
+	59c02	  218  GetCommandLineA	77e571cc
+	59fac	  303  GetLocalTime	77e6c37a
+	59fbc	  495  LocalUnlock	77e69f42
+	59fca	  491  LocalLock	77e557bb
+	59fd6	  485  LocalAlloc	77e64911
+	59fe4	  707  Sleep	77e54b74
+	59fec	  640  SetConsoleOutputCP	77e97489
+	5a002	  618  SetConsoleCP	77e9738f
+	5a012	   77  CreateThread	77e66510
+	5a022	  453  InitializeCriticalSection	77e58d0f
+	5a03e	   52  CreateEventA	77e5b217
+	5a04e	  766  WaitForSingleObjectEx	77e6e891
+	5a066	  268  GetCurrentThreadId	77e59aa2
+	5a07c	  692  SetThreadPriority	77e6a93e
+	5a090	  141  ExitThread	77e606cf
+	5a09e	  656  SetEvent	77e5670d
+	5a0aa	  314  GetModuleHandleA	77e656db
+	5a0be	  560  RaiseException	77e59aac
+	5a0d0	  190  FormatMessageA	77e696b7
+	5a0e2	  675  SetPriorityClass	77e6f53e
+	5a0f6	  328  GetPriorityClass	77e87ca6
+	5a10a	  293  GetFileSize	77e58854
+	5a118	   55  CreateFileA	77e62b8d
+	5a126	  368  GetSystemDirectoryA	77e55493
+	5a13c	  720  TlsAlloc	77e6571f
+	5a148	  366  GetSystemDefaultLangID	77e56d1c
+	5a162	  159  FindClose	77e58d24
+	5a16e	  163  FindFirstFileA	77e58dd4
+	5a180	  668  SetLastError	77e6c4e4
+	5a190	  461  IsBadCodePtr	77e58707
+	5a1a0	  723  TlsSetValue	77e56d2d
+	5a1ae	  722  TlsGetValue	77e683b2
+	5a1bc	  765  WaitForSingleObject	77e58778
+	5a1d2	  550  PulseEvent	77e71040
+	5a1e0	  390  GetTickCount	77e5c0a6
+	5a1f0	  596  ResumeThread	77e56f37
+	5a200	  108  DuplicateHandle	77e5466c
+	5a212	  267  GetCurrentThread	77e6b260
+	5a226	  612  SetCommTimeouts	77e8d036
+	5a238	  217  GetCommTimeouts	77e70fcb
+	5a24a	  703  SetupComm	77e8c393
+	5a256	  611  SetCommState	77e8cd19
+	5a266	  216  GetCommState	77e8c88b
+	5a276	   90  DeleteCriticalSection	77f877e0
+	5a28e	  763  WaitForMultipleObjects	77e6e673
+	5a2a8	   28  ClearCommError	77e8c235
+	5a2ba	  327  GetOverlappedResult	77e55f72
+	5a2d0	  478  LeaveCriticalSection	77f8aa7d
+	5a2e8	  111  EnterCriticalSection	77f8aa4c
+	5a300	  139  EscapeCommFunction	77e8c44f
+	5a316	   27  ClearCommBreak	77e8c227
+	5a328	  608  SetCommBreak	77e8cbe4
+	5a338	  536  OutputDebugStringA	77e70c93
+	5a34e	  648  SetCurrentDirectoryA	77e65d92
+	5a366	  653  SetEnvironmentVariableA	77e6f57b
+	5a380	  644  SetConsoleTitleA	77e53523
+	5a394	  266  GetCurrentProcessId	77e565f4
+	5a3aa	  257  GetConsoleTitleA	77e53504
+	5a3be	  384  GetThreadContext	77e60dd4
+	5a3d2	  424  GlobalMemoryStatus	77e60794
+	5a3e8	  617  SetConsoleActiveScreenBuffer	77e96ed4
+	5a462	  624  SetConsoleCursorPosition	77e96f9e
+	5a426	  155  FillConsoleOutputCharacterA	77e96708
+	5a444	  256  GetConsoleScreenBufferInfo	77e65280
+	59c5c	  265  GetCurrentProcess	77e656d7
+	5a47e	  622  SetConsoleCursorInfo	77e96ffb
+	5a496	  646  SetConsoleWindowInfo	77e970bd
+	5a4ae	  642  SetConsoleScreenBufferSize	77e96f41
+	5a4cc	  236  GetConsoleCP	77e53b21
+	5a4dc	   47  CreateConsoleScreenBuffer	77e96745
+	5a4f8	  771  WriteConsoleA	77e64bd4
+	5a508	  242  GetConsoleCursorInfo	77e70ec7
+	5a520	  635  SetConsoleMode	77e690cc
+	5a532	  253  GetConsoleMode	77e657cd
+	5a544	  255  GetConsoleOutputCP	77e630c8
+	5a55a	  489  LocalFree	77e6499c
+	5a566	   12  Beep	77e7a518
+	5a56e	  776  WriteConsoleOutputA	77e96378
+	5a584	  645  SetConsoleTitleW	77e55bfb
+	5a598	  258  GetConsoleTitleW	77e5c1b1
+	5a5ac	  566  ReadConsoleOutputA	77e53986
+	5a5c2	   99  DeviceIoControl	77e675d0
+	5a5d4	  620  SetConsoleCtrlHandler	77e5d6fb
+	5a5ec	   66  CreateMutexA	77e58b78
+	5a5fc	  585  ReleaseMutex	77e674f7
+	5a60c	  799  _lclose	77e5d24f
+	5a616	  803  _lread	77e69b97
+	5a620	  801  _llseek	77e6f338
+	5a62a	  802  _lopen	77e6d72b
+	5a634	  407  GetWindowsDirectoryA	77e5d287
+	5a64c	  709  SuspendThread	77e6cfc6
+	5a65c	  195  FreeLibrary	77e6ab8c
+	5a66a	  812  lstrcmpiA	77e6a711
+	5a676	  288  GetFileAttributesA	77e5657a
+	5a68c	  151  FileTimeToDosDateTime	77e5ca19
+	5a6a4	  152  FileTimeToLocalFileTime	77e5fd48
+	5a6be	  553  QueryDosDeviceW	77e6abb3
+	5a6d0	  357  GetShortPathNameW	77e63127
+	5a6e4	  468  IsDBCSLeadByte	77e5e068
+	5a6f6	  291  GetFileAttributesW	77e661ba
+	5a70c	   87  DefineDosDeviceW	77e5535f
+	5a720	  173  FindNextFileW	77e5ddf4
+	5a730	  166  FindFirstFileW	77e6b379
+	5a742	  279  GetDriveTypeA	77e69f1a
+	5a752	   51  CreateDirectoryW	77e54fbf
+	5a766	  588  RemoveDirectoryW	77e71288
+	5a77a	  510  MoveFileW	77e561c8
+	5a786	  487  LocalFileTimeToFileTime	77e5a84a
+	5a7a0	  221  GetCompressedFileSizeW	77e8023d
+	5a7ba	  660  SetFileAttributesW	77e5f1d0
+	5a7d0	  280  GetDriveTypeW	77e5fb65
+	5a7e0	  295  GetFileTime	77e5b19a
+	5a7ee	  663  SetFileTime	77e5a372
+	5a7fc	  712  SystemTimeToFileTime	77e664a5
+	5a814	  372  GetSystemTime	77e5d9bd
+	5a824	  652  SetEndOfFile	77e6f044
+	5a834	   58  CreateFileW	77e595a3
+	5a842	   93  DeleteFileW	77e6b264
+	5a850	  292  GetFileInformationByHandle	77e63d33
+	5a86e	  284  GetEnvironmentVariableA	77e6c866
+	5a888	  655  SetErrorMode	77e665a2
+	5a898	  698  SetVolumeLabelA	77e86362
+	5a8aa	  669  SetLocalTime	77e77c43
+	5a8ba	  732  UnlockFile	77e5e42a
+	5a8c8	  496  LockFile	77e5681d
+	5a8d4	   48  CreateDirectoryA	77e6ab59
+	5a8e8	  356  GetShortPathNameA	77e5dbf8
+	59bf4	   85  DebugBreak	77e7b89e
+	5a90a	  304  GetLocaleInfoA	77e5f51e
+	5a91c	  382  GetTempPathA	77e6bf24
+	5a92c	  375  GetSystemWindowsDirectoryA	77e54774
+	5a94a	  821  lstrlenA	77e67334
+	5a956	  716  TerminateThread	77e5e2c6
+	5a968	  380  GetTempFileNameA	77e6739c
+	5a97c	  603  SearchPathA	77e5e100
+	5a98a	  205  GetBinaryTypeA	77e8d219
+	5a99c	  286  GetExitCodeProcess	77e6eeb1
+	5a9b2	   71  CreateProcessA	77e6a1f3
+	5a9c4	  604  SearchPathW	77e5ae94
+	5a9d2	  381  GetTempFileNameW	77e66383
+	5a9e6	  143  ExpandEnvironmentStringsA	77e64ca6
+	5aa02	  509  MoveFileExW	77e718ad
+	5aa10	  278  GetDiskFreeSpaceW	77e688a1
+	5aa24	  402  GetVolumeInformationW	77e6413d
+	5aa3c	  225  GetComputerNameW	77e5f6fe
+	5aa50	  370  GetSystemInfo	77e57be4
+	5aa60	  760  VirtualUnlock	77e62ebf
+	5aa70	  445  HeapReAlloc	77f87bec
+	5aa7e	  623  SetConsoleCursorMode	77e97889
+	5aa96	  632  SetConsoleLocalEUDC	77e977e3
+	5aaac	  740  VDMConsoleOperation	77e980f9
+	5aac2	  319  GetNextVDMCommand	77e70743
+	5aad6	  142  ExitVDM	77e52689
+	5aae0	  625  SetConsoleDisplayMode	77e95868
+	5aaf8	  244  GetConsoleDisplayMode	77e6fca1
+	5ab10	  631  SetConsoleKeyShortcuts	77e95b10
+	5ab2a	  246  GetConsoleFontSize	77e96d37
+	5ab40	  262  GetCurrentConsoleFont	77e96d9f
+	5ab58	  641  SetConsolePalette	77e95c0d
+	5ab6c	  636  SetConsoleNlsMode	77e97674
+	5ab80	  254  GetConsoleNlsMode	77e9752f
+	5ab94	  667  SetLastConsoleEventActive	77e9802b
+	5abb0	  247  GetConsoleHardwareState	77e959bc
+	5abca	  627  SetConsoleHardwareState	77e95a80
+	5abe4	  579  RegisterConsoleVDM	77e535c6
+	5abfa	   39  ConsoleMenuControl	77e5357c
+	5ac10	  704  ShowConsoleCursor	77e957c1
+	5ac24	  564  ReadConsoleInputExW	77e95dac
+	5ac3a	  250  GetConsoleInputWaitHandle	77e954ff
+	5ac56	  774  WriteConsoleInputVDMW	77e95c9f
+	5ac6e	  460  InvalidateConsoleDIBits	77e968d7
+	5ac88	  697  SetVDMCurrentDirectories	77e8d6fe
+	5aca4	  251  GetConsoleKeyboardLayoutNameA	77e53bd6
+	5a408	  154  FillConsoleOutputAttribute	77e53a56
+	5a8fc	   92  DeleteFileA	77e630b0
+
+ 000595f8	00059aa4 ffffffff ffffffff 00059f3e 00001448
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	59ebe	  189  NtQueryInformationProcess	77f8f45f
+	59eda	  645  RtlUnicodeStringToAnsiString	77f8e5ec
+	59efa	   76  NtClose	77f88578
+	59f04	  115  NtEnumerateValueKey	77f8e90d
+	59f1a	  159  NtOpenKey	77f89a99
+	59f26	  510  RtlInitUnicodeString	77f87124
+	5b184	  561  RtlNtStatusToDosError	77f8b552
+	5b04c	  640  RtlTimeToTimeFields	77f89dd8
+	5b062	  636  RtlTimeFieldsToTime	77f93c52
+	5b078	   14  DbgPrint	77f9819d
+	5b084	   64  NtAlertThread	77f85811
+	5b094	  200  NtQueryPerformanceCounter	77f93abc
+	5b0b0	  451  RtlExtendedLargeIntegerDivide	77f8ef95
+	5b0d0	  292  NtWaitForMultipleObjects	77f87e6c
+	5b0ec	  450  RtlExtendedIntegerMultiply	77f93dd5
+	5b10a	  542  RtlLeaveCriticalSection	77f8aa7d
+	5b124	  436  RtlEnterCriticalSection	77f8aa4c
+	5b13e	  283  NtTerminateProcess	77f8c3d8
+	5b154	  291  NtVdmControl	77f97a8c
+	5b164	  514  RtlInitializeCriticalSection	77f94328
+	5b19c	  649  RtlUnicodeStringToOemString	77f8f644
+	5b1ba	  333  RtlAnsiStringToUnicodeString	77f94511
+	5b1da	  509  RtlInitString	77f8632d
+	5b1ea	  566  RtlOemStringToUnicodeString	77f90929
+	5b208	  475  RtlFreeUnicodeString	77f8b537
+	5b220	  216  NtRaiseHardError	77f9a438
+	5b234	  506  RtlInitAnsiString	77f9194e
+	5b248	   68  NtAllocateVirtualMemory	77f95da9
+	5b262	   85  NtCreateFile	77f95238
+	5b272	  110  NtDeviceIoControlFile	77f96bd7
+	5b28a	  454  RtlFillMemoryUlong	77f827c7
+	5b2a0	  186  NtQueryInformationFile	77f8b9a0
+	5b2ba	  156  NtOpenFile	77f8b5b4
+	5b2c8	  126  NtFsControlFile	77f8bf26
+	5b2da	  293  NtWaitForSingleObject	77f8a117
+	5b2f2	  148  NtMapViewOfSection	77f8682e
+	5b308	  290  NtUnmapViewOfSection	77f82ba5
+	5b320	   96  NtCreateSection	77f89c33
+	5b332	  211  NtQueryValueKey	77f83d9c
+	5b344	  125  NtFreeVirtualMemory	77f8bba5
+	5b35a	  567  RtlOemToUnicodeN	77f8fe23
+	5b36e	  127  NtGetContextThread	77f97abb
+	5b384	  190  NtQueryInformationThread	77f938e8
+	5b3a0	  112  NtDuplicateObject	77f83f7a
+	5b3b4	  244  NtSetContextThread	77f97bfa
+	5b3ca	   16  DbgPrompt	77f9fb21
+	5b3d6	  252  NtSetInformationFile	77f93e3f
+	5b3ee	  469  RtlFreeAnsiString	77f8b537
+	5b402	  198  NtQueryObject	77f8c4d6
+	5b412	  213  NtQueryVolumeInformationFile	77f87422
+	5b432	  446  RtlEqualUnicodeString	77f8a792
+	5b44a	  205  NtQuerySymbolicLinkObject	77f908a5
+	5b466	  166  NtOpenSymbolicLinkObject	77f87339
+	5b482	  337  RtlAppendUnicodeToString	77f90ab2
+	5b49e	  180  NtQueryDirectoryFile	77f919f3
+	5b4b6	  330  RtlAllocateHeap	77fc976b
+	5b4c8	  471  RtlFreeHeap	77fc9c41
+	5b4d6	  390  RtlCreateUnicodeString	77f95246
+	5b4f0	  427  RtlDosPathNameToNtPathName_U	77f84026
+	5b510	  357  RtlCompareUnicodeString	77f8eed4
+	5b52a	  660  RtlUpcaseUnicodeStringToCountedOemString	77f9730b
+	5b556	  529  RtlIsNameLegalDOS8Dot3	77f97399
+	5b570	  527  RtlIsDosDeviceName_U	77f8b616
+	5b588	  646  RtlUnicodeStringToCountedOemString	77fa73a6
+	5b5ae	  657  RtlUpcaseUnicodeChar	77f966b4
+	5b5c6	  487  RtlGetFullPathName_U	77f90f84
+	5b5de	  424  RtlDetermineDosPathNameType_U	77f84ebf
+	5b5fe	  589  RtlReAllocateHeap	77f87bec
+	5b612	  184  NtQueryFullAttributesFile	77f904a6
+	5b62e	  336  RtlAppendUnicodeStringToString	77f884de
+	5b650	  478  RtlGenerate8dot3Name	77faf050
+	5b668	  419  RtlDestroyEnvironment	77f90a84
+	5b680	  611  RtlSetEnvironmentVariable	77f95135
+	5b69c	  380  RtlCreateEnvironment	77f88411
+	5b6b4	  693  RtlxUnicodeStringToOemSize	77fa7614
+	5b6d2	   51  NlsMbOemCodePageTag	77fcd318
+	5b6e8	  593  RtlReleasePebLock	77f8b31d
+	5b6fc	  309  RtlAcquirePebLock	77f8b30d
+	5b710	  472  RtlFreeOemString	77f8521f
+	5b724	  608  RtlSetCurrentDirectory_U	77f95f8e
+	5b740	  256  NtSetInformationProcess	77f8b7a5
+	5b75a	  261  NtSetLdtEntries	77f8114c
+	5b76c	  348  RtlCharToInteger	77f8daa7
+
+ 0005960c	0005965c ffffffff ffffffff 00059f9e 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	59f8e	  404  RegEnumValueA	77d8da74
+	59f7e	  413  RegOpenKeyExA	77d882ac
+	59f6a	  418  RegQueryInfoKeyA	77d8df09
+	59f5c	  388  RegCloseKey	77d87d4d
+	59f48	  423  RegQueryValueExA	77d8858e
+
+ 00059620	00059674 ffffffff ffffffff 0005ad54 00001018
+
+	DLL Name: GDI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5acd8	  462  SelectObject	77f4182d
+	5ace8	  494  SetPaletteEntries	77f579b4
+	5acfc	  463  SelectPalette	77f45ca5
+	5ad0c	   44  CreateDCA	77f4a2de
+	5ad18	   67  CreatePalette	77f4814d
+	5ad28	   56  CreateFontIndirectA	77f43b1b
+	5ad3e	  444  RemoveFontResourceW	77f60438
+	5acc4	  361  GetStringBitmapA	77f6a8bb
+
+ 00059634	000599f0 ffffffff ffffffff 0005b040 00001394
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5ae94	  608  SetWindowPos	77de713b
+	5aea4	  526  ScreenToClient	77de5d23
+	5b034	  691  wsprintfA	77dedbee
+	5b022	   44  CharToOemBuffA	77e0777c
+	5b014	  467  OemToCharA	77dfd65e
+	5b002	   49  CharUpperBuffW	77ded068
+	5ad5e	  283  GetKeyboardType	77defb7e
+	5ad70	  431  LoadStringA	77dee3af
+	5ad7e	  432  LoadStringW	77dee395
+	5ad8c	  358  GetWindowThreadProcessId	77de510c
+	5ada8	  134  DefWindowProcA	77de4918
+	5adba	  210  EnumWindows	77de4bcd
+	5adc8	  149  DialogBoxParamA	77df14d7
+	5adda	  258  GetDesktopWindow	77de74be
+	5adee	  564  SetForegroundWindow	77de60b9
+	5ae04	  605  SetWindowLongA	77de7452
+	5ae16	  623  ShowWindow	77de7181
+	5ae24	  611  SetWindowTextA	77de6563
+	5ae36	  261  GetDlgItem	77ded52d
+	5ae44	  418  LoadIconA	77dee291
+	5ae50	  187  EndDialog	77e06444
+	5ae5c	  531  SendDlgItemMessageA	77df141d
+	5ae72	  346  GetWindowLongA	77de3893
+	5ae84	  536  SendMessageA	77de4961
+	5afe2	  442  MapVirtualKeyA	77df423f
+	5aff4	   47  CharUpperA	77dece72
+	5aeb6	  352  GetWindowRect	77de5a08
+	5aec6	  329  GetSystemMetrics	77de71fe
+	5aeda	  338  GetUserObjectInformationA	77e1a1a7
+	5aef6	  333  GetThreadDesktop	77def361
+	5af0a	  622  ShowStartGlass	77e130c0
+	5af1c	  215  FindWindowA	77def332
+	5af2a	  450  MessageBeep	77df3600
+	5af38	  267  GetForegroundWindow	77de5f1f
+	5af4e	  556  SetCursorPos	77e1a964
+	5af5e	  255  GetCursorPos	77de5bff
+	5af6e	   60  ClipCursor	77e2e5db
+	5af7c	  137  DeleteMenu	77dec6f8
+	5af8a	    8  AppendMenuW	77e06f66
+	5af98	  458  ModifyMenuW	77e081e1
+	5afa6	  244  GetClipCursor	77e2e68d
+	5afb6	  277  GetKeyState	77de4d96
+	5afc4	  483  PostMessageA	77de765d
+	5afd4	  677  VkKeyScanW	77ded597
+
+ 00059648	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0xf05b780
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		382b6138
+Major/Minor 			0/0
+Name 				0005bdde ntvdm.exe
+Ordinal Base 			1
+Number in:
+	Export Address Table 		0000009f
+	[Name Pointer/Ordinal] Table	0000009f
+Table Addresses
+	Export Address Table 		0005b7a8
+	Name Pointer Table 		0005ba24
+	Ordinal Table 			0005bca0
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 3b38 Export RVA
+	[   1] +base[   2] a7d48 Export RVA
+	[   2] +base[   3] 48714 Export RVA
+	[   3] +base[   4] 486e8 Export RVA
+	[   4] +base[   5] 486fe Export RVA
+	[   5] +base[   6] 3dce Export RVA
+	[   6] +base[   7] b0324 Export RVA
+	[   7] +base[   8] a6ce0 Export RVA
+	[   8] +base[   9] a82e0 Export RVA
+	[   9] +base[  10] 41b84 Export RVA
+	[  10] +base[  11] 48852 Export RVA
+	[  11] +base[  12] d322 Export RVA
+	[  12] +base[  13] 4c1c5 Export RVA
+	[  13] +base[  14] 14c2d Export RVA
+	[  14] +base[  15] 5b70 Export RVA
+	[  15] +base[  16] 75e44 Export RVA
+	[  16] +base[  17] 475c Export RVA
+	[  17] +base[  18] 32779 Export RVA
+	[  18] +base[  19] 5542 Export RVA
+	[  19] +base[  20] 32e6d Export RVA
+	[  20] +base[  21] 4f7b Export RVA
+	[  21] +base[  22] 4f2b Export RVA
+	[  22] +base[  23] 333e6 Export RVA
+	[  23] +base[  24] 32dd2 Export RVA
+	[  24] +base[  25] 330e4 Export RVA
+	[  25] +base[  26] 32fa3 Export RVA
+	[  26] +base[  27] 32edf Export RVA
+	[  27] +base[  28] 32f51 Export RVA
+	[  28] +base[  29] 3320c Export RVA
+	[  29] +base[  30] 32ce8 Export RVA
+	[  30] +base[  31] 33084 Export RVA
+	[  31] +base[  32] 33706 Export RVA
+	[  32] +base[  33] 41eaf Export RVA
+	[  33] +base[  34] 33549 Export RVA
+	[  34] +base[  35] 335e6 Export RVA
+	[  35] +base[  36] 334af Export RVA
+	[  36] +base[  37] 467d Export RVA
+	[  37] +base[  38] 33789 Export RVA
+	[  38] +base[  39] 358d4 Export RVA
+	[  39] +base[  40] 4af9a Export RVA
+	[  40] +base[  41] 48604 Export RVA
+	[  41] +base[  42] 338ab Export RVA
+	[  42] +base[  43] 4c1d5 Export RVA
+	[  43] +base[  44] 33820 Export RVA
+	[  44] +base[  45] 48780 Export RVA
+	[  45] +base[  46] 3482e Export RVA
+	[  46] +base[  47] 348f2 Export RVA
+	[  47] +base[  48] 7d00 Export RVA
+	[  48] +base[  49] 491d6 Export RVA
+	[  49] +base[  50] 49159 Export RVA
+	[  50] +base[  51] 6400 Export RVA
+	[  51] +base[  52] 7254 Export RVA
+	[  52] +base[  53] 41c16 Export RVA
+	[  53] +base[  54] 6a52 Export RVA
+	[  54] +base[  55] 7397 Export RVA
+	[  55] +base[  56] 4468b Export RVA
+	[  56] +base[  57] 45261 Export RVA
+	[  57] +base[  58] 4360d Export RVA
+	[  58] +base[  59] 44217 Export RVA
+	[  59] +base[  60] 44b13 Export RVA
+	[  60] +base[  61] 44a26 Export RVA
+	[  61] +base[  62] 44600 Export RVA
+	[  62] +base[  63] 46065 Export RVA
+	[  63] +base[  64] 460ca Export RVA
+	[  64] +base[  65] 45e26 Export RVA
+	[  65] +base[  66] 460b3 Export RVA
+	[  66] +base[  67] 4603b Export RVA
+	[  67] +base[  68] 6a52c Export RVA
+	[  68] +base[  69] 40e47 Export RVA
+	[  69] +base[  70] 874b Export RVA
+	[  70] +base[  71] 6f4e Export RVA
+	[  71] +base[  72] 8754 Export RVA
+	[  72] +base[  73] 40df1 Export RVA
+	[  73] +base[  74] 6585 Export RVA
+	[  74] +base[  75] 1137e Export RVA
+	[  75] +base[  76] 5637 Export RVA
+	[  76] +base[  77] f55a Export RVA
+	[  77] +base[  78] 175bc Export RVA
+	[  78] +base[  79] 8bc6 Export RVA
+	[  79] +base[  80] 4bf0 Export RVA
+	[  80] +base[  81] 750c Export RVA
+	[  81] +base[  82] 40e77 Export RVA
+	[  82] +base[  83] 40e06 Export RVA
+	[  83] +base[  84] 19b90 Export RVA
+	[  84] +base[  85] 969c Export RVA
+	[  85] +base[  86] 70f8 Export RVA
+	[  86] +base[  87] 4c34 Export RVA
+	[  87] +base[  88] 40de5 Export RVA
+	[  88] +base[  89] 40e15 Export RVA
+	[  89] +base[  90] 40deb Export RVA
+	[  90] +base[  91] 40dfa Export RVA
+	[  91] +base[  92] 40e21 Export RVA
+	[  92] +base[  93] 40e00 Export RVA
+	[  93] +base[  94] 40e8f Export RVA
+	[  94] +base[  95] 40e27 Export RVA
+	[  95] +base[  96] 1310b Export RVA
+	[  96] +base[  97] 40e1b Export RVA
+	[  97] +base[  98] 40e0f Export RVA
+	[  98] +base[  99] 40e2d Export RVA
+	[  99] +base[ 100] 40e34 Export RVA
+	[ 100] +base[ 101] 4671 Export RVA
+	[ 101] +base[ 102] 4cf0 Export RVA
+	[ 102] +base[ 103] f4ec Export RVA
+	[ 103] +base[ 104] 3b62 Export RVA
+	[ 104] +base[ 105] 40e83 Export RVA
+	[ 105] +base[ 106] 40e3b Export RVA
+	[ 106] +base[ 107] 40e5f Export RVA
+	[ 107] +base[ 108] 4e61 Export RVA
+	[ 108] +base[ 109] 4956 Export RVA
+	[ 109] +base[ 110] 496d Export RVA
+	[ 110] +base[ 111] 40e53 Export RVA
+	[ 111] +base[ 112] 5a9f Export RVA
+	[ 112] +base[ 113] 563e Export RVA
+	[ 113] +base[ 114] 34c25 Export RVA
+	[ 114] +base[ 115] 339ca Export RVA
+	[ 115] +base[ 116] 358d4 Export RVA
+	[ 116] +base[ 117] a7f24 Export RVA
+	[ 117] +base[ 118] 40f6f Export RVA
+	[ 118] +base[ 119] 108c8 Export RVA
+	[ 119] +base[ 120] 6f54 Export RVA
+	[ 120] +base[ 121] 7133 Export RVA
+	[ 121] +base[ 122] 40ead Export RVA
+	[ 122] +base[ 123] eb00 Export RVA
+	[ 123] +base[ 124] 7447 Export RVA
+	[ 124] +base[ 125] 6f19 Export RVA
+	[ 125] +base[ 126] 5afe Export RVA
+	[ 126] +base[ 127] beaa Export RVA
+	[ 127] +base[ 128] 188ca Export RVA
+	[ 128] +base[ 129] 13c87 Export RVA
+	[ 129] +base[ 130] 63d0 Export RVA
+	[ 130] +base[ 131] 40fb3 Export RVA
+	[ 131] +base[ 132] 16c9a Export RVA
+	[ 132] +base[ 133] a6fb Export RVA
+	[ 133] +base[ 134] cc8b Export RVA
+	[ 134] +base[ 135] 40f3e Export RVA
+	[ 135] +base[ 136] 63e8 Export RVA
+	[ 136] +base[ 137] 40e95 Export RVA
+	[ 137] +base[ 138] 40ee9 Export RVA
+	[ 138] +base[ 139] 40ea1 Export RVA
+	[ 139] +base[ 140] 40ec5 Export RVA
+	[ 140] +base[ 141] 40f19 Export RVA
+	[ 141] +base[ 142] 40ed1 Export RVA
+	[ 142] +base[ 143] 40ff9 Export RVA
+	[ 143] +base[ 144] 40f25 Export RVA
+	[ 144] +base[ 145] 11371 Export RVA
+	[ 145] +base[ 146] 40ef5 Export RVA
+	[ 146] +base[ 147] 40edd Export RVA
+	[ 147] +base[ 148] 40f4b Export RVA
+	[ 148] +base[ 149] 40f58 Export RVA
+	[ 149] +base[ 150] fa33 Export RVA
+	[ 150] +base[ 151] 4e9b Export RVA
+	[ 151] +base[ 152] 40fec Export RVA
+	[ 152] +base[ 153] 40fcf Export RVA
+	[ 153] +base[ 154] 40f65 Export RVA
+	[ 154] +base[ 155] 40f96 Export RVA
+	[ 155] +base[ 156] 40f01 Export RVA
+	[ 156] +base[ 157] 4974 Export RVA
+	[ 157] +base[ 158] 40f31 Export RVA
+	[ 158] +base[ 159] 40f79 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] BlockWOWIdle
+	[   1] CurrentMonitorTeb
+	[   2] DBGNotifyDebugged
+	[   3] DBGNotifyNewTask
+	[   4] DBGNotifyRemoteThreadAddress
+	[   5] DispatchInterrupts
+	[   6] ExpLdt
+	[   7] ExpVdmTib
+	[   8] FlatAddress
+	[   9] GetDOSAppName
+	[  10] GetWOWShortCutInfo
+	[  11] IsCdRomFile
+	[  12] MGetVdmPointer
+	[  13] RegisterWOWIdle
+	[  14] ResumeTimerThread
+	[  15] SelectorLimit
+	[  16] Sim32pGetVDMPointer
+	[  17] SoftPcEoi
+	[  18] SuspendTimerThread
+	[  19] VDDAllocMem
+	[  20] VDDAllocateDosHandle
+	[  21] VDDAssociateNtHandle
+	[  22] VDDDeInstallIOHook
+	[  23] VDDDeInstallMemoryHook
+	[  24] VDDDeInstallUserHook
+	[  25] VDDExcludeMem
+	[  26] VDDFreeMem
+	[  27] VDDIncludeMem
+	[  28] VDDInstallIOHook
+	[  29] VDDInstallMemoryHook
+	[  30] VDDInstallUserHook
+	[  31] VDDQueryDMA
+	[  32] VDDReleaseDosHandle
+	[  33] VDDReleaseIrqLine
+	[  34] VDDRequestDMA
+	[  35] VDDReserveIrqLine
+	[  36] VDDRetrieveNtHandle
+	[  37] VDDSetDMA
+	[  38] VDDSimulate16
+	[  39] VDDTerminateVDM
+	[  40] VdmDbgAttach
+	[  41] VdmGetParametersInfoError
+	[  42] VdmMapFlat
+	[  43] VdmParametersInfo
+	[  44] VdmTraceEvent
+	[  45] WOWSysErrorBox
+	[  46] WaitIfIdle
+	[  47] call_ica_hw_interrupt
+	[  48] cmdCheckTemp
+	[  49] cmdCheckTempInit
+	[  50] cpu_createthread
+	[  51] demClientErrorEx
+	[  52] demFileDelete
+	[  53] demFileFindFirst
+	[  54] demFileFindNext
+	[  55] demGetCurrentDirectoryLCDS
+	[  56] demGetFileTimeByHandle_WOW
+	[  57] demIsShortPathName
+	[  58] demLFNCleanup
+	[  59] demLFNGetCurrentDirectory
+	[  60] demSetCurrentDirectoryGetDrive
+	[  61] demSetCurrentDirectoryLCDS
+	[  62] demWOWLFNAllocateSearchHandle
+	[  63] demWOWLFNCloseSearchHandle
+	[  64] demWOWLFNEntry
+	[  65] demWOWLFNGetSearchHandle
+	[  66] demWOWLFNInit
+	[  67] fSeparateWow
+	[  68] getAF
+	[  69] getAH
+	[  70] getAL
+	[  71] getAX
+	[  72] getBH
+	[  73] getBL
+	[  74] getBP
+	[  75] getBX
+	[  76] getCF
+	[  77] getCH
+	[  78] getCL
+	[  79] getCS
+	[  80] getCX
+	[  81] getDF
+	[  82] getDH
+	[  83] getDI
+	[  84] getDL
+	[  85] getDS
+	[  86] getDX
+	[  87] getEAX
+	[  88] getEBP
+	[  89] getEBX
+	[  90] getECX
+	[  91] getEDI
+	[  92] getEDX
+	[  93] getEFLAGS
+	[  94] getEIP
+	[  95] getES
+	[  96] getESI
+	[  97] getESP
+	[  98] getFS
+	[  99] getGS
+	[ 100] getIF
+	[ 101] getIP
+	[ 102] getIntelRegistersPointer
+	[ 103] getMSW
+	[ 104] getOF
+	[ 105] getPF
+	[ 106] getSF
+	[ 107] getSI
+	[ 108] getSP
+	[ 109] getSS
+	[ 110] getZF
+	[ 111] host_CreateThread
+	[ 112] host_ExitThread
+	[ 113] host_com_close
+	[ 114] host_direct_access_error
+	[ 115] host_simulate
+	[ 116] pDeviceChain
+	[ 117] setAF
+	[ 118] setAH
+	[ 119] setAL
+	[ 120] setAX
+	[ 121] setBH
+	[ 122] setBL
+	[ 123] setBP
+	[ 124] setBX
+	[ 125] setCF
+	[ 126] setCH
+	[ 127] setCL
+	[ 128] setCS
+	[ 129] setCX
+	[ 130] setDF
+	[ 131] setDH
+	[ 132] setDI
+	[ 133] setDL
+	[ 134] setDS
+	[ 135] setDX
+	[ 136] setEAX
+	[ 137] setEBP
+	[ 138] setEBX
+	[ 139] setECX
+	[ 140] setEDI
+	[ 141] setEDX
+	[ 142] setEFLAGS
+	[ 143] setEIP
+	[ 144] setES
+	[ 145] setESI
+	[ 146] setESP
+	[ 147] setFS
+	[ 148] setGS
+	[ 149] setIF
+	[ 150] setIP
+	[ 151] setMSW
+	[ 152] setOF
+	[ 153] setPF
+	[ 154] setSF
+	[ 155] setSI
+	[ 156] setSP
+	[ 157] setSS
+	[ 158] setZF
+
+There is a debug directory in .text at 0xf0015a0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00064a00
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 3
+010   Entry: ID: 0x000005, Value: 0x80000028
+028    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 1, IDs: 0
+038     Entry: name: [val: 80000238 len 10]: ERRORPANEL, Value: 0x800000a8
+0a8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0b8       Entry: ID: 0x000411, Value: 0x000198
+198        Leaf: Addr: 0x0b1250, Size: 0x00019c, Codepage: 1252
+018   Entry: ID: 0x000006, Value: 0x80000040
+040    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 8
+050     Entry: ID: 0x000001, Value: 0x800000c0
+0c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0d0       Entry: ID: 0x000411, Value: 0x0001a8
+1a8        Leaf: Addr: 0x0b13ec, Size: 0x00023c, Codepage: 1252
+058     Entry: ID: 0x000002, Value: 0x800000d8
+0d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0e8       Entry: ID: 0x000411, Value: 0x0001b8
+1b8        Leaf: Addr: 0x0b1628, Size: 0x000324, Codepage: 1252
+060     Entry: ID: 0x000013, Value: 0x800000f0
+0f0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+100       Entry: ID: 0x000411, Value: 0x0001c8
+1c8        Leaf: Addr: 0x0b194c, Size: 0x000124, Codepage: 1252
+068     Entry: ID: 0x000014, Value: 0x80000108
+108      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+118       Entry: ID: 0x000411, Value: 0x0001d8
+1d8        Leaf: Addr: 0x0b1a70, Size: 0x000088, Codepage: 1252
+070     Entry: ID: 0x000015, Value: 0x80000120
+120      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+130       Entry: ID: 0x000411, Value: 0x0001e8
+1e8        Leaf: Addr: 0x0b1af8, Size: 0x0000b0, Codepage: 1252
+078     Entry: ID: 0x000016, Value: 0x80000138
+138      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+148       Entry: ID: 0x000411, Value: 0x0001f8
+1f8        Leaf: Addr: 0x0b1ba8, Size: 0x0003a0, Codepage: 1252
+080     Entry: ID: 0x000020, Value: 0x80000150
+150      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+160       Entry: ID: 0x000411, Value: 0x000208
+208        Leaf: Addr: 0x0b1f48, Size: 0x000088, Codepage: 1252
+088     Entry: ID: 0x00003f, Value: 0x80000168
+168      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+178       Entry: ID: 0x000411, Value: 0x000218
+218        Leaf: Addr: 0x0b1fd0, Size: 0x0000cc, Codepage: 1252
+020   Entry: ID: 0x000010, Value: 0x80000090
+090    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0a0     Entry: ID: 0x000001, Value: 0x80000180
+180      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+190       Entry: ID: 0x000411, Value: 0x000228
+228        Leaf: Addr: 0x0b209c, Size: 0x000340, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+13dd  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+13ed   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ String table starts at offset: 0x238
+ Resources start at offset: 0x250
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0005b521  0f001000  0f001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00007200  0f05d000  0f05d000  0005bc00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001b78  0f0b1000  0f0b1000  00062e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

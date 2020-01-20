@@ -1,0 +1,189 @@
+
+rasautou.exe:     file format pei-i386
+rasautou.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01001e10
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sun Oct 31 07:36:25 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00001600
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001e10
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000600
+CheckSum		00003d3d
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000200c 000000c8 Import Directory [parts of .idata]
+Entry 2 00004000 000003c0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 000000b8 Bound Import Directory
+Entry c 00001000 000000d8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100200c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000200c	00002108 ffffffff ffffffff 0000228a 00001034
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2296	  180  _controlfp	78003c1e
+	2256	  110  __p__fmode	78003e64
+	2264	  128  __set_app_type	78003e5a
+	2276	  199  _except_handler3	7800f56a
+	2246	  105  __p__commode	78003e6a
+	21be	  656  mbstowcs	78003023
+	21b6	  582  exit	7800269e
+	2236	  155  _adjust_fdiv	7803bb70
+	2222	  130  __setusermatherr	7800b426
+	2216	  268  _initterm	78001dea
+	2206	   88  __getmainargs	78003e70
+	21e8	   72  _XcptFilter	7800f7dc
+	21f6	   99  __p___initenv	7800bb9e
+	21ac	  667  printf	78025147
+	21e0	  208  _exit	7800b908
+	21ca	  706  strstr	780029bf
+	21d4	  446  _stricmp	78012961
+
+ 00002020	000020d4 ffffffff ffffffff 000022d6 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	22c6	  413  RegOpenKeyExA	77d882ac
+	22b8	  388  RegCloseKey	77d87d4d
+	22a4	  423  RegQueryValueExA	77d8858e
+
+ 00002034	000020e4 ffffffff ffffffff 0000236e 00001010
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2312	  301  GetLastError	77e5668c
+	234c	  339  GetProcAddress	77e6564b
+	233e	  195  FreeLibrary	77e6ab8c
+	2322	  143  ExpandEnvironmentStringsA	77e64ca6
+	235e	  479  LoadLibraryA	77e68023
+	22fe	  314  GetModuleHandleA	77e656db
+	22f0	  485  LocalAlloc	77e64911
+	22e4	  489  LocalFree	77e6499c
+
+ 00002048	00002150 ffffffff ffffffff 000023e2 0000107c
+
+	DLL Name: RASAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	237c	   95  RasSetAutodialEnableA	7749f73d
+	2394	   37  RasGetAutodialAddressA	7749ee8b
+	23ae	   41  RasGetAutodialParamA	7749fb16
+	23c6	   23  RasEnumAutodialAddressesA	7749f549
+
+ 0000205c	00002188 ffffffff ffffffff 000023fc 000010b4
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	23f0	  691  wsprintfA	77dedbee
+
+ 00002070	00002190 ffffffff ffffffff 00002408 000010bc
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000073	  115  <none>	74f94a6a
+
+ 00002084	00002198 ffffffff ffffffff 00002450 000010c4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	242a	  156  NtOpenFile	77f8b5b4
+	2438	  510  RtlInitUnicodeString	77f87124
+	2414	   14  DbgPrint	77f9819d
+	2420	   76  NtClose	77f88578
+
+ 00002098	00002178 ffffffff ffffffff 00002494 000010a4
+
+	DLL Name: TAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	246a	  131  lineGetTranslateCapsA	774ecc4f
+	2482	  137  lineInitialize	774e8562
+	245a	  206  lineShutdown	774e29fd
+
+ 000020ac	00002164 ffffffff ffffffff 000024f4 00001090
+
+	DLL Name: RASDLG.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	24ce	    3  RasDialDlgA	7580bd3c
+	24ba	    9  RasPhonebookDlgA	75820a41
+	24a0	    1  RasAutodialDisableDlgA	7580a601
+	24dc	    2  RasAutodialQueryDlgA	7580a1e2
+
+ 000020c0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010e0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00002200
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x00035c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001500  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000005c  01003000  01003000  00001c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003c0  01004000  01004000  00001e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

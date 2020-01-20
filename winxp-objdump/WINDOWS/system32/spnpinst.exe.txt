@@ -1,0 +1,195 @@
+
+spnpinst.exe:     file format pei-i386
+spnpinst.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010029b2
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:56:32 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00002200
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000029b2
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		0000d9bc
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002bd8 000000a0 Import Directory [parts of .idata]
+Entry 2 00005000 000003f8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001110 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001958 00000040 Load Configuration Directory
+Entry b 00000250 00000098 Bound Import Directory
+Entry c 00001000 00000110 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002bd8
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002bd8	00002d10 ffffffff ffffffff 00002e9c 00001098
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2e68	  133  __p__fmode	4cedf1db
+	2e58	  128  __p__commode	4cedf1a4
+	2e48	  182  _adjust_fdiv	4cf223d8
+	2e34	  154  __setusermatherr	4cf0d695
+	2e28	  315  _initterm	4cef9d67
+	2e16	  164  __wgetmainargs	4cedee8a
+	2e08	  165  __winitenv	4cf21a40
+	2e00	  656  exit	4cef9e7e
+	2e76	  152  __set_app_type	4cef537c
+	2de8	   78  _XcptFilter	4cef2dae
+	2de0	  246  _exit	4cef9e9a
+	2dd6	  197  _c_exit	4cef9ece
+	2dca	  553  _wcsicmp	4cf067bd
+	2dc0	  555  _wcslwr	4cf06917
+	2db6	  820  wcsstr	4cf08180
+	2dac	  813  wcslen	4cf07fcc
+	2da2	  825  wcstoul	4ceddc4a
+	2d96	  622  _wsystem	4cee931e
+	2e88	  237  _except_handler3	4cef5c94
+	2ea8	  214  _controlfp	4cf0ee4f
+	2df6	  200  _cexit	4cef9eb6
+	2d88	  544  _vsnwprintf	4cefffe7
+
+ 00002bec	00002c78 ffffffff ffffffff 00002f0c 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2ee8	  508  RegSetValueExW	77d8d757
+	2ec4	  495  RegQueryValueExW	77d86fef
+	2eb6	  458  RegCloseKey	77d86c17
+	2efa	  463  RegCreateKeyExW	77d8775c
+	2ed8	  485  RegOpenKeyExW	77d86a9f
+
+ 00002c00	00002c90 ffffffff ffffffff 000030e4 00001018
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3082	  315  GetCurrentProcess	7c80de85
+	306e	  842  TerminateProcess	7c801e1a
+	3054	  448  GetSystemTimeAsFileTime	7c8017e9
+	303e	  318  GetCurrentThreadId	7c8097b8
+	302e	  468  GetTickCount	7c80932e
+	3014	  660  QueryPerformanceCounter	7c80a4b7
+	3004	  460  GetTempPathW	7c830779
+	2ff0	  458  GetTempFileNameW	7c8359cf
+	3096	  859  UnhandledExceptionFilter	7c863e6a
+	2fd2	  360  GetLastError	7c94fe01
+	2fc6	  952  lstrlenW	7c809a99
+	2fba	  911  WriteFile	7c810e17
+	2fa8	  102  CreateProcessW	7c802336
+	2f92	  894  WaitForSingleObject	7c802530
+	2f84	  130  DeleteFileW	7c831f4b
+	30b2	  822  SetUnhandledExceptionFilter	7c8449fd
+	2f52	  316  GetCurrentProcessId	7c8099b0
+	2f44	  631  OpenProcess	7c8309d1
+	2f36	   49  CloseHandle	7c809bd7
+	30d0	  374  GetModuleHandleA	7c80b731
+	2fe2	   82  CreateFileW	7c8107f0
+	2f68	  405  GetPrivateProfileStringW	7c80f9ed
+	2f1a	  186  ExpandEnvironmentStringsW	7c8305e6
+
+ 00002c14	00002d6c ffffffff ffffffff 0000310e 000010f4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	30f2	  235  NtQueryInformationProcess	7c94d7e0
+
+ 00002c28	00002cf8 ffffffff ffffffff 00003118 00001080
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000017	   23  <none>	719e4211
+	8000006f	  111  <none>	719e3cce
+	80000073	  115  <none>	719e6a55
+	80000074	  116  <none>	719e3fed
+	80000003	    3  <none>	719e3e2b
+
+ 00002c3c	00002d74 ffffffff ffffffff 0000316c 000010fc
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	315a	   59  CoInitializeEx	7698ef7b
+	3146	   16  CoCreateInstance	7699057e
+	3136	  100  CoTaskMemFree	7698d044
+	3124	  104  CoUninitialize	7698ee46
+
+ 00002c50	00002cf0 ffffffff ffffffff 0000318e 00001078
+
+	DLL Name: PSAPI.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	3176	   15  GetModuleFileNameExW	76ba176a
+
+ 00002c64	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001110
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 000019a0 00000da0
+(format RSDS signature 19b660a33527465c93ee45941273bd94 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x005060, Size: 0x000394, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002198  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000008c  01004000  01004000  00002600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003f8  01005000  01005000  00002800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

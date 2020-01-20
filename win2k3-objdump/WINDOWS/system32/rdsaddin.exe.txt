@@ -1,0 +1,221 @@
+
+rdsaddin.exe:     file format pei-i386
+rdsaddin.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010029cd
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:06:02 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00002c00
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000029cd
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		00012391
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000328c 000000b4 Import Directory [parts of .idata]
+Entry 2 00005000 00000420 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001170 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001508 00000040 Load Configuration Directory
+Entry b 00000258 000000bc Bound Import Directory
+Entry c 00001000 00000168 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100328c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000328c	00003358 ffffffff ffffffff 00003734 00001018
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	35c8	  901  WaitForSingleObject	77e41680
+	35de	  111  CreateWaitableTimerW	77e68bf3
+	35f6	  594  LocalFree	77e4282c
+	3602	  175  ExitProcess	77e4f1e4
+	3610	  122  DeleteCriticalSection	77f48bb7
+	3628	  836  SetWaitableTimer	77e42118
+	363c	  636  OpenProcess	77e589c1
+	364a	  537  InitializeCriticalSection	77e42d03
+	35b2	  315  GetCurrentProcessId	77e41d40
+	367e	  408  GetProcAddress	77e42dfb
+	3690	  375  GetModuleHandleA	77e42cd1
+	36a4	  665  QueryPerformanceCounter	77e425d8
+	36be	  318  GetCurrentThreadId	77e419f7
+	36d4	  448  GetSystemTimeAsFileTime	77e41e46
+	36ee	  849  TerminateProcess	77e6ccc7
+	3702	  314  GetCurrentProcess	77e41d1a
+	3716	  829  SetUnhandledExceptionFilter	77e42d45
+	35a4	   80  CreateFileW	77e4964f
+	3592	  904  WaitNamedPipeW	77e7745a
+	3578	  805  SetNamedPipeHandleState	77e600f8
+	3568	   74  CreateEventW	77e4b0fd
+	355a	   46  CloseHandle	77e41c83
+	3540	  899  WaitForMultipleObjects	77e4b0cd
+	3532	  708  ResetEvent	77e4b0aa
+	3526	  683  ReadFile	77e48fee
+	350e	  143  EnterCriticalSection	77f42000
+	3502	  919  WriteFile	77e492aa
+	34f2	  361  GetLastError	77f45ba5
+	34dc	  396  GetOverlappedResult	77e5e97e
+	34c4	  583  LeaveCriticalSection	77f420c6
+	34b4	  469  GetTickCount	77e4193e
+	3666	  739  SetConsoleCtrlHandler	77e56063
+	34a8	  779  SetEvent	77e4b085
+	3a18	  900  WaitForMultipleObjectsEx	77e41b2f
+	3a08	  797  SetLastError	77f45bb4
+
+ 000032a0	00003420 ffffffff ffffffff 0000386e 000010e0
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	375c	   83  __CxxFrameHandler	77bb24b8
+	374c	  237  _endthreadex	77bc9158
+	3742	  818  wcscmp	77bd4d66
+	381a	  158  __setusermatherr	77bda0a0
+	3770	  201  _beginthreadex	77bc9213
+	3892	  219  _controlfp	77bdb7a1
+	3888	  443  _onexit	77bc3f78
+	387a	  109  __dllonexit	77bc3fc2
+	385c	  156  __set_app_type	77bc44b8
+	384e	  136  __p__fmode	77baeff8
+	383e	  131  __p__commode	77baefda
+	382e	  187  _adjust_fdiv	77bee654
+	380e	  320  _initterm	77bc8b58
+	3a34	  636  _wtoi	77bacfee
+	3a3c	  638  _wtol	77bacf89
+	3a44	  832  wcstok	77bd500b
+	37fc	  168  __wgetmainargs	77baecfa
+	37ee	  169  __winitenv	77bed9e0
+	37e6	  666  exit	77bc8c7b
+	37dc	  205  _cexit	77bc8c9d
+	37ce	   78  _XcptFilter	77bc20be
+	37c6	  251  _exit	77bc8c8c
+	37bc	  202  _c_exit	77bc8cac
+	37a8	  242  _except_handler3	77bc4d50
+	379e	  240  _errno	77baf05e
+	3794	  738  malloc	77bbbacf
+	378c	  687  free	77bbb8fb
+	3782	  760  realloc	77bbbb53
+
+ 000032b4	00003340 ffffffff ffffffff 000038fc 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	38a0	  457  RegCloseKey	77da2d0c
+	38ae	  493  RegQueryValueExW	77da2faa
+	38c2	  483  RegOpenKeyExW	77da1875
+	38d2	  281  GetTokenInformation	77da36c3
+	38e8	  426  OpenProcessToken	77da359d
+
+ 000032c8	00003400 ffffffff ffffffff 00003916 000010c0
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	390a	  726  wsprintfW	77d0c5c9
+
+ 000032dc	00003494 ffffffff ffffffff 0000396c 00001154
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3936	  104  CoUninitialize	7716390f
+	3948	   95  CoSetProxyBlanket	77198621
+	395c	   58  CoInitialize	771a2ee1
+	3922	   16  CoCreateInstance	77164edc
+
+ 000032f0	000033e8 ffffffff ffffffff 00003976 000010a8
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000096	  150  <none>	770fcb01
+	80000095	  149  <none>	770fc966
+	80000007	    7  <none>	770fc956
+	80000006	    6  <none>	770fca84
+	80000002	    2  <none>	770fcb65
+
+ 00003304	00003408 ffffffff ffffffff 000039b0 000010c8
+
+	DLL Name: WINSTA.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3998	   71  WinStationShadowStop	7626684e
+	3984	   70  WinStationShadow	76266b2d
+
+ 00003318	00003414 ffffffff ffffffff 000039ee 000010d4
+
+	DLL Name: WTSAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	39d6	   28  WTSVirtualChannelOpen	76f026ee
+	39bc	   31  WTSVirtualChannelQuery	76f02979
+
+ 0000332c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001170
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001d 00001550 00000950
+(format NB10 signature daff7f3e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x005060, Size: 0x0003bc, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002a4e  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000110  01004000  01004000  00003000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000420  01005000  01005000  00003200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

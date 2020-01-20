@@ -1,0 +1,547 @@
+
+vssvc.exe:     file format pei-i386
+vssvc.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010844b9
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:09:04 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		000be800
+SizeOfInitializedData	0000f200
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000844b9
+BaseOfCode		00001000
+BaseOfData		000c0000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	5
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		000d0000
+SizeOfHeaders		00000400
+CheckSum		000db40e
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000bd084 0000012c Import Directory [parts of .idata]
+Entry 2 000c3000 0000cee8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001650 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00038a58 00000040 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 0000057c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10bd084
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000bd084	000bd5e4 00000000 00000000 000bd910 00001434
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	bebf6	  775  srand
+	bebee	  761  rand
+	bebe6	  360  _itow
+	bebda	  719  iswalpha
+	bebd0	  832  wcsstr
+	bebc8	  803  time
+	bebbc	  736  localtime
+	bebb0	  824  wcsftime
+	beba2	  554  _vsnprintf
+	bd73a	   18  ??2@YAPAXI@Z
+	bd74a	   19  ??3@YAXPAX@Z
+	bd75a	   85  __CxxFrameHandler
+	bd76e	  458  _purecall
+	bd77a	   72  _CxxThrowException
+	bd790	  244  _except_handler3
+	bd7a4	  822  wcscpy
+	bd7ae	  825  wcslen
+	bd7b8	  689  free
+	bd7c0	  740  malloc
+	bd7ca	  820  wcscmp
+	bd7d4	  564  _wcsicmp
+	bd7e0	  762  realloc
+	bd7ea	  747  memmove
+	bd7f4	  828  wcsncpy
+	bd7fe	  818  wcscat
+	bd808	  827  wcsncmp
+	bd812	  242  _errno
+	bd81c	  203  _beginthreadex
+	bd82e	  568  _wcsnicmp
+	bd83a	  759  qsort
+	bd960	  221  _controlfp
+	bd956	  445  _onexit
+	bd948	  111  __dllonexit
+	bd934	   53  ?terminate@@YAXXZ
+	bd91c	   17  ??1type_info@@UAE@XZ
+	bd8fe	  158  __set_app_type
+	bd8f0	  138  __p__fmode
+	bd8e0	  133  __p__commode
+	bd842	  830  wcsrchr
+	bd84c	  819  wcschr
+	bd8d0	  189  _adjust_fdiv
+	bd856	  798  swprintf
+	bf0d2	   11  ??0exception@@QAE@ABV0@@Z
+	bf0ee	   16  ??1exception@@UAE@XZ
+	bf106	   12  ??0exception@@QAE@XZ
+	bf11e	  799  swscanf
+	bd8bc	  160  __setusermatherr
+	bd8b0	  322  _initterm
+	bd89e	  170  __wgetmainargs
+	bd894	  560  _wcmdln
+	bd88c	  668  exit
+	bd882	  207  _cexit
+	bd874	   79  _XcptFilter
+	bd86c	  253  _exit
+	bd862	  204  _c_exit
+	bd72c	  555  _vsnwprintf
+
+ 000bd098	000bd2d0 00000000 00000000 000bd96e 00001120
+
+	DLL Name: ATL.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	8000003a	   58  <none>
+	8000001e	   30  <none>
+	80000012	   18  <none>
+	80000020	   32  <none>
+	80000014	   20  <none>
+	80000011	   17  <none>
+	80000017	   23  <none>
+	80000010	   16  <none>
+
+ 000bd0ac	000bd1b0 00000000 00000000 000bdc5a 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	beda4	    5  AccessCheck
+	bed92	  436  PrivilegeCheck
+	bed7a	   56  CheckTokenMembership
+	bed68	  179  DuplicateToken
+	bee78	  588  StartServiceW
+	bee88	  569  SetSecurityDescriptorControl
+	beea8	  555  SetEntriesInAclW
+	beebc	  513  RegSaveKeyW
+	bee40	  566  SetNamedSecurityInfoW
+	bee2c	  498  RegQueryInfoKeyW
+	bee1c	  482  RegEnumValueW
+	bee0c	  512  RegSaveKeyExW
+	bedfc	  427  OpenEventLogW
+	bedea	   34  BackupEventLogW
+	bedda	   61  CloseEventLog
+	bf59e	  213  EnumServicesStatusW
+	bed4e	   88  ConvertStringSidToSidW
+	bed36	  336  LookupPrivilegeValueW
+	bed1e	   28  AdjustTokenPrivileges
+	bed12	  217  EqualSid
+	becfa	   17  AddAccessAllowedAceEx
+	bece2	   20  AddAccessDeniedAceEx
+	becd0	  430  OpenSCManagerW
+	becc0	  432  OpenServiceW
+	becaa	  451  QueryServiceStatus
+	bec94	   62  CloseServiceHandle
+	bec82	  433  OpenThreadToken
+	bec6e	  428  OpenProcessToken
+	bec58	  282  GetTokenInformation
+	bec3e	   80  ConvertSidToStringSidW
+	bec26	  522  RegisterEventSourceW
+	bec16	  533  ReportEventW
+	bebfe	  176  DeregisterEventSource
+	beeca	   86  ConvertStringSecurityDescriptorToSecurityDescriptorW
+	bedc8	   66  ControlService
+	bedb2	  103  CreateWellKnownSid
+	bee58	  264  GetSecurityDescriptorControl
+	bdc3e	   29  AllocateAndInitializeSid
+	bdc34	  226  FreeSid
+	bdc24	  479  RegEnumKeyExW
+	bdc14	  493  RegOpenKeyExW
+	bdc00	  504  RegQueryValueExW
+	bdbee	  466  RegCreateKeyExW
+	bdbdc	  517  RegSetValueExW
+	bdbce	  459  RegCloseKey
+	bdbba	  330  LookupAccountSidW
+	bdb9c	  267  GetSecurityDescriptorLength
+	bdb86	  410  MakeSelfRelativeSD
+	bdb6a	  319  IsValidSecurityDescriptor
+	bd976	  580  SetServiceStatus
+	bd98a	  526  RegisterServiceCtrlHandlerExW
+	bd9aa	  587  StartServiceCtrlDispatcherW
+	bd9c8	  308  InitializeSecurityDescriptor
+	bd9e8	   90  CopySid
+	bd9f2	  247  GetLengthSid
+	bda02	  320  IsValidSid
+	bda10	  572  SetSecurityDescriptorOwner
+	bda2e	  571  SetSecurityDescriptorGroup
+	bda4c	  328  LookupAccountNameW
+	bda62	   22  AddAce
+	bda6c	  229  GetAce
+	bda76	  230  GetAclInformation
+	bda8a	   16  AddAccessAllowedAce
+	bdaa0	  307  InitializeAcl
+	bdab0	  570  SetSecurityDescriptorDacl
+	bdacc	  266  GetSecurityDescriptorGroup
+	bdaea	  268  GetSecurityDescriptorOwner
+	bdb08	  574  SetSecurityDescriptorSacl
+	bdb24	  270  GetSecurityDescriptorSacl
+	bdb40	  318  IsValidAcl
+	bdb4e	  265  GetSecurityDescriptorDacl
+
+ 000bd0c0	000bd300 00000000 00000000 000be1e2 00001150
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	bf042	  213  FindFirstFileW
+	bdc68	   52  CloseHandle
+	bdc76	  913  WaitForSingleObject
+	bdc8c	  369  GetLastError
+	bdc9c	  111  CreateThread
+	bdcac	  547  InitializeCriticalSection
+	bdcc8	  129  DeleteCriticalSection
+	bdce0	  556  InterlockedIncrement
+	bf054	  709  RemoveDirectoryW
+	bdd10	  790  SetEvent
+	bdd1c	   80  CreateEventW
+	bdd2c	  116  CreateWaitableTimerW
+	bdd44	  326  GetCurrentThreadId
+	bdd5a	  850  SetWaitableTimer
+	bdd6e	   44  CancelWaitableTimer
+	bdd84	  650  OpenThread
+	bdd92	  965  lstrcmpiW
+	bdd9e	  273  GetCommandLineW
+	bddb0	  604  LocalFree
+	bddbc	  494  GetVolumeNameForVolumeMountPointW
+	bdde0	  496  GetVolumePathNameW
+	bddf6	  450  GetSystemDirectoryW
+	bde0c	  152  EnterCriticalSection
+	bde24	  593  LeaveCriticalSection
+	bde3c	  138  DeviceIoControl
+	bde4e	  719  ResetEvent
+	bde5c	  492  GetVolumeInformationW
+	bde74	  340  GetDriveTypeW
+	bde84	   86  CreateFileW
+	bde92	  849  SetVolumeMountPointW
+	bdeaa	  672  QueryDosDeviceW
+	bdebc	  974  lstrlenW
+	bdec8	  679  RaiseException
+	bdeda	  137  DeleteVolumeMountPointW
+	bdef4	  722  ResumeThread
+	bdf04	  550  InterlockedCompareExchange
+	bdf22	  837  SetThreadPriority
+	bdf36	  238  FlushFileBuffers
+	bdf4a	  911  WaitForMultipleObjects
+	bdf64	  458  GetSystemTimeAsFileTime
+	bdf7e	  548  InitializeCriticalSectionAndSpinCount
+	bdfa6	  855  Sleep
+	bdfae	  353  GetFileAttributesW
+	bf026	  189  ExpandEnvironmentStringsW
+	bdfd2	  132  DeleteFileW
+	bdfe0	  933  WriteFile
+	bdfec	  794  SetFileAttributesW
+	be002	   78  CreateDirectoryW
+	be016	  693  ReadFile
+	be022	  600  LocalAlloc
+	be030	  231  FindVolumeClose
+	be042	  126  DefineDosDeviceW
+	be056	  226  FindNextVolumeW
+	be068	  218  FindFirstVolumeW
+	be07c	  498  GetVolumePathNamesForVolumeNameW
+	be0a0	  278  GetComputerNameExW
+	be0b6	   42  CancelIo
+	be0c2	  404  GetOverlappedResult
+	be0d8	  225  FindNextVolumeMountPointW
+	be0f4	  232  FindVolumeMountPointClose
+	be110	  217  FindFirstVolumeMountPointW
+	be12e	  675  QueryPerformanceCounter
+	be148	  479  GetTickCount
+	be158	  323  GetCurrentProcessId
+	be16e	  863  TerminateProcess
+	be182	  322  GetCurrentProcess
+	be196	  879  UnhandledExceptionFilter
+	be1b2	  843  SetUnhandledExceptionFilter
+	be1d0	  440  GetStartupInfoW
+	bf068	  206  FindClose
+	bf074	  221  FindNextFileW
+	beffc	  528  HeapAlloc
+	beff0	  540  HeapSize
+	befd2	  461  GetSystemWindowsDirectoryW
+	befc2	  597  LoadLibraryW
+	befb0	  416  GetProcAddress
+	befa2	  248  FreeLibrary
+	bef92	  809  SetLastError
+	bef7e	  279  GetComputerNameW
+	bef6e	  490  GetVersionExW
+	bef5a	  325  GetCurrentThread
+	bef4a	  881  UnlockFileEx
+	bef3c	  612  LockFileEx
+	bef2c	  356  GetFileSizeEx
+	bef18	  797  SetFilePointerEx
+	bef02	  654  OutputDebugStringW
+	bf084	  625  MoveFileW
+	bf5b4	  629  MultiByteToWideChar
+	bf5ca	  973  lstrlenA
+	bf5d6	  706  ReleaseMutex
+	bf01a	  534  HeapFree
+	bf008	  419  GetProcessHeap
+	bdfc4	  624  MoveFileExW
+	bf5e6	  638  OpenEventW
+	bf5f4	  914  WaitForSingleObjectEx
+	bf60c	  875  TryEnterCriticalSection
+	bf626	  856  SleepEx
+	bdcf8	  552  InterlockedDecrement
+
+ 000bd0d4	000bd524 00000000 00000000 000be1fc 00001374
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	be1f0	  728  wsprintfW
+
+ 000bd0e8	000bd6e0 00000000 00000000 000be326 00001530
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	be24e	   61  CoInitializeSecurity
+	be266	   59  CoInitialize
+	be276	   17  CoCreateInstanceEx
+	be28c	   15  CoCreateGuid
+	be29c	    8  CLSIDFromString
+	be2ae	   28  CoFreeUnusedLibraries
+	be23c	  100  CoTaskMemAlloc
+	be2d8	   96  CoSetProxyBlanket
+	be2ec	  102  CoTaskMemRealloc
+	be300	   16  CoCreateInstance
+	be314	  309  StringFromGUID2
+	be22a	   60  CoInitializeEx
+	be218	  105  CoUninitialize
+	bf630	   46  CoGetMalloc
+	be208	  101  CoTaskMemFree
+	bf090	   91  CoRevertToSelf
+	bf0a2	   58  CoImpersonateClient
+	be2c6	  308  StringFromCLSID
+
+ 000bd0fc	000bd51c 00000000 00000000 000be340 0000136c
+
+	DLL Name: SHLWAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	be330	  149  SHDeleteKeyW
+
+ 000bd110	000bd4ac 00000000 00000000 000be34c 000012fc
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000009	    9  <none>
+	80000008	    8  <none>
+	800000a2	  162  <none>
+	80000007	    7  <none>
+	80000002	    2  <none>
+	80000004	    4  <none>
+	80000006	    6  <none>
+	800000c8	  200  <none>
+	8000000a	   10  <none>
+
+ 000bd124	000bd6c8 00000000 00000000 000be3b6 00001518
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	be39e	  688  RtlInitUnicodeString
+	be380	  172  NtCreateSymbolicLinkObject
+	be376	  144  NtClose
+	be35a	  304  NtQuerySystemInformation
+	bf0b8	  793  RtlPrefixUnicodeString
+
+ 000bd138	000bd4d4 00000000 00000000 000be5ac 00001324
+
+	DLL Name: SETUPAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	be4ba	   88  CM_Get_Device_ID_List_Size_ExW
+	be3dc	  141  CM_Locate_DevNodeW
+	be3f2	   78  CM_Get_Device_IDW
+	be406	   90  CM_Get_Device_ID_Size_Ex
+	be422	  285  SetupDiDestroyDeviceInfoList
+	be442	  330  SetupDiGetDeviceRegistryPropertyW
+	be466	  362  SetupDiOpenDeviceInfoW
+	be480	  272  SetupDiCreateDeviceInfoList
+	be49e	   84  CM_Get_Device_ID_List_ExW
+	be3c0	  168  CM_Reenumerate_DevNode_Ex
+	be4dc	  323  SetupDiGetDeviceInstallParamsW
+	be4fe	  288  SetupDiEnumDeviceInfo
+	be516	  308  SetupDiGetClassDevsW
+	be52e	  258  SetupDiCallClassInstaller
+	be54a	  375  SetupDiSetClassInstallParamsW
+	be56a	  328  SetupDiGetDeviceInterfaceDetailW
+	be58e	  289  SetupDiEnumDeviceInterfaces
+
+ 000bd14c	000bd52c 00000000 00000000 000beae2 0000137c
+
+	DLL Name: VSSAPI.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	bea7e	   13  ?GetCurrentVolumeCount@CVssWriter@@IBGIXZ
+	beaaa	   11  ?GetCurrentSnapshotSetId@CVssWriter@@IBG?AU_GUID@@XZ
+	be91c	   39  ?OnPostSnapshot@CVssWriter@@UAG_NPAVIVssWriterComponents@@@Z
+	be8ee	    4  ?AreComponentsSelected@CVssWriter@@IBG_NXZ
+	be860	   17  ?Initialize@CVssWriter@@QAGJU_GUID@@PBGW4VSS_USAGE_TYPE@@W4VSS_SOURCE_TYPE@@W4_VSS_APPLICATION_LEVEL@@KW4VSS_ALTERNATE_WRITER_STATE@@_N1@Z
+	be83e	   53  ?Subscribe@CVssWriter@@QAGJK@Z
+	be816	   52  ?SetWriterFailure@CVssWriter@@IAGJJ@Z
+	be7ec	   21  ?IsPathAffected@CVssWriter@@IBG_NPBG@Z
+	be7ca	   55  ?Unsubscribe@CVssWriter@@QAGJXZ
+	bea4e	   12  ?GetCurrentVolumeArray@CVssWriter@@IBGPAPBGXZ
+	be5ea	   51  ?OnVSSShutdown@CVssWriter@@UAG_NXZ
+	be722	   22  ?LoadVssSnapshotSetDescription@@YGJPBGPAPAVIVssSnapshotSetDescription@@U_GUID@@@Z
+	80000006	    6  <none>
+	be70a	    3  ??1CVssWriter@@UAE@XZ
+	be6f2	    1  ??0CVssWriter@@QAE@XZ
+	be6b0	   26  ?OnBackupComplete@CVssWriter@@UAG_NPAVIVssWriterComponents@@@Z
+	be680	   29  ?OnBackupShutdown@CVssWriter@@UAG_NU_GUID@@@Z
+	be648	   25  ?OnBackOffIOOnVolume@CVssWriter@@UAG_NPAGU_GUID@@1@Z
+	be610	   30  ?OnContinueIOOnVolume@CVssWriter@@UAG_NPAGU_GUID@@1@Z
+	bea0e	   43  ?OnPrepareBackup@CVssWriter@@UAG_NPAVIVssWriterComponents@@@Z
+	be95c	   35  ?OnPostRestore@CVssWriter@@UAG_NPAVIVssWriterComponents@@@Z
+	be9d8	   19  ?IsBootableSystemStateBackedUp@CVssWriter@@IBG_NXZ
+	be99a	   40  ?OnPreRestore@CVssWriter@@UAG_NPAVIVssWriterComponents@@@Z
+	be776	    7  ?CreateVssSnapshotSetDescription@@YGJU_GUID@@JPAPAVIVssSnapshotSetDescription@@@Z
+	be5ba	   50  ?OnVSSApplicationStartup@CVssWriter@@UAG_NXZ
+
+ 000bd160	000bd48c 00000000 00000000 000beb6a 000012dc
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	beaee	  226  NetShareAdd
+	beb0a	  105  NetApiBufferFree
+	beb1e	  232  NetShareGetInfo
+	beb30	  230  NetShareEnum
+	beb40	  124  NetDfsGetInfo
+	beb50	  172  NetLocalGroupGetMembers
+	beafc	  228  NetShareDel
+
+ 000bd174	000bd2f4 00000000 00000000 000beb96 00001144
+
+	DLL Name: CLUSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	beb88	   95  OpenCluster
+	beb78	    5  CloseCluster
+
+ 000bd188	000bd594 00000000 00000000 000bf592 000013e4
+
+	DLL Name: msvcp60.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	bf128	  297  ??0?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAE@ABV01@@Z
+	bf178	  299  ??0?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAE@ABV?$allocator@G@1@@Z
+	bf1d4	  453  ??1?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAE@XZ
+	bf21e	  302  ??0?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAE@PBGABV?$allocator@G@1@@Z
+	bf27e	 1264  ?c_str@?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QBEPBGXZ
+	bf2ce	  546  ??4?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAEAAV01@ABV01@@Z
+	bf322	  820  ??Y?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAEAAV01@ABV01@@Z
+	bf376	  822  ??Y?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAEAAV01@PBG@Z
+	bf3c8	 1299  ?compare@?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QBEHPBG@Z
+	bf41a	  377  ??0Init@ios_base@std@@QAE@XZ
+	bf43a	  384  ??0_Winit@std@@QAE@XZ
+	bf452	  484  ??1Init@ios_base@std@@QAE@XZ
+	bf472	  488  ??1_Winit@std@@QAE@XZ
+	bf48a	 1294  ?compare@?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QBEHABV12@@Z
+	bf4e0	  303  ??0?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAE@PBGIABV?$allocator@G@1@@Z
+	bf540	  548  ??4?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@std@@QAEAAV01@PBG@Z
+	bf63e	  761  ??Hstd@@YA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@0@PBGABV10@@Z
+	bf694	  759  ??Hstd@@YA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@0@ABV10@PBG@Z
+	bf6ea	  700  ??8std@@YA_NABV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@0@PBG@Z
+
+ 000bd19c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001650
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 00038aa0 00037ea0
+(format RSDS signature 3bbd6440f56444caba73928c32fd97b1 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 2, IDs: 3
+010   Entry: name: [val: 80000238 len 8]: REGISTRY, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 4
+048     Entry: ID: 0x0000c9, Value: 0x800000d0
+0d0      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0e0       Entry: ID: 0x000409, Value: 0x0001a8
+1a8        Leaf: Addr: 0x0c9ba0, Size: 0x0000fd, Codepage: 0
+050     Entry: ID: 0x0000ca, Value: 0x800000e8
+0e8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0f8       Entry: ID: 0x000409, Value: 0x0001b8
+1b8        Leaf: Addr: 0x0c9ca0, Size: 0x0004af, Codepage: 0
+058     Entry: ID: 0x0000cb, Value: 0x80000100
+100      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+110       Entry: ID: 0x000409, Value: 0x0001c8
+1c8        Leaf: Addr: 0x0ca270, Size: 0x00028d, Codepage: 0
+060     Entry: ID: 0x0000cc, Value: 0x80000118
+118      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+128       Entry: ID: 0x000409, Value: 0x0001d8
+1d8        Leaf: Addr: 0x0ca150, Size: 0x00011d, Codepage: 0
+018   Entry: name: [val: 8000024a len 7]: TYPELIB, Value: 0x80000068
+068    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+078     Entry: ID: 0x000001, Value: 0x80000130
+130      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+140       Entry: ID: 0x000409, Value: 0x0001e8
+1e8        Leaf: Addr: 0x0ca500, Size: 0x003490, Codepage: 0
+080     Entry: ID: 0x000002, Value: 0x80000148
+148      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+158       Entry: ID: 0x000409, Value: 0x0001f8
+1f8        Leaf: Addr: 0x0cd990, Size: 0x002530, Codepage: 0
+020   Entry: ID: 0x000006, Value: 0x80000088
+088    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+098     Entry: ID: 0x000007, Value: 0x80000160
+160      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+170       Entry: ID: 0x000409, Value: 0x000208
+208        Leaf: Addr: 0x0cfec0, Size: 0x000026, Codepage: 0
+028   Entry: ID: 0x00000b, Value: 0x800000a0
+0a0    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0b0     Entry: ID: 0x000001, Value: 0x80000178
+178      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+188       Entry: ID: 0x000409, Value: 0x000218
+218        Leaf: Addr: 0x0c3260, Size: 0x00658c, Codepage: 0
+030   Entry: ID: 0x000010, Value: 0x800000b8
+0b8    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0c8     Entry: ID: 0x000001, Value: 0x80000190
+190      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+1a0       Entry: ID: 0x000409, Value: 0x000228
+228        Leaf: Addr: 0x0c97f0, Size: 0x0003ac, Codepage: 0
+ String table starts at offset: 0x238
+ Resources start at offset: 0x6ba0
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000be73c  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000600  010c0000  010c0000  000bec00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         0000cee8  010c3000  010c3000  000bf200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,198 @@
+
+ups.exe:     file format pei-i386
+ups.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01003860
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Thu Oct 21 08:03:13 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00003200
+SizeOfInitializedData	00000c00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00003860
+BaseOfCode		00001000
+BaseOfData		00005000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00007000
+SizeOfHeaders		00000600
+CheckSum		000124df
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00003a24 000000a0 Import Directory [parts of .idata]
+Entry 2 00006000 00000398 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001120 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000238 00000094 Bound Import Directory
+Entry c 00001000 0000011c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1003a24
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00003a24	00003b6c ffffffff ffffffff 00003cb0 000010a8
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3be0	  739  wcslen	780012ef
+	3bfe	  208  _exit	7800b908
+	3bea	  736  wcscpy	780020e2
+	3bf4	  732  wcscat	78002107
+	3c1c	   99  __p___initenv	7800bb9e
+	3c06	   72  _XcptFilter	7800f7dc
+	3c14	  582  exit	7800269e
+	3c48	  130  __setusermatherr	7800b426
+	3c2c	   88  __getmainargs	78003e70
+	3c3c	  268  _initterm	78001dea
+	3c7c	  110  __p__fmode	78003e64
+	3c5c	  155  _adjust_fdiv	7803bb70
+	3c6c	  105  __p__commode	78003e6a
+	3cbc	  180  _controlfp	78003c1e
+	3c8a	  128  __set_app_type	78003e5a
+	3c9c	  199  _except_handler3	7800f56a
+
+ 00003a38	00003ac4 ffffffff ffffffff 00003dfe 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3d68	  486  StartServiceCtrlDispatcherW	77d990e4
+	3dec	  398  RegDeleteValueW	77d8d782
+	3dda	  393  RegCreateKeyExW	77d88e5e
+	3dca	  396  RegDeleteKeyW	77d93755
+	3db8	  435  RegSetValueExW	77d89348
+	3d9a	  444  RegisterServiceCtrlHandlerW	77d995e7
+	3d86	  479  SetServiceStatus	77d99694
+	3cca	  388  RegCloseKey	77d87d4d
+	3d54	  359  OpenProcessToken	77d889bc
+	3d3c	  281  LookupPrivilegeValueW	77d933a7
+	3d24	   25  AdjustTokenPrivileges	77d89ea6
+	3d0c	  440  RegisterEventSourceW	77d99721
+	3cfc	  450  ReportEventW	77d93800
+	3cec	  414  RegOpenKeyExW	77d88169
+	3cd8	  424  RegQueryValueExW	77d88078
+
+ 00003a4c	00003b04 ffffffff ffffffff 00003faa 00001040
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3e30	  301  GetLastError	77e5668c
+	3eb0	   58  CreateFileW	77e595a3
+	3ebe	  214  GetCommModemStatus	77e8c75c
+	3e62	  195  FreeLibrary	77e6ab8c
+	3e70	   53  CreateEventW	77e640bf
+	3f9c	  485  LocalAlloc	77e64911
+	3f94	  707  Sleep	77e54b74
+	3f72	  225  GetComputerNameW	77e5f6fe
+	3f60	  191  FormatMessageW	77e5aa62
+	3f86	  140  ExitProcess	77e6b0bb
+	3f46	  594  ResetEvent	77e6310f
+	3f32	  265  GetCurrentProcess	77e656d7
+	3f54	  489  LocalFree	77e6499c
+	3f08	  763  WaitForMultipleObjects	77e6e673
+	3ef8	   77  CreateThread	77e66510
+	3f22	  761  WaitCommEvent	77e8d155
+	3e50	  339  GetProcAddress	77e6564b
+	3e0c	   72  CreateProcessW	77e6db62
+	3e1e	  359  GetStartupInfoW	77e6b41b
+	3e40	  482  LoadLibraryW	77e5ecdf
+	3ea4	  656  SetEvent	77e5670d
+	3ed4	  610  SetCommMask	77e8cc83
+	3ee2	  139  EscapeCommFunction	77e8c44f
+	3e80	  765  WaitForSingleObject	77e58778
+	3e96	   30  CloseHandle	77e5a6c8
+
+ 00003a60	00003bb0 ffffffff ffffffff 00003fd0 000010ec
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3fb8	  158  NetMessageBufferSend	750f456a
+
+ 00003a74	00003bc8 ffffffff ffffffff 00003fee 00001104
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3fde	  213  ExitWindowsEx	77e1d98d
+
+ 00003a88	00003bb8 ffffffff ffffffff 0000403a 000010f4
+
+	DLL Name: POWRPROF.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	4024	    8  GetPwrCapabilities	76681d97
+	3ffa	   19  SetSuspendState	76682740
+	400c	   11  IsPwrHibernateAllowed	76682184
+
+ 00003a9c	00003bd0 ffffffff ffffffff 0000407e 0000110c
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	405a	   15  CoCreateInstance	77a24fe0
+	406e	   49  CoInitialize	77a2691a
+	4048	   89  CoUninitialize	77a26984
+
+ 00003ab0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001120
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00004400
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x006060, Size: 0x000338, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00003088  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000006cc  01005000  01005000  00003800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000398  01006000  01006000  00004000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

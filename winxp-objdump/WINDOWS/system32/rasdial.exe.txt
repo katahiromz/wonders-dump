@@ -1,0 +1,199 @@
+
+rasdial.exe:     file format pei-i386
+rasdial.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100230c
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Aug 18 05:55:47 2001
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	0
+SizeOfCode		00001a00
+SizeOfInitializedData	00001800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000230c
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		00007bb6
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002530 00000064 Import Directory [parts of .idata]
+Entry 2 00004000 000014f0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001100 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 0000006c Bound Import Directory
+Entry c 00001000 000000e4 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002530
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002530	00002600 ffffffff ffffffff 000027b0 0000106c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	27bc	  214  _controlfp	77bfa658
+	279e	  152  __set_app_type	77be3632
+	27ca	  237  _except_handler3	77be3eb0
+	2790	  133  __p__fmode	77bceb68
+	2780	  128  __p__commode	77bceb4a
+	2770	  182  _adjust_fdiv	77c0d388
+	275c	  154  __setusermatherr	77bf8f60
+	2750	  314  _initterm	77be79db
+	2740	  109  __getmainargs	77bce909
+	2734	  110  __initenv	77c0c9e4
+	272a	  200  _cexit	77be7b00
+	271c	   78  _XcptFilter	77be1269
+	2714	  246  _exit	77be7aee
+	270a	  197  _c_exit	77be7b11
+	2700	  389  _mbscmp	77bdfe7e
+	26f8	  655  exit	77be7adc
+	26f0	  351  _itoa	77bcc055
+	26e6	  427  _mbsupr	77be11e4
+	26dc	  775  strncpy	77bf3900
+	26d0	  395  _mbsicmp	77be0075
+	26c6	  687  getchar	77bebaad
+	26be	  318  _iob	77c0ac80
+	26b4	  670  fprintf	77bedc10
+	26aa	  287  _getch	77bdd438
+	26a0	  742  putchar	77bebe8f
+	2696	  515  _strupr	77bf2570
+	268c	  765  strchr	77bf3500
+	2682	  779  strstr	77bf3ab0
+	2678	  398  _mbslen	77be0216
+
+ 00002544	00002594 ffffffff ffffffff 000028c4 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	28a2	   70  CreateEventA	77e337de
+	27ec	  346  GetLastError	77f5157d
+	27fc	  471  GlobalAlloc	77e336a3
+	280a	  809  Sleep	77e21be6
+	2812	  359  GetModuleHandleA	77e39f93
+	2826	  712  SetConsoleCtrlHandler	77e36968
+	283e	  602  OpenFile	77e2cd4f
+	284a	  174  ExpandEnvironmentStringsA	77e268d9
+	2866	  748  SetEvent	77e34a3b
+	2872	  869  WaitForSingleObject	77e39d5b
+	2888	  568  LocalFree	77e39a45
+	28b2	  224  FormatMessageA	77e36a60
+	27de	  478  GlobalFree	77e33803
+	2894	  564  LocalAlloc	77e39881
+
+ 00002558	000025d0 ffffffff ffffffff 0000297e 0000103c
+
+	DLL Name: RASAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	28d2	   26  RasEnumConnectionsA	76e94d5f
+	28e8	   43  RasGetConnectStatusA	76e9581e
+	2900	   74  RasHangUpA	76e96ce0
+	290e	   34  RasFreeEapUserIdentityA	76e9ac09
+	2928	   19  RasDialA	76ea10d5
+	2934	   55  RasGetEapUserIdentityA	76e9ab0c
+	294e	   61  RasGetEntryPropertiesA	76e9ae3d
+	2968	   63  RasGetErrorStringA	76e95de3
+
+ 0000256c	000025f4 ffffffff ffffffff 000029a8 00001060
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	298c	   48  CharToOemA	77cf4d61
+	299a	  456  LoadStringA	77cf7250
+
+ 00002580	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001100
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001c 00001144 00000544
+(format NB10 signature d3847d3b age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000006, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 3
+030     Entry: ID: 0x000001, Value: 0x80000060
+060      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+070       Entry: ID: 0x000409, Value: 0x0000e0
+0e0        Leaf: Addr: 0x004160, Size: 0x0002fe, Codepage: 1252
+078       Entry: ID: 0x000411, Value: 0x0000f0
+0f0        Leaf: Addr: 0x004460, Size: 0x00024c, Codepage: 1252
+038     Entry: ID: 0x000002, Value: 0x80000080
+080      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+090       Entry: ID: 0x000409, Value: 0x000100
+100        Leaf: Addr: 0x0046ac, Size: 0x0003c2, Codepage: 1252
+098       Entry: ID: 0x000411, Value: 0x000110
+110        Leaf: Addr: 0x004a70, Size: 0x00025c, Codepage: 1252
+040     Entry: ID: 0x000003, Value: 0x800000a0
+0a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0b0       Entry: ID: 0x000409, Value: 0x000120
+120        Leaf: Addr: 0x004ccc, Size: 0x000060, Codepage: 1252
+0b8       Entry: ID: 0x000411, Value: 0x000130
+130        Leaf: Addr: 0x004d2c, Size: 0x000050, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000048
+048    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+058     Entry: ID: 0x000001, Value: 0x800000c0
+0c0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0d0       Entry: ID: 0x000409, Value: 0x000140
+140        Leaf: Addr: 0x004d7c, Size: 0x0003b4, Codepage: 1252
+0d8       Entry: ID: 0x000411, Value: 0x000150
+150        Leaf: Addr: 0x005130, Size: 0x0003c0, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+14f1  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+1501   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0x160
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000019b4  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01003000  01003000  00001e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001600  01004000  01004000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

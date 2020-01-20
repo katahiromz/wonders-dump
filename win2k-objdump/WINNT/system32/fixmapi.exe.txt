@@ -1,0 +1,113 @@
+
+fixmapi.exe:     file format pei-i386
+fixmapi.exe
+architecture: i386, flags 0x00000106:
+EXEC_P, HAS_LINENO, D_PAGED
+start address 0x004010b0
+
+Characteristics 0x30b
+	relocations stripped
+	executable
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sat Dec 12 03:00:54 1998
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	0
+SizeOfCode		00000400
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000010b0
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		00400000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	4
+MinorOSystemVersion	0
+MajorImageVersion	0
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00004000
+SizeOfHeaders		00000400
+CheckSum		0000d9a4
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00000000
+SizeOfStackReserve	00100000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001160 0000003c Import Directory [parts of .idata]
+Entry 2 00003000 000004a8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001020 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 000001f0 00000030 Bound Import Directory
+Entry c 00001000 0000001c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x401160
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001160	0000119c ffffffff ffffffff 000011ea 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	11ca	  244  GetLastError	77e5668c
+	11da	  400  LoadLibraryA	77e68023
+	11b8	  278  GetProcAddress	77e6564b
+
+ 00001174	000011ac ffffffff ffffffff 00001212 00001010
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1204	  405  MessageBoxA	77e13d68
+	11f8	  612  wsprintfA	77dedbee
+
+ 00001188	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x401020
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00001c00
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 36715dd5, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 36715dd5, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 36715dd5, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x000448, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000021e  00401000  00401000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000006d  00402000  00402000  00001400  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000004a8  00403000  00403000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,169 @@
+
+recover.exe:     file format pei-i386
+recover.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x0100177f
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:12:04 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001200
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000177f
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		0000f3ee
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001980 00000050 Import Directory [parts of .idata]
+Entry 2 00004000 000003e0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001100 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001160 00000040 Load Configuration Directory
+Entry b 00000248 00000040 Bound Import Directory
+Entry c 00001000 000000e8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001980
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001980	000019dc ffffffff ffffffff 00001b7a 0000100c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1ad8	  205  _cexit	77bc8c9d
+	1ae2	  666  exit	77bc8c7b
+	1aea	  113  __initenv	77bed9d8
+	1af6	  112  __getmainargs	77baed5c
+	1b06	  320  _initterm	77bc8b58
+	1b12	  158  __setusermatherr	77bda0a0
+	1b26	  187  _adjust_fdiv	77bee654
+	1aca	   78  _XcptFilter	77bc20be
+	1b46	  136  __p__fmode	77baeff8
+	1b54	  156  __set_app_type	77bc44b8
+	1b66	  242  _except_handler3	77bc4d50
+	1b86	  219  _controlfp	77bdb7a1
+	1ac2	  251  _exit	77bc8c8c
+	1b36	  131  __p__commode	77baefda
+	1ab8	  202  _c_exit	77bc8cac
+
+ 00001994	00001a1c ffffffff ffffffff 00002124 0000104c
+
+	DLL Name: ulib.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1c40	   43  ??1ARGUMENT_LEXEMIZER@@UAE@XZ	71f826de
+	1c60	   44  ??1ARRAY@@UAE@XZ	71f83717
+	1c74	   68  ??1STRING_ARGUMENT@@UAE@XZ	71f8241c
+	1c92	   62  ??1PATH_ARGUMENT@@UAE@XZ	71f82f3f
+	1cae	  151  ?FreeLibraryHandle@SYSTEM@@SGXPAX@Z	71f8c0aa
+	1cd4	  281  ?QueryLibraryEntryPoint@SYSTEM@@SGP6GHXZPBVWSTRING@@0PAPAX@Z	71f8c01d
+	1d14	  358  ?Strcat@WSTRING@@QAEEPBV1@@Z	71f8ea21
+	1c24	   67  ??1STREAM_MESSAGE@@UAE@XZ	71f8b2ff
+	1d70	  274  ?QueryFullPath@PATH@@QBEPAV1@XZ	71f89c51
+	1d92	  228  ?IsValueSet@ARGUMENT@@QAEEXZ	71f823fd
+	1db2	  277  ?QueryInvalidArgument@ARGUMENT_LEXEMIZER@@QAEPAVWSTRING@@XZ	71f8286c
+	1df0	  324  ?Set@STREAM_MESSAGE@@UAEEKW4MESSAGE_TYPE@@K@Z	71f8b3d2
+	1e20	  136  ?DoParsing@ARGUMENT_LEXEMIZER@@QAEEPAVARRAY@@@Z	71f82cb6
+	1e52	  248  ?Put@ARRAY@@UAEEPAVOBJECT@@@Z	71f8379b
+	1e72	  194  ?Initialize@PATH_ARGUMENT@@QAEEPADE@Z	71f8247f
+	1e9a	  178  ?Initialize@FLAG_ARGUMENT@@QAEEPAD@Z	71f8240a
+	1ec2	  201  ?Initialize@STRING_ARGUMENT@@QAEEPAD@Z	71f82460
+	1eec	  247  ?PrepareToParse@ARGUMENT_LEXEMIZER@@QAEEPAVWSTRING@@@Z	71f828c6
+	1f26	  330  ?SetCaseSensitive@ARGUMENT_LEXEMIZER@@QAEXE@Z	71f82393
+	1f56	  253  ?PutSeparators@ARGUMENT_LEXEMIZER@@QAEXPBD@Z	71f822a2
+	1f86	  168  ?Initialize@ARGUMENT_LEXEMIZER@@QAEEPAVARRAY@@@Z	71f82763
+	1fba	  169  ?Initialize@ARRAY@@QAEEKK@Z	71f83748
+	1fd8	  200  ?Initialize@STREAM_MESSAGE@@QAEEPAVSTREAM@@00@Z	71f8b32c
+	200a	  165  ?Get_Standard_Output_Stream@@YGPAVSTREAM@@XZ	71f8d367
+	203a	  164  ?Get_Standard_Input_Stream@@YGPAVSTREAM@@XZ	71f8d361
+	2068	   30  ??0PATH_ARGUMENT@@QAE@XZ	71f82f21
+	2084	   14  ??0FLAG_ARGUMENT@@QAE@XZ	71f82d91
+	20a0	   37  ??0STRING_ARGUMENT@@QAE@XZ	71f82dc9
+	20be	    1  ??0ARRAY@@QAE@XZ	71f836f9
+	20d2	    0  ??0ARGUMENT_LEXEMIZER@@QAE@XZ	71f8266c
+	20f2	   13  ??0DSTRING@@QAE@XZ	71f8efcc
+	2108	   36  ??0STREAM_MESSAGE@@QAE@XZ	71f8b2c9
+	1c0e	   51  ??1DSTRING@@UAE@XZ	71f8ecb7
+	1bfa	   60  ??1OBJECT@@UAE@XZ	71f88f2b
+	1bdc	  127  ?Display@MESSAGE@@QAAEPBDZZ	71f888d7
+	1bba	  207  ?Initialize@WSTRING@@QAEEPBDK@Z	71f8e576
+	1b94	  296  ?QueryString@WSTRING@@QBEPAV1@KK@Z	71f8f04e
+	1d34	  269  ?QueryDriveType@SYSTEM@@SG?AW4DRIVE_TYPE@@PBVWSTRING@@@Z	71f8c8d3
+
+ 000019a8	000019d0 ffffffff ffffffff 000021ac 00001000
+
+	DLL Name: ifsutil.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	212e	  119  ?QueryFileSystemName@IFS_SYSTEM@@SGEPBVWSTRING@@PAV2@PAJ1@Z	64ae7607
+	216c	   51  ?DosDriveNameToNtDriveName@IFS_SYSTEM@@SGEPBVWSTRING@@PAV2@@Z	64ae6797
+
+ 000019bc	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001100
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001c 000011a8 000005a8
+(format NB10 signature 4401803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x00037c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000011c2  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000024  01003000  01003000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003e0  01004000  01004000  00001800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

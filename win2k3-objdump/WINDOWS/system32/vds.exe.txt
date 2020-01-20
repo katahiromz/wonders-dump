@@ -1,0 +1,777 @@
+
+vds.exe:     file format pei-i386
+vds.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01048512
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:11:32 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00054400
+SizeOfInitializedData	00002000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00048512
+BaseOfCode		00001000
+BaseOfData		00056000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	5
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00059000
+SizeOfHeaders		00000400
+CheckSum		00056d54
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00052e60 00002583 Export Directory [.edata (or where ever we found it)]
+Entry 1 00050c88 00000140 Import Directory [parts of .idata]
+Entry 2 00057000 000013c0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001460 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00019070 00000040 Load Configuration Directory
+Entry b 00000250 00000138 Bound Import Directory
+Entry c 00001000 00000420 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1050c88
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00050c88	00050fbc ffffffff ffffffff 000513d0 000011f4
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51370	  322  _initterm	77bcae06
+	5137c	  160  __setusermatherr	77bde695
+	51390	  189  _adjust_fdiv	77bf467c
+	513a0	  133  __p__commode	77baf68e
+	511e8	   46  ?_set_se_translator@@YAP6AXIPAU_EXCEPTION_POINTERS@@@ZP6AXI0@Z@Z	77bb30ba
+	513b0	  138  __p__fmode	77baf6c5
+	513be	  158  __set_app_type	77bc632c
+	513dc	   53  ?terminate@@YAXXZ	77bb319a
+	513f0	   17  ??1type_info@@UAE@XZ	77bb2046
+	51408	  111  __dllonexit	77bc5df8
+	5135e	  170  __wgetmainargs	77baf32f
+	51354	  560  _wcmdln	77bf37e8
+	51416	  445  _onexit	77bc5d9f
+	51342	  207  _cexit	77bcaf77
+	51334	   79  _XcptFilter	77bc3cfc
+	5132c	  253  _exit	77bcaf5c
+	51322	  204  _c_exit	77bcaf8b
+	51318	  799  swscanf	77bd2b0a
+	5130e	  827  wcsncmp	77bd8f55
+	51302	  809  towupper	77badd1e
+	512f6	  719  iswalpha	77bad529
+	512ee	  803  time	77bdbea4
+	512e6	  775  srand	77bc825c
+	512de	  761  rand	77bc8273
+	512d2	  564  _wcsicmp	77bd762d
+	512c8	  828  wcsncpy	77bd8f91
+	512c0	  640  _wtol	77bad2e2
+	51420	  221  _controlfp	77be0067
+	512b6	  820  wcscmp	77bd8e09
+	512aa	  798  swprintf	77bd091f
+	512a0	  825  wcslen	77bd8ef2
+	5128a	   72  _CxxThrowException	77bb3223
+	51280	  822  wcscpy	77bd8dba
+	5126c	  244  _except_handler3	77bc6c74
+	51260	  458  _purecall	77bc6f6b
+	51250	   18  ??2@YAPAXI@Z	77bba971
+	51240	   19  ??3@YAXPAX@Z	77bba9a7
+	5122c	   85  __CxxFrameHandler	77bb3326
+	5134c	  668  exit	77bcaf41
+
+ 00050c9c	00050fb0 ffffffff ffffffff 00051462 000011e8
+
+	DLL Name: msvcp60.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51448	  381  ??0_Lockit@std@@QAE@XZ	4a1915a2
+	5142e	  486  ??1_Lockit@std@@QAE@XZ	4a191614
+
+ 00050cb0	00050dfc ffffffff ffffffff 0005146e 00001034
+
+	DLL Name: ATL.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	8000001e	   30  <none>	4a40110c
+	80000020	   32  <none>	4a40104e
+	80000014	   20  <none>	4a401550
+	80000011	   17  <none>	4a40150f
+	80000017	   23  <none>	4a4019b7
+	80000010	   16  <none>	4a401479
+
+ 00050cc4	00050dc8 ffffffff ffffffff 00051568 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51556	  473  RegDeleteValueW	77f6dad9
+	51546	  493  RegOpenKeyExW	77f77a9c
+	51534	  466  RegCreateKeyExW	77f771fc
+	51522	  517  RegSetValueExW	77f77739
+	51506	  312  InitiateSystemShutdownExW	77fb36b2
+	514f6	  479  RegEnumKeyExW	77f62824
+	514e8	  494  RegOpenKeyW	77f78613
+	514d4	  504  RegQueryValueExW	77f76a81
+	514c6	  459  RegCloseKey	77f76cce
+	514a8	  587  StartServiceCtrlDispatcherW	77f51e4e
+	5148a	  527  RegisterServiceCtrlHandlerW	77f593db
+	51476	  580  SetServiceStatus	77f66253
+
+ 00050cd8	00050e20 ffffffff ffffffff 00051a44 00001058
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	5172a	  232  FindVolumeMountPointClose	77e48549
+	51718	  226  FindNextVolumeW	77e43470
+	51a32	  440  GetStartupInfoW	77e4203e
+	51a14	  843  SetUnhandledExceptionFilter	77e82060
+	519f8	  879  UnhandledExceptionFilter	77e7690d
+	519e4	  322  GetCurrentProcess	77e62f9d
+	51762	  709  RemoveDirectoryW	77e47fc9
+	519b6	  458  GetSystemTimeAsFileTime	77e41fba
+	519a0	  323  GetCurrentProcessId	77e63c78
+	51990	  479  GetTickCount	77e619d1
+	51976	  675  QueryPerformanceCounter	77e69577
+	51960	  917  WideCharToMultiByte	77e63143
+	51946	  911  WaitForMultipleObjects	77e62fa6
+	51932	  797  SetFilePointerEx	77e5aecd
+	51922	  722  ResumeThread	77e5f38b
+	5190a	  849  SetVolumeMountPointW	77eaa89f
+	51776	  494  GetVolumeNameForVolumeMountPointW	77e517fd
+	5179a	  217  FindFirstVolumeMountPointW	77eaa2da
+	517b8	  218  FindFirstVolumeW	77e43786
+	517cc	  604  LocalFree	77e62419
+	517d8	  244  FormatMessageW	77e4f821
+	517ea	  416  GetProcAddress	77e63d7a
+	51746	  225  FindNextVolumeMountPointW	77eaa58b
+	517fc	  974  lstrlenW	77e622c9
+	51808	  672  QueryDosDeviceW	77e4aa00
+	5181a	  597  LoadLibraryW	77e5c6fa
+	5182a	  248  FreeLibrary	77e6b1a1
+	51838	  855  Sleep	77e424de
+	51840	  790  SetEvent	77e62311
+	5184c	  111  CreateThread	77e6510f
+	5185c	   80  CreateEventW	77e69b31
+	516d0	  913  WaitForSingleObject	77e61c7b
+	5186c	  965  lstrcmpiW	77e5b06a
+	51878	  933  WriteFile	77e65529
+	51884	  796  SetFilePointer	77e6568b
+	51896	  693  ReadFile	77e4184b
+	518a2	  496  GetVolumePathNameW	77e67687
+	518b8	  498  GetVolumePathNamesForVolumeNameW	77e51bb2
+	518dc	  137  DeleteVolumeMountPointW	77eaae13
+	519d0	  863  TerminateProcess	77e42004
+	51576	  419  GetProcessHeap	77e63ec7
+	51588	  534  HeapFree	7c829e17
+	51594	  553  InterlockedExchange	77e61694
+	515aa	  152  EnterCriticalSection	7c81a360
+	515c2	  593  LeaveCriticalSection	7c81a3ab
+	515da	  129  DeleteCriticalSection	7c82c988
+	515f2	  547  InitializeCriticalSection	77e67861
+	5160e	  556  InterlockedIncrement	77e6166c
+	51626	  552  InterlockedDecrement	77e61680
+	5163e	   52  CloseHandle	77e63e6f
+	5164c	  369  GetLastError	7c829e08
+	5165c	  108  CreateSemaphoreW	77e657ae
+	51670	  326  GetCurrentThreadId	77e62fc7
+	51686	  654  OutputDebugStringW	77e9c41e
+	5169c	  386  GetModuleHandleW	77e65136
+	516b0	  138  DeviceIoControl	77e41689
+	516c2	   86  CreateFileW	77e64841
+	51706	  231  FindVolumeClose	77e43435
+	516e6	  707  ReleaseSemaphore	77e5bf51
+	516fa	  968  lstrcpyW	77e63f02
+	518f6	  126  DefineDosDeviceW	77e4463b
+
+ 00050cec	00050f88 ffffffff ffffffff 00051b04 000011c0
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51a60	  318  GetMessageW	7739c819
+	51a52	  460  LoadStringW	773947a5
+	51a98	  728  wsprintfW	7738b1f6
+	51a6e	  162  DispatchMessageW	7739bac1
+	51af2	  143  DefWindowProcW	7739c6b7
+	51ad4	  541  RegisterDeviceNotificationW	7738aed9
+	51ac4	  513  PeekMessageW	7739be68
+	51aa4	  693  UnregisterDeviceNotification	77385b50
+	51a82	  518  PostThreadMessageW	7738af53
+
+ 00050d00	00050f24 ffffffff ffffffff 00051b10 0000115c
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000002	    2  <none>	77d040d9
+	80000013	   19  <none>	77d10fa9
+	80000014	   20  <none>	77d10ff5
+	8000001a	   26  <none>	77d142af
+	80000007	    7  <none>	77d043e2
+	80000004	    4  <none>	77d04070
+	80000006	    6  <none>	77d03f50
+	80000009	    9  <none>	77d041d2
+	80000008	    8  <none>	77d03f3b
+
+ 00050d14	0005105c ffffffff ffffffff 00051b54 00001294
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51b1e	  448  RtlAdjustPrivilege	7c8130ae
+	51b34	  310  NtQueryVolumeInformationFile	7c82771f
+
+ 00050d28	00051068 ffffffff ffffffff 00051c2e 000012a0
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51bf6	   16  CoCreateInstance	776a692a
+	51be0	   21  CoDisconnectObject	776c2285
+	51bce	  309  StringFromGUID2	776bb548
+	51bbe	  101  CoTaskMemFree	776bcf69
+	51c0a	   15  CoCreateGuid	776a5616
+	51b9a	    8  CLSIDFromString	776a1cb9
+	51b88	   60  CoInitializeEx	776bc826
+	51b76	  105  CoUninitialize	776bcc89
+	51b5e	   61  CoInitializeSecurity	776a7553
+	51c1a	  102  CoTaskMemRealloc	77697eb4
+	51bac	  100  CoTaskMemAlloc	776bcf28
+
+ 00050d3c	00050f54 ffffffff ffffffff 00051d54 0000118c
+
+	DLL Name: SETUPAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51d44	  121  CM_Get_Parent	770fb91e
+	51d26	  289  SetupDiEnumDeviceInterfaces	770eb516
+	51d06	  375  SetupDiSetClassInstallParamsW	7711b069
+	51cea	  258  SetupDiCallClassInstaller	7711c6c9
+	51cc8	  323  SetupDiGetDeviceInstallParamsW	7711ac85
+	51c38	  285  SetupDiDestroyDeviceInfoList	770eab09
+	51c58	  168  CM_Reenumerate_DevNode_Ex	7715b0bd
+	51c74	  288  SetupDiEnumDeviceInfo	770ede27
+	51c8c	  308  SetupDiGetClassDevsW	770eb1b1
+	51ca4	  328  SetupDiGetDeviceInterfaceDetailW	770efa3d
+
+ 00050d50	00050f80 ffffffff ffffffff 00051d72 000011b8
+
+	DLL Name: SHLWAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51d62	  149  SHDeleteKeyW	77da28c6
+
+ 00050d64	00050f18 ffffffff ffffffff 00051d9a 00001150
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51d7e	  226  NetShareAdd	71c84109
+	51d8c	  228  NetShareDel	71c843c1
+
+ 00050d78	00050f4c 00000000 00000000 00051dc0 00001184
+
+	DLL Name: OSUNINST.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51da8	    2  IsUninstallImageValid
+
+ 00050d8c	00050e18 ffffffff ffffffff 00051de4 00001050
+
+	DLL Name: CLUSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51dce	   89  GetNodeClusterState	74de446d
+
+ 00050da0	00051098 ffffffff ffffffff 00052e4c 000012d0
+
+	DLL Name: vdsutil.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	51df0	  132  ?VdsSeTranslator@CVdsStructuredExceptionTranslator@@SGXIPAU_EXCEPTION_POINTERS@@@Z	4ae03961
+	51e46	   21  ??1CVdsCallTracer@@QAE@XZ	4ae03f62
+	51e62	    7  ??0CVdsCallTracer@@QAE@KPBD@Z	4ae03f32
+	51e82	   89  ?LogError@@YGXPAGKKPAXKK0PAD@Z	4ae048d4
+	51ea4	   91  ?LogInfo@@YGXPAGKKPAXK0PAD@Z	4ae049c4
+	51ec4	  123  ?VdsInitializeCriticalSection@@YGKPAU_RTL_CRITICAL_SECTION@@@Z	4ae04ae4
+	51f06	  122  ?VdsHeapFree@@YGHPAXK0@Z	4ae04a56
+	51f22	   76  ?InitializeSecurityDescriptor@@YGKKPAXPAPAU_ACL@@PAPAX22@Z	4ae04cfa
+	51f60	  133  ?VdsTrace@@YAXKPADZZ	4ae03eb6
+	51f78	  138  ?VdsTraceW@@YAXKPAGZZ	4ae03ef4
+	51f90	   83  ?IsNoAutoMount@@YGHXZ	4ae0718a
+	51fa8	  121  ?VdsHeapAlloc@@YGPAXPAXKK@Z	4ae04a39
+	51fc6	   58  ?GetDeviceName@@YGKPAXHQAG@Z	4ae0517e
+	51fe6	   98  ?OpenDevice@@YGKPAGKPAPAX@Z	4ae04fd0
+	52004	   63  ?GetInterfaceDetailData@@YGKPAXPAU_SP_DEVICE_INTERFACE_DATA@@PAPAU_SP_DEVICE_INTERFACE_DETAIL_DATA_W@@@Z	4ae0528c
+	52070	   40  ??M@YG_NABU_GUID@@0@Z	4ae0634c
+	52088	   59  ?GetDeviceNumber@@YGKPAXPAU_STORAGE_DEVICE_NUMBER@@@Z	4ae050fa
+	520c0	   62  ?GetDiskLayout@@YGKPAXPAPAU_DRIVE_LAYOUT_INFORMATION_EX@@@Z	4ae05397
+	520fe	  115  ?Uninitialize@CVdsAsyncObjectBase@@SGXXZ	4ae06496
+	5212a	  116  ?Uninitialize@CVdsPnPNotificationBase@@QAEXXZ	4ae067e2
+	5215a	   48  ?Clone@CPrvEnumObject@@UAGJPAPAUIEnumVdsObject@@@Z	4ae08156
+	52190	  106  ?Reset@CPrvEnumObject@@UAGJXZ	4ae0753e
+	521b0	  113  ?Skip@CPrvEnumObject@@UAGJK@Z	4ae07663
+	521d0	   94  ?Next@CPrvEnumObject@@UAGJKPAPAUIUnknown@@PAK@Z	4ae075c9
+	52202	  134  ?VdsTraceEx@@YAXKKPADZZ	4ae03ed6
+	5221c	  102  ?RegisterHandle@CVdsPnPNotificationBase@@QAEKPAXPAPAX@Z	4ae068af
+	52256	   85  ?LockDismountVolume@@YGKPAXH@Z	4ae0621c
+	52278	   27  ??1CVdsWmiVariantObjectArrayEnum@@QAE@XZ	4ae09f23
+	522a4	  141  ?VdsWmiCopyFromVariantByteArray@@YGJPAUIWbemClassObject@@PAGJPAE@Z	4ae09728
+	522ea	   53  ?Detach@CVdsWmiVariantObjectArrayEnum@@QAEJXZ	4ae09f23
+	5231a	  150  ?VdsWmiGetObjectFromInstance@@YGJPAUIWbemClassObject@@PAGPAPAU1@@Z	4ae09637
+	52360	  152  ?VdsWmiGetUlongFromInstance@@YGJPAUIWbemClassObject@@PAGPAK@Z	4ae09558
+	523a0	  147  ?VdsWmiGetByteFromInstance@@YGJPAUIWbemClassObject@@PAGPAE@Z	4ae095a0
+	523e0	   95  ?Next@CVdsWmiVariantObjectArrayEnum@@QAEJPAPAUIWbemClassObject@@@Z	4ae09ba6
+	52426	   45  ?Attach@CVdsWmiVariantObjectArrayEnum@@QAEJPAUtagVARIANT@@@Z	4ae09b4d
+	52466	  140  ?VdsWmiConnectToNamespace@@YGJPAGPAPAUIWbemLocator@@PAPAUIWbemServices@@@Z	4ae094a2
+	524b4	   13  ??0CVdsWmiVariantObjectArrayEnum@@QAE@XZ	4ae09b38
+	524e0	   68  ?GetPartitionInformation@@YGKPAXPAU_PARTITION_INFORMATION_EX@@@Z	4ae05ed3
+	52524	   56  ?GetDeviceAndMediaType@@YGKPAXPAK1@Z	4ae0576b
+	5254c	   43  ?Append@CPrvEnumObject@@QAEJPAUIUnknown@@@Z	4ae07bc9
+	5257a	   47  ?Clear@CPrvEnumObject@@QAEXXZ	4ae07c61
+	5259a	   75  ?Initialize@CVdsPnPNotificationBase@@QAEKXZ	4ae084b4
+	525c8	   74  ?Initialize@CVdsAsyncObjectBase@@SGKXZ	4ae063dc
+	525f2	   84  ?IsWinPE@@YGHXZ	4ae060a5
+	52604	   20  ??1CVdsAsyncObjectBase@@QAE@XZ	4ae06377
+	52626	    6  ??0CVdsAsyncObjectBase@@QAE@XZ	4ae07262
+	52648	  112  ?Signal@CVdsAsyncObjectBase@@QAEXXZ	4ae06505
+	5266e	  108  ?SetCompletionStatus@CVdsAsyncObjectBase@@QAEXJK@Z	4ae06612
+	526a4	  100  ?QueryStatus@CVdsAsyncObjectBase@@UAGJPAJPAK@Z	4ae0676d
+	526d6	  128  ?VdsIscsiIpAddressToString@@YGJPAU_VDS_IPADDRESS@@KPAG@Z	4ae085dd
+	52712	  153  ?VdsWmiGetUlonglongFromInstance@@YGJPAUIWbemClassObject@@PAGPA_K@Z	4ae09500
+	52758	  145  ?VdsWmiFindInstanceOfClass@@YGJPAUIWbemServices@@PAG1PAPAUIWbemClassObject@@@Z	4ae09d13
+	527aa	  125  ?VdsIscsiCheckEqualIpAddress@@YGHU_VDS_IPADDRESS@@0@Z	4ae08916
+	527e2	  129  ?VdsIscsiIpsecIdToIpAddress@@YGJEKPAEPAU_VDS_IPADDRESS@@@Z	4ae08871
+	52820	  127  ?VdsIscsiIpAddressToIpsecId@@YGJPAU_VDS_IPADDRESS@@PAEPAKPAPAE@Z	4ae08702
+	52864	   49  ?CoFreeStringArray@@YGXPAPAGJ@Z	4ae0610f
+	52886	   69  ?GetVolumeDiskExtentInfo@@YGKPAXPAPAU_VOLUME_DISK_EXTENTS@@@Z	4ae0549d
+	528c6	   70  ?GetVolumeName@@YGJPAG0@Z	4ae07311
+	528e2	   44  ?AssignTempVolumeName@@YGJPAGQAG@Z	4ae05f43
+	52908	  105  ?RemoveTempVolumeName@@YGXPAG0@Z	4ae06008
+	5292c	   55  ?GarbageCollectDriveLetters@@YGXXZ	4ae07040
+	52952	   93  ?MountVolume@@YGKPAG@Z	4ae062b7
+	5296c	   86  ?LockVolume@@YGKPAX@Z	4ae06180
+	52984	  126  ?VdsIscsiGetIpAddressFromInstance@@YGJPAUIWbemClassObject@@PAGPAU_VDS_IPADDRESS@@@Z	4ae08c57
+	529da	  151  ?VdsWmiGetObjectInVariantObjectArray@@YGJPAUIWbemClassObject@@PAGJPAPAU1@@Z	4ae09c36
+	52a28	  124  ?VdsIscsiCacheSessionDevices@@YGJPAUIEnumWbemClassObject@@PAPAU_VDSISCSI_SESSION_DEVICES_CACHE@@@Z	4ae08f44
+	52a8e	  139  ?VdsWmiCallMethod@@YGJPAUIWbemServices@@PAUIWbemClassObject@@PAG1PAPAU2@@Z	4ae097e1
+	52adc	  156  ?VdsWmiSetObjectInInstance@@YGJPAUIWbemClassObject@@PAG0@Z	4ae09a18
+	52b1a	  149  ?VdsWmiGetMethodArgumentObject@@YGJPAUIWbemServices@@PAG1PAPAUIWbemClassObject@@@Z	4ae09e29
+	52b70	  159  ?VdsWmiSetUlonglongInInstance@@YGJPAUIWbemClassObject@@PAG_K@Z	4ae09851
+	52bb2	  144  ?VdsWmiCreateVariantArray@@YGJGJPAUtagVARIANT@@@Z	4ae09a6f
+	52be6	  158  ?VdsWmiSetUlongInInstance@@YGJPAUIWbemClassObject@@PAGK@Z	4ae098ea
+	52c22	  143  ?VdsWmiCreateClassInstance@@YGJPAUIWbemServices@@PAGPAPAUIWbemClassObject@@@Z	4ae09ebe
+	52c72	  118  ?UnregisterHandle@CVdsPnPNotificationBase@@QAEXPAX@Z	4ae06968
+	52caa	   60  ?GetDeviceRegistryProperty@@YGKKKPAPAEK@Z	4ae05caa
+	52cd6	  120  ?VdsAllocateEmptyString@@YGPAGXZ	4ae04a7e
+	52cfa	   61  ?GetDeviceRegistryProperty@@YGKPAXPAU_SP_DEVINFO_DATA@@KPAPAEK@Z	4ae05bac
+	52d3e	   50  ?CreateDeviceInfoSet@@YGKPAGPAPAXPAU_SP_DEVINFO_DATA@@@Z	4ae05dce
+	52d7a	   57  ?GetDeviceLocation@@YGKPAXPAU_VDS_DISK_PROP@@@Z	4ae059bd
+	52dac	   79  ?IsDiskClustered@@YGHPAX@Z	4ae06045
+	52dca	   66  ?GetMediaGeometry@@YGKPAXPAU_VDS_DISK_PROP@@@Z	4ae05928
+	52dfc	  160  ?WaitImpl@CVdsAsyncObjectBase@@QAEJPAJ@Z	4ae066d2
+	52e28	   78  ?IsDeviceFullyInstalled@@YGHPAG@Z	4ae06fab
+
+ 00050db4	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x1052e60
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		45d69c93
+Major/Minor 			0/0
+Name 				000534aa vds.exe
+Ordinal Base 			1
+Number in:
+	Export Address Table 		0000009d
+	[Name Pointer/Ordinal] Table	0000009d
+Table Addresses
+	Export Address Table 		00052e88
+	Name Pointer Table 		000530fc
+	Ordinal Table 			00053370
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 327ec Export RVA
+	[   1] +base[   2] 327ec Export RVA
+	[   2] +base[   3] 213df Export RVA
+	[   3] +base[   4] 327ec Export RVA
+	[   4] +base[   5] 327ec Export RVA
+	[   5] +base[   6] 327ec Export RVA
+	[   6] +base[   7] 327ec Export RVA
+	[   7] +base[   8] 327ec Export RVA
+	[   8] +base[   9] 327ec Export RVA
+	[   9] +base[  10] 327ec Export RVA
+	[  10] +base[  11] 327ec Export RVA
+	[  11] +base[  12] 327ec Export RVA
+	[  12] +base[  13] 327ec Export RVA
+	[  13] +base[  14] 327ec Export RVA
+	[  14] +base[  15] 327ec Export RVA
+	[  15] +base[  16] 327ec Export RVA
+	[  16] +base[  17] 327ec Export RVA
+	[  17] +base[  18] 327ec Export RVA
+	[  18] +base[  19] 327ec Export RVA
+	[  19] +base[  20] 327ec Export RVA
+	[  20] +base[  21] 327ec Export RVA
+	[  21] +base[  22] 327ec Export RVA
+	[  22] +base[  23] 327ec Export RVA
+	[  23] +base[  24] 327ec Export RVA
+	[  24] +base[  25] 327ec Export RVA
+	[  25] +base[  26] 327ec Export RVA
+	[  26] +base[  27] 327ec Export RVA
+	[  27] +base[  28] 327ec Export RVA
+	[  28] +base[  29] 327ec Export RVA
+	[  29] +base[  30] 327ec Export RVA
+	[  30] +base[  31] 327ec Export RVA
+	[  31] +base[  32] 327ec Export RVA
+	[  32] +base[  33] 327ec Export RVA
+	[  33] +base[  34] 19941 Export RVA
+	[  34] +base[  35] 19716 Export RVA
+	[  35] +base[  36] 19a3f Export RVA
+	[  36] +base[  37] 196c6 Export RVA
+	[  37] +base[  38] 196f1 Export RVA
+	[  38] +base[  39] 22217 Export RVA
+	[  39] +base[  40] 22217 Export RVA
+	[  40] +base[  41] 327cf Export RVA
+	[  41] +base[  42] 2dc77 Export RVA
+	[  42] +base[  43] 33c14 Export RVA
+	[  43] +base[  44] 33c14 Export RVA
+	[  44] +base[  45] 33c14 Export RVA
+	[  45] +base[  46] 33c14 Export RVA
+	[  46] +base[  47] 33c14 Export RVA
+	[  47] +base[  48] 33c14 Export RVA
+	[  48] +base[  49] 33c14 Export RVA
+	[  49] +base[  50] 33c14 Export RVA
+	[  50] +base[  51] 33c14 Export RVA
+	[  51] +base[  52] 33c14 Export RVA
+	[  52] +base[  53] 33c14 Export RVA
+	[  53] +base[  54] 33c14 Export RVA
+	[  54] +base[  55] 33c14 Export RVA
+	[  55] +base[  56] 33c14 Export RVA
+	[  56] +base[  57] 327f7 Export RVA
+	[  57] +base[  58] 327f7 Export RVA
+	[  58] +base[  59] 327f7 Export RVA
+	[  59] +base[  60] 327f7 Export RVA
+	[  60] +base[  61] 327f7 Export RVA
+	[  61] +base[  62] 327f7 Export RVA
+	[  62] +base[  63] 327f7 Export RVA
+	[  63] +base[  64] 327f7 Export RVA
+	[  64] +base[  65] 327f7 Export RVA
+	[  65] +base[  66] 327f7 Export RVA
+	[  66] +base[  67] 327f7 Export RVA
+	[  67] +base[  68] 327f7 Export RVA
+	[  68] +base[  69] 327f7 Export RVA
+	[  69] +base[  70] 327f7 Export RVA
+	[  70] +base[  71] 327f7 Export RVA
+	[  71] +base[  72] 199a6 Export RVA
+	[  72] +base[  73] 19736 Export RVA
+	[  73] +base[  74] 19655 Export RVA
+	[  74] +base[  75] 19a92 Export RVA
+	[  75] +base[  76] 196e2 Export RVA
+	[  76] +base[  77] 19706 Export RVA
+	[  77] +base[  78] 21422 Export RVA
+	[  78] +base[  79] 21422 Export RVA
+	[  79] +base[  80] 213ea Export RVA
+	[  80] +base[  81] 2dc53 Export RVA
+	[  81] +base[  82] 213b3 Export RVA
+	[  82] +base[  83] 213b3 Export RVA
+	[  83] +base[  84] 213b3 Export RVA
+	[  84] +base[  85] 213b3 Export RVA
+	[  85] +base[  86] 213b3 Export RVA
+	[  86] +base[  87] 213b3 Export RVA
+	[  87] +base[  88] 213b3 Export RVA
+	[  88] +base[  89] 213b3 Export RVA
+	[  89] +base[  90] 213b3 Export RVA
+	[  90] +base[  91] 213b3 Export RVA
+	[  91] +base[  92] 3042e Export RVA
+	[  92] +base[  93] 3042e Export RVA
+	[  93] +base[  94] 3042e Export RVA
+	[  94] +base[  95] 3042e Export RVA
+	[  95] +base[  96] 3042e Export RVA
+	[  96] +base[  97] 3042e Export RVA
+	[  97] +base[  98] 3042e Export RVA
+	[  98] +base[  99] 3042e Export RVA
+	[  99] +base[ 100] 3042e Export RVA
+	[ 100] +base[ 101] 3042e Export RVA
+	[ 101] +base[ 102] 3042e Export RVA
+	[ 102] +base[ 103] 3042e Export RVA
+	[ 103] +base[ 104] 44e7f Export RVA
+	[ 104] +base[ 105] 44e7f Export RVA
+	[ 105] +base[ 106] 44e7f Export RVA
+	[ 106] +base[ 107] 44e7f Export RVA
+	[ 107] +base[ 108] 30446 Export RVA
+	[ 108] +base[ 109] 30446 Export RVA
+	[ 109] +base[ 110] 30446 Export RVA
+	[ 110] +base[ 111] 30446 Export RVA
+	[ 111] +base[ 112] 21446 Export RVA
+	[ 112] +base[ 113] 2145f Export RVA
+	[ 113] +base[ 114] 2145f Export RVA
+	[ 114] +base[ 115] 2145f Export RVA
+	[ 115] +base[ 116] 2145f Export RVA
+	[ 116] +base[ 117] 2145f Export RVA
+	[ 117] +base[ 118] 2145f Export RVA
+	[ 118] +base[ 119] 2145f Export RVA
+	[ 119] +base[ 120] 2145f Export RVA
+	[ 120] +base[ 121] 2145f Export RVA
+	[ 121] +base[ 122] 2145f Export RVA
+	[ 122] +base[ 123] 2145f Export RVA
+	[ 123] +base[ 124] 2145f Export RVA
+	[ 124] +base[ 125] 2145f Export RVA
+	[ 125] +base[ 126] 2145f Export RVA
+	[ 126] +base[ 127] 2145f Export RVA
+	[ 127] +base[ 128] 2145f Export RVA
+	[ 128] +base[ 129] 2145f Export RVA
+	[ 129] +base[ 130] 2145f Export RVA
+	[ 130] +base[ 131] 2145f Export RVA
+	[ 131] +base[ 132] 2145f Export RVA
+	[ 132] +base[ 133] 2141a Export RVA
+	[ 133] +base[ 134] 2141a Export RVA
+	[ 134] +base[ 135] 2141a Export RVA
+	[ 135] +base[ 136] 19803 Export RVA
+	[ 136] +base[ 137] 327bc Export RVA
+	[ 137] +base[ 138] 327bc Export RVA
+	[ 138] +base[ 139] 327bc Export RVA
+	[ 139] +base[ 140] 327bc Export RVA
+	[ 140] +base[ 141] 327bc Export RVA
+	[ 141] +base[ 142] 327cf Export RVA
+	[ 142] +base[ 143] 2140f Export RVA
+	[ 143] +base[ 144] 44e97 Export RVA
+	[ 144] +base[ 145] 44e97 Export RVA
+	[ 145] +base[ 146] 44e97 Export RVA
+	[ 146] +base[ 147] 44e97 Export RVA
+	[ 147] +base[ 148] 44e97 Export RVA
+	[ 148] +base[ 149] 44e97 Export RVA
+	[ 149] +base[ 150] 44e97 Export RVA
+	[ 150] +base[ 151] 1980d Export RVA
+	[ 151] +base[ 152] 197f1 Export RVA
+	[ 152] +base[ 153] 197fa Export RVA
+	[ 153] +base[ 154] 197dd Export RVA
+	[ 154] +base[ 155] 198bc Export RVA
+	[ 155] +base[ 156] 196b9 Export RVA
+	[ 156] +base[ 157] 1981a Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] ??0?$CVdsCoTaskPtr@G@@QAE@XZ
+	[   1] ??0?$CVdsCoTaskPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAE@XZ
+	[   2] ??0?$CVdsHandleImpl@$0?0@@QAE@XZ
+	[   3] ??0?$CVdsHandleImpl@$0A@@@QAE@XZ
+	[   4] ??0?$CVdsHeapPtr@D@@QAE@XZ
+	[   5] ??0?$CVdsHeapPtr@E@@QAE@XZ
+	[   6] ??0?$CVdsHeapPtr@G@@QAE@XZ
+	[   7] ??0?$CVdsHeapPtr@J@@QAE@XZ
+	[   8] ??0?$CVdsHeapPtr@PAG@@QAE@XZ
+	[   9] ??0?$CVdsHeapPtr@PAUIUnknown@@@@QAE@XZ
+	[  10] ??0?$CVdsHeapPtr@U_AUCTION_THREAD_PARAMETER@@@@QAE@XZ
+	[  11] ??0?$CVdsHeapPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QAE@XZ
+	[  12] ??0?$CVdsHeapPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  13] ??0?$CVdsHeapPtr@U_EXTEND_VOLUME_HANDLER_PARAMETER@@@@QAE@XZ
+	[  14] ??0?$CVdsHeapPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAE@XZ
+	[  15] ??0?$CVdsHeapPtr@U_MOUNTMGR_MOUNT_POINT@@@@QAE@XZ
+	[  16] ??0?$CVdsHeapPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QAE@XZ
+	[  17] ??0?$CVdsHeapPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  18] ??0?$CVdsPtr@D@@QAE@XZ
+	[  19] ??0?$CVdsPtr@E@@QAE@XZ
+	[  20] ??0?$CVdsPtr@G@@QAE@XZ
+	[  21] ??0?$CVdsPtr@J@@QAE@XZ
+	[  22] ??0?$CVdsPtr@PAG@@QAE@XZ
+	[  23] ??0?$CVdsPtr@PAUIUnknown@@@@QAE@XZ
+	[  24] ??0?$CVdsPtr@U_AUCTION_THREAD_PARAMETER@@@@QAE@XZ
+	[  25] ??0?$CVdsPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QAE@XZ
+	[  26] ??0?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  27] ??0?$CVdsPtr@U_EXTEND_VOLUME_HANDLER_PARAMETER@@@@QAE@XZ
+	[  28] ??0?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAE@XZ
+	[  29] ??0?$CVdsPtr@U_MOUNTMGR_MOUNT_POINT@@@@QAE@XZ
+	[  30] ??0?$CVdsPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QAE@XZ
+	[  31] ??0?$CVdsPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  32] ??0?$CVdsPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAE@XZ
+	[  33] ??0CPrvEnumObject@@QAE@XZ
+	[  34] ??0CVdsCriticalSection@@QAE@PAU_RTL_CRITICAL_SECTION@@@Z
+	[  35] ??0CVdsPnPNotificationBase@@QAE@XZ
+	[  36] ??0CVdsStructuredExceptionTranslator@@QAE@XZ
+	[  37] ??0CVdsUnlockIt@@QAE@AAJ@Z
+	[  38] ??1?$CVdsCoTaskPtr@G@@QAE@XZ
+	[  39] ??1?$CVdsCoTaskPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAE@XZ
+	[  40] ??1?$CVdsHandleImpl@$0?0@@QAE@XZ
+	[  41] ??1?$CVdsHandleImpl@$0A@@@QAE@XZ
+	[  42] ??1?$CVdsHeapPtr@D@@QAE@XZ
+	[  43] ??1?$CVdsHeapPtr@E@@QAE@XZ
+	[  44] ??1?$CVdsHeapPtr@G@@QAE@XZ
+	[  45] ??1?$CVdsHeapPtr@J@@QAE@XZ
+	[  46] ??1?$CVdsHeapPtr@PAG@@QAE@XZ
+	[  47] ??1?$CVdsHeapPtr@PAUIUnknown@@@@QAE@XZ
+	[  48] ??1?$CVdsHeapPtr@U_AUCTION_THREAD_PARAMETER@@@@QAE@XZ
+	[  49] ??1?$CVdsHeapPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QAE@XZ
+	[  50] ??1?$CVdsHeapPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  51] ??1?$CVdsHeapPtr@U_EXTEND_VOLUME_HANDLER_PARAMETER@@@@QAE@XZ
+	[  52] ??1?$CVdsHeapPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAE@XZ
+	[  53] ??1?$CVdsHeapPtr@U_MOUNTMGR_MOUNT_POINT@@@@QAE@XZ
+	[  54] ??1?$CVdsHeapPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QAE@XZ
+	[  55] ??1?$CVdsHeapPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  56] ??1?$CVdsPtr@D@@QAE@XZ
+	[  57] ??1?$CVdsPtr@E@@QAE@XZ
+	[  58] ??1?$CVdsPtr@G@@QAE@XZ
+	[  59] ??1?$CVdsPtr@J@@QAE@XZ
+	[  60] ??1?$CVdsPtr@PAG@@QAE@XZ
+	[  61] ??1?$CVdsPtr@PAUIUnknown@@@@QAE@XZ
+	[  62] ??1?$CVdsPtr@U_AUCTION_THREAD_PARAMETER@@@@QAE@XZ
+	[  63] ??1?$CVdsPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QAE@XZ
+	[  64] ??1?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  65] ??1?$CVdsPtr@U_EXTEND_VOLUME_HANDLER_PARAMETER@@@@QAE@XZ
+	[  66] ??1?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAE@XZ
+	[  67] ??1?$CVdsPtr@U_MOUNTMGR_MOUNT_POINT@@@@QAE@XZ
+	[  68] ??1?$CVdsPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QAE@XZ
+	[  69] ??1?$CVdsPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QAE@XZ
+	[  70] ??1?$CVdsPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAE@XZ
+	[  71] ??1CPrvEnumObject@@QAE@XZ
+	[  72] ??1CVdsCriticalSection@@QAE@XZ
+	[  73] ??1CVdsDebugLog@@QAE@XZ
+	[  74] ??1CVdsPnPNotificationBase@@QAE@XZ
+	[  75] ??1CVdsStructuredExceptionTranslator@@QAE@XZ
+	[  76] ??1CVdsUnlockIt@@QAE@XZ
+	[  77] ??4?$CVdsCoTaskPtr@G@@QAEPAGPAG@Z
+	[  78] ??4?$CVdsCoTaskPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAEPAU_VDS_FILE_SYSTEM_TYPE_PROP@@PAU1@@Z
+	[  79] ??4?$CVdsHandleImpl@$0?0@@QAEPAXPAX@Z
+	[  80] ??4?$CVdsHandleImpl@$0A@@@QAEPAXPAX@Z
+	[  81] ??4?$CVdsHeapPtr@D@@QAEPADPAD@Z
+	[  82] ??4?$CVdsHeapPtr@E@@QAEPAEPAE@Z
+	[  83] ??4?$CVdsHeapPtr@G@@QAEPAGPAG@Z
+	[  84] ??4?$CVdsHeapPtr@J@@QAEPAJPAJ@Z
+	[  85] ??4?$CVdsHeapPtr@PAG@@QAEPAPAGPAPAG@Z
+	[  86] ??4?$CVdsHeapPtr@PAUIUnknown@@@@QAEPAPAUIUnknown@@PAPAU1@@Z
+	[  87] ??4?$CVdsHeapPtr@U_AUCTION_THREAD_PARAMETER@@@@QAEPAU_AUCTION_THREAD_PARAMETER@@PAU1@@Z
+	[  88] ??4?$CVdsHeapPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAEPAU_FORMAT_VOLUME_THREAD_PARAMETER@@PAU1@@Z
+	[  89] ??4?$CVdsHeapPtr@U_MOUNTMGR_MOUNT_POINT@@@@QAEPAU_MOUNTMGR_MOUNT_POINT@@PAU1@@Z
+	[  90] ??4?$CVdsHeapPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QAEPAU_MOUNTMGR_MOUNT_POINTS@@PAU1@@Z
+	[  91] ??8?$CVdsHandleImpl@$0?0@@QBE_NPAX@Z
+	[  92] ??8?$CVdsHandleImpl@$0A@@@QBE_NPAX@Z
+	[  93] ??8?$CVdsPtr@D@@QBE_NPAD@Z
+	[  94] ??8?$CVdsPtr@E@@QBE_NPAE@Z
+	[  95] ??8?$CVdsPtr@G@@QBE_NPAG@Z
+	[  96] ??8?$CVdsPtr@J@@QBE_NPAJ@Z
+	[  97] ??8?$CVdsPtr@PAG@@QBE_NPAPAG@Z
+	[  98] ??8?$CVdsPtr@PAUIUnknown@@@@QBE_NPAPAUIUnknown@@@Z
+	[  99] ??8?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QBE_NPAU_FORMAT_VOLUME_THREAD_PARAMETER@@@Z
+	[ 100] ??8?$CVdsPtr@U_MOUNTMGR_MOUNT_POINT@@@@QBE_NPAU_MOUNTMGR_MOUNT_POINT@@@Z
+	[ 101] ??8?$CVdsPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QBE_NPAU_MOUNTMGR_MOUNT_POINTS@@@Z
+	[ 102] ??8?$CVdsPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QBE_NPAU_VDS_FILE_SYSTEM_TYPE_PROP@@@Z
+	[ 103] ??9?$CVdsHandleImpl@$0?0@@QBE_NPAX@Z
+	[ 104] ??9?$CVdsPtr@G@@QBE_NPAG@Z
+	[ 105] ??9?$CVdsPtr@U_AUCTION_THREAD_PARAMETER@@@@QBE_NPAU_AUCTION_THREAD_PARAMETER@@@Z
+	[ 106] ??9?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QBE_NPAU_DRIVE_LAYOUT_INFORMATION_EX@@@Z
+	[ 107] ??A?$CVdsPtr@J@@QAEAAJJ@Z
+	[ 108] ??A?$CVdsPtr@PAG@@QAEAAPAGH@Z
+	[ 109] ??A?$CVdsPtr@PAG@@QAEAAPAGJ@Z
+	[ 110] ??A?$CVdsPtr@PAUIUnknown@@@@QAEAAPAUIUnknown@@J@Z
+	[ 111] ??A?$CVdsPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAEAAU_VDS_FILE_SYSTEM_TYPE_PROP@@H@Z
+	[ 112] ??B?$CVdsHandleImpl@$0?0@@QAEPAXXZ
+	[ 113] ??B?$CVdsHandleImpl@$0A@@@QAEPAXXZ
+	[ 114] ??B?$CVdsPtr@E@@QBEPAEXZ
+	[ 115] ??B?$CVdsPtr@G@@QBEPAGXZ
+	[ 116] ??B?$CVdsPtr@J@@QBEPAJXZ
+	[ 117] ??B?$CVdsPtr@PAG@@QBEPAPAGXZ
+	[ 118] ??B?$CVdsPtr@U_AUCTION_THREAD_PARAMETER@@@@QBEPAU_AUCTION_THREAD_PARAMETER@@XZ
+	[ 119] ??B?$CVdsPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QBEPAU_CLEAN_DISK_HANDLER_PARAMETER@@XZ
+	[ 120] ??B?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QBEPAU_FORMAT_VOLUME_THREAD_PARAMETER@@XZ
+	[ 121] ??B?$CVdsPtr@U_MOUNTMGR_MOUNT_POINT@@@@QBEPAU_MOUNTMGR_MOUNT_POINT@@XZ
+	[ 122] ??B?$CVdsPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QBEPAU_MOUNTMGR_MOUNT_POINTS@@XZ
+	[ 123] ??B?$CVdsPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QBEPAU_VDS_DRIVE_LAYOUT_INFORMATION_EX@@XZ
+	[ 124] ??C?$CVdsPtr@U_AUCTION_THREAD_PARAMETER@@@@QBEPAU_AUCTION_THREAD_PARAMETER@@XZ
+	[ 125] ??C?$CVdsPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QBEPAU_CLEAN_DISK_HANDLER_PARAMETER@@XZ
+	[ 126] ??C?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QBEPAU_DRIVE_LAYOUT_INFORMATION_EX@@XZ
+	[ 127] ??C?$CVdsPtr@U_EXTEND_VOLUME_HANDLER_PARAMETER@@@@QBEPAU_EXTEND_VOLUME_HANDLER_PARAMETER@@XZ
+	[ 128] ??C?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QBEPAU_FORMAT_VOLUME_THREAD_PARAMETER@@XZ
+	[ 129] ??C?$CVdsPtr@U_MOUNTMGR_MOUNT_POINT@@@@QBEPAU_MOUNTMGR_MOUNT_POINT@@XZ
+	[ 130] ??C?$CVdsPtr@U_MOUNTMGR_MOUNT_POINTS@@@@QBEPAU_MOUNTMGR_MOUNT_POINTS@@XZ
+	[ 131] ??C?$CVdsPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QBEPAU_VDS_DRIVE_LAYOUT_INFORMATION_EX@@XZ
+	[ 132] ??I?$CVdsHandleImpl@$0?0@@QAEPAPAXXZ
+	[ 133] ??I?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAEPAPAU_DRIVE_LAYOUT_INFORMATION_EX@@XZ
+	[ 134] ??I?$CVdsPtr@U_VDS_DRIVE_LAYOUT_INFORMATION_EX@@@@QAEPAPAU_VDS_DRIVE_LAYOUT_INFORMATION_EX@@XZ
+	[ 135] ?AllowCancel@CVdsAsyncObjectBase@@QAEXXZ
+	[ 136] ?Attach@?$CVdsPtr@G@@QAEXPAG@Z
+	[ 137] ?Attach@?$CVdsPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QAEXPAU_CLEAN_DISK_HANDLER_PARAMETER@@@Z
+	[ 138] ?Attach@?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAEXPAU_DRIVE_LAYOUT_INFORMATION_EX@@@Z
+	[ 139] ?Attach@?$CVdsPtr@U_EXTEND_VOLUME_HANDLER_PARAMETER@@@@QAEXPAU_EXTEND_VOLUME_HANDLER_PARAMETER@@@Z
+	[ 140] ?Attach@?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAEXPAU_FORMAT_VOLUME_THREAD_PARAMETER@@@Z
+	[ 141] ?Close@?$CVdsHandleImpl@$0?0@@QAEXXZ
+	[ 142] ?Detach@?$CVdsHandleImpl@$0?0@@QAEPAXXZ
+	[ 143] ?Detach@?$CVdsHandleImpl@$0A@@@QAEPAXXZ
+	[ 144] ?Detach@?$CVdsPtr@G@@QAEPAGXZ
+	[ 145] ?Detach@?$CVdsPtr@U_AUCTION_THREAD_PARAMETER@@@@QAEPAU_AUCTION_THREAD_PARAMETER@@XZ
+	[ 146] ?Detach@?$CVdsPtr@U_CLEAN_DISK_HANDLER_PARAMETER@@@@QAEPAU_CLEAN_DISK_HANDLER_PARAMETER@@XZ
+	[ 147] ?Detach@?$CVdsPtr@U_DRIVE_LAYOUT_INFORMATION_EX@@@@QAEPAU_DRIVE_LAYOUT_INFORMATION_EX@@XZ
+	[ 148] ?Detach@?$CVdsPtr@U_FORMAT_VOLUME_THREAD_PARAMETER@@@@QAEPAU_FORMAT_VOLUME_THREAD_PARAMETER@@XZ
+	[ 149] ?Detach@?$CVdsPtr@U_VDS_FILE_SYSTEM_TYPE_PROP@@@@QAEPAU_VDS_FILE_SYSTEM_TYPE_PROP@@XZ
+	[ 150] ?DisallowCancel@CVdsAsyncObjectBase@@QAEXXZ
+	[ 151] ?GetOutputType@CVdsAsyncObjectBase@@QAE?AW4__MIDL___MIDL_itf_vdscmlyr_0000_0002@@XZ
+	[ 152] ?IsCancelRequested@CVdsAsyncObjectBase@@QAEHXZ
+	[ 153] ?SetOutputType@CVdsAsyncObjectBase@@QAEXW4__MIDL___MIDL_itf_vdscmlyr_0000_0002@@@Z
+	[ 154] ?SetPositionToLast@CPrvEnumObject@@QAEXXZ
+	[ 155] ?TracingLogEnabled@CVdsDebugLog@@QAEHXZ
+	[ 156] ?ZeroAsyncOut@CVdsAsyncObjectBase@@QAEXXZ
+
+There is a debug directory in .text at 0x1001460
+
+Type                Size     Rva      Offset
+  2        CodeView 00000020 000190b8 000184b8
+(format RSDS signature eb51302051f54bc6984257fa4797333f age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 1, IDs: 3
+010   Entry: name: [val: 80000130 len 8]: REGISTRY, Value: 0x80000030
+030    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040     Entry: ID: 0x000065, Value: 0x80000090
+090      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0a0       Entry: ID: 0x000409, Value: 0x0000f0
+0f0        Leaf: Addr: 0x057fd8, Size: 0x00018b, Codepage: 0
+018   Entry: ID: 0x000006, Value: 0x80000048
+048    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+058     Entry: ID: 0x000007, Value: 0x800000a8
+0a8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0b8       Entry: ID: 0x000409, Value: 0x000100
+100        Leaf: Addr: 0x058168, Size: 0x000256, Codepage: 0
+020   Entry: ID: 0x00000b, Value: 0x80000060
+060    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+070     Entry: ID: 0x000001, Value: 0x800000c0
+0c0      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0d0       Entry: ID: 0x000409, Value: 0x000110
+110        Leaf: Addr: 0x0574d8, Size: 0x000b00, Codepage: 0
+028   Entry: ID: 0x000010, Value: 0x80000078
+078    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+088     Entry: ID: 0x000001, Value: 0x800000d8
+0d8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0e8       Entry: ID: 0x000409, Value: 0x000120
+120        Leaf: Addr: 0x057150, Size: 0x000384, Codepage: 0
+ String table starts at offset: 0x130
+ Resources start at offset: 0xfd8
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000543e3  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000600  01056000  01056000  00054800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000013c0  01057000  01057000  00054e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

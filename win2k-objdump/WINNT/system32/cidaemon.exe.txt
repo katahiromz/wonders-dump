@@ -1,0 +1,163 @@
+
+cidaemon.exe:     file format pei-i386
+cidaemon.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01001bf0
+
+Characteristics 0x31f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sat Sep 25 20:14:18 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00001800
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001bf0
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	5
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000600
+CheckSum		0000a89b
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002080 00000064 Import Directory [parts of .idata]
+Entry 2 00004000 000003d8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010c0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 00000054 Bound Import Directory
+Entry c 00001000 000000c0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002080
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002080	00002164 ffffffff ffffffff 00002416 00001080
+
+	DLL Name: query.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2322	   44  ??0CGenericCiProxy@@QAE@AAVCSharedNameGen@@KK@Z	67131e60
+	23fa	  133  ??1CFilterDaemon@@QAE@XZ	671519c9
+	23e2	  143  ??1CLangList@@QAE@XZ	6714e673
+	23a4	  724  ?SystemExceptionTranslator@@YAXIPAU_EXCEPTION_POINTERS@@@Z	6715956d
+	238e	  254  ?CIShutdown@@YGXXZ	670aded2
+	2378	  772  ?ciDelete@@YGXPAX@Z	6715a9ae
+	2354	  304  ?DoUpdates@CFilterDaemon@@QAEJXZ	67151a76
+	21a4	  137  ??1CGenericCiProxy@@UAE@XZ	671320f3
+	22e8	  414  ?GetStartupData@CGenericCiProxy@@QAEPBEAAU_GUID@@AAK@Z	671327e5
+	22d4	  774  ?ciNew@@YGPAXI@Z	6715a977
+	22aa	    9  ??0CCiAdminParams@@QAE@PAVCLangList@@@Z	67131a4b
+	2280	  663  ?SetPriority@CGenericCiProxy@@QAEXKK@Z	671328a5
+	2258	   51  ??0CLangList@@QAE@PAUICiCLangRes@@K@Z	6714e58f
+	2228	  369  ?GetEntryBuffer@CGenericCiProxy@@QAEPAEAAK@Z	671328ca
+	21c2	   37  ??0CFilterDaemon@@QAE@AAVCiProxy@@AAVCCiFrameworkParams@@AAVCLangList@@PAEKPAUICiCFilterClient@@@Z	67151781
+
+ 00002094	00002138 ffffffff ffffffff 00002474 00001054
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	247e	  656  RtlUnwind	77f86118
+	2468	 1095  _wcsicmp	77f881c5
+	245e	 1168  wcslen	77f8d1f7
+	2456	 1101  _wtol	77fb6d63
+	243a	  189  NtQueryInformationProcess	77f8f45f
+	2420	  256  NtSetInformationProcess	77f8b7a5
+
+ 000020a8	00002154 ffffffff ffffffff 000024c2 00001070
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	249e	   89  CoUninitialize	77a26984
+	248a	   15  CoCreateInstance	77a24fe0
+	24b0	   50  CoInitializeEx	77a26810
+
+ 000020bc	000020e4 ffffffff ffffffff 00002630 00001000
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2582	  137  __wgetmainargs	78004051
+	263c	  180  _controlfp	78003c1e
+	2618	   14  ??1type_info@@UAE@XZ	7800b20c
+	2608	   16  ??3@YAXPAX@Z	78001f56
+	25f4	  199  _except_handler3	7800f56a
+	25e2	  128  __set_app_type	78003e5a
+	25d4	  110  __p__fmode	78003e64
+	25c4	  105  __p__commode	78003e6a
+	25b4	  155  _adjust_fdiv	7803bb70
+	25a0	  130  __setusermatherr	7800b426
+	2594	  268  _initterm	78001dea
+	24f6	   66  _EH_prolog	7800114c
+	2570	  102  __p___winitenv	7800bba4
+	255a	   72  _XcptFilter	7800f7dc
+	2552	  208  _exit	7800b908
+	2568	  582  exit	7800269e
+	250e	   39  ?_set_se_translator@@YAP6AXIPAU_EXCEPTION_POINTERS@@@ZP6AXI0@Z@Z	7800b350
+	24e2	   73  __CxxFrameHandler	7800ae78
+	24cc	   65  _CxxThrowException	7800adbb
+	2504	  667  printf	78025147
+
+ 000020d0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010c0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00002400
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x000378, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000164a  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000006c  01003000  01003000  00001e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003d8  01004000  01004000  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,442 @@
+
+cluster.exe:     file format pei-i386
+cluster.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01018a46
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Sat Feb 17 06:02:40 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		0001e400
+SizeOfInitializedData	0000e000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00018a46
+BaseOfCode		00001000
+BaseOfData		00020000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0002f000
+SizeOfHeaders		00000400
+CheckSum		000318a2
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0001da9c 00000118 Import Directory [parts of .idata]
+Entry 2 00021000 0000d8f0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001440 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000031e8 00000040 Load Configuration Directory
+Entry b 00000258 0000010c Bound Import Directory
+Entry c 00001000 0000040c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x101da9c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0001da9c	0001dea8 ffffffff ffffffff 0001e1d4 000012f4
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e08e	  458  _purecall	77bc6f6b
+	1e09a	  728  iswspace	77bad5a7
+	1e01e	  840  wprintf	77bd31ca
+	1e0b0	  566  _wcslwr	77bd7787
+	1e0ba	  835  wcstol	77bae0d0
+	1e07a	  244  _except_handler3	77bc6c74
+	1e0ce	  640  _wtol	77bad2e2
+	1e0d6	  683  fprintf	77bd1d51
+	1e0e0	  242  _errno	77baf7a6
+	1e0ea	  799  swscanf	77bd2b0a
+	1e0f4	  837  wcstoul	77bae0ef
+	1e0fe	  618  _wsetlocale	77bc79f3
+	1e070	  827  wcsncmp	77bd8f55
+	1e066	  819  wcschr	77bd8dde
+	1e050	   72  _CxxThrowException	77bb3223
+	1e046	  575  _wcsupr	77bd7b42
+	1e028	  686  fputwc	77bd1f6a
+	1e03a	  564  _wcsicmp	77bd762d
+	1e032	  326  _iob	77bf1ca8
+	1e0c4	  832  wcsstr	77bd90a6
+	1e00a	   85  __CxxFrameHandler	77bb3326
+	1e002	  638  _wtoi	77bad34e
+	1e10c	  809  towupper	77badd1e
+	1e118	  820  wcscmp	77bd8e09
+	1e122	  204  _c_exit	77bcaf8b
+	1e12c	  253  _exit	77bcaf5c
+	1e134	   79  _XcptFilter	77bc3cfc
+	1e142	  207  _cexit	77bcaf77
+	1dfc0	   18  ??2@YAPAXI@Z	77bba971
+	1dff6	  723  iswdigit	77bad574
+	1dfec	  825  wcslen	77bd8ef2
+	1f2aa	  753  printf	77bd27c2
+	1f2b4	  555  _vsnwprintf	77bd0f3e
+	1e14c	  668  exit	77bcaf41
+	1e154	  171  __winitenv	77bf3a08
+	1e162	  170  __wgetmainargs	77baf32f
+	1e174	  322  _initterm	77bcae06
+	1dfe0	  816  vswprintf	77bd0e35
+	1dfd0	   19  ??3@YAXPAX@Z	77bba9a7
+	1e0a6	  463  _putws	77bd074d
+	1e21e	   53  ?terminate@@YAXXZ	77bb319a
+	1e210	  221  _controlfp	77be0067
+	1e206	  445  _onexit	77bc5d9f
+	1e1f8	  111  __dllonexit	77bc5df8
+	1e1e0	   17  ??1type_info@@UAE@XZ	77bb2046
+	1e1c2	  158  __set_app_type	77bc632c
+	1e1b4	  138  __p__fmode	77baf6c5
+	1e1a4	  133  __p__commode	77baf68e
+	1e194	  189  _adjust_fdiv	77bf467c
+	1e180	  160  __setusermatherr	77bde695
+
+ 0001dab0	0001dc30 ffffffff ffffffff 0001e232 0000107c
+
+	DLL Name: ATL.DLL
+	vma:  Hint/Ord Member-Name Bound-To
+	80000010	   16  <none>	4a401479
+
+ 0001dac4	0001dbb4 ffffffff ffffffff 0001e4e0 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e2c0	  328  LookupAccountNameW	77f6071f
+	1e4c2	  267  GetSecurityDescriptorLength	77f61cda
+	1e4a2	  308  InitializeSecurityDescriptor	77f6e00e
+	1e486	  319  IsValidSecurityDescriptor	77f6ab6c
+	1e46a	  270  GetSecurityDescriptorSacl	77f5a62d
+	1e44c	  266  GetSecurityDescriptorGroup	77f60999
+	1e42e	  268  GetSecurityDescriptorOwner	77f60967
+	1e41a	  555  SetEntriesInAclW	77f6ea58
+	1e3fe	  570  SetSecurityDescriptorDacl	77f6e033
+	1e3e2	  574  SetSecurityDescriptorSacl	77f53894
+	1e3c4	  571  SetSecurityDescriptorGroup	77f6e205
+	1e3a6	  572  SetSecurityDescriptorOwner	77f6e1dd
+	1e386	  569  SetSecurityDescriptorControl	77f5b6cf
+	1e370	  410  MakeSelfRelativeSD	77f7739a
+	1e350	   36  BuildExplicitAccessWithNameW	77fa5901
+	1e334	   29  AllocateAndInitializeSid	77f76ed2
+	1e318	  265  GetSecurityDescriptorDacl	77f6ab8e
+	1e30a	  318  IsValidAcl	77f6b0b3
+	1e2f6	  230  GetAclInformation	77f61d81
+	1e2ec	  229  GetAce	77f61d59
+	1e2e2	  226  FreeSid	77f76f12
+	1e2d6	  217  EqualSid	77f772f7
+	1e2aa	  447  QueryServiceConfigW	77f54f8c
+	1e298	   66  ControlService	77f54238
+	1e286	  430  OpenSCManagerW	77f6d845
+	1e276	  432  OpenServiceW	77f6d707
+	1e266	  588  StartServiceW	77f66e44
+	1e250	  451  QueryServiceStatus	77f6db9a
+	1e23a	   62  CloseServiceHandle	77f6d675
+	1f2c2	   53  ChangeServiceConfig2W	77fb64d1
+
+ 0001dad8	0001dd80 ffffffff ffffffff 0001e870 000011cc
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e78e	  441  GetStdHandle	77e6b437
+	1e79e	  309  GetConsoleOutputCP	77e66aec
+	1e7b4	  675  QueryPerformanceCounter	77e69577
+	1e7ce	  479  GetTickCount	77e619d1
+	1e7de	  323  GetCurrentProcessId	77e63c78
+	1e7f4	  458  GetSystemTimeAsFileTime	77e41fba
+	1e80e	  863  TerminateProcess	77e42004
+	1e822	  322  GetCurrentProcess	77e62f9d
+	1e77c	  307  GetConsoleMode	77e66b88
+	1e852	  843  SetUnhandledExceptionFilter	77e82060
+	1e73a	  809  SetLastError	7c82a136
+	1e728	  419  GetProcessHeap	77e63ec7
+	1e71c	  528  HeapAlloc	7c829fd6
+	1e710	  534  HeapFree	7c829e17
+	1e6f2	  142  DnsHostnameToComputerNameW	77e47741
+	1e76a	  765  SetConsoleMode	77e66c19
+	1e75a	  691  ReadConsoleW	77e4cde1
+	1e836	  879  UnhandledExceptionFilter	77e7690d
+	1e74a	  607  LocalReAlloc	77e5f0f7
+	1e6e4	  600  LocalAlloc	77e6239c
+	1e6ce	  278  GetComputerNameExW	77e5cf88
+	1e6a6	  548  InitializeCriticalSectionAndSpinCount	77e63ed9
+	1e682	  273  GetCommandLineW	77e6b756
+	1e676	  965  lstrcmpiW	77e5b06a
+	1e662	  386  GetModuleHandleW	77e65136
+	1e64c	  326  GetCurrentThreadId	77e62fc7
+	1e636	  917  WideCharToMultiByte	77e63143
+	1e620	  629  MultiByteToWideChar	77e62fd6
+	1e60e	  416  GetProcAddress	77e63d7a
+	1e5fe	  597  LoadLibraryW	77e5c6fa
+	1e5f0	  248  FreeLibrary	77e6b1a1
+	1e5e2	   52  CloseHandle	77e63e6f
+	1e5d0	  244  FormatMessageW	77e4f821
+	1e5c4	  604  LocalFree	77e62419
+	1e5ac	  129  DeleteCriticalSection	7c82c988
+	1e5a4	  855  Sleep	77e424de
+	1e58c	  556  InterlockedIncrement	77e6166c
+	1e57c	  369  GetLastError	7c829e08
+	1e564	  593  LeaveCriticalSection	7c81a3ab
+	1e54c	  152  EnterCriticalSection	7c81a360
+	1e530	  547  InitializeCriticalSection	77e67861
+	1e524	  973  lstrlenA	77e5be30
+	1e50c	  552  InterlockedDecrement	77e61680
+	1e500	  974  lstrlenW	77e622c9
+	1e4ee	   59  CompareStringW	77e6210b
+	1f2da	  962  lstrcmpW	77e6efab
+	1f2e6	  373  GetLocaleInfoW	77e66023
+	1f2f8	  569  IsDebuggerPresent	77e5da00
+	1f30c	  653  OutputDebugStringA	77e46c99
+	1f322	  550  InterlockedCompareExchange	77e616a8
+	1f340	  243  FormatMessageA	77e4bf02
+	1e694	  596  LoadLibraryExW	77e41b0c
+
+ 0001daec	0001de98 ffffffff ffffffff 0001e88c 000012e4
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e87e	  460  LoadStringW	773947a5
+
+ 0001db00	0001dfa8 ffffffff ffffffff 0001e8fe 000013f4
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e8be	   61  CoInitializeSecurity	776a7553
+	1e8ac	  105  CoUninitialize	776bcc89
+	1e8d6	   60  CoInitializeEx	776bc826
+	1e8e8	   17  CoCreateInstanceEx	776a673f
+	1e898	   16  CoCreateInstance	776a692a
+
+ 0001db14	0001de78 ffffffff ffffffff 0001e908 000012c4
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000008	    8  <none>	77d03f3b
+	80000002	    2  <none>	77d040d9
+	80000007	    7  <none>	77d043e2
+	80000004	    4  <none>	77d04070
+	80000006	    6  <none>	77d03f50
+
+ 0001db28	0001de54 ffffffff ffffffff 0001e96c 000012a0
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e9ae	  324  NetpwNameValidate	71c4b789
+	1e99a	  304  NetpNetBiosReset	71c604f4
+	1e97a	  306  NetpNetBiosStatusToApiStatus	71c5a69f
+	1e954	  242  NetUserChangePassword	71c71c15
+	1e94a	  264  Netbios	71c50dcc
+	1e93a	   11  DsGetDcNameW	71c4c24e
+	1e92a	  210  NetServerEnum	71c75c41
+	1e916	  105  NetApiBufferFree	71c47ee0
+
+ 0001db3c	0001dc38 ffffffff ffffffff 0001f12e 00001084
+
+	DLL Name: CLUSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1ead0	   15  ClusterGetEnumCount	74deafda
+	1eae6	    7  CloseClusterNetInterface	74deb122
+	1eb02	   97  OpenClusterNetInterface	74deb018
+	1eb1c	   76  GetClusterNetInterfaceState	74deb1a1
+	1eb3a	   21  ClusterNetInterfaceControl	74de6956
+	1eb58	    9  CloseClusterNode	74de7765
+	1eb6c	   82  GetClusterNodeState	74de78fc
+	1eb82	   99  OpenClusterNode	74de765b
+	1eb94	   27  ClusterNodeCloseEnum	74de528f
+	1ebac	   31  ClusterNodeOpenEnum	74de5169
+	1ebc2	   28  ClusterNodeControl	74de66e5
+	1ebd8	  101  PauseClusterNode	74de796d
+	1ebec	  106  ResumeClusterNode	74de79cb
+	1ec00	   63  EvictClusterNodeEx	74de7a87
+	1ec16	   80  GetClusterNodeId	74de7842
+	1ec2a	   72  GetClusterInformation	74de5b58
+	1ec42	  114  SetClusterServiceAccountPassword	74de5630
+	1ec66	   46  ClusterResourceControl	74de6cfa
+	1ec80	   60  DeleteClusterResource	74de9579
+	1ec98	  113  SetClusterResourceName	74de96d1
+	1ecb2	   45  ClusterResourceCloseEnum	74de528f
+	1ecce	   49  ClusterResourceOpenEnum	74de9aa4
+	1ece8	   64  FailClusterResource	74de9732
+	1ecfe	   57  CreateClusterResource	74de937c
+	1ed16	   96  OpenClusterGroup	74de6e45
+	1ed2a	    6  CloseClusterGroup	74de6f4f
+	1ed3e	    4  ChangeClusterResourceGroup	74de984c
+	1ed5c	    0  AddClusterResourceDependency	74de9978
+	1ed7c	  103  RemoveClusterResourceDependency	74de99dc
+	1ed9e	    1  AddClusterResourceNode	74de98b0
+	1edb8	  104  RemoveClusterResourceNode	74de9914
+	1edd4	   79  GetClusterNetworkState	74deadcf
+	1edee	  110  SetClusterNetworkName	74deae40
+	1ee06	   22  ClusterNetworkCloseEnum	74de528f
+	1ee20	   26  ClusterNetworkOpenEnum	74deaf47
+	1ee3a	   23  ClusterNetworkControl	74de681c
+	1eaba	   98  OpenClusterNetwork	74deac46
+	1ea98	  111  SetClusterNetworkPriorityOrder	74de4f30
+	1ea82	    8  CloseClusterNetwork	74dead50
+	1ea6c	  100  OpenClusterResource	74de9444
+	1ea50	  112  SetClusterQuorumResource	74de4ebc
+	1ea38	   11  CloseClusterResource	74de94fa
+	1ea26	  109  SetClusterName	74de4de7
+	1ea14	   32  ClusterOpenEnum	74de5099
+	1ea06	   14  ClusterEnum	74de55c7
+	1e9f2	   12  ClusterCloseEnum	74de512c
+	1e9e4	   95  OpenCluster	74de4082
+	1e9c2	   13  ClusterControl	74de6a90
+	1eef4	  108  SetClusterGroupNodeList	74de70e5
+	1ef0e	   52  ClusterResourceTypeEnum	74de9d08
+	1ef28	   50  ClusterResourceTypeCloseEnum	74de9d85
+	1ef48	   54  ClusterResourceTypeOpenEnum	74de9c5b
+	1ef66	   51  ClusterResourceTypeControl	74de6485
+	1ef84	   61  DeleteClusterResourceType	74de9c04
+	1efa0	   58  CreateClusterResourceType	74de9ba1
+	1efbc	   84  GetClusterQuorumResource	74de54d7
+	1efd8	   71  GetClusterGroupState	74de6fce
+	1eff0	   18  ClusterGroupEnum	74de55c7
+	1f004	   24  ClusterNetworkEnum	74de55c7
+	1f01a	   29  ClusterNodeEnum	74de55c7
+	1f02c	   87  GetClusterResourceState	74de95d7
+	1f046	   47  ClusterResourceEnum	74de9b37
+	1f05c	   56  CreateClusterNotifyPort	74deab4d
+	1f076	   10  CloseClusterNotifyPort	74deaa4b
+	1f090	  102  RegisterClusterNotify	74dea8cb
+	1f0a8	   83  GetClusterNotify	74dea9b3
+	1eede	   55  CreateClusterGroup	74de6d3b
+	1f0bc	   94  OnlineClusterResource	74de9790
+	1f0d4	   92  OfflineClusterResource	74de97ee
+	1f0ee	   93  OnlineClusterGroup	74de730d
+	1f104	   91  OfflineClusterGroup	74de759f
+	1f11a	   90  MoveClusterGroup	74de73b8
+	1ee52	   74  GetClusterNetInterface	74deb212
+	1ee6c	   59  DeleteClusterGroup	74de75fd
+	1ee82	  107  SetClusterGroupName	74de7084
+	1ee98	   16  ClusterGroupCloseEnum	74de528f
+	1eeb0	   20  ClusterGroupOpenEnum	74de51fc
+	1eec8	   17  ClusterGroupControl	74de65ae
+	1e9d4	    5  CloseCluster	74de545e
+
+ 0001db50	0001df74 ffffffff ffffffff 0001f230 000013c0
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f15c	  455  RtlAnsiStringToUnicodeString	7c81a2ab
+	1f144	  779  RtlNtStatusToDosError	7c8296a2
+	1f13a	 1351  memmove	7c81b2ed
+	1f17c	  681  RtlInitAnsiString	7c81a431
+	1f190	  629  RtlFreeAnsiString	7c82b0be
+	1f1a4	  905  RtlUnicodeStringToAnsiString	7c82eab8
+	1f1c4	  688  RtlInitUnicodeString	7c81a469
+	1f224	 1300  _strnicmp	7c8394c5
+	1f206	  909  RtlUnicodeStringToOemString	7c80b099
+	1f1fc	 1377  toupper	7c83006a
+	1f1e8	  632  RtlFreeOemString	7c81143f
+	1f1dc	 1339  iswctype	7c819ed9
+
+ 0001db64	0001dea0 ffffffff ffffffff 0001f23a 000012ec
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8000000b	   11  <none>	71c043f9
+
+ 0001db78	0001dd78 ffffffff ffffffff 0001f274 000011c4
+
+	DLL Name: DNSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f260	  103  DnsValidateName_W	76ed6c26
+
+ 0001db8c	0001de90 ffffffff ffffffff 0001f29e 000012dc
+
+	DLL Name: Secur32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f28c	   25  GetUserNameExW	76f52191
+
+ 0001dba0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001440
+
+Type                Size     Rva      Offset
+  2        CodeView 00000024 00003230 00002630
+(format RSDS signature cb569f3134d8442dba640b7600a1aa2f age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 3
+010   Entry: ID: 0x000006, Value: 0x80000028
+028    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 6
+038     Entry: ID: 0x00003f, Value: 0x80000098
+098      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0a8       Entry: ID: 0x000409, Value: 0x000158
+158        Leaf: Addr: 0x02dde8, Size: 0x0000d2, Codepage: 0
+040     Entry: ID: 0x000042, Value: 0x800000b0
+0b0      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0c0       Entry: ID: 0x000409, Value: 0x000168
+168        Leaf: Addr: 0x02dec0, Size: 0x000214, Codepage: 0
+048     Entry: ID: 0x000043, Value: 0x800000c8
+0c8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0d8       Entry: ID: 0x000409, Value: 0x000178
+178        Leaf: Addr: 0x02e0d8, Size: 0x000288, Codepage: 0
+050     Entry: ID: 0x000045, Value: 0x800000e0
+0e0      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+0f0       Entry: ID: 0x000409, Value: 0x000188
+188        Leaf: Addr: 0x02e360, Size: 0x0000e6, Codepage: 0
+058     Entry: ID: 0x000046, Value: 0x800000f8
+0f8      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+108       Entry: ID: 0x000409, Value: 0x000198
+198        Leaf: Addr: 0x02e448, Size: 0x000146, Codepage: 0
+060     Entry: ID: 0x00004c, Value: 0x80000110
+110      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+120       Entry: ID: 0x000409, Value: 0x0001a8
+1a8        Leaf: Addr: 0x02e590, Size: 0x00035c, Codepage: 0
+018   Entry: ID: 0x00000b, Value: 0x80000068
+068    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+078     Entry: ID: 0x000001, Value: 0x80000128
+128      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+138       Entry: ID: 0x000409, Value: 0x0001b8
+1b8        Leaf: Addr: 0x021578, Size: 0x00c870, Codepage: 0
+020   Entry: ID: 0x000010, Value: 0x80000080
+080    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+090     Entry: ID: 0x000001, Value: 0x80000140
+140      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+150       Entry: ID: 0x000409, Value: 0x0001c8
+1c8        Leaf: Addr: 0x0211e0, Size: 0x000394, Codepage: 0
+ Resources start at offset: 0xcde8
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0001e352  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01020000  01020000  0001e800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         0000d8f0  01021000  01021000  0001ea00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

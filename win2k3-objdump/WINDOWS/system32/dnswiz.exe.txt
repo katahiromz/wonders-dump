@@ -1,0 +1,153 @@
+
+dnswiz.exe:     file format pei-i386
+dnswiz.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001965
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:14:24 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001200
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001965
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		000043bd
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001ea8 00000064 Import Directory [parts of .idata]
+Entry 2 00004000 000003c8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010a0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000011c8 00000040 Load Configuration Directory
+Entry b 00000250 00000058 Bound Import Directory
+Entry c 00001000 00000098 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001ea8
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001ea8	00001f0c ffffffff ffffffff 0000203a 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1fa4	  408  GetProcAddress	77e42dfb
+	1fb6	  375  GetModuleHandleA	77e42cd1
+	1fca	  665  QueryPerformanceCounter	77e425d8
+	1fe4	  469  GetTickCount	77e4193e
+	1ff4	  318  GetCurrentThreadId	77e419f7
+	200a	  315  GetCurrentProcessId	77e41d40
+	2020	  448  GetSystemTimeAsFileTime	77e41e46
+	21d0	  594  LocalFree	77e4282c
+	21dc	  431  GetStartupInfoA	77e4e861
+
+ 00001ebc	00001f44 ffffffff ffffffff 00002142 00001038
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2072	   18  ??3@YAXPAX@Z	77bb9507
+	211c	  156  __set_app_type	77bc44b8
+	212e	  242  _except_handler3	77bc4d50
+	214e	   16  ??1type_info@@UAE@XZ	77bb134e
+	20fe	  131  __p__commode	77baefda
+	20da	  158  __setusermatherr	77bda0a0
+	2174	   52  ?terminate@@YAXXZ	77bb235a
+	20ee	  187  _adjust_fdiv	77bee654
+	2166	  219  _controlfp	77bdb7a1
+	2048	   83  __CxxFrameHandler	77bb24b8
+	205c	   71  _CxxThrowException	77bb23d4
+	20ce	  320  _initterm	77bc8b58
+	20be	  112  __getmainargs	77baed5c
+	20b4	  173  _acmdln	77bed7c8
+	20ac	  666  exit	77bc8c7b
+	20a2	  205  _cexit	77bc8c9d
+	2094	   78  _XcptFilter	77bc20be
+	208c	  251  _exit	77bc8c8c
+	2082	  202  _c_exit	77bc8cac
+	210e	  136  __p__fmode	77baeff8
+
+ 00001ed0	00001f98 ffffffff ffffffff 000021b8 0000108c
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2194	   16  CoCreateInstance	77164edc
+	21a8	   58  CoInitialize	771a2ee1
+
+ 00001ee4	00001f34 ffffffff ffffffff 000021c2 00001028
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000009	    9  <none>	771072bd
+	80000006	    6  <none>	770fca84
+	80000002	    2  <none>	770fcb65
+
+ 00001ef8	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010a0
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001b 00001210 00000610
+(format NB10 signature d001803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x000368, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000011ee  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000007c  01003000  01003000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003c8  01004000  01004000  00001800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

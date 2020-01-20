@@ -1,0 +1,139 @@
+
+csrss.exe:     file format pei-i386
+csrss.exe
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x4a6810ea
+
+Characteristics 0x10e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:12:32 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000600
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000010ea
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		4a680000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	5
+MinorSubsystemVersion	2
+Win32Version		00000000
+SizeOfImage		00004000
+SizeOfHeaders		00000400
+CheckSum		0000be31
+Subsystem		00000001	(NT native)
+DllCharacteristics	00000400
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00003000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001344 0000003c Import Directory [parts of .idata]
+Entry 2 00002000 000003f0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00003000 00000028 Base Relocation Directory [.reloc]
+Entry 6 00001030 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000238 00000030 Bound Import Directory
+Entry c 00001000 00000030 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x4a681344
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001344	00001388 ffffffff ffffffff 0000140e 00001008
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	13f8	  382  NtTerminateProcess	77f4360b
+	13de	  837  RtlSetProcessIsCritical	77f72bb2
+	13ca	  383  NtTerminateThread	77f4361f
+	13b0	  353  NtSetInformationProcess	77f433c7
+	143e	   15  DbgBreakPoint	77f43847
+	144e	  441  RtlAllocateHeap	77f472dc
+	1460	  610  RtlFreeAnsiString	77f47d27
+	1474	  879  RtlUnicodeStringToAnsiString	77f482ba
+	1494	  754  RtlNormalizeProcessParams	77f5a11d
+
+ 00001358	00001380 ffffffff ffffffff 00001432 00001000
+
+	DLL Name: CSRSRV.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1418	   25  CsrServerInitialization	75a52e6b
+
+ 0000136c	00000000 00000000 00000000 00000000 00000000
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00001000 Chunk size 40 (0x28) Number of fixups 16
+	reloc    0 offset   7a [107a] HIGHLOW
+	reloc    1 offset   98 [1098] HIGHLOW
+	reloc    2 offset   b2 [10b2] HIGHLOW
+	reloc    3 offset   d5 [10d5] HIGHLOW
+	reloc    4 offset   e1 [10e1] HIGHLOW
+	reloc    5 offset  100 [1100] HIGHLOW
+	reloc    6 offset  153 [1153] HIGHLOW
+	reloc    7 offset  195 [1195] HIGHLOW
+	reloc    8 offset  1df [11df] HIGHLOW
+	reloc    9 offset  23c [123c] HIGHLOW
+	reloc   10 offset  26c [126c] HIGHLOW
+	reloc   11 offset  294 [1294] HIGHLOW
+	reloc   12 offset  2d5 [12d5] HIGHLOW
+	reloc   13 offset  32b [132b] HIGHLOW
+	reloc   14 offset  338 [1338] HIGHLOW
+	reloc   15 offset  33e [133e] HIGHLOW
+
+There is a debug directory in .text at 0x4a681030
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001a 0000104c 0000044c
+(format NB10 signature 6001803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x002060, Size: 0x00038c, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000004b0  4a681000  4a681000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .rsrc         000003f0  4a682000  4a682000  00000a00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .reloc        0000004a  4a683000  4a683000  00000e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,188 @@
+
+sfc.exe:     file format pei-i386
+sfc.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01001910
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Tue Sep 28 12:19:18 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00001000
+SizeOfInitializedData	00001a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001910
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000600
+CheckSum		00004944
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001b04 00000078 Import Directory [parts of .idata]
+Entry 2 00003000 000017e8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 00000068 Bound Import Directory
+Entry c 00001000 000000dc Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001b04
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001b04	00001bd0 ffffffff ffffffff 00001d96 00001054
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1d52	  105  __p__commode	78003e6a
+	1d42	  155  _adjust_fdiv	7803bb70
+	1d2e	  130  __setusermatherr	7800b426
+	1d62	  110  __p__fmode	78003e64
+	1da2	  180  _controlfp	78003c1e
+	1d70	  128  __set_app_type	78003e5a
+	1cfe	  102  __p___winitenv	7800bba4
+	1caa	  603  free	780010ed
+	1ca0	  732  wcscat	78002107
+	1c96	  744  wcsrchr	78003fdf
+	1c8c	  736  wcscpy	780020e2
+	1c80	  730  vswprintf	78025b2e
+	1c74	  727  vfwprintf	780259e1
+	1c6c	  272  _iob	7803bb90
+	1c62	  739  wcslen	780012ef
+	1d22	  268  _initterm	78001dea
+	1d10	  137  __wgetmainargs	78004051
+	1ce0	  208  _exit	7800b908
+	1cf6	  582  exit	7800269e
+	1ce8	   72  _XcptFilter	7800f7dc
+	1cbc	  491  _wcsnicmp	7802889c
+	1cd4	  682  setlocale	780044d7
+	1cc8	  487  _wcsicmp	78002635
+	1cb2	  751  wcstoul	78016b2e
+	1c58	  654  malloc	78001000
+	1d82	  199  _except_handler3	7800f56a
+
+ 00001b18	00001b7c ffffffff ffffffff 00001e30 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1e14	   26  AllocateAndInitializeSid	77d8919e
+	1dfc	   53  CheckTokenMembership	77d8a95b
+	1df2	  177  FreeSid	77d891d7
+	1de0	  435  RegSetValueExW	77d89348
+	1dd2	  415  RegOpenKeyW	77d88274
+	1dbe	  424  RegQueryValueExW	77d88078
+	1db0	  388  RegCloseKey	77d87d4d
+
+ 00001b2c	00001b9c ffffffff ffffffff 00001f08 00001020
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1eca	  166  FindFirstFileW	77e6b379
+	1eb4	  660  SetFileAttributesW	77e5f1d0
+	1edc	  144  ExpandEnvironmentStringsW	77e58178
+	1e96	  173  FindNextFileW	77e5ddf4
+	1e8a	  159  FindClose	77e58d24
+	1ea6	   93  DeleteFileW	77e6b264
+	1e6c	  489  LocalFree	77e6499c
+	1e5c	  360  GetStdHandle	77e63f05
+	1e78	  191  FormatMessageW	77e5aa62
+	1e4e	  296  GetFileType	77e6cac7
+	1e3e	  781  WriteConsoleW	77e6013e
+	1ef8	  301  GetLastError	77e5668c
+
+ 00001b40	00001c3c ffffffff ffffffff 00001f36 000010c0
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f22	  329  GetSystemMetrics	77de71fe
+	1f16	  692  wsprintfW	77de850e
+
+ 00001b54	00001c48 ffffffff ffffffff 00001f42 000010cc
+
+	DLL Name: sfc.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000006	    6  <none>	76912681
+	80000003	    3  <none>	769125e0
+	80000004	    4  <none>	76912621
+
+ 00001b68	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010e0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00003000
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+060       Entry: ID: 0x000409, Value: 0x000090
+090        Leaf: Addr: 0x0030d0, Size: 0x00096c, Codepage: 1252
+068       Entry: ID: 0x000411, Value: 0x0000a0
+0a0        Leaf: Addr: 0x003a3c, Size: 0x0006d8, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000070
+070      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+080       Entry: ID: 0x000409, Value: 0x0000b0
+0b0        Leaf: Addr: 0x004114, Size: 0x000364, Codepage: 1252
+088       Entry: ID: 0x000411, Value: 0x0000c0
+0c0        Leaf: Addr: 0x004478, Size: 0x000370, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+17e9  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+Corrupt .rsrc section detected!
+ Resources start at offset: 0xd0
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000f4a  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000003c  01002000  01002000  00001600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00001800  01003000  01003000  00001800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

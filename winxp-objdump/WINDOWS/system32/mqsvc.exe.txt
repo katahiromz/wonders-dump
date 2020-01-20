@@ -1,0 +1,131 @@
+
+mqsvc.exe:     file format pei-i386
+mqsvc.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001121
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:39:54 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00000600
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001121
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00004000
+SizeOfHeaders		00000400
+CheckSum		0000ffab
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000133c 00000050 Import Directory [parts of .idata]
+Entry 2 00003000 00000478 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001060 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001090 00000040 Load Configuration Directory
+Entry b 00000250 00000044 Bound Import Directory
+Entry c 00001000 00000050 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100133c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000133c	0000139c ffffffff ffffffff 000014a2 00001010
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	143a	  154  __setusermatherr	4cf0d695
+	144e	  182  _adjust_fdiv	4cf223d8
+	145e	  128  __p__commode	4cedf1a4
+	146e	  133  __p__fmode	4cedf1db
+	147c	  152  __set_app_type	4cef537c
+	148e	  237  _except_handler3	4cef5c94
+	14ae	  214  _controlfp	4cf0ee4f
+	142e	  315  _initterm	4cef9d67
+	141c	  164  __wgetmainargs	4cedee8a
+	140e	  165  __winitenv	4cf21a40
+	1406	  656  exit	4cef9e7e
+	13fc	  200  _cexit	4cef9eb6
+	13ee	   78  _XcptFilter	4cef2dae
+	13e6	  246  _exit	4cef9e9a
+	13dc	  197  _c_exit	4cef9ece
+
+ 00001350	0000138c ffffffff ffffffff 000014d0 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	14bc	  374  GetModuleHandleA	7c80b731
+
+ 00001364	00001394 ffffffff ffffffff 000014f6 00001008
+
+	DLL Name: MQQM.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	14de	   14  ?QMMain@@YGHHQAPBG@Z	5eecf8a4
+
+ 00001378	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001060
+
+Type                Size     Rva      Offset
+  2        CodeView 00000022 000010d8 000004d8
+(format RSDS signature 6b363918e80e4ec3aac4d29929ec0c65 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x003060, Size: 0x000414, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000050c  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000028  01002000  01002000  00000a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000478  01003000  01003000  00000c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,182 @@
+
+auditusr.exe:     file format pei-i386
+auditusr.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01003573
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:31:44 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00002e00
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00003573
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00006000
+SizeOfHeaders		00000400
+CheckSum		00009458
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000037a4 00000078 Import Directory [parts of .idata]
+Entry 2 00005000 000003e0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001100 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001288 00000040 Load Configuration Directory
+Entry b 00000248 00000074 Bound Import Directory
+Entry c 00001000 000000fc Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10037a4
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000037a4	00003894 ffffffff ffffffff 00003a7a 00001078
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	39a0	  816  wcsncpy	4cf0806b
+	3994	  557  _wcsnicmp	4cf06abb
+	3a86	  214  _controlfp	4cf0ee4f
+	3980	  807  wcschr	4cf07eb8
+	3976	  666  fgetwc	4cf00d37
+	396c	  753  rewind	4cf01983
+	3960	  684  fwprintf	4cf015ba
+	3956	  734  memcpy	4cf06f70
+	3a66	  237  _except_handler3	4cef5c94
+	3a54	  152  __set_app_type	4cef537c
+	3a46	  133  __p__fmode	4cedf1db
+	3a36	  128  __p__commode	4cedf1a4
+	3a26	  182  _adjust_fdiv	4cf223d8
+	3a12	  154  __setusermatherr	4cf0d695
+	3a06	  315  _initterm	4cef9d67
+	39f4	  164  __wgetmainargs	4cedee8a
+	39e6	  165  __winitenv	4cf21a40
+	39de	  656  exit	4cef9e7e
+	39d4	  200  _cexit	4cef9eb6
+	39c6	   78  _XcptFilter	4cef2dae
+	39be	  246  _exit	4cef9e9a
+	39b4	  197  _c_exit	4cef9ece
+	398a	  667  fgetws	4cf00d8e
+	39aa	  813  wcslen	4cf07fcc
+	394a	  756  setlocale	4cef3c31
+	3942	  319  _iob	4cf1fc80
+	3936	  553  _wcsicmp	4cf067bd
+	392c	  828  wprintf	4cf0225b
+	3922	  583  _wfopen	4cf001e7
+	3918	  736  memset	4cf075f0
+
+ 000037b8	0000381c ffffffff ffffffff 00003b06 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3aa2	  476  RegEnumValueW	77d87edd
+	3ab2	  485  RegOpenKeyExW	77d86a9f
+	3ac2	   88  ConvertStringSidToSidW	77da4437
+	3adc	  328  LookupAccountSidW	77d956e7
+	3af0	  326  LookupAccountNameW	77d95b39
+	3a94	  458  RegCloseKey	77d86c17
+
+ 000037cc	00003854 ffffffff ffffffff 00003c48 00001038
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3c16	  822  SetUnhandledExceptionFilter	7c8449fd
+	3bfa	  859  UnhandledExceptionFilter	7c863e6a
+	3be6	  315  GetCurrentProcess	7c80de85
+	3bd2	  842  TerminateProcess	7c801e1a
+	3bb8	  448  GetSystemTimeAsFileTime	7c8017e9
+	3ba2	  316  GetCurrentProcessId	7c8099b0
+	3b8c	  318  GetCurrentThreadId	7c8097b8
+	3b7c	  468  GetTickCount	7c80932e
+	3b62	  660  QueryPerformanceCounter	7c80a4b7
+	3b54	  586  LocalAlloc	7c809a1d
+	3b42	  582  LoadLibraryExW	7c801af5
+	3b32	  360  GetLastError	7c94fe01
+	3b20	  236  FormatMessageW	7c834ba7
+	3b14	  590  LocalFree	7c8099bf
+	3c34	  374  GetModuleHandleA	7c80b731
+
+ 000037e0	00003838 ffffffff ffffffff 00003cc8 0000101c
+
+	DLL Name: AUTHZ.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3c72	    5  AuthzFreeContext	77c25bfc
+	3c86	   13  AuthzInitializeResourceManager	77c24917
+	3ca8	   10  AuthzInitializeContextFromSid	77c258f3
+	3cea	   35  AuthziQueryAuditPolicy	77c279f5
+	3c56	    7  AuthzFreeResourceManager	77c271bb
+	3cd2	   36  AuthziSetAuditPolicy	77c278e7
+
+ 000037f4	00003910 ffffffff ffffffff 00003d14 000010f4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3d04	  693  RtlLengthSid	7c95317e
+
+ 00003808	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001100
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 000012d0 000006d0
+(format RSDS signature 2b4e6c8a81f4467b8b3e907650078a45 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x005060, Size: 0x000380, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002d1e  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000080  01004000  01004000  00003200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003e0  01005000  01005000  00003400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

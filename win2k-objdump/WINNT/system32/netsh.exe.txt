@@ -1,0 +1,291 @@
+
+netsh.exe:     file format pei-i386
+netsh.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01006970
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sun Oct 31 07:36:10 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		0000e200
+SizeOfInitializedData	00008000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00006970
+BaseOfCode		00001000
+BaseOfData		00010000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00028000
+SizeOfHeaders		00000600
+CheckSum		0002373d
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000e76c 0000008c Import Directory [parts of .idata]
+Entry 2 00022000 000051d8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001190 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000238 00000088 Bound Import Directory
+Entry c 00001000 0000018c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100e76c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000e76c	0000e7f8 ffffffff ffffffff 0000ea6e 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	ea5e	  358  OpenEventLogW	77d8419b
+	e992	  435  RegSetValueExW	77d89348
+	e9a4	  393  RegCreateKeyExW	77d88e5e
+	e9b6	  398  RegDeleteValueW	77d8d782
+	e9c8	  414  RegOpenKeyExW	77d88169
+	e9d8	  405  RegEnumValueW	77d8dcc7
+	e9e8	  419  RegQueryInfoKeyW	77d8a6a3
+	e9fc	  344  NotifyChangeEventLog	77d9d3f6
+	ea14	   57  CloseEventLog	77d9d3cc
+	ea24	  424  RegQueryValueExW	77d88078
+	ea38	  390  RegConnectRegistryW	77d98654
+	ea4e	  387  ReadEventLogW	77d9d7e5
+	e984	  388  RegCloseKey	77d87d4d
+
+ 0000e780	0000e830 ffffffff ffffffff 0000efb0 00001038
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	eac6	  482  LoadLibraryW	77e5ecdf
+	ea88	  341  GetProcessHeap	77e59596
+	ea9a	  442  HeapFree	77fc9c41
+	eaa6	  195  FreeLibrary	77e6ab8c
+	eab4	  339  GetProcAddress	77e6564b
+	ea7c	  436  HeapAlloc	77fc976b
+	ead6	  445  HeapReAlloc	77f87bec
+	eae4	  301  GetLastError	77e5668c
+	eaf4	  315  GetModuleHandleW	77e5dbbf
+	eb08	  514  MultiByteToWideChar	77e65f62
+	eb1e	  782  WriteFile	77e64a24
+	eb2a	  769  WideCharToMultiByte	77e5afd8
+	eb40	  191  FormatMessageW	77e5aa62
+	eb52	  489  LocalFree	77e6499c
+	eb5e	  360  GetStdHandle	77e63f05
+	eb6e	   30  CloseHandle	77e5a6c8
+	eb7c	  656  SetEvent	77e5670d
+	eb88	  521  OpenEventW	77e5a11c
+	eb96	  624  SetConsoleCursorPosition	77e96f9e
+	ebb2	  154  FillConsoleOutputAttribute	77e53a56
+	ebd0	  156  FillConsoleOutputCharacterW	77e96728
+	ebee	  256  GetConsoleScreenBufferInfo	77e65280
+	ec0c	  620  SetConsoleCtrlHandler	77e5d6fb
+	ec24	  617  SetConsoleActiveScreenBuffer	77e96ed4
+	ec44	  642  SetConsoleScreenBufferSize	77e96f41
+	ec62	   47  CreateConsoleScreenBuffer	77e96745
+	ec7e	   53  CreateEventW	77e640bf
+	ec8e	  594  ResetEvent	77e6310f
+	ec9c	  765  WaitForSingleObject	77e58778
+	ecb2	  764  WaitForMultipleObjectsEx	77e57914
+	ecce	  144  ExpandEnvironmentStringsW	77e58178
+	ecea	  398  GetVersion	77e6e6d6
+	ecf8	  140  ExitProcess	77e6b0bb
+	ed06	  599  RtlUnwind	77f86118
+	ed12	  393  GetTimeZoneInformation	77e65376
+	ed2c	  372  GetSystemTime	77e5d9bd
+	ed3c	  303  GetLocalTime	77e6c37a
+	ed4c	  715  TerminateProcess	77e5225c
+	ed60	  265  GetCurrentProcess	77e656d7
+	ed74	  731  UnhandledExceptionFilter	77e89fb7
+	ed90	  313  GetModuleFileNameW	77e560b2
+	eda6	  193  FreeEnvironmentStringsA	77e5229e
+	edc0	  194  FreeEnvironmentStringsW	77e632f0
+	edda	  281  GetEnvironmentStrings	77e64780
+	edf2	  283  GetEnvironmentStringsW	77e58bc7
+	ee0c	  219  GetCommandLineW	77e6c693
+	ee1e	  218  GetCommandLineA	77e571cc
+	ee30	  664  SetHandleCount	77e6138c
+	ee42	  296  GetFileType	77e6cac7
+	ee50	  358  GetStartupInfoA	77e6d000
+	ee62	  440  HeapDestroy	77e583d1
+	ee70	  438  HeapCreate	77e55304
+	ee7e	  753  VirtualFree	77e5d002
+	ee8c	  312  GetModuleFileNameA	77e63992
+	eea2	  476  LCMapStringA	77e6d78f
+	eeb2	  477  LCMapStringW	77e65ae4
+	eec2	  185  FlushFileBuffers	77e547d2
+	eed6	  750  VirtualAlloc	77e60ee2
+	eee6	  479  LoadLibraryA	77e68023
+	eef6	  361  GetStringTypeA	77e5e6e0
+	ef08	  364  GetStringTypeW	77e57a07
+	ef1a	  680  SetStdHandle	77e69290
+	ef2a	   58  CreateFileW	77e595a3
+	ef38	  661  SetFilePointer	77e6ed4c
+	ef4a	  573  ReadFile	77e548da
+	ef56	  652  SetEndOfFile	77e6f044
+	ef66	   36  CompareStringA	77e676ff
+	ef78	   37  CompareStringW	77e67e42
+	ef8a	  207  GetCPInfo	77e69041
+	ef96	  653  SetEnvironmentVariableA	77e6f57b
+
+ 0000e794	0000e970 ffffffff ffffffff 0000efd8 00001178
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	efca	  432  LoadStringW	77dee395
+	efbe	  692  wsprintfW	77de850e
+
+ 0000e7a8	0000e94c ffffffff ffffffff 0000f080 00001154
+
+	DLL Name: MPRAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f04e	   68  MprConfigGetGuidName	772d676a
+	f034	   71  MprConfigInterfaceEnum	772d5ecc
+	efe4	   72  MprConfigInterfaceGetHandle	772d5aca
+	f002	   67  MprConfigGetFriendlyName	772d6721
+	f01e	   66  MprConfigBufferFree	772d4333
+	f066	    8  MprAdminGetErrorString	772d8f8f
+
+ 0000e7bc	0000e968 ffffffff ffffffff 0000f0a2 00001170
+
+	DLL Name: RASAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f08c	   65  RasGetErrorStringW	7749b664
+
+ 0000e7d0	0000e97c ffffffff ffffffff 0000f0c4 00001184
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	f0b0	  477  RtlGUIDFromString	77faeea5
+
+ 0000e7e4	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001190
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00016800
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x000006, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 10
+030     Entry: ID: 0x000001, Value: 0x80000098
+098      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0a8       Entry: ID: 0x000409, Value: 0x0001f8
+1f8        Leaf: Addr: 0x022358, Size: 0x000028, Codepage: 1252
+0b0       Entry: ID: 0x000411, Value: 0x000208
+208        Leaf: Addr: 0x022380, Size: 0x000028, Codepage: 1252
+038     Entry: ID: 0x000007, Value: 0x800000b8
+0b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0c8       Entry: ID: 0x000409, Value: 0x000218
+218        Leaf: Addr: 0x0223a8, Size: 0x00043a, Codepage: 1252
+0d0       Entry: ID: 0x000411, Value: 0x000228
+228        Leaf: Addr: 0x0227e4, Size: 0x0002a8, Codepage: 1252
+040     Entry: ID: 0x000008, Value: 0x800000d8
+0d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+0e8       Entry: ID: 0x000409, Value: 0x000238
+238        Leaf: Addr: 0x022a8c, Size: 0x000b0c, Codepage: 1252
+0f0       Entry: ID: 0x000411, Value: 0x000248
+248        Leaf: Addr: 0x023598, Size: 0x000688, Codepage: 1252
+048     Entry: ID: 0x000009, Value: 0x800000f8
+0f8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+108       Entry: ID: 0x000409, Value: 0x000258
+258        Leaf: Addr: 0x023c20, Size: 0x000988, Codepage: 1252
+110       Entry: ID: 0x000411, Value: 0x000268
+268        Leaf: Addr: 0x0245a8, Size: 0x0006a8, Codepage: 1252
+050     Entry: ID: 0x00000a, Value: 0x80000118
+118      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+128       Entry: ID: 0x000409, Value: 0x000278
+278        Leaf: Addr: 0x024c50, Size: 0x0002f6, Codepage: 1252
+130       Entry: ID: 0x000411, Value: 0x000288
+288        Leaf: Addr: 0x024f48, Size: 0x000238, Codepage: 1252
+058     Entry: ID: 0x00000b, Value: 0x80000138
+138      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+148       Entry: ID: 0x000409, Value: 0x000298
+298        Leaf: Addr: 0x025180, Size: 0x00065c, Codepage: 1252
+150       Entry: ID: 0x000411, Value: 0x0002a8
+2a8        Leaf: Addr: 0x0257dc, Size: 0x000490, Codepage: 1252
+060     Entry: ID: 0x00003f, Value: 0x80000158
+158      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+168       Entry: ID: 0x000409, Value: 0x0002b8
+2b8        Leaf: Addr: 0x025c6c, Size: 0x000224, Codepage: 1252
+170       Entry: ID: 0x000411, Value: 0x0002c8
+2c8        Leaf: Addr: 0x025e90, Size: 0x000178, Codepage: 1252
+068     Entry: ID: 0x00007e, Value: 0x80000178
+178      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+188       Entry: ID: 0x000409, Value: 0x0002d8
+2d8        Leaf: Addr: 0x026008, Size: 0x00015a, Codepage: 1252
+190       Entry: ID: 0x000411, Value: 0x0002e8
+2e8        Leaf: Addr: 0x026164, Size: 0x0000a8, Codepage: 1252
+070     Entry: ID: 0x0003aa, Value: 0x80000198
+198      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+1a8       Entry: ID: 0x000409, Value: 0x0002f8
+2f8        Leaf: Addr: 0x02620c, Size: 0x000334, Codepage: 1252
+1b0       Entry: ID: 0x000411, Value: 0x000308
+308        Leaf: Addr: 0x026540, Size: 0x0001b8, Codepage: 1252
+078     Entry: ID: 0x0003ab, Value: 0x800001b8
+1b8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+1c8       Entry: ID: 0x000409, Value: 0x000318
+318        Leaf: Addr: 0x0266f8, Size: 0x0002ae, Codepage: 1252
+1d0       Entry: ID: 0x000411, Value: 0x000328
+328        Leaf: Addr: 0x0269a8, Size: 0x00017c, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000080
+080    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+090     Entry: ID: 0x000001, Value: 0x800001d8
+1d8      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+1e8       Entry: ID: 0x000409, Value: 0x000338
+338        Leaf: Addr: 0x026b24, Size: 0x000354, Codepage: 1252
+1f0       Entry: ID: 0x000411, Value: 0x000348
+348        Leaf: Addr: 0x026e78, Size: 0x000360, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+51d9  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+51e9   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0x358
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000e0ce  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00002e00  01010000  01010000  0000e800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00005200  01022000  01022000  00011600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

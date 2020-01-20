@@ -1,0 +1,302 @@
+
+mqdssvc.exe:     file format pei-i386
+mqdssvc.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01006d1c
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Jun 15 18:46:58 2009
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		0000f800
+SizeOfInitializedData	00001000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00006d1c
+BaseOfCode		00001000
+BaseOfData		00011000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00013000
+SizeOfHeaders		00000400
+CheckSum		0001c294
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00010000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0000f8dc 00000118 Import Directory [parts of .idata]
+Entry 2 00012000 00000420 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000012a0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00003238 00000040 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 0000025c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x100f8dc
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0000f8dc	0000fb90 00000000 00000000 0000fdea 0000119c
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1040a	  827  wcsncmp
+	10400	  296  _getche
+	103ee	  689  free
+	103e4	  740  malloc
+	10414	  820  wcscmp
+	1041e	  822  wcscpy
+	10428	  466  _resetstkoflw
+	103f6	  753  printf
+	fc5a	   85  __CxxFrameHandler
+	fc6e	   55  ?what@exception@@UBEPBDXZ
+	fc8a	  458  _purecall
+	fe3a	  221  _controlfp
+	fe26	   53  ?terminate@@YAXXZ
+	fe1c	  445  _onexit
+	fe0e	  111  __dllonexit
+	fdf6	   17  ??1type_info@@UAE@XZ
+	fdd8	  158  __set_app_type
+	fdca	  138  __p__fmode
+	fdba	  133  __p__commode
+	fdaa	  189  _adjust_fdiv
+	fd96	  160  __setusermatherr
+	fd8a	  322  _initterm
+	fd78	  170  __wgetmainargs
+	fd6a	  171  __winitenv
+	fd60	  207  _cexit
+	fd52	   79  _XcptFilter
+	fd4a	  253  _exit
+	fd40	  204  _c_exit
+	fd2c	  244  _except_handler3
+	fd24	  761  rand
+	fc96	   16  ??1exception@@UAE@XZ
+	fcae	   12  ??0exception@@QAE@XZ
+	fcc6	  555  _vsnwprintf
+	fcd4	  564  _wcsicmp
+	fd1a	  747  memmove
+	fd12	  668  exit
+	fcfc	   72  _CxxThrowException
+	fce0	   11  ??0exception@@QAE@ABV0@@Z
+	fc50	  825  wcslen
+
+ 0000f8f0	0000f9f4 00000000 00000000 0000ff54 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	104a0	  632  TraceEvent
+	104ae	  588  StartServiceCtrlDispatcherW
+	104cc	  528  RegisterServiceCtrlHandlerW
+	104ea	  581  SetServiceStatus
+	ff44	  494  RegOpenKeyExW
+	ff34	  483  RegEnumValueW
+	ff24	  634  TraceMessage
+	ff0c	  643  UnregisterTraceGuids
+	fef6	  530  RegisterTraceGuidsW
+	fede	  285  GetTraceLoggerHandle
+	fec8	  284  GetTraceEnableLevel
+	feb2	  283  GetTraceEnableFlags
+	fe7a	   86  ConvertStringSecurityDescriptorToSecurityDescriptorW
+	fe68	  467  RegCreateKeyExW
+	fe56	  518  RegSetValueExW
+	fe48	  460  RegCloseKey
+	104fe	  505  RegQueryValueExW
+	10512	  474  RegDeleteValueW
+	10524	  523  RegisterEventSourceW
+	1053c	  534  ReportEventW
+
+ 0000f904	0000fa48 00000000 00000000 000100a8 00001054
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	10564	  593  LeaveCriticalSection
+	1054c	  129  DeleteCriticalSection
+	1057c	  556  InterlockedIncrement
+	10594	  547  InitializeCriticalSection
+	105c8	  185  ExitProcess
+	105d6	  248  FreeLibrary
+	105e4	  416  GetProcAddress
+	105f6	  597  LoadLibraryW
+	1002c	  458  GetSystemTimeAsFileTime
+	10046	  864  TerminateProcess
+	1005a	  322  GetCurrentProcess
+	1006e	  880  UnhandledExceptionFilter
+	1008a	  844  SetUnhandledExceptionFilter
+	105b0	  152  EnterCriticalSection
+	ff62	  604  LocalFree
+	ff6e	  369  GetLastError
+	ff7e	  189  ExpandEnvironmentStringsW
+	ff9a	   52  CloseHandle
+	ffa8	  111  CreateThread
+	ffb8	  856  Sleep
+	ffc0	  382  GetModuleFileNameW
+	ffd6	  675  QueryPerformanceCounter
+	fff0	  479  GetTickCount
+	10000	  326  GetCurrentThreadId
+	10016	  323  GetCurrentProcessId
+
+ 0000f918	0000fad0 00000000 00000000 000100b6 000010dc
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000014	   20  <none>
+	80000012	   18  <none>
+	80000097	  151  <none>
+	80000011	   17  <none>
+	80000017	   23  <none>
+	80000015	   21  <none>
+	8000006f	  111  <none>
+	8000000c	   12  <none>
+	80000009	    9  <none>
+	80000002	    2  <none>
+	80000003	    3  <none>
+	80000034	   52  <none>
+
+ 0000f92c	0000fac8 00000000 00000000 000100d0 000010d4
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	100c2	  460  LoadStringW
+
+ 0000f940	0000fc40 00000000 00000000 00010100 0000124c
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	100ee	   60  CoInitializeEx
+	10682	   16  CoCreateInstance
+	100dc	  105  CoUninitialize
+
+ 0000f954	0000fb04 00000000 00000000 000101de 00001110
+
+	DLL Name: mqdssrv.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1017c	    1  DSCreateServersCache
+	10194	   15  DSLookupEnd
+	101a2	   16  DSLookupNext
+	101b2	   14  DSLookupBegin
+	101c2	    8  DSGetObjectPropertiesGuid
+	1016c	    4  DSExSetTimer
+	1015e	   25  DSTerminate
+	1014e	   20  DSServerInit
+	10138	   13  DSIsWeakenSecurity
+	1011c	   22  DSSetObjectPropertiesGuid
+	1010a	   19  DSRelaxSecurity
+
+ 0000f968	0000fb34 00000000 00000000 000103b8 00001140
+
+	DLL Name: mqsec.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	102a2	  159  MQSec_IsDC
+	102b0	   21  ??1CRestriction@@QAE@XZ
+	102ca	   17  ??1CColumns@@QAE@XZ
+	102e0	   34  ?Add@CColumns@@QAEXABK@Z
+	102fc	    3  ??0CColumns@@QAE@I@Z
+	10314	   45  ?AddRestriction@CRestriction@@QAEXPAU_GUID@@KK@Z
+	10348	   43  ?AddRestriction@CRestriction@@QAEXKKK@Z
+	10372	   11  ??0CRestriction@@QAE@I@Z
+	1038e	  162  MQSec_IsSystemSid
+	103a2	  152  MQSec_GetProcessSid
+	101fe	   58  ?DeleteFalconKeyValue@@YGJPBG@Z
+	10220	  186  SetFalconKeyValue
+	10234	   64  ?GetComputerDnsNameInternal@@YGJPAGPAK@Z
+	10260	   65  ?GetComputerNameInternal@@YGJPAGPAK@Z
+	101ea	  134  GetFalconKeyValue
+	10288	  140  MQSec_CanGenerateAudit
+
+ 0000f97c	0000fb78 00000000 00000000 000103d8 00001184
+
+	DLL Name: mqutil.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	103c2	    0  MQGetResourceHandle
+
+ 0000f990	0000fb80 00000000 00000000 00010494 0000118c
+
+	DLL Name: msvcp60.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	10476	  388  ??0bad_alloc@std@@QAE@PBD@Z
+	1045a	  490  ??1bad_alloc@std@@UAE@XZ
+	10438	  387  ??0bad_alloc@std@@QAE@ABV01@@Z
+
+ 0000f9a4	0000fab0 00000000 00000000 0001062a 000010bc
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1061a	   11  DsGetDcNameW
+	10606	  105  NetApiBufferFree
+
+ 0000f9b8	0000fc30 00000000 00000000 0001066c 0000123c
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	10658	  677  RtlImageNtHeader
+	1064a	  632  RtlFreeHeap
+	10638	  452  RtlAllocateHeap
+
+ 0000f9cc	0000fabc 00000000 00000000 00010696 000010c8
+
+	DLL Name: OLEAUT32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	80000006	    6  <none>
+	80000002	    2  <none>
+
+ 0000f9e0	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10012a0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000024 00003280 00002680
+(format RSDS signature 4d5b2481650b43db90f7bf6c55684d87 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x012060, Size: 0x0003bc, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000f6b0  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000600  01011000  01011000  0000fc00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000420  01012000  01012000  00010200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

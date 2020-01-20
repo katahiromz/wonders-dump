@@ -1,0 +1,143 @@
+
+wowfax.dll:     file format pei-i386
+wowfax.dll
+architecture: i386, flags 0x0000010b:
+HAS_RELOC, EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x5635031a
+
+Characteristics 0x210e
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	DLL
+
+Time/Date		Sat Aug 25 04:39:21 2001
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	0
+SizeOfCode		00000400
+SizeOfInitializedData	00000580
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0000031a
+BaseOfCode		00000300
+BaseOfData		00000600
+ImageBase		56350000
+SectionAlignment	00000080
+FileAlignment		00000080
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	5
+MinorSubsystemVersion	1
+Win32Version		00000000
+SizeOfImage		00000c80
+SizeOfHeaders		00000300
+CheckSum		000040d2
+Subsystem		00000001	(NT native)
+DllCharacteristics	00000000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00000700 00000028 Import Directory [parts of .idata]
+Entry 2 00000800 00000400 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000c00 00000030 Base Relocation Directory [.reloc]
+Entry 6 00000630 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 000002b8 0000001c Bound Import Directory
+Entry c 00000600 00000024 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in INIT at 0x56350700
+
+The Import Tables (interpreted INIT section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00000700	00000728 ffffffff ffffffff 000007de 00000600
+
+	DLL Name: WIN32K.SYS
+	vma:  Hint/Ord Member-Name Bound-To
+	074c	   26  EngCreatePalette	bf829f0d
+	0760	   55  EngFreeMem	bf86ead6
+	076e	   36  EngDeletePalette	bf89f706
+	0782	   13  EngAssociateSurface	bf86f6e9
+	0798	   20  EngCreateBitmap	bf834282
+	07aa	   40  EngDeleteSurface	bf82a6f6
+	07be	   46  EngEraseSurface	bf83c9fc
+	07d0	    8  EngAllocMem	bf86ea62
+
+ 00000714	00000000 00000000 00000000 00000000 00000000
+
+
+PE File Base Relocations (interpreted .reloc section contents)
+
+Virtual Address: 00000000 Chunk size 48 (0x30) Number of fixups 20
+	reloc    0 offset  339 [ 339] HIGHLOW
+	reloc    1 offset  5b0 [ 5b0] HIGHLOW
+	reloc    2 offset  5b6 [ 5b6] HIGHLOW
+	reloc    3 offset  5bc [ 5bc] HIGHLOW
+	reloc    4 offset  5c2 [ 5c2] HIGHLOW
+	reloc    5 offset  5c8 [ 5c8] HIGHLOW
+	reloc    6 offset  5ce [ 5ce] HIGHLOW
+	reloc    7 offset  5d4 [ 5d4] HIGHLOW
+	reloc    8 offset  5da [ 5da] HIGHLOW
+	reloc    9 offset  684 [ 684] HIGHLOW
+	reloc   10 offset  68c [ 68c] HIGHLOW
+	reloc   11 offset  694 [ 694] HIGHLOW
+	reloc   12 offset  69c [ 69c] HIGHLOW
+	reloc   13 offset  6a4 [ 6a4] HIGHLOW
+	reloc   14 offset  6ac [ 6ac] HIGHLOW
+	reloc   15 offset  6b4 [ 6b4] HIGHLOW
+	reloc   16 offset  6bc [ 6bc] HIGHLOW
+	reloc   17 offset  6c4 [ 6c4] HIGHLOW
+	reloc   18 offset  6cc [ 6cc] HIGHLOW
+	reloc   19 offset  6d4 [ 6d4] HIGHLOW
+
+There is a debug directory in .rdata at 0x56350630
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 0000064c 0000064c
+(format RSDS signature 6b13659537d7457dac5433df163ce185 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x000860, Size: 0x0003a0, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002de  56350300  56350300  00000300  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .rdata        0000006f  56350600  56350600  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .data         00000058  56350680  56350680  00000680  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 INIT          000000ea  56350700  56350700  00000700  2**2
+                  CONTENTS, ALLOC, LOAD, CODE
+  4 .rsrc         00000400  56350800  56350800  00000800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .reloc        00000032  56350c00  56350c00  00000c00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

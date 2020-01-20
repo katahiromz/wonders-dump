@@ -1,0 +1,164 @@
+
+lsass.exe:     file format pei-i386
+lsass.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01001258
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Fri Nov 19 07:17:07 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00000c00
+SizeOfInitializedData	00007000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001258
+BaseOfCode		00001000
+BaseOfData		00002000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000a000
+SizeOfHeaders		00000600
+CheckSum		0000acbc
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00006000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00001884 00000064 Import Directory [parts of .idata]
+Entry 2 00003000 00004650 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010a0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 00000060 Bound Import Directory
+Entry c 00001000 0000007c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1001884
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00001884	000018e8 ffffffff ffffffff 000019e2 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1964	  195  FreeLibrary	77e6ab8c
+	1972	  339  GetProcAddress	77e6564b
+	1984	  479  LoadLibraryA	77e68023
+	1994	  470  IsDebuggerPresent	77e51765
+	19a8	  696  SetUnhandledExceptionFilter	77e578a7
+	19c6	  655  SetErrorMode	77e665a2
+	19d6	  599  RtlUnwind	77f86118
+
+ 00001898	00001934 ffffffff ffffffff 00001ac0 0000104c
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1a58	  256  NtSetInformationProcess	77f8b7a5
+	1a98	   83  NtCreateEvent	77f942b4
+	1a8a	  154  NtOpenEvent	77f82964
+	1a72	   76  NtClose	77f88578
+	19f0	  337  RtlAppendUnicodeToString	77f90ab2
+	1a44	  284  NtTerminateThread	77f8f06d
+	1a38	   14  DbgPrint	77f9819d
+	1a28	   13  DbgBreakPoint	77f9f9df
+	1a0c	  525  RtlIntegerToUnicodeString	77f83c83
+	1aa8	  510  RtlInitUnicodeString	77f87124
+	1a7c	  249  NtSetEvent	77f8dbe6
+
+ 000018ac	00001908 ffffffff ffffffff 00001b64 00001020
+
+	DLL Name: LSASRV.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1b34	   78  LsapInitLsa	765914ae
+	1b50	   74  LsapCheckBootMode	765912a8
+	1b42	  120  ServiceInit	76591483
+	1aca	   76  LsapDsInitializeDsStateInfo	76586d1c
+	1b10	   77  LsapDsInitializePromoteInterface	76586c70
+	1b00	   73  LsapAuOpenSam	7659e447
+	1ae8	   75  LsapDsDebugInitialize	76585632
+
+ 000018c0	00001928 ffffffff ffffffff 00001b94 00001040
+
+	DLL Name: SAMSRV.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1b82	   40  SamIInitialize	763e96b0
+	1b70	   92  SampUsingDsData	763ed2a3
+
+ 000018d4	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010a0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00008200
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 1, IDs: 2
+010   Entry: name: [val: 800000e8 len 7]: MOFDATA, Value: 0x80000028
+028    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 1, IDs: 0
+038     Entry: name: [val: 800000f8 len 14]: LSAMOFRESOURCE, Value: 0x80000070
+070      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+080       Entry: ID: 0x000411, Value: 0x0000b8
+0b8        Leaf: Addr: 0x003118, Size: 0x0004a9, Codepage: 1252
+018   Entry: ID: 0x00000b, Value: 0x80000040
+040    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+050     Entry: ID: 0x000001, Value: 0x80000088
+088      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+098       Entry: ID: 0x000411, Value: 0x0000c8
+0c8        Leaf: Addr: 0x0035c4, Size: 0x003cbc, Codepage: 1252
+020   Entry: ID: 0x000010, Value: 0x80000058
+058    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+068     Entry: ID: 0x000001, Value: 0x800000a0
+0a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0b0       Entry: ID: 0x000411, Value: 0x0000d8
+0d8        Leaf: Addr: 0x007280, Size: 0x0003d0, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+4651  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+4661   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ String table starts at offset: 0xe8
+ Resources start at offset: 0x118
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000ba0  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000018  01002000  01002000  00001200  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00006d68  01003000  01003000  00001400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

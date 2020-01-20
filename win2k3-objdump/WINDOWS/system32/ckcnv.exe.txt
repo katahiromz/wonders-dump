@@ -1,0 +1,170 @@
+
+ckcnv.exe:     file format pei-i386
+ckcnv.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01001fe2
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:09:14 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00001800
+SizeOfInitializedData	00000600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00001fe2
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00005000
+SizeOfHeaders		00000400
+CheckSum		00006792
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002298 00000064 Import Directory [parts of .idata]
+Entry 2 00004000 000003d8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000012c8 00000040 Load Configuration Directory
+Entry b 00000250 0000006c Bound Import Directory
+Entry c 00001000 000000dc Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002298
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002298	0000230c ffffffff ffffffff 00002598 00001010
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2414	   77  CreateFileA	77e49a48
+	2422	  197  FindClose	77e47635
+	242e	  211  FindNextFileA	77e4e3f6
+	243e	   61  CopyFileA	77e6adae
+	244a	  201  FindFirstFileA	77e4e329
+	245c	  922  WritePrivateProfileSectionA	77e913d2
+	247a	  613  MoveFileExA	77e6ae08
+	2488	  479  GetVersionExA	77e46417
+	2498	  373  GetModuleFileNameA	77e4a14a
+	24ae	  124  DeleteFileA	77e5e384
+	2408	  683  ReadFile	77e48fee
+	24ce	  375  GetModuleHandleA	77e42cd1
+	24e2	  665  QueryPerformanceCounter	77e425d8
+	24fc	  469  GetTickCount	77e4193e
+	250c	  318  GetCurrentThreadId	77e419f7
+	2522	  315  GetCurrentProcessId	77e41d40
+	2538	  448  GetSystemTimeAsFileTime	77e41e46
+	2552	  849  TerminateProcess	77e6ccc7
+	2566	  314  GetCurrentProcess	77e41d1a
+	257a	  829  SetUnhandledExceptionFilter	77e42d45
+	23f6	   51  CompareFileTime	77e46583
+	23e6	  361  GetLastError	77f45ba5
+	24bc	  408  GetProcAddress	77e42dfb
+	2746	  431  GetStartupInfoA	77e4e861
+	23d8	   46  CloseHandle	77e41c83
+
+ 000022ac	00002380 ffffffff ffffffff 000026ae 00001084
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	260c	  251  _exit	77bc8c8c
+	2614	   78  _XcptFilter	77bc20be
+	2622	  205  _cexit	77bc8c9d
+	262c	  666  exit	77bc8c7b
+	2634	  173  _acmdln	77bed7c8
+	263e	  112  __getmainargs	77baed5c
+	264e	  320  _initterm	77bc8b58
+	265a	  158  __setusermatherr	77bda0a0
+	266e	  187  _adjust_fdiv	77bee654
+	2602	  202  _c_exit	77bc8cac
+	268e	  136  __p__fmode	77baeff8
+	269c	  156  __set_app_type	77bc44b8
+	26ba	  219  _controlfp	77bdb7a1
+	25dc	  790  strstr	77bd4b20
+	25b8	  242  _except_handler3	77bc4d50
+	25ae	  792  strtok	77bd4ba6
+	25a6	  654  atoi	77bac155
+	25f6	  517  _strnicmp	77bd33ec
+	267e	  131  __p__commode	77baefda
+	25e6	   17  ??2@YAPAXI@Z	77bb94db
+	25cc	   18  ??3@YAXPAX@Z	77bb9507
+
+ 000022c0	000022fc ffffffff ffffffff 000026fc 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	26c8	  492  RegQueryValueExA	77da3a49
+	26ec	  291  GetUserNameA	77da8a06
+	26dc	  482  RegOpenKeyExA	77da3c62
+
+ 000022d4	00002374 ffffffff ffffffff 0000273a 00001078
+
+	DLL Name: WININET.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	270a	    0  CommitUrlCacheEntryA	760f2970
+	2722	   63  GetUrlCacheEntryInfoA	760f20cd
+
+ 000022e8	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010e0
+
+Type                Size     Rva      Offset
+  2        CodeView 0000001a 00001310 00000710
+(format NB10 signature 9a00803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x004060, Size: 0x000374, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001758  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000058  01003000  01003000  00001c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003d8  01004000  01004000  00001e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

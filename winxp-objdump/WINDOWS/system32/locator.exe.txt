@@ -1,0 +1,253 @@
+
+locator.exe:     file format pei-i386
+locator.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010119ff
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Apr 14 03:30:50 2008
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00011a00
+SizeOfInitializedData	00000800
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000119ff
+BaseOfCode		00001000
+BaseOfData		00013000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	1
+MajorImageVersion	5
+MinorImageVersion	1
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00015000
+SizeOfHeaders		00000400
+CheckSum		00020f48
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00011ebc 000000b4 Import Directory [parts of .idata]
+Entry 2 00014000 000003d0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000011f0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 000032b0 00000040 Load Configuration Directory
+Entry b 00000250 000000c4 Bound Import Directory
+Entry c 00001000 000001e8 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1011ebc
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00011ebc	000120c4 ffffffff ffffffff 000122da 00001154
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1223e	   78  _XcptFilter	4cef2dae
+	12236	  246  _exit	4cef9e9a
+	1222c	  197  _c_exit	4cef9ece
+	12222	  820  wcsstr	4cf08180
+	12218	  761  sprintf	4ceff931
+	1220e	  825  wcstoul	4ceddc4a
+	12202	  786  swprintf	4ceff9c8
+	121fa	  645  atol	4cedbe7b
+	121f2	  644  atoi	4cedbf18
+	121e8	  807  wcschr	4cf07eb8
+	1224c	  200  _cexit	4cef9eb6
+	121cc	  360  _local_unwind2	4cef54a7
+	121c4	  749  rand	4cef71d3
+	121bc	  791  time	4cf0aecf
+	121b4	  763  srand	4cef71bc
+	121a8	  553  _wcsicmp	4cf067bd
+	1219c	  449  _purecall	4cef5f0d
+	12188	  237  _except_handler3	4cef5c94
+	1217e	  808  wcscmp	4cf07ee3
+	12174	  813  wcslen	4cf07fcc
+	1216a	  810  wcscpy	4cf07e94
+	12256	  656  exit	4cef9e7e
+	1225e	  110  __initenv	4cf21a38
+	1226a	  109  __getmainargs	4cedeeeb
+	1227a	  315  _initterm	4cef9d67
+	12286	  154  __setusermatherr	4cf0d695
+	1229a	  182  _adjust_fdiv	4cf223d8
+	122aa	  128  __p__commode	4cedf1a4
+	122ba	  133  __p__fmode	4cedf1db
+	122c8	  152  __set_app_type	4cef537c
+	122e6	  106  __dllonexit	4cef4e51
+	122f4	  436  _onexit	4cef4df8
+	122fe	  214  _controlfp	4cf0ee4f
+	121de	  806  wcscat	4cf07e61
+	12162	  677  free	4ceec21b
+	12158	  728  malloc	4ceec407
+
+ 00011ed0	00011f7c ffffffff ffffffff 0001235c 0000100c
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	12320	  518  RegisterServiceCtrlHandlerW	77da3e57
+	1230c	  571  SetServiceStatus	77da3231
+	1233e	  578  StartServiceCtrlDispatcherW	77da357d
+
+ 00011ee4	00011f8c ffffffff ffffffff 00012600 0000101c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	12544	  318  GetCurrentThreadId	7c8097b8
+	1252a	  660  QueryPerformanceCounter	7c80a4b7
+	12516	  692  ReleaseSemaphore	7c80c03d
+	12502	  105  CreateSemaphoreW	7c810116
+	124ee	  272  GetComputerNameW	7c8316b7
+	124de	  108  CreateThread	7c8106c7
+	124b6	  412  GetProcessHeap	7c80ac51
+	124a6	  360  GetLastError	7c94fe01
+	12498	  182  ExitProcess	7c81cafa
+	12488	  468  GetTickCount	7c80932e
+	12476	  553  IsBadStringPtrW	7c80a66c
+	12468	  183  ExitThread	7c80c0e8
+	1255a	  316  GetCurrentProcessId	7c8099b0
+	1244a	  678  ReadFile	7c801812
+	12438	   90  CreateMailslotW	7c82ccd4
+	1242a	   82  CreateFileW	7c8107f0
+	1241e	  911  WriteFile	7c810e17
+	12410	   49  CloseHandle	7c809bd7
+	123f8	  150  EnterCriticalSection	7c941000
+	123e0	  579  LeaveCriticalSection	7c9410e0
+	123c8	  127  DeleteCriticalSection	7c95135a
+	123ac	  536  InitializeCriticalSection	7c809f81
+	12394	  540  InterlockedDecrement	7c80980a
+	1237c	  544  InterlockedIncrement	7c8097f6
+	1236a	  665  RaiseException	7c812a99
+	125ec	  374  GetModuleHandleA	7c80b731
+	125ce	  822  SetUnhandledExceptionFilter	7c8449fd
+	125b2	  859  UnhandledExceptionFilter	7c863e6a
+	12570	  448  GetSystemTimeAsFileTime	7c8017e9
+	1258a	  842  TerminateProcess	7c801e1a
+	12456	  796  SetMailslotInfo	7c82cdd0
+	124c8	  894  WaitForSingleObject	7c802530
+	1259e	  315  GetCurrentProcess	7c80de85
+
+ 00011ef8	00012034 ffffffff ffffffff 000127ac 000010c4
+
+	DLL Name: RPCRT4.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	126b0	  391  RpcMgmtSetCancelTimeout	77e42776
+	126ca	  468  RpcStringBindingComposeW	77e3ed21
+	126e6	  470  RpcStringBindingParseW	77e3e9b6
+	12700	  327  RpcBindingFromStringBindingW	77e3eac5
+	12720	  486  UuidFromStringW	77e61413
+	1269e	  325  RpcBindingFree	77e3b3d8
+	12750	  418  RpcServerListen	77e5f7bd
+	12762	  435  RpcServerUseProtseqEpW	77e4dd7d
+	1277c	  421  RpcServerRegisterIf	77e5f8ae
+	12792	  396  RpcMgmtWaitServerListen	77e64892
+	1268e	  490  UuidToStringW	77e579c6
+	1267c	  472  RpcStringFreeW	77e3e75e
+	12668	  408  RpcRaiseException	77e6042e
+	12650	  375  RpcImpersonateClient	77e3a436
+	1263e	  410  RpcRevertToSelf	77e3b487
+	12632	  488  UuidIsNil	77e7f149
+	12620	  260  NdrServerCall2	77eb46d5
+	12732	  395  RpcMgmtStopServerListening	77e648e7
+	1260e	  127  NdrClientCall2	77eb44d0
+
+ 00011f0c	00012014 ffffffff ffffffff 0001285e 000010a4
+
+	DLL Name: NETAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1283e	  210  NetServerEnum	59265313
+	12814	  183  NetRegisterDomainNameChangeNotification	5926173e
+	12804	   11  DsGetDcNameW	5925d189
+	127f0	  105  NetApiBufferFree	59257a00
+	127cc	   34  DsRoleGetPrimaryDomainInformation	5925cfdd
+	127b8	   30  DsRoleFreeMemory	5925cedd
+	1284e	  150  NetGetDCName	5928f52f
+
+ 00011f20	00011f70 ffffffff ffffffff 0001286c 00001000
+
+	DLL Name: ACTIVEDS.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8000000f	   15  <none>	76dcef81
+	8000000d	   13  <none>	76dcf17b
+
+ 00011f34	0001208c ffffffff ffffffff 0001298e 0000111c
+
+	DLL Name: adsldpc.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1296a	   16  ADSIGetNextRow	76de0541
+	1295a	   13  ADSIGetColumn	76de057b
+	12948	   12  ADSIFreeColumn	76de05ba
+	1292e	   22  ADSISetSearchPreference	76de048d
+	1291a	   11  ADSIExecuteSearch	76de04ba
+	12902	    8  ADSICloseSearchHandle	76de050e
+	128e8	   17  ADSIGetObjectAttributes	76de040c
+	128ce	   21  ADSISetObjectAttributes	76de03d0
+	128b8	    9  ADSICreateDSObject	76de044b
+	128a4	   20  ADSIOpenDSObject	76de0661
+	1288e	   10  ADSIDeleteDSObject	76de046f
+	1287a	    7  ADSICloseDSObject	76de082a
+	1297c	   14  ADSIGetFirstRow	76de0524
+
+ 00011f48	00012084 ffffffff ffffffff 000129a6 00001114
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1299a	  729  wsprintfW	77cfa9b6
+
+ 00011f5c	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10011f0
+
+Type                Size     Rva      Offset
+  2        CodeView 00000024 000032f8 000026f8
+(format RSDS signature 06f65771c787473083ab3cd6033a7d2f age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x014060, Size: 0x000370, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000119b2  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000318  01013000  01013000  00011e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003d0  01014000  01014000  00012200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

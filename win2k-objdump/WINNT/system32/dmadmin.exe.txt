@@ -1,0 +1,381 @@
+
+dmadmin.exe:     file format pei-i386
+dmadmin.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x0101eab0
+
+Characteristics 0x31f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Wed Dec 01 04:50:15 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		0001fa00
+SizeOfInitializedData	00004000
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	0001eab0
+BaseOfCode		00001000
+BaseOfData		00021000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00026000
+SizeOfHeaders		00000600
+CheckSum		00026467
+Subsystem		00000002	(Windows GUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 0001f534 000000f0 Import Directory [parts of .idata]
+Entry 2 00025000 00000538 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001380 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000248 000000f0 Bound Import Directory
+Entry c 00001000 00000374 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x101f534
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 0001f534	0001f7dc ffffffff ffffffff 0001fb56 000011b8
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1f998	  736  wcscpy	780020e2
+	1fa46	  657  mbtowc	78002d93
+	1fa50	   96  __mb_cur_max	7803b368
+	1fa60	  596  fopen	78022aa9
+	1fa68	  585  fclose	78012188
+	1fa72	  588  fflush	780114fa
+	1fa7c	  692  strchr	780127ce
+	1fa86	  456  _strupr	78028531
+	1fa90	  238  _ftol	78001bf1
+	1fa98	  732  wcscat	78002107
+	1faa2	  687  sprintf	780253ca
+	1faac	  208  _exit	7800b908
+	1fab4	   72  _XcptFilter	7800f7dc
+	1fac2	   99  __p___initenv	7800bb9e
+	1fad2	   88  __getmainargs	78003e70
+	1fae2	  268  _initterm	78001dea
+	1faee	  130  __setusermatherr	7800b426
+	1fb02	  155  _adjust_fdiv	7803bb70
+	1fb12	  105  __p__commode	78003e6a
+	1fb22	  110  __p__fmode	78003e64
+	1fb30	  128  __set_app_type	78003e5a
+	1fb70	  387  _onexit	78004446
+	1fb7a	  180  _controlfp	78003c1e
+	1fb42	  199  _except_handler3	7800f56a
+	1fb62	   85  __dllonexit	78002131
+	1fa0a	  496  _wcsupr	780289c0
+	1f9ea	  741  wcsncmp	78028f1d
+	1fa00	  734  wcscmp	780012b8
+	1fa1c	  654  malloc	78001000
+	1fa14	  603  free	780010ed
+	1f9b8	  746  wcsstr	78028f97
+	1f9c2	  582  exit	7800269e
+	1f9ca	   15  ??2@YAPAXI@Z	780021ee
+	1f9da	   16  ??3@YAXPAX@Z	78001f56
+	1fa3c	  742  wcsncpy	78012737
+	1fa30	  723  towupper	7801685e
+	1fa26	  661  memmove	780030b5
+	1f9ae	  739  wcslen	780012ef
+	1f9f4	  656  mbstowcs	78003023
+	1f9a2	  712  swprintf	78002a18
+
+ 0001f548	0001f624 ffffffff ffffffff 0001fd56 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	1fba6	  444  RegisterServiceCtrlHandlerW	77d995e7
+	1fd16	  413  RegOpenKeyExA	77d882ac
+	1fbc4	  479  SetServiceStatus	77d99694
+	1fbd8	  388  RegCloseKey	77d87d4d
+	1fb88	  486  StartServiceCtrlDispatcherW	77d990e4
+	1fbfa	  414  RegOpenKeyExW	77d88169
+	1fc0a	  381  QueryServiceStatus	77d94e34
+	1fbe6	  424  RegQueryValueExW	77d88078
+	1fc36	  363  OpenServiceW	77d93d01
+	1fc46	  361  OpenSCManagerW	77d93c56
+	1fc20	   58  CloseServiceHandle	77d93df4
+	1fc70	  423  RegQueryValueExA	77d8858e
+	1fc84	  412  RegOpenKeyA	77d883fa
+	1fc58	  440  RegisterEventSourceW	77d99721
+	1fcaa	  450  ReportEventW	77d93800
+	1fd46	  396  RegDeleteKeyW	77d93755
+	1fd36	  487  StartServiceW	77d99027
+	1fd26	  395  RegDeleteKeyA	77d8de84
+	1fcba	  260  InitiateSystemShutdownW	77db3dd5
+	1fc92	  136  DeregisterEventSource	77d9294e
+	1fd06	  438  RegUnLoadKeyW	77db4fcc
+	1fcf8	  409  RegLoadKeyW	77d83fce
+	1fce6	  393  RegCreateKeyExW	77d88e5e
+	1fcd4	  435  RegSetValueExW	77d89348
+
+ 0001f55c	0001f6c4 ffffffff ffffffff 00020228 000010a0
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2008e	   90  DeleteCriticalSection	77f877e0
+	20202	  514  MultiByteToWideChar	77e65f62
+	1fece	  315  GetModuleHandleW	77e5dbbf
+	20938	   55  CreateFileA	77e62b8d
+	1fee2	  489  LocalFree	77e6499c
+	1fec2	  822  lstrlenW	77e5cd5c
+	20218	  479  LoadLibraryA	77e68023
+	201ec	  769  WideCharToMultiByte	77e5afd8
+	201d6	  369  GetSystemDirectoryW	77e6ca3a
+	201c8	  521  OpenEventW	77e5a11c
+	201b8	  467  IsBadWritePtr	77e65ddb
+	201ac	  815  lstrcpyA	77e57e39
+	2019a	   37  CompareStringW	77e67e42
+	2018a	  461  IsBadCodePtr	77e58707
+	20176	  225  GetComputerNameW	77e5f6fe
+	20168	  485  LocalAlloc	77e64911
+	20158	  668  SetLastError	77e6c4e4
+	20146	  716  TerminateThread	77e5e2c6
+	20136	  596  ResumeThread	77e56f37
+	20124	  166  FindFirstFileW	77e6b379
+	20118	  159  FindClose	77e58d24
+	20102	  268  GetCurrentThreadId	77e59aa2
+	200f2	  482  LoadLibraryW	77e5ecdf
+	200e0	  339  GetProcAddress	77e6564b
+	200ca	  291  GetFileAttributesW	77e661ba
+	1fd64	  553  QueryDosDeviceW	77e6abb3
+	1fd76	  707  Sleep	77e54b74
+	1fd7e	  442  HeapFree	77fc9c41
+	1fd8a	  341  GetProcessHeap	77e59596
+	1fd9c	   99  DeviceIoControl	77e675d0
+	1fdae	   30  CloseHandle	77e5a6c8
+	1fdbc	   58  CreateFileW	77e595a3
+	1fdca	  436  HeapAlloc	77fc976b
+	1fdd6	   87  DefineDosDeviceW	77e5535f
+	1fdea	  280  GetDriveTypeW	77e5fb65
+	1fdfa	  301  GetLastError	77e5668c
+	1fe0a	  812  lstrcmpiA	77e6a711
+	1fe16	  813  lstrcmpiW	77e5aab8
+	1fe22	   77  CreateThread	77e66510
+	1fe32	   53  CreateEventW	77e640bf
+	1fe42	  656  SetEvent	77e5670d
+	1fe4e	  765  WaitForSingleObject	77e58778
+	1fe64	   75  CreateSemaphoreW	77e6c407
+	1fe78	  532  OpenSemaphoreW	77e5c21b
+	1fe8a	  453  InitializeCriticalSection	77e58d0f
+	1fea6	  655  SetErrorMode	77e665a2
+	1feb6	  810  lstrcmpW	77e6016c
+	200a6	  459  InterlockedIncrement	77e64a02
+	200be	  821  lstrlenA	77e67334
+	1feee	  191  FormatMessageW	77e5aa62
+	1ff00	  478  LeaveCriticalSection	77f8aa7d
+	1ff18	  111  EnterCriticalSection	77f8aa4c
+	1ff30	  573  ReadFile	77e548da
+	1ff3c	  466  IsBadStringPtrW	77e6a7e5
+	1ff4e	  464  IsBadReadPtr	77e60c3b
+	1ff5e	  816  lstrcpyW	77e5a1a4
+	1ff6a	  183  FindVolumeMountPointClose	77e5befb
+	1ff86	  176  FindNextVolumeMountPointW	77e8f286
+	1ffa2	  404  GetVolumeNameForVolumeMountPointW	77e54b1d
+	1ffc6	  807  lstrcatW	77e66133
+	1ffd2	  169  FindFirstVolumeMountPointW	77e8ef23
+	1fff0	  182  FindVolumeClose	77e8eae8
+	20002	  177  FindNextVolumeW	77e8e849
+	20014	  170  FindFirstVolumeW	77e8e5fc
+	20028	  701  SetVolumeMountPointW	77e8f967
+	20040	   98  DeleteVolumeMountPointW	77e8fe5e
+	2005a	  195  FreeLibrary	77e6ab8c
+	20068	  456  InterlockedDecrement	77e64a13
+	20080	  141  ExitThread	77e606cf
+
+ 0001f570	0001f8b8 ffffffff ffffffff 00020338 00001294
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	202b6	  505  RegisterClassW	77dee852
+	20322	  487  PostThreadMessageW	77dee4b8
+	20316	  692  wsprintfW	77de850e
+	20304	  135  DefWindowProcW	77de44a7
+	202f2	  485  PostQuitMessage	77e04584
+	202e2	  144  DestroyWindow	77de736e
+	202d6	  419  LoadIconW	77dee175
+	202c8	  417  LoadCursorW	77dee0ff
+	202a4	   91  CreateWindowExW	77de7d01
+	20296	  623  ShowWindow	77de7181
+	20286	  484  PostMessageW	77de35ac
+	20278	  305  GetMessageW	77de2e6c
+	20250	  152  DispatchMessageW	77de2eff
+	20264	  647  TranslateMessage	77de3669
+	20236	   17  BroadcastSystemMessageW	77e03994
+
+ 0001f584	0001f918 ffffffff ffffffff 00020520 000012f4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	20462	  390  RtlCreateUnicodeString	77f95246
+	2050a	  119  NtFlushBuffersFile	77f8f8e7
+	204ec	  450  RtlExtendedIntegerMultiply	77f93dd5
+	204d0	  166  NtOpenSymbolicLinkObject	77f87339
+	204b4	  205  NtQuerySymbolicLinkObject	77f908a5
+	204a6	  217  NtReadFile	77f8fb5d
+	20498	  296  NtWriteFile	77f891b0
+	20486	  126  NtFsControlFile	77f8bf26
+	2047c	   76  NtClose	77f88578
+	2036a	  110  NtDeviceIoControlFile	77f96bd7
+	20454	  156  NtOpenFile	77f8b5b4
+	2043c	  475  RtlFreeUnicodeString	77f8b537
+	20420	  207  NtQuerySystemInformation	77f95bbd
+	20400	  645  RtlUnicodeStringToAnsiString	77f8e5ec
+	203ec	  469  RtlFreeAnsiString	77f8b537
+	203cc	  451  RtlExtendedLargeIntegerDivide	77f8ef95
+	203b6	  327  RtlAdjustPrivilege	77f87347
+	203a2	  208  NtQuerySystemTime	77f8e546
+	20382	  213  NtQueryVolumeInformationFile	77f87422
+	20352	  510  RtlInitUnicodeString	77f87124
+	20344	  154  NtOpenEvent	77f82964
+
+ 0001f598	0001f970 ffffffff ffffffff 000205de 0000134c
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	20550	   86  CoTaskMemRealloc	77a25cb0
+	2052a	   80  CoSetProxyBlanket	77a68e00
+	2053e	   84  CoTaskMemAlloc	77a230b0
+	205b6	   89  CoUninitialize	77a26984
+	2058c	   51  CoInitializeSecurity	77a3af53
+	205a4	   50  CoInitializeEx	77a26810
+	205c8	   77  CoRevokeClassObject	77a3eb25
+	20564	   85  CoTaskMemFree	77a2309e
+	20574	   67  CoRegisterClassObject	77a3a6ca
+
+ 0001f5ac	0001f880 ffffffff ffffffff 00020690 0000125c
+
+	DLL Name: RPCRT4.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	20618	  393  RpcServerUnregisterIf	77d29bba
+	205fa	  445  UuidEqual	77d340ae
+	20676	  402  RpcServerUseProtseqEpW	77d27a34
+	20660	  389  RpcServerRegisterIf	77d1166c
+	2064e	  386  RpcServerListen	77d1169f
+	20630	  365  RpcMgmtStopServerListening	77d39a3c
+	20606	  447  UuidFromStringW	77d33dea
+	205e8	  255  NdrServerCall2	77d71920
+
+ 0001f5c0	0001f688 ffffffff ffffffff 000207fe 00001064
+
+	DLL Name: CFGMGR32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	206dc	   94  CM_Get_Device_Interface_List_SizeW	7784189e
+	2069c	  160  CM_Reenumerate_DevNode_Ex	77892de0
+	206b8	   92  CM_Get_Device_Interface_List_ExW	77844f04
+	2073e	  133  CM_Locate_DevNodeW	778416f8
+	20702	   68  CM_Get_DevNode_Registry_Property_ExW	7784a6c4
+	2072a	  116  CM_Get_Parent_Ex	77897dbc
+	20784	   90  CM_Get_Device_Interface_ListW	77841968
+	20754	   72  CM_Get_Device_IDW	77898465
+	20768	   84  CM_Get_Device_ID_Size_Ex	77841ce6
+	207dc	   82  CM_Get_Device_ID_List_Size_ExW	77898214
+	207a4	   70  CM_Get_DevNode_Status_Ex	7784bfe2
+	207c0	   78  CM_Get_Device_ID_List_ExW	77842149
+
+ 0001f5d4	0001f8a4 ffffffff ffffffff 0002088c 00001280
+
+	DLL Name: SETUPAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	20850	  386  SetupDiOpenDeviceInterfaceW	77841999
+	2086e	  301  SetupDiCreateDeviceInfoList	77841985
+	2082c	  349  SetupDiGetDeviceInterfaceDetailW	7784b51b
+	2080c	  314  SetupDiDestroyDeviceInfoList	778464ec
+
+ 0001f5e8	0001f6bc ffffffff ffffffff 000208b0 00001098
+
+	DLL Name: CLUSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2089a	   82  GetNodeClusterState	737e34e0
+
+ 0001f5fc	0001f8f8 ffffffff ffffffff 0002092c 000012d4
+
+	DLL Name: dmutil.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2091c	   10  SetErrorData	71cb13b0
+	2090c	    6  GetErrorData	71cb142b
+	208fc	    7  RgszwDupRgszw	71cb1eb5
+	208ea	    9  RgszwFromValist	71cb1b54
+	208da	    8  RgszwFromArgs	71cb1e5c
+	208ce	    5  FreeRgszw	71cb1e73
+	208bc	   17  TranslateError	71cb1390
+
+ 0001f610	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001380
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00024000
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 3
+010   Entry: ID: 0x000006, Value: 0x80000028
+028    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+038     Entry: ID: 0x00003f, Value: 0x80000070
+070      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+080       Entry: ID: 0x000411, Value: 0x0000b8
+0b8        Leaf: Addr: 0x0250e8, Size: 0x000038, Codepage: 1252
+018   Entry: ID: 0x00000b, Value: 0x80000040
+040    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+050     Entry: ID: 0x000001, Value: 0x80000088
+088      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+098       Entry: ID: 0x000411, Value: 0x0000c8
+0c8        Leaf: Addr: 0x025120, Size: 0x0000c8, Codepage: 1252
+020   Entry: ID: 0x000010, Value: 0x80000058
+058    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+068     Entry: ID: 0x000001, Value: 0x800000a0
+0a0      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+0b0       Entry: ID: 0x000411, Value: 0x0000d8
+0d8        Leaf: Addr: 0x0251e8, Size: 0x000350, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+539  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+549   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0xe8
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0001f946  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00003a00  01021000  01021000  00020000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000600  01025000  01025000  00023a00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

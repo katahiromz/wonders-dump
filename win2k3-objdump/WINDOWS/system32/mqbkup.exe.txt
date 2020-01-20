@@ -1,0 +1,243 @@
+
+mqbkup.exe:     file format pei-i386
+mqbkup.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01006450
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Mon Jun 15 18:47:21 2009
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00006a00
+SizeOfInitializedData	00000a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00006450
+BaseOfCode		00001000
+BaseOfData		00008000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000a000
+SizeOfHeaders		00000400
+CheckSum		000171d4
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00006e3c 0000008c Import Directory [parts of .idata]
+Entry 2 00009000 00000418 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001200 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00001a18 00000040 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 000001e0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1006e3c
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00006e3c	00007030 00000000 00000000 00007214 00001168
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7220	  221  _controlfp
+	7200	  244  _except_handler3
+	71ee	  158  __set_app_type
+	71e0	  138  __p__fmode
+	71d0	  133  __p__commode
+	71c0	  189  _adjust_fdiv
+	71ac	  160  __setusermatherr
+	71a0	  322  _initterm
+	718e	  170  __wgetmainargs
+	7180	  171  __winitenv
+	7176	  207  _cexit
+	7168	   79  _XcptFilter
+	7160	  253  _exit
+	7156	  204  _c_exit
+	714c	  828  wcsncpy
+	7140	  808  towlower
+	7136	  819  wcschr
+	712c	  830  wcsrchr
+	7122	  820  wcscmp
+	7118	  841  wscanf
+	7110	  668  exit
+	7106	  826  wcsncat
+	70fa	  798  swprintf
+	70ea	   18  ??2@YAPAXI@Z
+	70d6	   85  __CxxFrameHandler
+	70cc	  822  wcscpy
+	70c2	  825  wcslen
+	70b8	  818  wcscat
+	70a8	   19  ??3@YAXPAX@Z
+
+ 00006e50	00006ec8 00000000 00000000 0000746a 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7458	  510  RegRestoreKeyW
+	744a	  514  RegSaveKeyW
+	7438	  467  RegCreateKeyExW
+	7428	  589  StartServiceW
+	740e	  208  EnumDependentServicesW
+	73f8	  448  QueryServiceConfigW
+	73e0	  453  QueryServiceStatusEx
+	73ce	   66  ControlService
+	73b8	  452  QueryServiceStatus
+	73a6	  431  OpenSCManagerW
+	7396	  433  OpenServiceW
+	7382	  241  GetFileSecurityW
+	7372	  494  RegOpenKeyExW
+	7360	  518  RegSetValueExW
+	734c	  505  RegQueryValueExW
+	7338	  429  OpenProcessToken
+	7320	  337  LookupPrivilegeValueW
+	7308	   28  AdjustTokenPrivileges
+	72ec	   29  AllocateAndInitializeSid
+	72dc	  247  GetLengthSid
+	72bc	  308  InitializeSecurityDescriptor
+	72ac	  307  InitializeAcl
+	7296	   16  AddAccessAllowedAce
+	728c	   22  AddAce
+	7270	  571  SetSecurityDescriptorDacl
+	725c	  560  SetFileSecurityW
+	7252	  226  FreeSid
+	723c	   62  CloseServiceHandle
+	722e	  460  RegCloseKey
+
+ 00006e64	00006f70 00000000 00000000 00007766 000010a8
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	772c	  880  UnhandledExceptionFilter
+	7748	  844  SetUnhandledExceptionFilter
+	7718	  864  TerminateProcess
+	761e	  914  WaitForSingleObject
+	7616	  856  Sleep
+	7608	  355  GetFileSize
+	7702	  323  GetCurrentProcessId
+	76ec	  326  GetCurrentThreadId
+	76dc	  479  GetTickCount
+	76c2	  675  QueryPerformanceCounter
+	76ae	  362  GetFullPathNameW
+	769a	  386  GetModuleHandleW
+	7688	  416  GetProcAddress
+	7678	  597  LoadLibraryW
+	7664	   78  CreateDirectoryW
+	7642	  335  GetDiskFreeSpaceExW
+	7658	   70  CopyFileW
+	7634	  646  OpenProcess
+	75fc	  693  ReadFile
+	7478	  458  GetSystemTimeAsFileTime
+	7492	  248  FreeLibrary
+	74a0	   52  CloseHandle
+	74ae	  358  GetFileType
+	74bc	  604  LocalFree
+	74c8	  934  WriteFile
+	74d4	  918  WideCharToMultiByte
+	74ea	  600  LocalAlloc
+	74f8	  933  WriteConsoleW
+	7508	  441  GetStdHandle
+	7518	  244  FormatMessageW
+	752a	  353  GetFileAttributesW
+	7540	  369  GetLastError
+	7550	   86  CreateFileW
+	755e	  450  GetSystemDirectoryW
+	7574	   59  CompareStringW
+	7586	  629  MultiByteToWideChar
+	759c	  322  GetCurrentProcess
+	75b0	  490  GetVersionExW
+	75c0	  206  FindClose
+	75cc	  221  FindNextFileW
+	75dc	  132  DeleteFileW
+	75ea	  213  FindFirstFileW
+
+ 00006e78	0000701c 00000000 00000000 0000778e 00001154
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7782	   44  CharNextW
+	7774	  460  LoadStringW
+
+ 00006e8c	00006f40 00000000 00000000 00007898 00001078
+
+	DLL Name: CLUSAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	7868	   47  ClusterResourceEnum
+	7850	   94  OnlineClusterResource
+	7836	   87  GetClusterResourceState
+	781c	   92  OfflineClusterResource
+	7802	   46  ClusterResourceControl
+	77f4	   95  OpenCluster
+	77de	  100  OpenClusterResource
+	77c6	   11  CloseClusterResource
+	77aa	   45  ClusterResourceCloseEnum
+	779a	    5  CloseCluster
+	787e	   49  ClusterResourceOpenEnum
+
+ 00006ea0	00007028 00000000 00000000 000078ba 00001160
+
+	DLL Name: mqutil.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	78a4	    0  MQGetResourceHandle
+
+ 00006eb4	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001200
+
+Type                Size     Rva      Offset
+  2        CodeView 00000023 00001a60 00000e60
+(format RSDS signature fab07bc124d54117b40e64f3ae1f1449 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x009060, Size: 0x0003b8, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000068c6  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01008000  01008000  00006e00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00000418  01009000  01009000  00007000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

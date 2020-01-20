@@ -1,0 +1,186 @@
+
+ipxroute.exe:     file format pei-i386
+ipxroute.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x01002e40
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Sun Sep 26 04:16:46 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00002600
+SizeOfInitializedData	00004a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00002e40
+BaseOfCode		00001000
+BaseOfData		00004000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0000a000
+SizeOfHeaders		00000600
+CheckSum		0000ea94
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 000031cc 0000008c Import Directory [parts of .idata]
+Entry 2 00005000 000046fc Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010c0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 0000007c Bound Import Directory
+Entry c 00001000 000000c0 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10031cc
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000031cc	00003284 ffffffff ffffffff 00003430 0000102c
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3386	  208  _exit	7800b908
+	338e	   72  _XcptFilter	7800f7dc
+	339c	   99  __p___initenv	7800bb9e
+	33ac	   88  __getmainargs	78003e70
+	33bc	  268  _initterm	78001dea
+	33c8	  130  __setusermatherr	7800b426
+	337e	  673  qsort	7802109c
+	336c	  272  _iob	7803bb90
+	33ec	  105  __p__commode	78003e6a
+	3362	  597  fprintf	780115fb
+	3374	  654  malloc	78001000
+	341c	  199  _except_handler3	7800f56a
+	343c	  180  _controlfp	78003c1e
+	3318	  710  strtoul	78016847
+	3350	  661  memmove	780030b5
+	3346	  687  sprintf	780253ca
+	333e	  570  atoi	7800c7d0
+	3334	  667  printf	78025147
+	332c	  582  exit	7800269e
+	3322	  456  _strupr	78028531
+	33fc	  110  __p__fmode	78003e64
+	335a	  603  free	780010ed
+	340a	  128  __set_app_type	78003e5a
+	33dc	  155  _adjust_fdiv	7803bb70
+
+ 000031e0	00003258 ffffffff ffffffff 0000349c 00001000
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	348e	  485  LocalAlloc	77e64911
+	347c	  190  FormatMessageA	77e696b7
+	3466	  514  MultiByteToWideChar	77e65f62
+	3456	  301  GetLastError	77e5668c
+	344a	  489  LocalFree	77e6499c
+
+ 000031f4	000032fc ffffffff ffffffff 000034f2 000010a4
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	34c2	  510  RtlInitUnicodeString	77f87124
+	34aa	   76  NtClose	77f88578
+	34da	  110  NtDeviceIoControlFile	77f96bd7
+	34b4	  156  NtOpenFile	77f8b5b4
+	35ac	  233  NtRequestWaitReplyPort	77f8aaaa
+	35c6	   79  NtConnectPort	77f8c857
+
+ 00003208	000032f0 ffffffff ffffffff 00003510 00001098
+
+	DLL Name: WINSTRM.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	34fc	    5  s_open	639c110a
+	3506	    4  s_ioctl	639c1374
+
+ 0000321c	00003270 ffffffff ffffffff 00003586 00001018
+
+	DLL Name: MPRAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	351c	   83  MprConfigServerDisconnect	772d4256
+	356e	   68  MprConfigGetGuidName	772d676a
+	3554	   82  MprConfigServerConnect	772d4118
+	3538	   67  MprConfigGetFriendlyName	772d6721
+
+ 00003230	000032e8 ffffffff ffffffff 000035a0 00001090
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	3592	   43  CharToOemA	77deea8a
+
+ 00003244	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010c0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00007600
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+060       Entry: ID: 0x000409, Value: 0x000090
+090        Leaf: Addr: 0x0050d0, Size: 0x0023dc, Codepage: 1252
+068       Entry: ID: 0x000411, Value: 0x0000a0
+0a0        Leaf: Addr: 0x0074ac, Size: 0x001b54, Codepage: 1252
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000070
+070      Language Table: Char: 0, Time: 00000000, Ver: 4/0, Num Names: 0, IDs: 2
+080       Entry: ID: 0x000409, Value: 0x0000b0
+0b0        Leaf: Addr: 0x009000, Size: 0x00037c, Codepage: 1252
+088       Entry: ID: 0x000411, Value: 0x0000c0
+0c0        Leaf: Addr: 0x00937c, Size: 0x000380, Codepage: 1252
+
+WARNING: Extra data in .rsrc section - it will be ignored by Windows:
+46fd  Type Table: Char: 1229210689, Time: 5858474e, Ver: 16720/17476, Num Names: 20041, IDs: 20551
+470d   Entry: <corrupt string offset: 0x49444441>
+Corrupt .rsrc section detected!
+ Resources start at offset: 0xd0
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000025d6  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000184  01004000  01004000  00002c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00004800  01005000  01005000  00002e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,251 @@
+
+wlbs.exe:     file format pei-i386
+wlbs.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x010063eb
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Tue Mar 25 07:15:01 2003
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00006200
+SizeOfInitializedData	00011600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000063eb
+BaseOfCode		00001000
+BaseOfData		00008000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		0001a000
+SizeOfHeaders		00000400
+CheckSum		00017aa1
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00100000
+SizeOfStackCommit	00008000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00006fd0 0000005f Export Directory [.edata (or where ever we found it)]
+Entry 1 000067e4 0000008c Import Directory [parts of .idata]
+Entry 2 00010000 00009dd0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001190 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00002608 00000040 Load Configuration Directory
+Entry b 00000250 00000094 Bound Import Directory
+Entry c 00001000 0000018c Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x10067e4
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 000067e4	00006888 ffffffff ffffffff 00006bd4 00001018
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6a66	  363  GetLocalTime	77e43173
+	6a76	  239  FreeLibrary	77e42e72
+	6a84	  587  LoadLibraryW	77e5836b
+	6a94	  442  GetSystemDirectoryW	77e5abad
+	6aaa	  951  lstrcmpiW	77e43ed3
+	6ab6	  754  SetConsoleMode	77e55c81
+	6ac8	  299  GetConsoleMode	77e55946
+	6ada	  350  GetFileType	77e4dd97
+	6ae8	  433  GetStdHandle	77e4e7d7
+	6af8	  408  GetProcAddress	77e42dfb
+	6b0a	  375  GetModuleHandleA	77e42cd1
+	6a56	  361  GetLastError	77f45ba5
+	6b38	  469  GetTickCount	77e4193e
+	6b48	  318  GetCurrentThreadId	77e419f7
+	6b5e	  315  GetCurrentProcessId	77e41d40
+	6b74	  448  GetSystemTimeAsFileTime	77e41e46
+	6b8e	  849  TerminateProcess	77e6ccc7
+	6ba2	  314  GetCurrentProcess	77e41d1a
+	6bb6	  829  SetUnhandledExceptionFilter	77e42d45
+	6fa0	  320  GetDateFormatW	77e56cac
+	6f8e	  471  GetTimeFormatW	77e57865
+	6f7a	  378  GetModuleHandleW	77e47f64
+	6f64	  619  MultiByteToWideChar	77e45595
+	6a4a	  960  lstrlenW	77e423c1
+	6a3a	  918  WriteConsoleW	77e55909
+	6a24	  301  GetConsoleOutputCP	77e559ca
+	6a0e	  905  WideCharToMultiByte	77e4683d
+	6b1e	  665  QueryPerformanceCounter	77e425d8
+	69fc	  235  FormatMessageW	77e54f0d
+
+ 000067f8	00006910 ffffffff ffffffff 00006d78 000010a0
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6c70	  818  wcscmp	77bd4d66
+	6c7a	   18  ??3@YAXPAX@Z	77bb9507
+	6c8a	   17  ??2@YAPAXI@Z	77bb94db
+	6c9a	  676  fgetwc	77bceb5c
+	6ca4	  616  _wsetlocale	77bc59d2
+	6cb2	  202  _c_exit	77bc8cac
+	6cbc	  251  _exit	77bc8c8c
+	6cc4	   78  _XcptFilter	77bc20be
+	6cd2	  205  _cexit	77bc8c9d
+	6cdc	  666  exit	77bc8c7b
+	6ce4	  169  __winitenv	77bed9e0
+	6c68	  324  _iob	77bebca0
+	6d04	  320  _initterm	77bc8b58
+	6d10	  158  __setusermatherr	77bda0a0
+	6d24	  187  _adjust_fdiv	77bee654
+	6d34	  131  __p__commode	77baefda
+	6d44	  136  __p__fmode	77baeff8
+	6d52	  156  __set_app_type	77bc44b8
+	6d64	  242  _except_handler3	77bc4d50
+	6d84	  219  _controlfp	77bdb7a1
+	6c5e	  672  fflush	77bcceb9
+	6c52	  618  _wspawnl	77bb87f6
+	6c48	  240  _errno	77baf05e
+	6c40	  801  time	77bd7b81
+	6c36	  823  wcslen	77bd4e32
+	6c2c	  838  wprintf	77bcff52
+	6c22	  751  printf	77bcf5f6
+	6c18	  826  wcsncpy	77bd4eba
+	6c0e	  827  wcspbrk	77bd4ef7
+	6fbe	  537  _tzset	77bd746e
+	6fb2	  734  localtime	77bd79f5
+	6be2	  553  _vsnwprintf	77bcdebd
+	6bf0	  817  wcschr	77bd4d44
+	6bfa	  562  _wcsicmp	77bd36c8
+	6c06	  636  _wtoi	77bacfee
+	6cf2	  168  __wgetmainargs	77baecfa
+
+ 0000680c	00006870 ffffffff ffffffff 00006dfa 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6d92	  456  ReadEventLogW	77dd9698
+	6dcc	  259  GetNumberOfEventLogRecords	77dd9301
+	6db2	  260  GetOldestEventLogRecord	77dd9327
+	6da2	   61  CloseEventLog	77db28ec
+	6dea	  425  OpenEventLogW	77db2aea
+
+ 00006820	00006900 ffffffff ffffffff 00006e08 00001090
+
+	DLL Name: WS2_32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8000000c	   12  <none>	71c03de0
+	8000006f	  111  <none>	71c07a00
+	8000000b	   11  <none>	71c017b0
+
+ 00006834	000069a4 ffffffff ffffffff 00006e26 00001134
+
+	DLL Name: ole32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6e14	    8  CLSIDFromString	77167c2a
+
+ 00006848	000069ac ffffffff ffffffff 00006f56 0000113c
+
+	DLL Name: wlbsctrl.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	6eb4	   73  WlbsDrainStop	58f4ed7b
+	6ec4	   95  WlbsResume	58f4ed5d
+	6ed2	  100  WlbsSuspend	58f4ed53
+	6ee0	   99  WlbsStop	58f4ed71
+	6eec	   98  WlbsStart	58f4ed67
+	6ef8	   91  WlbsQuery	58f4ed37
+	6f04	   90  WlbsPortSet	58f4ee52
+	6f12	   89  WlbsPasswordSet	58f4ee5c
+	6ea6	   74  WlbsEnable	58f4ed85
+	6f36	   75  WlbsEnumClusters	58f4ef4a
+	6f4a	   84  WlbsInit	58f4ed2a
+	6e72	   86  WlbsNotifyConfigChange	58f4ef92
+	6e62	  104  WlbsWriteReg	58f4eeab
+	6e54	   93  WlbsReadReg	58f4ee84
+	6e3e	   62  WlbsAddressToString	58f4ee1d
+	6e30	   94  WlbsResolve	58f4edaf
+	6e98	   71  WlbsDisable	58f4ed93
+	6f24	   92  WlbsQueryState	58f4ed45
+	6e8c	   72  WlbsDrain	58f4eda1
+
+ 0000685c	00000000 00000000 00000000 00000000 00000000
+
+There is an export table in .text at 0x1006fd0
+
+The Export Tables (interpreted .text section contents)
+
+Export Flags 			0
+Time/Date stamp 		3e8001f5
+Major/Minor 			0/0
+Name 				00007002 wlbs.exe
+Ordinal Base 			1
+Number in:
+	Export Address Table 		00000001
+	[Name Pointer/Ordinal] Table	00000001
+Table Addresses
+	Export Address Table 		00006ff8
+	Name Pointer Table 		00006ffc
+	Ordinal Table 			00007000
+
+Export Address Table -- Ordinal Base 1
+	[   0] +base[   1] 2738 Export RVA
+
+[Ordinal/Name Pointer] Table
+	[   0] ??4WLBS_REG_PARAMS@@QAEAAU0@ABU0@@Z
+
+There is a debug directory in .text at 0x1001190
+
+Type                Size     Rva      Offset
+  2        CodeView 00000019 00002650 00001a50
+(format NB10 signature f501803e age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x010440, Size: 0x00998c, Codepage: 0
+018   Entry: ID: 0x000010, Value: 0x80000038
+038    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+048     Entry: ID: 0x000001, Value: 0x80000068
+068      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+078       Entry: ID: 0x000409, Value: 0x000090
+090        Leaf: Addr: 0x0100a0, Size: 0x0003a0, Codepage: 0
+ Resources start at offset: 0x440
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000602f  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01008000  01008000  00006600  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         00009dd0  01010000  01010000  00006800  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

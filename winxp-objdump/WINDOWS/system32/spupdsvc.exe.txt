@@ -1,0 +1,200 @@
+
+spupdsvc.exe:     file format pei-i386
+spupdsvc.exe
+architecture: i386, flags 0x0000010a:
+EXEC_P, HAS_DEBUG, D_PAGED
+start address 0x01003d19
+
+Characteristics 0x10f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+
+Time/Date		Fri Jul 27 23:49:53 2007
+Magic			010b	(PE32)
+MajorLinkerVersion	7
+MinorLinkerVersion	10
+SizeOfCode		00003800
+SizeOfInitializedData	00000a00
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	00003d19
+BaseOfCode		00001000
+BaseOfData		00005000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	2
+MajorImageVersion	5
+MinorImageVersion	2
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00007000
+SizeOfHeaders		00000400
+CheckSum		000155c3
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00002000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00003ee0 00000078 Import Directory [parts of .idata]
+Entry 2 00006000 000003e0 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00004200 00002578 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 00001160 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00002420 00000040 Load Configuration Directory
+Entry b 00000000 00000000 Bound Import Directory
+Entry c 00001000 00000144 Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1003ee0
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00003ee0	00003f58 00000000 00000000 000041b4 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	409c	   62  CloseServiceHandle
+	40b2	   53  ChangeServiceConfig2W
+	40ca	  101  CreateServiceW
+	40dc	  430  OpenSCManagerW
+	40ee	  175  DeleteService
+	40fe	  432  OpenServiceW
+	410e	  580  SetServiceStatus
+	4122	  527  RegisterServiceCtrlHandlerW
+	4140	  587  StartServiceCtrlDispatcherW
+	415e	  459  RegCloseKey
+	416c	  504  RegQueryValueExW
+	4180	  493  RegOpenKeyExW
+	4190	  517  RegSetValueExW
+	41a2	  466  RegCreateKeyExW
+
+ 00003ef4	00004070 00000000 00000000 0000421c 00001118
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	4226	  918  RtlUnwind
+	4210	 1311  _wcsicmp
+	4202	 1295  _snwprintf
+	41f8	 1391  wcsncpy
+	41ee	 1384  wcschr
+	41e4	 1386  wcscpy
+	41da	 1393  wcsrchr
+	41d0	 1356  sprintf
+	41c2	 1309  _vsnprintf
+	4232	  309  NtQueryVirtualMemory
+
+ 00003f08	0000400c 00000000 00000000 000042b0 000010b4
+
+	DLL Name: SETUPAPI.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	424a	  232  SetupCloseInfFile
+	4272	  421  SetupGetLineTextW
+	4286	  394  SetupFindFirstLineW
+	429c	  461  SetupOpenInfFileW
+	425e	  395  SetupFindNextLine
+
+ 00003f1c	00004024 00000000 00000000 00004396 000010cc
+
+	DLL Name: msvcrt.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	4342	  160  __setusermatherr
+	4336	  322  _initterm
+	4324	  170  __wgetmainargs
+	430e	  668  exit
+	4304	  207  _cexit
+	42ee	  253  _exit
+	42e4	  204  _c_exit
+	42dc	  689  free
+	42d2	  740  malloc
+	42c8	  840  wprintf
+	42be	  753  printf
+	43a2	  221  _controlfp
+	4384	  158  __set_app_type
+	4376	  138  __p__fmode
+	4366	  133  __p__commode
+	42f6	   79  _XcptFilter
+	4356	  189  _adjust_fdiv
+	4316	  171  __winitenv
+
+ 00003f30	00003f94 00000000 00000000 000045f4 0000103c
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	45d6	  843  SetUnhandledExceptionFilter
+	45ba	  879  UnhandledExceptionFilter
+	45a6	  322  GetCurrentProcess
+	4592	  863  TerminateProcess
+	4578	  458  GetSystemTimeAsFileTime
+	4562	  323  GetCurrentProcessId
+	454c	  326  GetCurrentThreadId
+	4532	  675  QueryPerformanceCounter
+	4524	  132  DeleteFileW
+	4514	  490  GetVersionExW
+	44fc	  321  GetCurrentDirectoryW
+	44e4	  779  SetCurrentDirectoryW
+	44d2	  105  CreateProcessW
+	44bc	  913  WaitForSingleObject
+	44a6	  346  GetExitCodeProcess
+	4498	   52  CloseHandle
+	4482	  353  GetFileAttributesW
+	446c	  382  GetModuleFileNameW
+	4458	  238  FlushFileBuffers
+	4440	  499  GetWindowsDirectoryA
+	442a	  793  SetFileAttributesA
+	441c	  131  DeleteFileA
+	440e	   83  CreateFileA
+	43fc	  796  SetFilePointer
+	43ec	  371  GetLocalTime
+	43dc	  369  GetLastError
+	43cc	  479  GetTickCount
+	43c0	  933  WriteFile
+	43b0	  809  SetLastError
+
+ 00003f44	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x1001160
+
+Type                Size     Rva      Offset
+  2        CodeView 00000025 00002468 00001868
+(format RSDS signature 88bf5af837304412a87d3b32401bd805 age 1)
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+010   Entry: ID: 0x000010, Value: 0x80000018
+018    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+028     Entry: ID: 0x000001, Value: 0x80000030
+030      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+040       Entry: ID: 0x000409, Value: 0x000048
+048        Leaf: Addr: 0x006060, Size: 0x000380, Codepage: 0
+ Resources start at offset: 0x60
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00003602  01001000  01001000  00000400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01005000  01005000  00003c00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000003e0  01006000  01006000  00003e00  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+

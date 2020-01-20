@@ -1,0 +1,178 @@
+
+nbtstat.exe:     file format pei-i386
+nbtstat.exe
+architecture: i386, flags 0x00000102:
+EXEC_P, D_PAGED
+start address 0x010026c0
+
+Characteristics 0x30f
+	relocations stripped
+	executable
+	line numbers stripped
+	symbols stripped
+	32 bit words
+	debugging information removed
+
+Time/Date		Tue Oct 19 08:05:24 1999
+Magic			010b	(PE32)
+MajorLinkerVersion	5
+MinorLinkerVersion	12
+SizeOfCode		00001e00
+SizeOfInitializedData	0000d600
+SizeOfUninitializedData	00000000
+AddressOfEntryPoint	000026c0
+BaseOfCode		00001000
+BaseOfData		00003000
+ImageBase		01000000
+SectionAlignment	00001000
+FileAlignment		00000200
+MajorOSystemVersion	5
+MinorOSystemVersion	0
+MajorImageVersion	5
+MinorImageVersion	0
+MajorSubsystemVersion	4
+MinorSubsystemVersion	0
+Win32Version		00000000
+SizeOfImage		00011000
+SizeOfHeaders		00000600
+CheckSum		0000a2fc
+Subsystem		00000003	(Windows CUI)
+DllCharacteristics	00008000
+SizeOfStackReserve	00040000
+SizeOfStackCommit	00001000
+SizeOfHeapReserve	00100000
+SizeOfHeapCommit	00001000
+LoaderFlags		00000000
+NumberOfRvaAndSizes	00000010
+
+The Data Directory
+Entry 0 00000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00002874 0000008c Import Directory [parts of .idata]
+Entry 2 0000e000 000029e8 Resource Directory [.rsrc]
+Entry 3 00000000 00000000 Exception Directory [.pdata]
+Entry 4 00000000 00000000 Security Directory
+Entry 5 00000000 00000000 Base Relocation Directory [.reloc]
+Entry 6 000010e0 0000001c Debug Directory
+Entry 7 00000000 00000000 Description Directory
+Entry 8 00000000 00000000 Special Directory
+Entry 9 00000000 00000000 Thread Storage Directory [.tls]
+Entry a 00000000 00000000 Load Configuration Directory
+Entry b 00000240 000000a8 Bound Import Directory
+Entry c 00001000 000000dc Import Address Table Directory
+Entry d 00000000 00000000 Delay Import Directory
+Entry e 00000000 00000000 CLR Runtime Header
+Entry f 00000000 00000000 Reserved
+
+There is an import table in .text at 0x1002874
+
+The Import Tables (interpreted .text section contents)
+ vma:            Hint    Time      Forward  DLL       First
+                 Table   Stamp     Chain    Name      Thunk
+ 00002874	00002980 ffffffff ffffffff 000029dc 00001080
+
+	DLL Name: WSOCK32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	8000000e	   14  <none>	74f933e7
+	80000454	 1108  <none>	74f578d2
+	8000000a	   10  <none>	74f91379
+
+ 00002888	00002974 ffffffff ffffffff 000029fa 00001074
+
+	DLL Name: USER32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2d22	   44  CharToOemBuffA	77e0777c
+	29e8	  468  OemToCharBuffA	77e29739
+
+ 0000289c	00002990 ffffffff ffffffff 00002b64 00001090
+
+	DLL Name: ntdll.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2b04	  509  RtlInitString	77f8632d
+	2ae4	  333  RtlAnsiStringToUnicodeString	77f94511
+	2a92	 1149  strncpy	77f8a557
+	2a7e	  469  RtlFreeAnsiString	77f8b537
+	2b14	  293  NtWaitForSingleObject	77f8a117
+	2b2c	  110  NtDeviceIoControlFile	77f96bd7
+	2a42	  661  RtlUpcaseUnicodeStringToOemString	77f85f66
+	2ad4	   85  NtCreateFile	77f95238
+	2a2e	 1116  isprint	77fb63f6
+	2a26	 1104  atoi	77f9431d
+	2a1c	 1138  sprintf	77f874bb
+	2a12	   76  NtClose	77f88578
+	2a06	 1162  vsprintf	77fb7ee2
+	2b44	  451  RtlExtendedLargeIntegerDivide	77f8ef95
+	2a38	 1133  memmove	77f82a70
+	2a66	  510  RtlInitUnicodeString	77f87124
+	2abc	  475  RtlFreeUnicodeString	77f8b537
+	2a9c	  645  RtlUnicodeStringToAnsiString	77f8e5ec
+
+ 000028b0	00002938 ffffffff ffffffff 00002c2a 00001038
+
+	DLL Name: MSVCRT.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2b96	   99  __p___initenv	7800bb9e
+	2c16	  199  _except_handler3	7800f56a
+	2c04	  128  __set_app_type	78003e5a
+	2b6e	  582  exit	7800269e
+	2c36	  180  _controlfp	78003c1e
+	2bf6	  110  __p__fmode	78003e64
+	2be6	  105  __p__commode	78003e6a
+	2bc2	  130  __setusermatherr	7800b426
+	2b76	  532  _write	78014b25
+	2b80	  208  _exit	7800b908
+	2b88	   72  _XcptFilter	7800f7dc
+	2bd6	  155  _adjust_fdiv	7803bb70
+	2ba6	   88  __getmainargs	78003e70
+	2bb6	  268  _initterm	78001dea
+
+ 000028c4	00002900 ffffffff ffffffff 00002c76 00001000
+
+	DLL Name: ADVAPI32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2c52	  423  RegQueryValueExA	77d8858e
+	2c66	  413  RegOpenKeyExA	77d882ac
+	2c44	  388  RegCloseKey	77d87d4d
+
+ 000028d8	00002910 ffffffff ffffffff 00002d14 00001010
+
+	DLL Name: KERNEL32.dll
+	vma:  Hint/Ord Member-Name Bound-To
+	2cda	  195  FreeLibrary	77e6ab8c
+	2cf4	  485  LocalAlloc	77e64911
+	2cb0	  707  Sleep	77e54b74
+	2c9a	  514  MultiByteToWideChar	77e65f62
+	2c84	  769  WideCharToMultiByte	77e5afd8
+	2ce8	  489  LocalFree	77e6499c
+	2d02	  190  FormatMessageA	77e696b7
+	2cca	  479  LoadLibraryA	77e68023
+	2cb8	  339  GetProcAddress	77e6564b
+
+ 000028ec	00000000 00000000 00000000 00000000 00000000
+
+There is a debug directory in .text at 0x10010e0
+
+Type                Size     Rva      Offset
+  4            Misc 00000110 00000000 00005000
+
+The .rsrc Resource Directory section:
+000  Type Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 2
+010   Entry: ID: 0x00000b, Value: 0x80000020
+020    Name Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+030     Entry: ID: 0x000001, Value: 0x80000050
+050      Language Table: Char: 0, Time: 00000000, Ver: 0/0, Num Names: 0, IDs: 1
+060       Entry: ID: 0x000409, Value: 0x000080
+080        Leaf: Addr: 0x00e408, Size: 0x0025e0, Codepage: 0
+ Resources start at offset: 0x408
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001d34  01001000  01001000  00000600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000200  01003000  01003000  00002400  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .rsrc         000029e8  0100e000  0100e000  00002600  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+SYMBOL TABLE:
+no symbols
+
+
